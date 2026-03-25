@@ -245,8 +245,8 @@ Example: Pool Config stores basis string at `CST Activity = 'Input'`.
 |------|------|--------------|
 | `cst_account_config.yaml` | CST Account Config | Feeders to Stage 1 apportionment cube |
 | `cst_account_to_pool_apportionment.yaml` | CST Account to Pool Apportionment | Amount, Rate, Apportioned Amount rules + feeders to Stage 2 + RC01 feeders |
-| `cst_pool_config.yaml` | CST Pool Config | Driver Pct Share rule + feeders to Stage 2 apportionment rate |
-| `cst_pool_to_activity_apportionment.yaml` | CST Pool to Activity Apportionment | Amount, Rate, Apportioned Amount rules + feeders to Stage 3 + RC03 feeders |
+| `cst_pool_config.yaml` | CST Pool Config | Driver Pct Share rule + feeders to Stage 2 apportionment rate — self-feeder uses `Total Activities` consolidation (fixed bug: was using invalid `!CST Pool Config Measure` variable) |
+| `cst_pool_to_activity_apportionment.yaml` | CST Pool to Activity Apportionment | Amount, Rate, Apportioned Amount rules + feeders to Stage 3 + RC03 feeders — Apportioned Amount uses Stage 1b Complete cross-cube flag to choose SA vs Amount |
 | `cst_activity_config.yaml` | CST Activity Config | Driver Pct Share rule + feeders to Stage 3 apportionment rate |
 | `cst_activity_to_service_line_apportionment.yaml` | CST Activity to Service Line Apportionment | Amount, Rate, Apportioned Amount, Per Unit rules + RC05 feeders |
 | `cst_apportionment_reconciliation.yaml` | CST Apportionment Reconciliation | RC01/RC03/RC05 Input Total, Output Total, Variance, Status rules |
@@ -264,7 +264,7 @@ python3 model_builder/deploy_rules.py cst_account_config
 
 ## Views inventory (YAML source of truth)
 
-All views are named `RPT Default` and have `set_as_default: true`.
+Views follow the `RPT <Description>` naming convention. Each cube has at least one `RPT Default` view with `set_as_default: true`. Additional views use descriptive names.
 Deploy: `python3 model_builder/deploy_views.py`
 
 ### View conventions
@@ -281,7 +281,7 @@ Deploy: `python3 model_builder/deploy_views.py`
 | `cst_account_to_pool_apportionment.yaml` | CST Account to Pool Apportionment | TOTAL OVERHEAD drilldown × Cost Pool | Period range | Apportioned Amount, Total Cost Centres |
 | `cst_pool_config.yaml` | CST Pool Config | Cost Pool × Driver × Activity | Period range | Pool to Activity Basis |
 | `cst_pool_to_activity_apportionment.yaml` | CST Pool to Activity Apportionment | Cost Pool × Activity | Period range | Apportioned Amount, Total Cost Centres |
-| `cst_pool_to_pool_config.yaml` | CST Pool to Pool Config | Cost Pool Dest × Cost Pool | Period range × all measures | Input CC — RPT Default shows all measures; RPT Driver Value By Cost Centre expands CCs |
+| `cst_pool_to_pool_config.yaml` | CST Pool to Pool Config | Cost Pool Dest × Cost Pool | Period range × all measures | Input CC — 3 views: RPT Default (all measures), RPT Pool to Pool Active (Active flag entry, no NON EMPTY on rows), RPT Driver Value By Cost Centre (expanded CCs) |
 | `cst_pool_to_pool_apportionment.yaml` | CST Pool to Pool Apportionment | Cost Pool (rows) | Cost Centre × Cost Pool Dest (cols) | Apportioned Amount — **static period** |
 | `cst_activity_config.yaml` | CST Activity Config | Activity × Driver × Service Line | Period range | Activity to Service Line Basis |
 | `cst_activity_to_service_line_apportionment.yaml` | CST Activity to Service Line Apportionment | Activity × Service Line | Period range | Apportioned Amount, Total Cost Centres |
@@ -300,10 +300,13 @@ Deploy: `python3 model_builder/deploy_subsets.py`
 | File | Dimension | Subset name | MDX |
 |------|-----------|-------------|-----|
 | `cst_cost_pool.yaml` | CST Cost Pool | All Cost Pools | `TM1FILTERBYLEVEL({TM1SUBSETALL(...)}, 0)` |
+| `cst_cost_pool_dest.yaml` | CST Cost Pool Dest | All Cost Pool Dests | `TM1FILTERBYLEVEL({TM1SUBSETALL(...)}, 0)` |
 | `cst_activity.yaml` | CST Activity | All Activities | `TM1FILTERBYLEVEL({TM1SUBSETALL(...)}, 0)` |
+| `cst_activity_dest.yaml` | CST Activity Dest | All Activity Dests | `TM1FILTERBYLEVEL({TM1SUBSETALL(...)}, 0)` |
 | `cst_service_line.yaml` | CST Service Line | All Service Lines | `TM1FILTERBYLEVEL({TM1SUBSETALL(...)}, 0)` |
 | `cst_driver.yaml` | CST Driver | All Drivers | `TM1FILTERBYLEVEL({TM1SUBSETALL(...)}, 0)` |
 | `cst_reconciliation_check.yaml` | CST Reconciliation Check | All Checks | `TM1FILTERBYLEVEL({TM1SUBSETALL(...)}, 0)` |
+| `cst_etl_job.yaml` | CST ETL Job | All ETL Jobs | `TM1FILTERBYLEVEL({TM1SUBSETALL(...)}, 0)` |
 
 ---
 
@@ -344,7 +347,7 @@ Deploy: `python3 model_builder/deploy_subsets.py`
 ├── ti_processes/                       ← YAML TI process definitions
 └── tests/
     └── data/
-        └── cst_test_data.db            ← SQLite test database
+        └── cst_test_data.db            ← SQLite test database (excluded from git — binary)
 ```
 
 ---
@@ -400,6 +403,9 @@ python3 etl/run_apportionment.py --version Budget --force
 | Stage 2 Apportioned Amount fallback | Uses Settled Amount post-Stage 1b, Amount pre-Stage 1b | Controlled by Stage 1b Complete cross-cube flag — see above |
 | ETL trigger mechanism | CST ETL Control cube + Python poller | TM1 V12 has no ExecuteCommand — poller reads Status=REQUESTED and dispatches ETL |
 | Stage 1b P2P config basis | Driver Value + Active flag | Active (1/0) defines valid CP→CP relationships. Driver Values normalised across Active=1 intersections only. Self-row (CP01→CP01) handles partial retention. No Active entry = pool not redistributed. |
+| Direct vs Indirect costs | Apportionment Type flag + Direct Service Line % | `Apportionment Type` (Direct/Indirect/Excluded) at Account/CC level. Direct costs bypass ABC chain, route to Service Line via explicit % split. `CST Service Line` dimension to be added to `CST Account Config` — `Input` sentinel used where not applicable. |
+| Sub-Service Line structure | PA Virtual Dimensions (Hierarchies) — deferred | Granular SL leaves with multiple hierarchy groupings. No cube redesign needed. Implement when sub-SL reporting is required. |
+| Git strategy | Single repo per module, master branch, no remote yet | `tm1_apportionment` initialised. Remote and dev/test/main branching to be set up. Binary `.db` files excluded. |
 
 ## CI/CD pipeline
 
@@ -458,16 +464,27 @@ Everything goes through the pipeline. Manual changes in Architect get overwritte
 ---
 
 ## Pending — not yet built
-- Stage 2b Python iteration: Activity → Activity reciprocal in `run_apportionment.py`
+
+**Next up — agreed design, not yet implemented:**
+- Update `CST Account Config` cube — add `CST Service Line` dimension
+- Replace `Is Apportioned` with `Apportionment Type` (String: Direct/Indirect/Excluded)
+- Add `Direct %` measure to `CST Account Config Measure`
+- Update ETL, rules, views and test data for direct/indirect routing
+- Update `_run_stage1b()` to filter P2P reads by `Active = 1`
+
+**Still to build:**
+- Stage 2b Activity → Activity iterative solver
 - RC02, RC04, RC06 reconciliation checks (reciprocal balance + end-to-end)
 - GBL Assumptions cube in tm1_global (META DATA GBL Version TI errors until built)
-- Update `_run_stage1b()` to filter P2P reads by `Active = 1` measure
-- deploy/ folder: production infrastructure docs (systemd service for poller, environment config)
+- Remote git repo + dev/test/main branch structure
+- Production infrastructure docs (systemd service for poller, environment config per environment)
 
-## Recently built (keep for context)
+## Recently built
 - Stage 1b Pool → Pool reciprocal iteration — converges in ~11 iterations, tolerance 0.01
 - Stage 1b Complete cross-cube flag — written by Python to Reconciliation cube after convergence
 - CST ETL Control cube + Python poller (`etl/poller.py`) — job queue pattern replacing ExecuteCommand
 - TI wrapper processes: CST Load Drivers, CST Load GL Data, CST Run Apportionment
 - Default subsets for all CST dimensions
 - Config-driven overhead_consolidation (`config.py CST_CONFIG`) — substituted into rules/views at deploy time
+- P2P Active flag — `CST Pool to Pool Config Measure` + SQL test data + load process updated
+- Git initialised — `.db` files excluded, 3 commits on master
