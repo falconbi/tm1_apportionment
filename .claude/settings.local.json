@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 model_builder/create_cst_dimensions.py)",
+      "Bash(python3 model_builder/create_cst_cubes.py)",
+      "Bash(python3 model_builder/create_cst_apportionment_stage.py)",
+      "Bash(python3:*)"
+    ]
+  }
+}

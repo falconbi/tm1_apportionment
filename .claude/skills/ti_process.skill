@@ -1,0 +1,271 @@
+---
+description: TI process standards for the CST Apportionment module — native TM1 TurboIntegrator processes defined in YAML, deployed via deploy_processes.py
+---
+
+# TI Process Standards — CST Apportionment
+
+TI processes in this repo are **native TM1 TurboIntegrator processes** defined as YAML files in `processes/` and deployed to TM1 via `model_builder/deploy_processes.py`.
+
+## YAML Schema
+
+```yaml
+name: CST Run <Stage Name>
+
+parameters:
+  - name: pPeriod
+    prompt: "Period to process e.g. Apr FY2025. Leave blank for all."
+    type: String
+    default: 'Apr FY2025'
+  - name: pVersion
+    prompt: "Version to process e.g. Budget. Leave blank for all."
+    type: String
+    default: 'Budget'
+  - name: pDebug
+    prompt: "Write debug output to Debug_<Stage>.txt. Y or N."
+    type: String
+    default: 'N'
+
+datasource:
+  type: TM1CubeView
+  cube: <Source Cube>
+  view: TI_CST_<Stage>_DS
+
+variables:
+  - name: v_Measure        # MUST be first — absorbs field 1 (measure element name)
+    type: String
+  - name: v_Period
+    type: String
+  - name: v_Version
+    type: String
+  # ... remaining row dimensions in cube order
+  - name: v_<NumericField>
+    type: Numeric
+
+prolog: |
+  # prolog TM1 TurboIntegrator code
+
+metadata: ''
+
+data: |
+  # data tab TM1 TurboIntegrator code
+
+epilog: |
+  # epilog TM1 TurboIntegrator code
+```
+
+## Datasource Variable Mapping
+
+**Critical:** When the datasource is `TM1CubeView`, TM1 prepends the **measure element name** as field 1 before the row dimension elements. Variables map in this order:
+
+| Field | Content | Variable |
+|-------|---------|----------|
+| 1 | Measure element name (String) | `v_Measure` (absorbs, never used) |
+| 2 | Row dim 1 element | `v_<dim1>` |
+| 3 | Row dim 2 element | `v_<dim2>` |
+| ... | ... | ... |
+| N | Last row dim element | `v_<dimN>` |
+| N+1 | Numeric cell value | `v_<Value>` (Numeric) |
+
+If you omit `v_Measure`, all subsequent variables are shifted off by one — the Numeric variable will receive a String and TM1 throws "Cannot convert field N, value '...' to real number."
+
+## ViewCreateByMDX Argument Order
+
+```
+ViewCreateByMDX( CubeName, ViewName, MDXExpression, DeleteExisting );
+```
+
+**Cube name is the first argument.** Getting this wrong causes: `Error: Cube 'TI_CST_..._DS' not found.`
+
+Example (correct):
+```
+ViewCreateByMDX( 'CST Apportionment Config', sDSView, sMDX, 1 );
+```
+
+## ViewDestroy Argument Order
+
+```
+ViewDestroy( CubeName, ViewName );
+```
+
+Same pattern — cube name first.
+
+## Standard Prolog Pattern (CubeView datasource)
+
+```
+# ── Build datasource view filtered by parameters ──────────────────────────────
+
+sDSView = 'TI_CST_<Stage>_DS';
+
+IF( pPeriod @= '' );
+  sPeriodSet = 'TM1FILTERBYLEVEL({TM1SUBSETALL([GBL Period])},0)';
+ELSE;
+  sPeriodSet = '{[GBL Period].[' | pPeriod | ']}';
+ENDIF;
+
+IF( pVersion @= '' );
+  sVersionSet = 'TM1FILTERBYLEVEL({TM1SUBSETALL([GBL Version])},0)';
+ELSE;
+  sVersionSet = '{[GBL Version].[' | pVersion | ']}';
+ENDIF;
+
+sMDX = 'SELECT {[<Cube> Measure].[<Measure>]} ON COLUMNS, NON EMPTY CROSSJOIN(' | sPeriodSet | ', CROSSJOIN(' | sVersionSet | ', ...)) ON ROWS FROM [<Cube>]';
+
+ViewCreateByMDX( '<Cube>', sDSView, sMDX, 1 );
+
+# ── Clear target cube ─────────────────────────────────────────────────────────
+
+CubeClearData( '<Target Cube>' );
+```
+
+## Debug Pattern
+
+Always include a `pDebug` parameter (String, default `'N'`). At the top of the data tab:
+
+```
+IF( pDebug @= 'Y' );
+  ASCIIOutput( 'Debug_<Stage>.txt',
+    'v_Period='  | v_Period,
+    'v_Version=' | v_Version,
+    'v_Field='   | v_Field,
+    'v_Value='   | NumberToString( v_NumericField ) );
+  ItemReject( 'Debug mode — row logged, not written' );
+ENDIF;
+```
+
+- `ItemReject(message)` skips the current row; processing continues to the next row.
+- `ASCIIOutput` with a relative filename writes to the TM1 **server DataBaseDirectory** (the `Data\` folder configured in `tm1s.cfg`). This is a server-side path, not a client path. Check `tm1s.cfg → DataBaseDirectory` for the exact location.
+
+## Standard Data Tab Pattern
+
+```
+IF( pDebug @= 'Y' );
+  ASCIIOutput( 'Debug_<Stage>.txt', ... );
+  ItemReject( 'Debug mode — row logged, not written' );
+ENDIF;
+
+# Main logic — look up source and write to target
+vAmount = CellGetN( '<Source Cube>', v_Period, v_Version, v_Dim1, v_Dim2, 'Amount' );
+
+IF( vAmount <> 0 );
+  CellPutN( vAmount, '<Target Cube>', v_Period, v_Version, v_Dim1, v_Dim2, v_Dim3, 'Amount' );
+  CellPutN( vRate,   '<Target Cube>', v_Period, v_Version, v_Dim1, v_Dim2, v_Dim3, 'Apportionment Rate' );
+ENDIF;
+```
+
+Note: Amount and Apportionment Rate are both written; Apportioned Amount is **not** written — it is calculated by the TM1 rule `['Apportioned Amount'] = N: ['Amount'] * ['Apportionment Rate'] / 100;`
+
+## Standard Epilog Pattern
+
+```
+# ── Clean up datasource view ──────────────────────────────────────────────────
+
+ViewDestroy( '<Cube>', 'TI_CST_<Stage>_DS' );
+```
+
+## Deploying
+
+```bash
+python3 model_builder/deploy_processes.py                          # all processes
+python3 model_builder/deploy_processes.py cst_run_stage1_gl_to_pool   # single process
+```
+
+`deploy_processes.py` deletes the existing process (if present) and recreates it — safe to re-run.
+
+## MDX Read Pattern (Python TM1py — for reference / data validation scripts)
+
+Always read with `NON EMPTY` and place Period/Version on the ROWS axis (not in WHERE) to avoid the "dimension appears twice" error:
+
+```python
+mdx = f"""
+SELECT
+  {{[{CUBE} Measure].[Amount]}} ON COLUMNS,
+  NON EMPTY CROSSJOIN(
+    {_period_set(period)},
+    CROSSJOIN(
+      {_version_set(version)},
+      CROSSJOIN(
+        {_leaves('GBL Account')},
+        {_leaves('GBL Cost Centre')}
+      )
+    )
+  ) ON ROWS
+FROM [{CUBE}]""".strip()
+```
+
+## "Is Apportioned" Gate
+
+The CST model has no explicit Is Apportioned flag. The gate is implemented via `NON EMPTY` on the Config cube read:
+- Accounts with no entry in CST Apportionment Config (pct = 0 or missing) are naturally excluded
+- Only accounts with at least one non-zero Apportionment Pct in CST Apportionment Config are processed
+
+## Stage Inventory
+
+| Process YAML | Source → Target | Key join keys |
+|--------------|----------------|---------------|
+| `cst_run_stage1_gl_to_pool.yaml` | GL Input + Apportion Config → Cost Pool Apportionment | (period, version, acct, cc) |
+| `cst_run_stage1b_pool_to_pool.yaml` | Pool Apportionment + P2P Driver → Pool-to-Pool Apportionment | (period, version, pool, cc) |
+| `cst_run_stage2_pool_to_activity.yaml` | Pool Apportionment + Pool Driver → Activity Apportionment | (period, version, pool, cc) |
+| `cst_run_stage2b_act_to_act.yaml` | Activity Apportionment + A2A Driver → Act-to-Act Apportionment | (period, version, act, cc) |
+| `cst_run_stage3_act_to_sl.yaml` | Activity Apportionment + Activity Driver → Service Line Cost | (period, version, act, cc) |
+
+## View Definition Standard
+
+Views are defined as YAML files in `views/` and deployed by `model_builder/deploy_views.py`. Do not hard-code MDX view strings in TI code.
+
+### YAML Schema
+
+```yaml
+cube: CST Cost Pool Apportionment
+views:
+  - view_name: RPT Default
+    mdx: |
+      SELECT NON EMPTY ...
+      FROM [CST Cost Pool Apportionment]
+      WHERE (...)
+
+  - view_name: RPT YTD
+    mdx: |
+      SELECT ...
+```
+
+- `cube` — exact TM1 cube name
+- `view_name` — name of the view (e.g. `RPT Default`)
+- `mdx: |` — block scalar; all MDX lines **must be indented at least 2 spaces** including `SELECT`, `FROM`, `WHERE`. Unindented lines end the YAML block scalar and cause a `ScannerError`.
+
+**Do not use JSON for view files.** JSON strings cannot contain literal newlines, so PAW-copied MDX must be escaped — error-prone and was the source of a prior corruption incident.
+
+### Filename Convention
+
+Lowercase the cube name, replace spaces with underscores: `cst_cost_pool_apportionment.yaml`
+
+### Standard Apportionment View MDX
+
+```
+SELECT
+NON EMPTY CROSSJOIN(TM1FILTERBYLEVEL({TM1SUBSETALL([GBL Cost Centre])}, 0), TM1FILTERBYLEVEL({TM1SUBSETALL([DEST_DIM])}, 0)) ON COLUMNS,
+NON EMPTY TM1FILTERBYLEVEL({TM1SUBSETALL([SOURCE_DIM])}, 0) ON ROWS
+FROM [CUBE]
+WHERE ([GBL Version].[Budget],
+       [GBL Period].[Apr FY2025],
+       [MEASURE_DIM].[Apportioned Amount])
+```
+
+### Driver View MDX
+
+```
+SELECT
+NON EMPTY {[MEASURE_DIM].[Driver Value],
+           [MEASURE_DIM].[Driver Percentage Share]} ON COLUMNS,
+NON EMPTY TM1FILTERBYLEVEL({TM1SUBSETALL([SOURCE_DIM])}, 0) ON ROWS
+FROM [CUBE]
+WHERE ([GBL Version].[Budget],
+       [GBL Period].[Apr FY2025],
+       [CONTEXT_DIM].[CONTEXT_ELEM])
+```
+
+### Deploying
+
+```bash
+python3 model_builder/deploy_views.py
+python3 model_builder/deploy_views.py cst_cost_pool_apportionment   # single file
+```

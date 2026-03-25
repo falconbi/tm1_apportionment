@@ -1,0 +1,28 @@
+name: CST Run Apportionment
+parameters:
+  - name: pPeriod
+    prompt: "Period e.g. 2025-04 — leave blank to run all periods for the version"
+    default: ""
+    type: String
+  - name: pVersion
+    prompt: Version
+    default: Budget
+    type: String
+  - name: pMaxIter
+    prompt: Max iterations for reciprocal solver
+    default: 100
+    type: Numeric
+  - name: pForce
+    prompt: "Force run — 1 skips VAL gate check, 0 aborts on FAIL"
+    default: 0
+    type: Numeric
+
+prolog: |
+  sCube = 'CST ETL Control';
+  sJob  = 'Run Apportionment';
+
+  CellPutS( pPeriod,                  sCube, sJob, 'Period'   );
+  CellPutS( pVersion,                 sCube, sJob, 'Version'  );
+  CellPutN( pMaxIter,                 sCube, sJob, 'Max Iter' );
+  CellPutN( pForce,                   sCube, sJob, 'Force'    );
+  CellPutS( 'REQUESTED',              sCube, sJob, 'Status'   );

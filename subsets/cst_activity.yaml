@@ -1,0 +1,5 @@
+dimension: CST Activity
+subsets:
+  - subset_name: All Activities
+    set_as_default: true
+    mdx: "{TM1FILTERBYLEVEL({TM1SUBSETALL([CST Activity])}, 0)}"

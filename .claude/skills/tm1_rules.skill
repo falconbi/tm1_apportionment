@@ -1,0 +1,152 @@
+---
+description: TM1 rules standards for the CST Apportionment module — syntax, SKIPCHECK, feeders, stage rule templates
+---
+
+# TM1 Rules Standards — CST Apportionment
+
+TM1 rules are stored in `rules/` in the repo as `.rux` files and deployed via TM1py. Rules should be read from file and applied with `tm1.cubes.update_or_create_rules()`.
+
+## File Location
+
+```
+rules/
+  cst_cost_pool_apportionment.rux
+  cst_pool_to_pool_apportionment.rux
+  cst_activity_apportionment.rux
+  cst_activity_to_activity_apportionment.rux
+  cst_service_line_cost.rux
+  cst_pool_driver.rux
+  cst_activity_driver.rux
+  cst_pool_to_pool_driver.rux
+  cst_profit_and_loss_report.rux
+```
+
+## Required Header
+
+Every rules file must start with `SKIPCHECK;`. Without it, TM1 re-evaluates rules for every consolidation, causing extreme slowness on large models.
+
+```
+SKIPCHECK;
+
+# Feeders
+FEEDERS;
+...
+```
+
+## Apportioned Amount Rule — Standard Pattern
+
+The core calculation for all apportionment cubes:
+
+```
+SKIPCHECK;
+
+['Apportioned Amount'] = N:
+    IF(['Amount'] <> 0,
+       ['Amount'] * ['Apportionment Rate'] / 100,
+       0);
+
+FEEDERS;
+
+['Amount'] => ['Apportioned Amount'];
+```
+
+**Notes**:
+- `N:` prefix = numeric rule; use `S:` for string rules
+- Always guard with `IF(<> 0, ..., 0)` to avoid divide-by-zero and noise
+- Apportionment Rate is stored as a percentage (e.g. 60 = 60%), divide by 100
+- The TI process writes Amount and Apportionment Rate; the rule calculates Apportioned Amount
+- **Feeders are always required under SKIPCHECK for any rule-derived cell**, regardless of whether the source values are written by TI or derived by other rules. Without a feeder, TM1 never evaluates the rule at that cell and it returns zero/empty. The feeder tells TM1 *where* to evaluate the result, not *how* the inputs were populated.
+
+## Feeder Pattern
+
+Feeders tell TM1 which source cells can activate a rule result. Without a feeder, consolidation calculations are zero (SKIPCHECK suppresses automatic feeder derivation).
+
+```
+FEEDERS;
+
+# Feed Apportioned Amount from Amount
+['Amount'] => ['Apportioned Amount'];
+```
+
+For rules that depend on values from other cubes, use a DB() feeder:
+
+```
+['Driver Value'] => ['Driver Percentage Share'];
+```
+
+## DB() Function — Cross-Cube Lookup
+
+To read a value from another cube within a rule:
+
+```
+DB('CST Pool Driver',
+   !GBL Period,
+   !GBL Version,
+   !CST Cost Pool,
+   !CST Activity,
+   'Driver Percentage Share')
+```
+
+`!DimName` refers to the current element of that dimension on the slice being calculated. Dimension names in DB() must exactly match the cube's dimension order.
+
+## String Measures in Rules
+
+Use `StringToNumber()` when a string measure is used in a numeric calculation:
+
+```
+['Numeric Result'] = N:
+    StringToNumber(DB('CST Account Driver', ..., 'Driver Code'));
+```
+
+For pure string rules, use `S:` prefix:
+
+```
+['Display Label'] = S:
+    DB('CST Account Driver', ..., 'Driver Code');
+```
+
+## Driver Percentage Share Calculation
+
+For driver cubes that calculate percentage share from raw values:
+
+```
+SKIPCHECK;
+
+['Driver Percentage Share'] = N:
+    IF(
+        ['Driver Value'] <> 0
+        AND DB('CST Driver Values', !GBL Period, !GBL Version, !CST Cost Pool, 'TOTAL', 'Driver Value') <> 0,
+        ['Driver Value']
+        / DB('CST Driver Values', !GBL Period, !GBL Version, !CST Cost Pool, 'TOTAL', 'Driver Value')
+        * 100,
+        0
+    );
+
+FEEDERS;
+['Driver Value'] => ['Driver Percentage Share'];
+```
+
+Replace `TOTAL` with the appropriate consolidation element name.
+
+## Stage Rule Summary
+
+| Cube | Rule | Source |
+|------|------|--------|
+| CST Cost Pool Apportionment | `['Apportioned Amount'] = N: ['Amount'] * ['Apportionment Rate'] / 100` | TI writes Amount + Rate |
+| CST Pool to Pool Apportionment | `['Apportioned Amount'] = N: ['Amount'] * ['Driver Percentage Share'] / 100` | TI writes Amount; rule reads Driver% |
+| CST Activity Apportionment | `['Apportioned Amount'] = N: ['Amount'] * ['Driver Percentage Share'] / 100` | TI writes Amount; rule reads Driver% |
+| CST Activity to Activity Apportionment | same pattern | — |
+| CST Service Line Cost | same pattern | — |
+| CST Pool Driver | `['Driver Percentage Share'] = N: ['Driver Value'] / TOTAL * 100` | Input cube feeds Driver Value |
+| CST Activity Driver | same pattern | — |
+| CST Profit and Loss Report | aggregates from all stage outputs via DB() | — |
+
+## Deploying Rules via TM1py
+
+```python
+with open('rules/cst_cost_pool_apportionment.rux') as f:
+    rules_text = f.read()
+tm1.cubes.update_rules(cube_name='CST Cost Pool Apportionment', rules=rules_text)
+```
+
+If the cube has no existing rules, use `create_rules()`. Check with `tm1.cubes.get(cube_name).has_rules`.

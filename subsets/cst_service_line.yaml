@@ -1,0 +1,5 @@
+dimension: CST Service Line
+subsets:
+  - subset_name: All Service Lines
+    set_as_default: true
+    mdx: "{TM1FILTERBYLEVEL({TM1SUBSETALL([CST Service Line])}, 0)}"
