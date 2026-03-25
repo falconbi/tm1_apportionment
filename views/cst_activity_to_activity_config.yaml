@@ -1,0 +1,23 @@
+cube: CST Activity to Activity Config
+views:
+  - view_name: RPT Default
+    set_as_default: true
+    mdx: |
+      SELECT
+      NON EMPTY {
+        STRTOMEMBER("[GBL Period].[" + [GBL Version].CURRENTMEMBER.PROPERTIES("Start Period") + "]")
+        :
+        STRTOMEMBER("[GBL Period].[" + [GBL Version].CURRENTMEMBER.PROPERTIES("End Period") + "]")
+      } ON 0,
+      NON EMPTY {
+        [CST Activity].[CST Activity].MEMBERS
+      } * {
+        [CST Activity Dest].[CST Activity Dest].MEMBERS
+      } * {
+        [GBL Cost Centre].[GBL Cost Centre].MEMBERS
+      } ON 1
+      FROM [CST Activity to Activity Config]
+      WHERE (
+        [GBL Version].[GBL Version].[Budget],
+        [CST Activity to Activity Config Measure].[CST Activity to Activity Config Measure].[Driver Value]
+      )

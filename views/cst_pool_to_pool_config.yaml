@@ -1,0 +1,66 @@
+cube: CST Pool to Pool Config
+views:
+  - view_name: RPT Default
+    set_as_default: true
+    mdx: |
+      SELECT
+      NON EMPTY {
+        STRTOMEMBER("[GBL Period].[" + [GBL Version].CURRENTMEMBER.PROPERTIES("Start Period") + "]")
+        :
+        STRTOMEMBER("[GBL Period].[" + [GBL Version].CURRENTMEMBER.PROPERTIES("End Period") + "]")
+      } * {
+        [CST Pool to Pool Config Measure].[CST Pool to Pool Config Measure].MEMBERS
+      } ON 0,
+      NON EMPTY {
+        TM1FILTERBYLEVEL({TM1SUBSETALL([CST Cost Pool Dest])}, 0)
+      } * {
+        TM1FILTERBYLEVEL({TM1SUBSETALL([CST Cost Pool])}, 0)
+      } ON 1
+      FROM [CST Pool to Pool Config]
+      WHERE (
+        [GBL Version].[GBL Version].[Budget],
+        [GBL Cost Centre].[GBL Cost Centre].[Input]
+      )
+
+  - view_name: RPT Pool to Pool Active
+    set_as_default: false
+    mdx: |
+      SELECT
+      NON EMPTY {
+        STRTOMEMBER("[GBL Period].[" + [GBL Version].CURRENTMEMBER.PROPERTIES("Start Period") + "]")
+        :
+        STRTOMEMBER("[GBL Period].[" + [GBL Version].CURRENTMEMBER.PROPERTIES("End Period") + "]")
+      } ON 0,
+      {
+        TM1FILTERBYLEVEL({TM1SUBSETALL([CST Cost Pool])}, 0)
+      } * {
+        TM1FILTERBYLEVEL({TM1SUBSETALL([CST Cost Pool Dest])}, 0)
+      } ON 1
+      FROM [CST Pool to Pool Config]
+      WHERE (
+        [GBL Version].[GBL Version].[Budget],
+        [GBL Cost Centre].[GBL Cost Centre].[Input],
+        [CST Pool to Pool Config Measure].[CST Pool to Pool Config Measure].[Active]
+      )
+
+  - view_name: RPT Driver Value By Cost Centre
+    set_as_default: false
+    mdx: |
+      SELECT
+      NON EMPTY {
+        STRTOMEMBER("[GBL Period].[" + [GBL Version].CURRENTMEMBER.PROPERTIES("Start Period") + "]")
+        :
+        STRTOMEMBER("[GBL Period].[" + [GBL Version].CURRENTMEMBER.PROPERTIES("End Period") + "]")
+      } ON 0,
+      NON EMPTY {
+        TM1FILTERBYLEVEL({TM1SUBSETALL([CST Cost Pool])}, 0)
+      } * {
+        TM1FILTERBYLEVEL({TM1SUBSETALL([CST Cost Pool Dest])}, 0)
+      } * {
+        TM1FILTERBYLEVEL({TM1SUBSETALL([GBL Cost Centre])}, 0)
+      } ON 1
+      FROM [CST Pool to Pool Config]
+      WHERE (
+        [GBL Version].[GBL Version].[Budget],
+        [CST Pool to Pool Config Measure].[CST Pool to Pool Config Measure].[Driver Value]
+      )

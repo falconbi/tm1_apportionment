@@ -1,0 +1,5 @@
+dimension: CST ETL Job
+subsets:
+  - subset_name: All ETL Jobs
+    set_as_default: true
+    mdx: "{TM1FILTERBYLEVEL({TM1SUBSETALL([CST ETL Job])}, 0)}"
