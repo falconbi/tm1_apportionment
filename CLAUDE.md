@@ -174,17 +174,20 @@ Single period override: `--period 2025-04 --version Budget`
 
 ## Validation gate — VAL checks
 
-| Check | What it validates | Written by |
-|-------|-------------------|------------|
-| VAL01 | Driver value completeness — pools have values for their basis | load_drivers.py |
-| VAL02 | Driver coverage — all activities have input volumes | load_drivers.py |
-| VAL03 | Driver SQL vs TM1 spot-check | load_drivers.py |
-| VAL04 | Account config coverage — overhead accounts have pool assignments | load_drivers.py + load_gl.py |
+| Check | What it validates | Status | Written by |
+|-------|-------------------|--------|------------|
+| VAL01 | Pool Config — all pools have driver percentage shares configured | FAIL if any pool missing | run_apportionment.py |
+| VAL02 | Activity Config — all activities have input volumes configured | FAIL if any activity missing | run_apportionment.py |
+| VAL03 | Driver SQL vs TM1 spot-check — TM1 loaded values match SQL source totals | FAIL if mismatch > tolerance | run_apportionment.py |
+| VAL04 | Account Config — all overhead accounts have pool assignments (Driver % sums to 100) | FAIL if any account unassigned | run_apportionment.py |
+| VAL05 | Account Config — all Direct accounts have Direct % configured (sums to 100) | FAIL if any direct account missing % | run_apportionment.py |
+| VAL06 | Account Config — no accounts with blank Apportionment Type | FAIL if any account type is blank | run_apportionment.py |
 
 Status values: `PASS` / `WARNING` / `FAIL` / `NO DATA`
 - **FAIL** — gate blocks apportionment (override with `--force`)
 - **WARNING** — gate passes, apportionment runs with interim numbers
-- VAL01 = WARNING when pools have no driver values (valid — zero apportionment for those pools)
+- P2P and A2A driver completeness = WARNING not FAIL (missing = reciprocal skipped, valid if not configured)
+- VAL03 requires SQL source connection — skipped with WARNING if unavailable
 
 ---
 
