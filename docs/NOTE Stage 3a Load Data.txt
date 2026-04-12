@@ -1,0 +1,8 @@
+This stage prepares data from Stage 2c output.
+
+Drivers were loaded in Stage 1a — no new drivers loaded here.
+
+This stage:
+- Reads settled activity costs from Stage 2c
+- Passes data to Stage 3b for apportionment
+- Confirms Stage 2c Complete flag before proceeding

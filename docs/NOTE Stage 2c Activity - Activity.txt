@@ -1,0 +1,9 @@
+This stage handles reciprocal costs between activities, 
+where activities provide services to each other.
+
+Similar logic to Stage 1c:
+- Each activity-to-activity pair is configured with Active flag
+- Iterates until amounts converge between all activity pairs
+- Writes Complete flag when converged
+- Stage 3 then uses Activity to Service Line amounts.
+

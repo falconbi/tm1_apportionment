@@ -1,0 +1,27 @@
+The final stage routes activity costs to Service Lines.
+
+Note: Drivers were already loaded in Stage 1a. 
+Stage 3 uses the settled activity costs from Stage 2c output.
+
+How it works:
+
+1. Each activity's costs are apportioned to the Service 
+   Lines it supports, based on driver percentages.
+
+2. Service Lines represent the final cost objects — 
+   typically products, services, or cost centres.
+
+3. The apportionment formula:
+   
+   Apportioned Amount = Activity Amount x Driver %
+   
+   Example:
+     HR Activity: $150,000 total costs
+     Service Line: Employee Benefits driver %
+     Product A: 40%
+     Product B: 35%
+     Product C: 25%
+     
+     Product A receives: $150,000 x 40% = $60,000
+     Product B receives: $150,000 x 35% = $52,500
+     Product C receives: $150,000 x 25% = $37,500

@@ -1,0 +1,271 @@
+Process Flow Overview
+=================
+
+The Stage 1 apportionment process runs in three parts:
+
+  Stage 1a: Load Data
+  Stage 1b: Account — Pool
+  Stage 1c: Pool — Pool
+
+
+Stage 1a: Load Data
+-----------------
+
+Before apportionment calculations can run, three data sources must be 
+loaded into the system:
+
+1. Load Drivers
+   Drivers define how costs are shared across activities. The system 
+   supports six driver types:
+   
+   - Floor Space (sq ft) — for facility costs
+   - Headcount — for HR and payroll costs
+   - Asset Value — for depreciation and insurance
+   - Power Usage — for utility costs
+   - Bed Days — for healthcare costing
+   - Transactions — for activity-based processing costs
+   
+   Driver values are stored at the intersection of Cost Pool to 
+   Activity and represent each pool's share of that activity's total costs.
+
+2. Load GL Actuals
+   General Ledger amounts are loaded from the source finance system. 
+   Each account is classified as:
+   
+   - Direct — costs routed straight to Service Lines
+   - Indirect — costs that flow through the apportionment chain
+   - Excluded — costs not included in apportionment
+
+3. Load Driver Configuration
+   One process loads ALL driver data for all stages:
+   
+   - Pool Config — driver basis and values (Stage 1b)
+   - Pool to Pool Config — reciprocal driver pairs (Stage 1c)
+   - Activity Config — driver basis and values (Stage 2b)
+   - Activity to Activity Config — reciprocal driver pairs (Stage 2c)
+
+4. Load Cost Centre to Pool %
+   Each Cost Centre is assigned to a primary Cost Pool. This defines:
+   
+   - Where the centre's costs enter the apportionment chain
+   - The initial pool where overheads are collected before 
+     redistribution
+
+
+Stage 1b: Account — Pool
+---------------------
+
+This stage distributes overhead account costs to cost pools.
+
+How it works:
+
+1. Each overhead account is assigned to a cost pool in the Account Config.
+   This determines which pool collects that account's costs.
+
+2. Driver percentage shares are defined per pool in Pool Config.
+   These show how each pool's costs should be split across 
+   the activities it serves.
+
+3. The apportionment formula:
+   
+   Apportioned Amount = Account Amount x Driver %
+   
+   Example:
+     Account: IT Support ($100,000)
+     Assigned to: Technology Pool
+     Technology Pool driver % to HR Activity: 30%
+     Technology Pool driver % to Finance Activity: 70%
+     
+     HR Activity receives: $30,000
+     Finance Activity receives: $70,000
+
+4. Accounts marked as Direct bypass Stage 1b. They route 
+   straight to Service Lines via their direct percentage split.
+
+
+Stage 1c: Pool — Pool
+---------------------
+
+This stage handles reciprocal costs between cost pools, 
+where pools provide services to each other.
+
+Why it is needed:
+
+Some cost pools receive services from other pools. For example:
+- Facilities Pool provides office space to IT Pool
+- IT Pool provides tech support to Facilities Pool
+
+This creates a circular dependency that cannot be resolved 
+by a single pass through the data.
+
+How it works:
+
+1. Each pool-to-pool relationship is configured with:
+   - Active flag (1 = included in iteration, 0 = excluded)
+   - Driver Value (how the sending pool's costs are split)
+
+2. The process iterates multiple times until amounts 
+   converge (balance between all pool pairs).
+
+3. Convergence is reached when the difference between 
+   iterations is less than 0.01 (1 cent).
+
+Example first iteration:
+  Facilities receives from IT: $10,000
+  IT receives from Facilities: $5,000
+  
+  Net after iteration 1:
+    Facilities net: +$5,000
+    IT net: -$5,000
+
+  After convergence (typically 5-15 iterations):
+    All pools balance — each receives back proportionally 
+    what it contributed to others.
+
+
+Complete flag:
+
+Once Stage 1c converges, a Complete flag is written.
+This tells the system that Stage 1b amounts have been 
+settled and Stage 2 can now use Pool to Activity 
+apportionment amounts.
+
+
+What Happens After Stage 1
+-------------------------
+
+The Stage 2 apportionment process runs in three parts:
+
+  Stage 2a: Prepare Data
+  Stage 2b: Pool — Activity
+  Stage 2c: Activity — Activity
+
+
+Stage 2a: Prepare Data
+---------------------
+
+This stage prepares data from Stage 1c output.
+
+Drivers were loaded in Stage 1a — no new drivers loaded here.
+
+This stage:
+- Reads settled pool costs from Stage 1c
+- Passes data to Stage 2b for apportionment
+- Confirms Stage 1c Complete flag before proceeding
+
+
+Stage 2b: Pool — Activity
+----------------------
+
+This stage distributes pool costs to activities.
+
+How it works:
+
+1. Each cost pool's costs are apportioned to the activities 
+   it serves, based on driver percentages.
+
+2. Driver types (Floor Space, Headcount, Asset Value, etc.)
+   determine how each pool's costs are split.
+
+3. The apportionment formula:
+   
+   Apportioned Amount = Pool Amount x Driver %
+   
+   Example:
+     Technology Pool: $200,000 total costs
+     Driver: Headcount
+     HR Activity headcount: 10
+     Finance Activity headcount: 20
+     IT Activity headcount: 20
+     
+     Total headcount: 50
+     
+     HR Activity receives: $200,000 x 10/50 = $40,000
+     Finance Activity receives: $200,000 x 20/50 = $80,000
+     IT Activity receives: $200,000 x 20/50 = $80,000
+
+4. Stage 1c must complete first. The system checks for the 
+   Complete flag before running Stage 2b.
+
+
+Stage 2c: Activity — Activity
+--------------------------
+
+This stage handles reciprocal costs between activities, 
+where activities provide services to each other.
+
+Similar logic to Stage 1c:
+- Each activity-to-activity pair is configured with Active flag
+- Iterates until amounts converge between all activity pairs
+- Writes Complete flag when converged
+- Stage 3 then uses Activity to Service Line amounts.
+
+
+Stage 3: Activity — Service Line
+-----------------------------
+
+The final stage routes activity costs to Service Lines.
+
+  Stage 3a: Prepare Data
+  Stage 3b: Activity — Service Line
+
+Note: Drivers were already loaded in Stage 1a. 
+Stage 3 uses the settled activity costs from Stage 2c output.
+
+
+Stage 3a: Prepare Data
+---------------------
+
+This stage prepares data from Stage 2c output.
+
+Drivers were loaded in Stage 1a — no new drivers loaded here.
+
+This stage:
+- Reads settled activity costs from Stage 2c
+- Passes data to Stage 3b for apportionment
+- Confirms Stage 2c Complete flag before proceeding
+
+
+Stage 3b: Activity — Service Line
+
+The final stage routes activity costs to Service Lines.
+
+Note: Drivers were already loaded in Stage 1a. 
+Stage 3 uses the settled activity costs from Stage 2c output.
+
+How it works:
+
+1. Each activity's costs are apportioned to the Service 
+   Lines it supports, based on driver percentages.
+
+2. Service Lines represent the final cost objects — 
+   typically products, services, or cost centres.
+
+3. The apportionment formula:
+   
+   Apportioned Amount = Activity Amount x Driver %
+   
+   Example:
+     HR Activity: $150,000 total costs
+     Service Line: Employee Benefits driver %
+     Product A: 40%
+     Product B: 35%
+     Product C: 25%
+     
+     Product A receives: $150,000 x 40% = $60,000
+     Product B receives: $150,000 x 35% = $52,500
+     Product C receives: $150,000 x 25% = $37,500
+
+4. Direct costs (from Stage 1a) are added here. Direct 
+   accounts bypass Stages 1 and 2 and route straight 
+   to Service Lines via their direct % split.
+
+
+Process Complete
+--------------
+
+After Stages 1a–1c, 2a–2c and 3a–3b, all costs have been apportioned from:
+  Accounts → Cost Pools → Activities → Service Lines
+
+The system now has complete cost allocation for a full 
+Cost to Service Line P&L report.

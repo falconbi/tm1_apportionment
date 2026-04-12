@@ -1,0 +1,30 @@
+This stage distributes pool costs to activities.
+
+How it works:
+
+1. Each cost pool's costs are apportioned to the activities 
+   it serves, based on driver percentages.
+
+2. Driver types (Floor Space, Headcount, Asset Value, etc.)
+   determine how each pool's costs are split.
+
+3. The apportionment formula:
+   
+   Apportioned Amount = Pool Amount x Driver %
+   
+   Example:
+     Technology Pool: $200,000 total costs
+     Driver: Headcount
+     HR Activity headcount: 10
+     Finance Activity headcount: 20
+     IT Activity headcount: 20
+     
+     Total headcount: 50
+     
+     HR Activity receives: $200,000 x 10/50 = $40,000
+     Finance Activity receives: $200,000 x 20/50 = $80,000
+     IT Activity receives: $200,000 x 20/50 = $80,000
+
+4. Stage 1c must complete first. The system checks for the 
+   Complete flag before running Stage 2b.
+

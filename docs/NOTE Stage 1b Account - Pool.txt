@@ -1,0 +1,30 @@
+Stage 1b: Account — Pool
+---------------------
+
+This stage distributes overhead account costs to cost pools.
+
+How it works:
+
+1. Each overhead account is assigned to a cost pool in the Account Config.
+   This determines which pool collects that account's costs.
+
+2. Driver percentage shares are defined per pool in Pool Config.
+   These show how each pool's costs should be split across 
+   the activities it serves.
+
+3. The apportionment formula:
+   
+   Apportioned Amount = Account Amount x Driver %
+   
+   Example:
+     Account: IT Support ($100,000)
+     Assigned to: Technology Pool
+     Technology Pool driver % to HR Activity: 30%
+     Technology Pool driver % to Finance Activity: 70%
+     
+     HR Activity receives: $30,000
+     Finance Activity receives: $70,000
+
+4. Accounts marked as Direct bypass Stage 1b. They route 
+   straight to Service Lines via their direct percentage split.
+

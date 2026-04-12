@@ -1,0 +1,46 @@
+Stage 1c: Pool — Pool
+---------------------
+
+This stage handles reciprocal costs between cost pools, 
+where pools provide services to each other.
+
+Why it is needed:
+
+Some cost pools receive services from other pools. For example:
+- Facilities Pool provides office space to IT Pool
+- IT Pool provides tech support to Facilities Pool
+
+This creates a circular dependency that cannot be resolved 
+by a single pass through the data.
+
+How it works:
+
+1. Each pool-to-pool relationship is configured with:
+   - Active flag (1 = included in iteration, 0 = excluded)
+   - Driver Value (how the sending pool's costs are split)
+
+2. The process iterates multiple times until amounts 
+   converge (balance between all pool pairs).
+
+3. Convergence is reached when the difference between 
+   iterations is less than 0.01 (1 cent).
+
+Example first iteration:
+  Facilities receives from IT: $10,000
+  IT receives from Facilities: $5,000
+  
+  Net after iteration 1:
+    Facilities net: +$5,000
+    IT net: -$5,000
+
+  After convergence (typically 5-15 iterations):
+    All pools balance — each receives back proportionally 
+    what it contributed to others.
+
+
+Complete flag:
+
+Once Stage 1c converges, a Complete flag is written.
+This tells the system that Stage 1b amounts have been 
+settled and Stage 2 can now use Pool to Activity 
+apportionment amounts.
