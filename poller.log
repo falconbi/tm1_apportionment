@@ -1,0 +1,2325 @@
+
+  CST ETL Poller started — polling every 15s
+  Jobs: Load GL, Load Drivers, Run Apportionment
+
+  → Load Drivers REQUESTED — starting
+
+────────────────────────────────────────────────────────────
+  ETL — Load Drivers → TM1
+  Source: cst_test_data.db
+  Version: Budget  (2026-04 → 2027-03, 12 periods)
+────────────────────────────────────────────────────────────
+
+  Period 2026-04 / Budget
+    1. CST Pool Config
+       ✓ 0 cells written
+    2. CST Pool to Pool Config
+       ✓ 0 cells written
+    3. CST Activity Config
+       ✓ 0 cells written
+    4. CST Activity to Activity Config
+       ✓ 0 cells written
+    5. Validation checks
+       ✓ VAL01-VAL04 written
+
+  Period 2026-05 / Budget
+    1. CST Pool Config
+       ✓ 0 cells written
+    2. CST Pool to Pool Config
+       ✓ 0 cells written
+    3. CST Activity Config
+       ✓ 0 cells written
+    4. CST Activity to Activity Config
+       ✓ 0 cells written
+    5. Validation checks
+       ✓ VAL01-VAL04 written
+
+  Period 2026-06 / Budget
+    1. CST Pool Config
+       ✓ 0 cells written
+    2. CST Pool to Pool Config
+       ✓ 0 cells written
+    3. CST Activity Config
+       ✓ 0 cells written
+    4. CST Activity to Activity Config
+       ✓ 0 cells written
+    5. Validation checks
+       ✓ VAL01-VAL04 written
+
+  Period 2026-07 / Budget
+    1. CST Pool Config
+       ✓ 0 cells written
+    2. CST Pool to Pool Config
+       ✓ 0 cells written
+    3. CST Activity Config
+       ✓ 0 cells written
+    4. CST Activity to Activity Config
+       ✓ 0 cells written
+    5. Validation checks
+       ✓ VAL01-VAL04 written
+
+  Period 2026-08 / Budget
+    1. CST Pool Config
+       ✓ 0 cells written
+    2. CST Pool to Pool Config
+       ✓ 0 cells written
+    3. CST Activity Config
+       ✓ 0 cells written
+    4. CST Activity to Activity Config
+       ✓ 0 cells written
+    5. Validation checks
+       ✓ VAL01-VAL04 written
+
+  Period 2026-09 / Budget
+    1. CST Pool Config
+       ✓ 0 cells written
+    2. CST Pool to Pool Config
+       ✓ 0 cells written
+    3. CST Activity Config
+       ✓ 0 cells written
+    4. CST Activity to Activity Config
+       ✓ 0 cells written
+    5. Validation checks
+       ✓ VAL01-VAL04 written
+
+  Period 2026-10 / Budget
+    1. CST Pool Config
+       ✓ 0 cells written
+    2. CST Pool to Pool Config
+       ✓ 0 cells written
+    3. CST Activity Config
+       ✓ 0 cells written
+    4. CST Activity to Activity Config
+       ✓ 0 cells written
+    5. Validation checks
+       ✓ VAL01-VAL04 written
+
+  Period 2026-11 / Budget
+    1. CST Pool Config
+       ✓ 0 cells written
+    2. CST Pool to Pool Config
+       ✓ 0 cells written
+    3. CST Activity Config
+       ✓ 0 cells written
+    4. CST Activity to Activity Config
+       ✓ 0 cells written
+    5. Validation checks
+       ✓ VAL01-VAL04 written
+
+  Period 2026-12 / Budget
+    1. CST Pool Config
+       ✓ 0 cells written
+    2. CST Pool to Pool Config
+       ✓ 0 cells written
+    3. CST Activity Config
+       ✓ 0 cells written
+    4. CST Activity to Activity Config
+       ✓ 0 cells written
+    5. Validation checks
+       ✓ VAL01-VAL04 written
+
+  Period 2027-01 / Budget
+    1. CST Pool Config
+       ✓ 0 cells written
+    2. CST Pool to Pool Config
+       ✓ 0 cells written
+    3. CST Activity Config
+       ✓ 0 cells written
+    4. CST Activity to Activity Config
+       ✓ 0 cells written
+    5. Validation checks
+       ✓ VAL01-VAL04 written
+
+  Period 2027-02 / Budget
+    1. CST Pool Config
+       ✓ 0 cells written
+    2. CST Pool to Pool Config
+       ✓ 0 cells written
+    3. CST Activity Config
+       ✓ 0 cells written
+    4. CST Activity to Activity Config
+       ✓ 0 cells written
+    5. Validation checks
+       ✓ VAL01-VAL04 written
+
+  Period 2027-03 / Budget
+    1. CST Pool Config
+       ✓ 0 cells written
+    2. CST Pool to Pool Config
+       ✓ 0 cells written
+    3. CST Activity Config
+       ✓ 0 cells written
+    4. CST Activity to Activity Config
+       ✓ 0 cells written
+    5. Validation checks
+       ✓ VAL01-VAL04 written
+
+────────────────────────────────────────────────────────────
+  Done. Review VAL checks in PAW before running apportionment.
+────────────────────────────────────────────────────────────
+
+  ✓ Load Drivers COMPLETE — Completed for all Budget periods
+  → Load Drivers REQUESTED — starting
+
+────────────────────────────────────────────────────────────
+  ETL — Load Drivers → TM1
+  Source: cst_test_data.db
+  Version: Forecast  (2026-04 → 2027-10, 19 periods)
+────────────────────────────────────────────────────────────
+
+  Period 2026-04 / Forecast
+    1. CST Pool Config
+       ✓ 30 cells written
+    2. CST Pool to Pool Config
+       ✓ 60 cells written
+    3. CST Activity Config
+       ✓ 231 cells written
+    4. CST Activity to Activity Config
+       ✓ 12 cells written
+    5. Validation checks
+       ✓ VAL01-VAL04 written
+
+  Period 2026-05 / Forecast
+    1. CST Pool Config
+       ✓ 30 cells written
+    2. CST Pool to Pool Config
+       ✓ 60 cells written
+    3. CST Activity Config
+       ✓ 231 cells written
+    4. CST Activity to Activity Config
+       ✓ 12 cells written
+    5. Validation checks
+       ✓ VAL01-VAL04 written
+
+  Period 2026-06 / Forecast
+    1. CST Pool Config
+       ✓ 30 cells written
+    2. CST Pool to Pool Config
+       ✓ 60 cells written
+    3. CST Activity Config
+       ✓ 231 cells written
+    4. CST Activity to Activity Config
+       ✓ 12 cells written
+    5. Validation checks
+       ✓ VAL01-VAL04 written
+
+  Period 2026-07 / Forecast
+    1. CST Pool Config
+       ✓ 30 cells written
+    2. CST Pool to Pool Config
+       ✓ 60 cells written
+    3. CST Activity Config
+       ✓ 231 cells written
+    4. CST Activity to Activity Config
+       ✓ 12 cells written
+    5. Validation checks
+       ✓ VAL01-VAL04 written
+
+  Period 2026-08 / Forecast
+    1. CST Pool Config
+       ✓ 30 cells written
+    2. CST Pool to Pool Config
+       ✓ 60 cells written
+    3. CST Activity Config
+       ✓ 231 cells written
+    4. CST Activity to Activity Config
+       ✓ 12 cells written
+    5. Validation checks
+       ✓ VAL01-VAL04 written
+
+  Period 2026-09 / Forecast
+    1. CST Pool Config
+       ✓ 30 cells written
+    2. CST Pool to Pool Config
+       ✓ 60 cells written
+    3. CST Activity Config
+       ✓ 231 cells written
+    4. CST Activity to Activity Config
+       ✓ 12 cells written
+    5. Validation checks
+       ✓ VAL01-VAL04 written
+
+  Period 2026-10 / Forecast
+    1. CST Pool Config
+       ✓ 30 cells written
+    2. CST Pool to Pool Config
+       ✓ 60 cells written
+    3. CST Activity Config
+       ✓ 231 cells written
+    4. CST Activity to Activity Config
+       ✓ 12 cells written
+    5. Validation checks
+       ✓ VAL01-VAL04 written
+
+  Period 2026-11 / Forecast
+    1. CST Pool Config
+       ✓ 30 cells written
+    2. CST Pool to Pool Config
+       ✓ 60 cells written
+    3. CST Activity Config
+       ✓ 231 cells written
+    4. CST Activity to Activity Config
+       ✓ 12 cells written
+    5. Validation checks
+       ✓ VAL01-VAL04 written
+
+  Period 2026-12 / Forecast
+    1. CST Pool Config
+       ✓ 30 cells written
+    2. CST Pool to Pool Config
+       ✓ 60 cells written
+    3. CST Activity Config
+       ✓ 231 cells written
+    4. CST Activity to Activity Config
+       ✓ 12 cells written
+    5. Validation checks
+       ✓ VAL01-VAL04 written
+
+  Period 2027-01 / Forecast
+    1. CST Pool Config
+       ✓ 30 cells written
+    2. CST Pool to Pool Config
+       ✓ 60 cells written
+    3. CST Activity Config
+       ✓ 231 cells written
+    4. CST Activity to Activity Config
+       ✓ 12 cells written
+    5. Validation checks
+       ✓ VAL01-VAL04 written
+
+  Period 2027-02 / Forecast
+    1. CST Pool Config
+       ✓ 30 cells written
+    2. CST Pool to Pool Config
+       ✓ 60 cells written
+    3. CST Activity Config
+       ✓ 231 cells written
+    4. CST Activity to Activity Config
+       ✓ 12 cells written
+    5. Validation checks
+       ✓ VAL01-VAL04 written
+
+  Period 2027-03 / Forecast
+    1. CST Pool Config
+       ✓ 30 cells written
+    2. CST Pool to Pool Config
+       ✓ 60 cells written
+    3. CST Activity Config
+       ✓ 231 cells written
+    4. CST Activity to Activity Config
+       ✓ 12 cells written
+    5. Validation checks
+       ✓ VAL01-VAL04 written
+
+  Period 2027-04 / Forecast
+    1. CST Pool Config
+       ✓ 30 cells written
+    2. CST Pool to Pool Config
+       ✓ 60 cells written
+    3. CST Activity Config
+       ✓ 231 cells written
+    4. CST Activity to Activity Config
+       ✓ 12 cells written
+    5. Validation checks
+       ✓ VAL01-VAL04 written
+
+  Period 2027-05 / Forecast
+    1. CST Pool Config
+       ✓ 30 cells written
+    2. CST Pool to Pool Config
+       ✓ 60 cells written
+    3. CST Activity Config
+       ✓ 231 cells written
+    4. CST Activity to Activity Config
+       ✓ 12 cells written
+    5. Validation checks
+       ✓ VAL01-VAL04 written
+
+  Period 2027-06 / Forecast
+    1. CST Pool Config
+       ✓ 30 cells written
+    2. CST Pool to Pool Config
+       ✓ 60 cells written
+    3. CST Activity Config
+       ✓ 231 cells written
+    4. CST Activity to Activity Config
+       ✓ 12 cells written
+    5. Validation checks
+       ✓ VAL01-VAL04 written
+
+  Period 2027-07 / Forecast
+    1. CST Pool Config
+       ✓ 30 cells written
+    2. CST Pool to Pool Config
+       ✓ 60 cells written
+    3. CST Activity Config
+       ✓ 231 cells written
+    4. CST Activity to Activity Config
+       ✓ 12 cells written
+    5. Validation checks
+       ✓ VAL01-VAL04 written
+
+  Period 2027-08 / Forecast
+    1. CST Pool Config
+       ✓ 30 cells written
+    2. CST Pool to Pool Config
+       ✓ 60 cells written
+    3. CST Activity Config
+       ✓ 231 cells written
+    4. CST Activity to Activity Config
+       ✓ 12 cells written
+    5. Validation checks
+       ✓ VAL01-VAL04 written
+
+  Period 2027-09 / Forecast
+    1. CST Pool Config
+       ✓ 0 cells written
+    2. CST Pool to Pool Config
+       ✓ 0 cells written
+    3. CST Activity Config
+       ✓ 0 cells written
+    4. CST Activity to Activity Config
+       ✓ 0 cells written
+    5. Validation checks
+       ✓ VAL01-VAL04 written
+
+  Period 2027-10 / Forecast
+    1. CST Pool Config
+       ✓ 0 cells written
+    2. CST Pool to Pool Config
+       ✓ 0 cells written
+    3. CST Activity Config
+       ✓ 0 cells written
+    4. CST Activity to Activity Config
+       ✓ 0 cells written
+    5. Validation checks
+       ✓ VAL01-VAL04 written
+
+────────────────────────────────────────────────────────────
+  Done. Review VAL checks in PAW before running apportionment.
+────────────────────────────────────────────────────────────
+
+  ✓ Load Drivers COMPLETE — Completed for all Forecast periods
+  → Load Drivers REQUESTED — starting
+
+────────────────────────────────────────────────────────────
+  ETL — Load Drivers → TM1
+  Source: cst_test_data.db
+  Version: Actual  (2025-04 → 2026-03, 12 periods)
+────────────────────────────────────────────────────────────
+
+  Period 2025-04 / Actual
+    1. CST Pool Config
+       ✓ 0 cells written
+    2. CST Pool to Pool Config
+       ✓ 0 cells written
+    3. CST Activity Config
+       ✓ 0 cells written
+    4. CST Activity to Activity Config
+       ✓ 0 cells written
+    5. Validation checks
+       ✓ VAL01-VAL04 written
+
+  Period 2025-05 / Actual
+    1. CST Pool Config
+       ✓ 0 cells written
+    2. CST Pool to Pool Config
+       ✓ 0 cells written
+    3. CST Activity Config
+       ✓ 0 cells written
+    4. CST Activity to Activity Config
+       ✓ 0 cells written
+    5. Validation checks
+       ✓ VAL01-VAL04 written
+
+  Period 2025-06 / Actual
+    1. CST Pool Config
+       ✓ 0 cells written
+    2. CST Pool to Pool Config
+       ✓ 0 cells written
+    3. CST Activity Config
+       ✓ 0 cells written
+    4. CST Activity to Activity Config
+       ✓ 0 cells written
+    5. Validation checks
+       ✓ VAL01-VAL04 written
+
+  Period 2025-07 / Actual
+    1. CST Pool Config
+       ✓ 0 cells written
+    2. CST Pool to Pool Config
+       ✓ 0 cells written
+    3. CST Activity Config
+       ✓ 0 cells written
+    4. CST Activity to Activity Config
+       ✓ 0 cells written
+    5. Validation checks
+       ✓ VAL01-VAL04 written
+
+  Period 2025-08 / Actual
+    1. CST Pool Config
+       ✓ 0 cells written
+    2. CST Pool to Pool Config
+       ✓ 0 cells written
+    3. CST Activity Config
+       ✓ 0 cells written
+    4. CST Activity to Activity Config
+       ✓ 0 cells written
+    5. Validation checks
+       ✓ VAL01-VAL04 written
+
+  Period 2025-09 / Actual
+    1. CST Pool Config
+       ✓ 0 cells written
+    2. CST Pool to Pool Config
+       ✓ 0 cells written
+    3. CST Activity Config
+       ✓ 0 cells written
+    4. CST Activity to Activity Config
+       ✓ 0 cells written
+    5. Validation checks
+       ✓ VAL01-VAL04 written
+
+  Period 2025-10 / Actual
+    1. CST Pool Config
+       ✓ 0 cells written
+    2. CST Pool to Pool Config
+       ✓ 0 cells written
+    3. CST Activity Config
+       ✓ 0 cells written
+    4. CST Activity to Activity Config
+       ✓ 0 cells written
+    5. Validation checks
+       ✓ VAL01-VAL04 written
+
+  Period 2025-11 / Actual
+    1. CST Pool Config
+       ✓ 0 cells written
+    2. CST Pool to Pool Config
+       ✓ 0 cells written
+    3. CST Activity Config
+       ✓ 0 cells written
+    4. CST Activity to Activity Config
+       ✓ 0 cells written
+    5. Validation checks
+       ✓ VAL01-VAL04 written
+
+  Period 2025-12 / Actual
+    1. CST Pool Config
+       ✓ 0 cells written
+    2. CST Pool to Pool Config
+       ✓ 0 cells written
+    3. CST Activity Config
+       ✓ 0 cells written
+    4. CST Activity to Activity Config
+       ✓ 0 cells written
+    5. Validation checks
+       ✓ VAL01-VAL04 written
+
+  Period 2026-01 / Actual
+    1. CST Pool Config
+       ✓ 0 cells written
+    2. CST Pool to Pool Config
+       ✓ 0 cells written
+    3. CST Activity Config
+       ✓ 0 cells written
+    4. CST Activity to Activity Config
+       ✓ 0 cells written
+    5. Validation checks
+       ✓ VAL01-VAL04 written
+
+  Period 2026-02 / Actual
+    1. CST Pool Config
+       ✓ 0 cells written
+    2. CST Pool to Pool Config
+       ✓ 0 cells written
+    3. CST Activity Config
+       ✓ 0 cells written
+    4. CST Activity to Activity Config
+       ✓ 0 cells written
+    5. Validation checks
+       ✓ VAL01-VAL04 written
+
+  Period 2026-03 / Actual
+    1. CST Pool Config
+       ✓ 0 cells written
+    2. CST Pool to Pool Config
+       ✓ 0 cells written
+    3. CST Activity Config
+       ✓ 0 cells written
+    4. CST Activity to Activity Config
+       ✓ 0 cells written
+    5. Validation checks
+       ✓ VAL01-VAL04 written
+
+────────────────────────────────────────────────────────────
+  Done. Review VAL checks in PAW before running apportionment.
+────────────────────────────────────────────────────────────
+
+  ✓ Load Drivers COMPLETE — Completed for all Actual periods
+  → Run Apportionment REQUESTED — starting
+
+────────────────────────────────────────────────────────────
+  CST Apportionment Run
+  Period:  2026-04
+  Version: Budget
+────────────────────────────────────────────────────────────
+
+  Running VAL checks...
+    VAL checks written to Reconciliation cube
+
+  Validation gate check...
+    ✗ VAL01: FAIL — 9 pool(s) missing driver %: CP01, CP02, CP03, CP04, CP05, CP06, CP07, CP08, CP09
+    ✗ VAL02: FAIL — 11 activity(s) missing input volume: A01, A02, A03, A04, A05, A06, A07, A08, A09, A10, A11
+    ! VAL03: WARNING — SQL source check not configured — skipped
+    ✓ VAL04: PASS — All overhead accounts have pool assignments
+    ✓ VAL05: PASS — All Direct accounts have Direct % configured
+    ✓ VAL06: PASS — All accounts have Apportionment Type configured
+
+  ✗ Validation failed — apportionment aborted.
+    Run with --force to override gate check.
+
+  Skipping period 2026-04 — gate check failed.
+
+────────────────────────────────────────────────────────────
+  CST Apportionment Run
+  Period:  2026-05
+  Version: Budget
+────────────────────────────────────────────────────────────
+
+  Running VAL checks...
+    VAL checks written to Reconciliation cube
+
+  Validation gate check...
+    ✗ VAL01: FAIL — 9 pool(s) missing driver %: CP01, CP02, CP03, CP04, CP05, CP06, CP07, CP08, CP09
+    ✗ VAL02: FAIL — 11 activity(s) missing input volume: A01, A02, A03, A04, A05, A06, A07, A08, A09, A10, A11
+    ! VAL03: WARNING — SQL source check not configured — skipped
+    ✓ VAL04: PASS — All overhead accounts have pool assignments
+    ✓ VAL05: PASS — All Direct accounts have Direct % configured
+    ✓ VAL06: PASS — All accounts have Apportionment Type configured
+
+  ✗ Validation failed — apportionment aborted.
+    Run with --force to override gate check.
+
+  Skipping period 2026-05 — gate check failed.
+
+────────────────────────────────────────────────────────────
+  CST Apportionment Run
+  Period:  2026-06
+  Version: Budget
+────────────────────────────────────────────────────────────
+
+  Running VAL checks...
+    VAL checks written to Reconciliation cube
+
+  Validation gate check...
+    ✗ VAL01: FAIL — 9 pool(s) missing driver %: CP01, CP02, CP03, CP04, CP05, CP06, CP07, CP08, CP09
+    ✗ VAL02: FAIL — 11 activity(s) missing input volume: A01, A02, A03, A04, A05, A06, A07, A08, A09, A10, A11
+    ! VAL03: WARNING — SQL source check not configured — skipped
+    ✓ VAL04: PASS — All overhead accounts have pool assignments
+    ✓ VAL05: PASS — All Direct accounts have Direct % configured
+    ✓ VAL06: PASS — All accounts have Apportionment Type configured
+
+  ✗ Validation failed — apportionment aborted.
+    Run with --force to override gate check.
+
+  Skipping period 2026-06 — gate check failed.
+
+────────────────────────────────────────────────────────────
+  CST Apportionment Run
+  Period:  2026-07
+  Version: Budget
+────────────────────────────────────────────────────────────
+
+  Running VAL checks...
+    VAL checks written to Reconciliation cube
+
+  Validation gate check...
+    ✗ VAL01: FAIL — 9 pool(s) missing driver %: CP01, CP02, CP03, CP04, CP05, CP06, CP07, CP08, CP09
+    ✗ VAL02: FAIL — 11 activity(s) missing input volume: A01, A02, A03, A04, A05, A06, A07, A08, A09, A10, A11
+    ! VAL03: WARNING — SQL source check not configured — skipped
+    ✓ VAL04: PASS — All overhead accounts have pool assignments
+    ✓ VAL05: PASS — All Direct accounts have Direct % configured
+    ✓ VAL06: PASS — All accounts have Apportionment Type configured
+
+  ✗ Validation failed — apportionment aborted.
+    Run with --force to override gate check.
+
+  Skipping period 2026-07 — gate check failed.
+
+────────────────────────────────────────────────────────────
+  CST Apportionment Run
+  Period:  2026-08
+  Version: Budget
+────────────────────────────────────────────────────────────
+
+  Running VAL checks...
+    VAL checks written to Reconciliation cube
+
+  Validation gate check...
+    ✗ VAL01: FAIL — 9 pool(s) missing driver %: CP01, CP02, CP03, CP04, CP05, CP06, CP07, CP08, CP09
+    ✗ VAL02: FAIL — 11 activity(s) missing input volume: A01, A02, A03, A04, A05, A06, A07, A08, A09, A10, A11
+    ! VAL03: WARNING — SQL source check not configured — skipped
+    ✓ VAL04: PASS — All overhead accounts have pool assignments
+    ✓ VAL05: PASS — All Direct accounts have Direct % configured
+    ✓ VAL06: PASS — All accounts have Apportionment Type configured
+
+  ✗ Validation failed — apportionment aborted.
+    Run with --force to override gate check.
+
+  Skipping period 2026-08 — gate check failed.
+
+────────────────────────────────────────────────────────────
+  CST Apportionment Run
+  Period:  2026-09
+  Version: Budget
+────────────────────────────────────────────────────────────
+
+  Running VAL checks...
+    VAL checks written to Reconciliation cube
+
+  Validation gate check...
+    ✗ VAL01: FAIL — 9 pool(s) missing driver %: CP01, CP02, CP03, CP04, CP05, CP06, CP07, CP08, CP09
+    ✗ VAL02: FAIL — 11 activity(s) missing input volume: A01, A02, A03, A04, A05, A06, A07, A08, A09, A10, A11
+    ! VAL03: WARNING — SQL source check not configured — skipped
+    ✓ VAL04: PASS — All overhead accounts have pool assignments
+    ✓ VAL05: PASS — All Direct accounts have Direct % configured
+    ✓ VAL06: PASS — All accounts have Apportionment Type configured
+
+  ✗ Validation failed — apportionment aborted.
+    Run with --force to override gate check.
+
+  Skipping period 2026-09 — gate check failed.
+
+────────────────────────────────────────────────────────────
+  CST Apportionment Run
+  Period:  2026-10
+  Version: Budget
+────────────────────────────────────────────────────────────
+
+  Running VAL checks...
+    VAL checks written to Reconciliation cube
+
+  Validation gate check...
+    ✗ VAL01: FAIL — 9 pool(s) missing driver %: CP01, CP02, CP03, CP04, CP05, CP06, CP07, CP08, CP09
+    ✗ VAL02: FAIL — 11 activity(s) missing input volume: A01, A02, A03, A04, A05, A06, A07, A08, A09, A10, A11
+    ! VAL03: WARNING — SQL source check not configured — skipped
+    ✓ VAL04: PASS — All overhead accounts have pool assignments
+    ✓ VAL05: PASS — All Direct accounts have Direct % configured
+    ✓ VAL06: PASS — All accounts have Apportionment Type configured
+
+  ✗ Validation failed — apportionment aborted.
+    Run with --force to override gate check.
+
+  Skipping period 2026-10 — gate check failed.
+
+────────────────────────────────────────────────────────────
+  CST Apportionment Run
+  Period:  2026-11
+  Version: Budget
+────────────────────────────────────────────────────────────
+
+  Running VAL checks...
+    VAL checks written to Reconciliation cube
+
+  Validation gate check...
+    ✗ VAL01: FAIL — 9 pool(s) missing driver %: CP01, CP02, CP03, CP04, CP05, CP06, CP07, CP08, CP09
+    ✗ VAL02: FAIL — 11 activity(s) missing input volume: A01, A02, A03, A04, A05, A06, A07, A08, A09, A10, A11
+    ! VAL03: WARNING — SQL source check not configured — skipped
+    ✓ VAL04: PASS — All overhead accounts have pool assignments
+    ✓ VAL05: PASS — All Direct accounts have Direct % configured
+    ✓ VAL06: PASS — All accounts have Apportionment Type configured
+
+  ✗ Validation failed — apportionment aborted.
+    Run with --force to override gate check.
+
+  Skipping period 2026-11 — gate check failed.
+
+────────────────────────────────────────────────────────────
+  CST Apportionment Run
+  Period:  2026-12
+  Version: Budget
+────────────────────────────────────────────────────────────
+
+  Running VAL checks...
+    VAL checks written to Reconciliation cube
+
+  Validation gate check...
+    ✗ VAL01: FAIL — 9 pool(s) missing driver %: CP01, CP02, CP03, CP04, CP05, CP06, CP07, CP08, CP09
+    ✗ VAL02: FAIL — 11 activity(s) missing input volume: A01, A02, A03, A04, A05, A06, A07, A08, A09, A10, A11
+    ! VAL03: WARNING — SQL source check not configured — skipped
+    ✓ VAL04: PASS — All overhead accounts have pool assignments
+    ✓ VAL05: PASS — All Direct accounts have Direct % configured
+    ✓ VAL06: PASS — All accounts have Apportionment Type configured
+
+  ✗ Validation failed — apportionment aborted.
+    Run with --force to override gate check.
+
+  Skipping period 2026-12 — gate check failed.
+
+────────────────────────────────────────────────────────────
+  CST Apportionment Run
+  Period:  2027-01
+  Version: Budget
+────────────────────────────────────────────────────────────
+
+  Running VAL checks...
+    VAL checks written to Reconciliation cube
+
+  Validation gate check...
+    ✗ VAL01: FAIL — 9 pool(s) missing driver %: CP01, CP02, CP03, CP04, CP05, CP06, CP07, CP08, CP09
+    ✗ VAL02: FAIL — 11 activity(s) missing input volume: A01, A02, A03, A04, A05, A06, A07, A08, A09, A10, A11
+    ! VAL03: WARNING — SQL source check not configured — skipped
+    ✓ VAL04: PASS — All overhead accounts have pool assignments
+    ✓ VAL05: PASS — All Direct accounts have Direct % configured
+    ✓ VAL06: PASS — All accounts have Apportionment Type configured
+
+  ✗ Validation failed — apportionment aborted.
+    Run with --force to override gate check.
+
+  Skipping period 2027-01 — gate check failed.
+
+────────────────────────────────────────────────────────────
+  CST Apportionment Run
+  Period:  2027-02
+  Version: Budget
+────────────────────────────────────────────────────────────
+
+  Running VAL checks...
+    VAL checks written to Reconciliation cube
+
+  Validation gate check...
+    ✗ VAL01: FAIL — 9 pool(s) missing driver %: CP01, CP02, CP03, CP04, CP05, CP06, CP07, CP08, CP09
+    ✗ VAL02: FAIL — 11 activity(s) missing input volume: A01, A02, A03, A04, A05, A06, A07, A08, A09, A10, A11
+    ! VAL03: WARNING — SQL source check not configured — skipped
+    ✓ VAL04: PASS — All overhead accounts have pool assignments
+    ✓ VAL05: PASS — All Direct accounts have Direct % configured
+    ✓ VAL06: PASS — All accounts have Apportionment Type configured
+
+  ✗ Validation failed — apportionment aborted.
+    Run with --force to override gate check.
+
+  Skipping period 2027-02 — gate check failed.
+
+────────────────────────────────────────────────────────────
+  CST Apportionment Run
+  Period:  2027-03
+  Version: Budget
+────────────────────────────────────────────────────────────
+
+  Running VAL checks...
+    VAL checks written to Reconciliation cube
+
+  Validation gate check...
+    ✗ VAL01: FAIL — 9 pool(s) missing driver %: CP01, CP02, CP03, CP04, CP05, CP06, CP07, CP08, CP09
+    ✗ VAL02: FAIL — 11 activity(s) missing input volume: A01, A02, A03, A04, A05, A06, A07, A08, A09, A10, A11
+    ! VAL03: WARNING — SQL source check not configured — skipped
+    ✓ VAL04: PASS — All overhead accounts have pool assignments
+    ✓ VAL05: PASS — All Direct accounts have Direct % configured
+    ✓ VAL06: PASS — All accounts have Apportionment Type configured
+
+  ✗ Validation failed — apportionment aborted.
+    Run with --force to override gate check.
+
+  Skipping period 2027-03 — gate check failed.
+
+  ✗ Periods with failures: 2026-04, 2026-05, 2026-06, 2026-07, 2026-08, 2026-09, 2026-10, 2026-11, 2026-12, 2027-01, 2027-02, 2027-03
+  ✗ Run Apportionment FAILED — RC checks failed — review in PAW
+  → Load Drivers REQUESTED — starting
+
+────────────────────────────────────────────────────────────
+  ETL — Load Drivers → TM1
+  Source: cst_test_data.db
+  Version: Budget  (2026-04 → 2027-03, 12 periods)
+────────────────────────────────────────────────────────────
+
+  Period 2026-04 / Budget
+    1. CST Pool Config
+       ✓ 0 cells written
+    2. CST Pool to Pool Config
+       ✓ 0 cells written
+    3. CST Activity Config
+       ✓ 0 cells written
+    4. CST Activity to Activity Config
+       ✓ 0 cells written
+    5. Validation checks
+       ✓ VAL01-VAL04 written
+
+  Period 2026-05 / Budget
+    1. CST Pool Config
+       ✓ 0 cells written
+    2. CST Pool to Pool Config
+       ✓ 0 cells written
+    3. CST Activity Config
+       ✓ 0 cells written
+    4. CST Activity to Activity Config
+       ✓ 0 cells written
+    5. Validation checks
+       ✓ VAL01-VAL04 written
+
+  Period 2026-06 / Budget
+    1. CST Pool Config
+       ✓ 0 cells written
+    2. CST Pool to Pool Config
+       ✓ 0 cells written
+    3. CST Activity Config
+       ✓ 0 cells written
+    4. CST Activity to Activity Config
+       ✓ 0 cells written
+    5. Validation checks
+       ✓ VAL01-VAL04 written
+
+  Period 2026-07 / Budget
+    1. CST Pool Config
+       ✓ 0 cells written
+    2. CST Pool to Pool Config
+       ✓ 0 cells written
+    3. CST Activity Config
+       ✓ 0 cells written
+    4. CST Activity to Activity Config
+       ✓ 0 cells written
+    5. Validation checks
+       ✓ VAL01-VAL04 written
+
+  Period 2026-08 / Budget
+    1. CST Pool Config
+       ✓ 0 cells written
+    2. CST Pool to Pool Config
+       ✓ 0 cells written
+    3. CST Activity Config
+       ✓ 0 cells written
+    4. CST Activity to Activity Config
+       ✓ 0 cells written
+    5. Validation checks
+       ✓ VAL01-VAL04 written
+
+  Period 2026-09 / Budget
+    1. CST Pool Config
+       ✓ 0 cells written
+    2. CST Pool to Pool Config
+       ✓ 0 cells written
+    3. CST Activity Config
+       ✓ 0 cells written
+    4. CST Activity to Activity Config
+       ✓ 0 cells written
+    5. Validation checks
+       ✓ VAL01-VAL04 written
+
+  Period 2026-10 / Budget
+    1. CST Pool Config
+       ✓ 0 cells written
+    2. CST Pool to Pool Config
+       ✓ 0 cells written
+    3. CST Activity Config
+       ✓ 0 cells written
+    4. CST Activity to Activity Config
+       ✓ 0 cells written
+    5. Validation checks
+       ✓ VAL01-VAL04 written
+
+  Period 2026-11 / Budget
+    1. CST Pool Config
+       ✓ 0 cells written
+    2. CST Pool to Pool Config
+       ✓ 0 cells written
+    3. CST Activity Config
+       ✓ 0 cells written
+    4. CST Activity to Activity Config
+       ✓ 0 cells written
+    5. Validation checks
+       ✓ VAL01-VAL04 written
+
+  Period 2026-12 / Budget
+    1. CST Pool Config
+       ✓ 0 cells written
+    2. CST Pool to Pool Config
+       ✓ 0 cells written
+    3. CST Activity Config
+       ✓ 0 cells written
+    4. CST Activity to Activity Config
+       ✓ 0 cells written
+    5. Validation checks
+       ✓ VAL01-VAL04 written
+
+  Period 2027-01 / Budget
+    1. CST Pool Config
+       ✓ 0 cells written
+    2. CST Pool to Pool Config
+       ✓ 0 cells written
+    3. CST Activity Config
+       ✓ 0 cells written
+    4. CST Activity to Activity Config
+       ✓ 0 cells written
+    5. Validation checks
+       ✓ VAL01-VAL04 written
+
+  Period 2027-02 / Budget
+    1. CST Pool Config
+       ✓ 0 cells written
+    2. CST Pool to Pool Config
+       ✓ 0 cells written
+    3. CST Activity Config
+       ✓ 0 cells written
+    4. CST Activity to Activity Config
+       ✓ 0 cells written
+    5. Validation checks
+       ✓ VAL01-VAL04 written
+
+  Period 2027-03 / Budget
+    1. CST Pool Config
+       ✓ 0 cells written
+    2. CST Pool to Pool Config
+       ✓ 0 cells written
+    3. CST Activity Config
+       ✓ 0 cells written
+    4. CST Activity to Activity Config
+       ✓ 0 cells written
+    5. Validation checks
+       ✓ VAL01-VAL04 written
+
+────────────────────────────────────────────────────────────
+  Done. Review VAL checks in PAW before running apportionment.
+────────────────────────────────────────────────────────────
+
+  ✓ Load Drivers COMPLETE — Completed for all Budget periods
+  → Run Apportionment REQUESTED — starting
+
+────────────────────────────────────────────────────────────
+  CST Apportionment Run
+  Period:  2026-04
+  Version: Budget
+────────────────────────────────────────────────────────────
+
+  Running VAL checks...
+    VAL checks written to Reconciliation cube
+
+  Validation gate check...
+    ✗ VAL01: FAIL — 9 pool(s) missing driver %: CP01, CP02, CP03, CP04, CP05, CP06, CP07, CP08, CP09
+    ✗ VAL02: FAIL — 11 activity(s) missing input volume: A01, A02, A03, A04, A05, A06, A07, A08, A09, A10, A11
+    ! VAL03: WARNING — SQL source check not configured — skipped
+    ✓ VAL04: PASS — All overhead accounts have pool assignments
+    ✓ VAL05: PASS — All Direct accounts have Direct % configured
+    ✓ VAL06: PASS — All accounts have Apportionment Type configured
+
+  ✗ Validation failed — apportionment aborted.
+    Run with --force to override gate check.
+
+  Skipping period 2026-04 — gate check failed.
+
+────────────────────────────────────────────────────────────
+  CST Apportionment Run
+  Period:  2026-05
+  Version: Budget
+────────────────────────────────────────────────────────────
+
+  Running VAL checks...
+    VAL checks written to Reconciliation cube
+
+  Validation gate check...
+    ✗ VAL01: FAIL — 9 pool(s) missing driver %: CP01, CP02, CP03, CP04, CP05, CP06, CP07, CP08, CP09
+    ✗ VAL02: FAIL — 11 activity(s) missing input volume: A01, A02, A03, A04, A05, A06, A07, A08, A09, A10, A11
+    ! VAL03: WARNING — SQL source check not configured — skipped
+    ✓ VAL04: PASS — All overhead accounts have pool assignments
+    ✓ VAL05: PASS — All Direct accounts have Direct % configured
+    ✓ VAL06: PASS — All accounts have Apportionment Type configured
+
+  ✗ Validation failed — apportionment aborted.
+    Run with --force to override gate check.
+
+  Skipping period 2026-05 — gate check failed.
+
+────────────────────────────────────────────────────────────
+  CST Apportionment Run
+  Period:  2026-06
+  Version: Budget
+────────────────────────────────────────────────────────────
+
+  Running VAL checks...
+    VAL checks written to Reconciliation cube
+
+  Validation gate check...
+    ✗ VAL01: FAIL — 9 pool(s) missing driver %: CP01, CP02, CP03, CP04, CP05, CP06, CP07, CP08, CP09
+    ✗ VAL02: FAIL — 11 activity(s) missing input volume: A01, A02, A03, A04, A05, A06, A07, A08, A09, A10, A11
+    ! VAL03: WARNING — SQL source check not configured — skipped
+    ✓ VAL04: PASS — All overhead accounts have pool assignments
+    ✓ VAL05: PASS — All Direct accounts have Direct % configured
+    ✓ VAL06: PASS — All accounts have Apportionment Type configured
+
+  ✗ Validation failed — apportionment aborted.
+    Run with --force to override gate check.
+
+  Skipping period 2026-06 — gate check failed.
+
+────────────────────────────────────────────────────────────
+  CST Apportionment Run
+  Period:  2026-07
+  Version: Budget
+────────────────────────────────────────────────────────────
+
+  Running VAL checks...
+    VAL checks written to Reconciliation cube
+
+  Validation gate check...
+    ✗ VAL01: FAIL — 9 pool(s) missing driver %: CP01, CP02, CP03, CP04, CP05, CP06, CP07, CP08, CP09
+    ✗ VAL02: FAIL — 11 activity(s) missing input volume: A01, A02, A03, A04, A05, A06, A07, A08, A09, A10, A11
+    ! VAL03: WARNING — SQL source check not configured — skipped
+    ✓ VAL04: PASS — All overhead accounts have pool assignments
+    ✓ VAL05: PASS — All Direct accounts have Direct % configured
+    ✓ VAL06: PASS — All accounts have Apportionment Type configured
+
+  ✗ Validation failed — apportionment aborted.
+    Run with --force to override gate check.
+
+  Skipping period 2026-07 — gate check failed.
+
+────────────────────────────────────────────────────────────
+  CST Apportionment Run
+  Period:  2026-08
+  Version: Budget
+────────────────────────────────────────────────────────────
+
+  Running VAL checks...
+    VAL checks written to Reconciliation cube
+
+  Validation gate check...
+    ✗ VAL01: FAIL — 9 pool(s) missing driver %: CP01, CP02, CP03, CP04, CP05, CP06, CP07, CP08, CP09
+    ✗ VAL02: FAIL — 11 activity(s) missing input volume: A01, A02, A03, A04, A05, A06, A07, A08, A09, A10, A11
+    ! VAL03: WARNING — SQL source check not configured — skipped
+    ✓ VAL04: PASS — All overhead accounts have pool assignments
+    ✓ VAL05: PASS — All Direct accounts have Direct % configured
+    ✓ VAL06: PASS — All accounts have Apportionment Type configured
+
+  ✗ Validation failed — apportionment aborted.
+    Run with --force to override gate check.
+
+  Skipping period 2026-08 — gate check failed.
+
+────────────────────────────────────────────────────────────
+  CST Apportionment Run
+  Period:  2026-09
+  Version: Budget
+────────────────────────────────────────────────────────────
+
+  Running VAL checks...
+    VAL checks written to Reconciliation cube
+
+  Validation gate check...
+    ✗ VAL01: FAIL — 9 pool(s) missing driver %: CP01, CP02, CP03, CP04, CP05, CP06, CP07, CP08, CP09
+    ✗ VAL02: FAIL — 11 activity(s) missing input volume: A01, A02, A03, A04, A05, A06, A07, A08, A09, A10, A11
+    ! VAL03: WARNING — SQL source check not configured — skipped
+    ✓ VAL04: PASS — All overhead accounts have pool assignments
+    ✓ VAL05: PASS — All Direct accounts have Direct % configured
+    ✓ VAL06: PASS — All accounts have Apportionment Type configured
+
+  ✗ Validation failed — apportionment aborted.
+    Run with --force to override gate check.
+
+  Skipping period 2026-09 — gate check failed.
+
+────────────────────────────────────────────────────────────
+  CST Apportionment Run
+  Period:  2026-10
+  Version: Budget
+────────────────────────────────────────────────────────────
+
+  Running VAL checks...
+    VAL checks written to Reconciliation cube
+
+  Validation gate check...
+    ✗ VAL01: FAIL — 9 pool(s) missing driver %: CP01, CP02, CP03, CP04, CP05, CP06, CP07, CP08, CP09
+    ✗ VAL02: FAIL — 11 activity(s) missing input volume: A01, A02, A03, A04, A05, A06, A07, A08, A09, A10, A11
+    ! VAL03: WARNING — SQL source check not configured — skipped
+    ✓ VAL04: PASS — All overhead accounts have pool assignments
+    ✓ VAL05: PASS — All Direct accounts have Direct % configured
+    ✓ VAL06: PASS — All accounts have Apportionment Type configured
+
+  ✗ Validation failed — apportionment aborted.
+    Run with --force to override gate check.
+
+  Skipping period 2026-10 — gate check failed.
+
+────────────────────────────────────────────────────────────
+  CST Apportionment Run
+  Period:  2026-11
+  Version: Budget
+────────────────────────────────────────────────────────────
+
+  Running VAL checks...
+    VAL checks written to Reconciliation cube
+
+  Validation gate check...
+    ✗ VAL01: FAIL — 9 pool(s) missing driver %: CP01, CP02, CP03, CP04, CP05, CP06, CP07, CP08, CP09
+    ✗ VAL02: FAIL — 11 activity(s) missing input volume: A01, A02, A03, A04, A05, A06, A07, A08, A09, A10, A11
+    ! VAL03: WARNING — SQL source check not configured — skipped
+    ✓ VAL04: PASS — All overhead accounts have pool assignments
+    ✓ VAL05: PASS — All Direct accounts have Direct % configured
+    ✓ VAL06: PASS — All accounts have Apportionment Type configured
+
+  ✗ Validation failed — apportionment aborted.
+    Run with --force to override gate check.
+
+  Skipping period 2026-11 — gate check failed.
+
+────────────────────────────────────────────────────────────
+  CST Apportionment Run
+  Period:  2026-12
+  Version: Budget
+────────────────────────────────────────────────────────────
+
+  Running VAL checks...
+    VAL checks written to Reconciliation cube
+
+  Validation gate check...
+    ✗ VAL01: FAIL — 9 pool(s) missing driver %: CP01, CP02, CP03, CP04, CP05, CP06, CP07, CP08, CP09
+    ✗ VAL02: FAIL — 11 activity(s) missing input volume: A01, A02, A03, A04, A05, A06, A07, A08, A09, A10, A11
+    ! VAL03: WARNING — SQL source check not configured — skipped
+    ✓ VAL04: PASS — All overhead accounts have pool assignments
+    ✓ VAL05: PASS — All Direct accounts have Direct % configured
+    ✓ VAL06: PASS — All accounts have Apportionment Type configured
+
+  ✗ Validation failed — apportionment aborted.
+    Run with --force to override gate check.
+
+  Skipping period 2026-12 — gate check failed.
+
+────────────────────────────────────────────────────────────
+  CST Apportionment Run
+  Period:  2027-01
+  Version: Budget
+────────────────────────────────────────────────────────────
+
+  Running VAL checks...
+    VAL checks written to Reconciliation cube
+
+  Validation gate check...
+    ✗ VAL01: FAIL — 9 pool(s) missing driver %: CP01, CP02, CP03, CP04, CP05, CP06, CP07, CP08, CP09
+    ✗ VAL02: FAIL — 11 activity(s) missing input volume: A01, A02, A03, A04, A05, A06, A07, A08, A09, A10, A11
+    ! VAL03: WARNING — SQL source check not configured — skipped
+    ✓ VAL04: PASS — All overhead accounts have pool assignments
+    ✓ VAL05: PASS — All Direct accounts have Direct % configured
+    ✓ VAL06: PASS — All accounts have Apportionment Type configured
+
+  ✗ Validation failed — apportionment aborted.
+    Run with --force to override gate check.
+
+  Skipping period 2027-01 — gate check failed.
+
+────────────────────────────────────────────────────────────
+  CST Apportionment Run
+  Period:  2027-02
+  Version: Budget
+────────────────────────────────────────────────────────────
+
+  Running VAL checks...
+    VAL checks written to Reconciliation cube
+
+  Validation gate check...
+    ✗ VAL01: FAIL — 9 pool(s) missing driver %: CP01, CP02, CP03, CP04, CP05, CP06, CP07, CP08, CP09
+    ✗ VAL02: FAIL — 11 activity(s) missing input volume: A01, A02, A03, A04, A05, A06, A07, A08, A09, A10, A11
+    ! VAL03: WARNING — SQL source check not configured — skipped
+    ✓ VAL04: PASS — All overhead accounts have pool assignments
+    ✓ VAL05: PASS — All Direct accounts have Direct % configured
+    ✓ VAL06: PASS — All accounts have Apportionment Type configured
+
+  ✗ Validation failed — apportionment aborted.
+    Run with --force to override gate check.
+
+  Skipping period 2027-02 — gate check failed.
+
+────────────────────────────────────────────────────────────
+  CST Apportionment Run
+  Period:  2027-03
+  Version: Budget
+────────────────────────────────────────────────────────────
+
+  Running VAL checks...
+    VAL checks written to Reconciliation cube
+
+  Validation gate check...
+    ✗ VAL01: FAIL — 9 pool(s) missing driver %: CP01, CP02, CP03, CP04, CP05, CP06, CP07, CP08, CP09
+    ✗ VAL02: FAIL — 11 activity(s) missing input volume: A01, A02, A03, A04, A05, A06, A07, A08, A09, A10, A11
+    ! VAL03: WARNING — SQL source check not configured — skipped
+    ✓ VAL04: PASS — All overhead accounts have pool assignments
+    ✓ VAL05: PASS — All Direct accounts have Direct % configured
+    ✓ VAL06: PASS — All accounts have Apportionment Type configured
+
+  ✗ Validation failed — apportionment aborted.
+    Run with --force to override gate check.
+
+  Skipping period 2027-03 — gate check failed.
+
+  ✗ Periods with failures: 2026-04, 2026-05, 2026-06, 2026-07, 2026-08, 2026-09, 2026-10, 2026-11, 2026-12, 2027-01, 2027-02, 2027-03
+  ✗ Run Apportionment FAILED — RC checks failed — review in PAW
+  → Run Apportionment REQUESTED — starting
+
+────────────────────────────────────────────────────────────
+  CST Apportionment Run
+  Period:  2026-04
+  Version: Budget
+────────────────────────────────────────────────────────────
+
+  Running VAL checks...
+    VAL checks written to Reconciliation cube
+
+  Validation gate check...
+    ✗ VAL01: FAIL — 9 pool(s) missing driver %: CP01, CP02, CP03, CP04, CP05, CP06, CP07, CP08, CP09
+    ✗ VAL02: FAIL — 11 activity(s) missing input volume: A01, A02, A03, A04, A05, A06, A07, A08, A09, A10, A11
+    ! VAL03: WARNING — SQL source check not configured — skipped
+    ✓ VAL04: PASS — All overhead accounts have pool assignments
+    ✓ VAL05: PASS — All Direct accounts have Direct % configured
+    ✓ VAL06: PASS — All accounts have Apportionment Type configured
+
+  ✗ Validation failed — apportionment aborted.
+    Run with --force to override gate check.
+
+  Skipping period 2026-04 — gate check failed.
+
+────────────────────────────────────────────────────────────
+  CST Apportionment Run
+  Period:  2026-05
+  Version: Budget
+────────────────────────────────────────────────────────────
+
+  Running VAL checks...
+    VAL checks written to Reconciliation cube
+
+  Validation gate check...
+    ✗ VAL01: FAIL — 9 pool(s) missing driver %: CP01, CP02, CP03, CP04, CP05, CP06, CP07, CP08, CP09
+    ✗ VAL02: FAIL — 11 activity(s) missing input volume: A01, A02, A03, A04, A05, A06, A07, A08, A09, A10, A11
+    ! VAL03: WARNING — SQL source check not configured — skipped
+    ✓ VAL04: PASS — All overhead accounts have pool assignments
+    ✓ VAL05: PASS — All Direct accounts have Direct % configured
+    ✓ VAL06: PASS — All accounts have Apportionment Type configured
+
+  ✗ Validation failed — apportionment aborted.
+    Run with --force to override gate check.
+
+  Skipping period 2026-05 — gate check failed.
+
+────────────────────────────────────────────────────────────
+  CST Apportionment Run
+  Period:  2026-06
+  Version: Budget
+────────────────────────────────────────────────────────────
+
+  Running VAL checks...
+    VAL checks written to Reconciliation cube
+
+  Validation gate check...
+    ✗ VAL01: FAIL — 9 pool(s) missing driver %: CP01, CP02, CP03, CP04, CP05, CP06, CP07, CP08, CP09
+    ✗ VAL02: FAIL — 11 activity(s) missing input volume: A01, A02, A03, A04, A05, A06, A07, A08, A09, A10, A11
+    ! VAL03: WARNING — SQL source check not configured — skipped
+    ✓ VAL04: PASS — All overhead accounts have pool assignments
+    ✓ VAL05: PASS — All Direct accounts have Direct % configured
+    ✓ VAL06: PASS — All accounts have Apportionment Type configured
+
+  ✗ Validation failed — apportionment aborted.
+    Run with --force to override gate check.
+
+  Skipping period 2026-06 — gate check failed.
+
+────────────────────────────────────────────────────────────
+  CST Apportionment Run
+  Period:  2026-07
+  Version: Budget
+────────────────────────────────────────────────────────────
+
+  Running VAL checks...
+    VAL checks written to Reconciliation cube
+
+  Validation gate check...
+    ✗ VAL01: FAIL — 9 pool(s) missing driver %: CP01, CP02, CP03, CP04, CP05, CP06, CP07, CP08, CP09
+    ✗ VAL02: FAIL — 11 activity(s) missing input volume: A01, A02, A03, A04, A05, A06, A07, A08, A09, A10, A11
+    ! VAL03: WARNING — SQL source check not configured — skipped
+    ✓ VAL04: PASS — All overhead accounts have pool assignments
+    ✓ VAL05: PASS — All Direct accounts have Direct % configured
+    ✓ VAL06: PASS — All accounts have Apportionment Type configured
+
+  ✗ Validation failed — apportionment aborted.
+    Run with --force to override gate check.
+
+  Skipping period 2026-07 — gate check failed.
+
+────────────────────────────────────────────────────────────
+  CST Apportionment Run
+  Period:  2026-08
+  Version: Budget
+────────────────────────────────────────────────────────────
+
+  Running VAL checks...
+    VAL checks written to Reconciliation cube
+
+  Validation gate check...
+    ✗ VAL01: FAIL — 9 pool(s) missing driver %: CP01, CP02, CP03, CP04, CP05, CP06, CP07, CP08, CP09
+    ✗ VAL02: FAIL — 11 activity(s) missing input volume: A01, A02, A03, A04, A05, A06, A07, A08, A09, A10, A11
+    ! VAL03: WARNING — SQL source check not configured — skipped
+    ✓ VAL04: PASS — All overhead accounts have pool assignments
+    ✓ VAL05: PASS — All Direct accounts have Direct % configured
+    ✓ VAL06: PASS — All accounts have Apportionment Type configured
+
+  ✗ Validation failed — apportionment aborted.
+    Run with --force to override gate check.
+
+  Skipping period 2026-08 — gate check failed.
+
+────────────────────────────────────────────────────────────
+  CST Apportionment Run
+  Period:  2026-09
+  Version: Budget
+────────────────────────────────────────────────────────────
+
+  Running VAL checks...
+    VAL checks written to Reconciliation cube
+
+  Validation gate check...
+    ✗ VAL01: FAIL — 9 pool(s) missing driver %: CP01, CP02, CP03, CP04, CP05, CP06, CP07, CP08, CP09
+    ✗ VAL02: FAIL — 11 activity(s) missing input volume: A01, A02, A03, A04, A05, A06, A07, A08, A09, A10, A11
+    ! VAL03: WARNING — SQL source check not configured — skipped
+    ✓ VAL04: PASS — All overhead accounts have pool assignments
+    ✓ VAL05: PASS — All Direct accounts have Direct % configured
+    ✓ VAL06: PASS — All accounts have Apportionment Type configured
+
+  ✗ Validation failed — apportionment aborted.
+    Run with --force to override gate check.
+
+  Skipping period 2026-09 — gate check failed.
+
+────────────────────────────────────────────────────────────
+  CST Apportionment Run
+  Period:  2026-10
+  Version: Budget
+────────────────────────────────────────────────────────────
+
+  Running VAL checks...
+    VAL checks written to Reconciliation cube
+
+  Validation gate check...
+    ✗ VAL01: FAIL — 9 pool(s) missing driver %: CP01, CP02, CP03, CP04, CP05, CP06, CP07, CP08, CP09
+    ✗ VAL02: FAIL — 11 activity(s) missing input volume: A01, A02, A03, A04, A05, A06, A07, A08, A09, A10, A11
+    ! VAL03: WARNING — SQL source check not configured — skipped
+    ✓ VAL04: PASS — All overhead accounts have pool assignments
+    ✓ VAL05: PASS — All Direct accounts have Direct % configured
+    ✓ VAL06: PASS — All accounts have Apportionment Type configured
+
+  ✗ Validation failed — apportionment aborted.
+    Run with --force to override gate check.
+
+  Skipping period 2026-10 — gate check failed.
+
+────────────────────────────────────────────────────────────
+  CST Apportionment Run
+  Period:  2026-11
+  Version: Budget
+────────────────────────────────────────────────────────────
+
+  Running VAL checks...
+    VAL checks written to Reconciliation cube
+
+  Validation gate check...
+    ✗ VAL01: FAIL — 9 pool(s) missing driver %: CP01, CP02, CP03, CP04, CP05, CP06, CP07, CP08, CP09
+    ✗ VAL02: FAIL — 11 activity(s) missing input volume: A01, A02, A03, A04, A05, A06, A07, A08, A09, A10, A11
+    ! VAL03: WARNING — SQL source check not configured — skipped
+    ✓ VAL04: PASS — All overhead accounts have pool assignments
+    ✓ VAL05: PASS — All Direct accounts have Direct % configured
+    ✓ VAL06: PASS — All accounts have Apportionment Type configured
+
+  ✗ Validation failed — apportionment aborted.
+    Run with --force to override gate check.
+
+  Skipping period 2026-11 — gate check failed.
+
+────────────────────────────────────────────────────────────
+  CST Apportionment Run
+  Period:  2026-12
+  Version: Budget
+────────────────────────────────────────────────────────────
+
+  Running VAL checks...
+    VAL checks written to Reconciliation cube
+
+  Validation gate check...
+    ✗ VAL01: FAIL — 9 pool(s) missing driver %: CP01, CP02, CP03, CP04, CP05, CP06, CP07, CP08, CP09
+    ✗ VAL02: FAIL — 11 activity(s) missing input volume: A01, A02, A03, A04, A05, A06, A07, A08, A09, A10, A11
+    ! VAL03: WARNING — SQL source check not configured — skipped
+    ✓ VAL04: PASS — All overhead accounts have pool assignments
+    ✓ VAL05: PASS — All Direct accounts have Direct % configured
+    ✓ VAL06: PASS — All accounts have Apportionment Type configured
+
+  ✗ Validation failed — apportionment aborted.
+    Run with --force to override gate check.
+
+  Skipping period 2026-12 — gate check failed.
+
+────────────────────────────────────────────────────────────
+  CST Apportionment Run
+  Period:  2027-01
+  Version: Budget
+────────────────────────────────────────────────────────────
+
+  Running VAL checks...
+    VAL checks written to Reconciliation cube
+
+  Validation gate check...
+    ✗ VAL01: FAIL — 9 pool(s) missing driver %: CP01, CP02, CP03, CP04, CP05, CP06, CP07, CP08, CP09
+    ✗ VAL02: FAIL — 11 activity(s) missing input volume: A01, A02, A03, A04, A05, A06, A07, A08, A09, A10, A11
+    ! VAL03: WARNING — SQL source check not configured — skipped
+    ✓ VAL04: PASS — All overhead accounts have pool assignments
+    ✓ VAL05: PASS — All Direct accounts have Direct % configured
+    ✓ VAL06: PASS — All accounts have Apportionment Type configured
+
+  ✗ Validation failed — apportionment aborted.
+    Run with --force to override gate check.
+
+  Skipping period 2027-01 — gate check failed.
+
+────────────────────────────────────────────────────────────
+  CST Apportionment Run
+  Period:  2027-02
+  Version: Budget
+────────────────────────────────────────────────────────────
+
+  Running VAL checks...
+    VAL checks written to Reconciliation cube
+
+  Validation gate check...
+    ✗ VAL01: FAIL — 9 pool(s) missing driver %: CP01, CP02, CP03, CP04, CP05, CP06, CP07, CP08, CP09
+    ✗ VAL02: FAIL — 11 activity(s) missing input volume: A01, A02, A03, A04, A05, A06, A07, A08, A09, A10, A11
+    ! VAL03: WARNING — SQL source check not configured — skipped
+    ✓ VAL04: PASS — All overhead accounts have pool assignments
+    ✓ VAL05: PASS — All Direct accounts have Direct % configured
+    ✓ VAL06: PASS — All accounts have Apportionment Type configured
+
+  ✗ Validation failed — apportionment aborted.
+    Run with --force to override gate check.
+
+  Skipping period 2027-02 — gate check failed.
+
+────────────────────────────────────────────────────────────
+  CST Apportionment Run
+  Period:  2027-03
+  Version: Budget
+────────────────────────────────────────────────────────────
+
+  Running VAL checks...
+    VAL checks written to Reconciliation cube
+
+  Validation gate check...
+    ✗ VAL01: FAIL — 9 pool(s) missing driver %: CP01, CP02, CP03, CP04, CP05, CP06, CP07, CP08, CP09
+    ✗ VAL02: FAIL — 11 activity(s) missing input volume: A01, A02, A03, A04, A05, A06, A07, A08, A09, A10, A11
+    ! VAL03: WARNING — SQL source check not configured — skipped
+    ✓ VAL04: PASS — All overhead accounts have pool assignments
+    ✓ VAL05: PASS — All Direct accounts have Direct % configured
+    ✓ VAL06: PASS — All accounts have Apportionment Type configured
+
+  ✗ Validation failed — apportionment aborted.
+    Run with --force to override gate check.
+
+  Skipping period 2027-03 — gate check failed.
+
+  ✗ Periods with failures: 2026-04, 2026-05, 2026-06, 2026-07, 2026-08, 2026-09, 2026-10, 2026-11, 2026-12, 2027-01, 2027-02, 2027-03
+  ✗ Run Apportionment FAILED — RC checks failed — review in PAW
+  → Load Drivers REQUESTED — starting
+
+────────────────────────────────────────────────────────────
+  ETL — Load Drivers → TM1
+  Source: cst_test_data.db
+  Version: Budget  (2026-04 → 2027-03, 12 periods)
+────────────────────────────────────────────────────────────
+
+  Period 2026-04 / Budget
+    1. CST Pool Config
+       ✓ 0 cells written
+    2. CST Pool to Pool Config
+       ✓ 0 cells written
+    3. CST Activity Config
+       ✓ 0 cells written
+    4. CST Activity to Activity Config
+       ✓ 0 cells written
+    5. Validation checks
+       ✓ VAL01-VAL04 written
+
+  Period 2026-05 / Budget
+    1. CST Pool Config
+       ✓ 0 cells written
+    2. CST Pool to Pool Config
+       ✓ 0 cells written
+    3. CST Activity Config
+       ✓ 0 cells written
+    4. CST Activity to Activity Config
+       ✓ 0 cells written
+    5. Validation checks
+       ✓ VAL01-VAL04 written
+
+  Period 2026-06 / Budget
+    1. CST Pool Config
+       ✓ 0 cells written
+    2. CST Pool to Pool Config
+       ✓ 0 cells written
+    3. CST Activity Config
+       ✓ 0 cells written
+    4. CST Activity to Activity Config
+       ✓ 0 cells written
+    5. Validation checks
+       ✓ VAL01-VAL04 written
+
+  Period 2026-07 / Budget
+    1. CST Pool Config
+       ✓ 0 cells written
+    2. CST Pool to Pool Config
+       ✓ 0 cells written
+    3. CST Activity Config
+       ✓ 0 cells written
+    4. CST Activity to Activity Config
+       ✓ 0 cells written
+    5. Validation checks
+       ✓ VAL01-VAL04 written
+
+  Period 2026-08 / Budget
+    1. CST Pool Config
+       ✓ 0 cells written
+    2. CST Pool to Pool Config
+       ✓ 0 cells written
+    3. CST Activity Config
+       ✓ 0 cells written
+    4. CST Activity to Activity Config
+       ✓ 0 cells written
+    5. Validation checks
+       ✓ VAL01-VAL04 written
+
+  Period 2026-09 / Budget
+    1. CST Pool Config
+       ✓ 0 cells written
+    2. CST Pool to Pool Config
+       ✓ 0 cells written
+    3. CST Activity Config
+       ✓ 0 cells written
+    4. CST Activity to Activity Config
+       ✓ 0 cells written
+    5. Validation checks
+       ✓ VAL01-VAL04 written
+
+  Period 2026-10 / Budget
+    1. CST Pool Config
+       ✓ 0 cells written
+    2. CST Pool to Pool Config
+       ✓ 0 cells written
+    3. CST Activity Config
+       ✓ 0 cells written
+    4. CST Activity to Activity Config
+       ✓ 0 cells written
+    5. Validation checks
+       ✓ VAL01-VAL04 written
+
+  Period 2026-11 / Budget
+    1. CST Pool Config
+       ✓ 0 cells written
+    2. CST Pool to Pool Config
+       ✓ 0 cells written
+    3. CST Activity Config
+       ✓ 0 cells written
+    4. CST Activity to Activity Config
+       ✓ 0 cells written
+    5. Validation checks
+       ✓ VAL01-VAL04 written
+
+  Period 2026-12 / Budget
+    1. CST Pool Config
+       ✓ 0 cells written
+    2. CST Pool to Pool Config
+       ✓ 0 cells written
+    3. CST Activity Config
+       ✓ 0 cells written
+    4. CST Activity to Activity Config
+       ✓ 0 cells written
+    5. Validation checks
+       ✓ VAL01-VAL04 written
+
+  Period 2027-01 / Budget
+    1. CST Pool Config
+       ✓ 0 cells written
+    2. CST Pool to Pool Config
+       ✓ 0 cells written
+    3. CST Activity Config
+       ✓ 0 cells written
+    4. CST Activity to Activity Config
+       ✓ 0 cells written
+    5. Validation checks
+       ✓ VAL01-VAL04 written
+
+  Period 2027-02 / Budget
+    1. CST Pool Config
+       ✓ 0 cells written
+    2. CST Pool to Pool Config
+       ✓ 0 cells written
+    3. CST Activity Config
+       ✓ 0 cells written
+    4. CST Activity to Activity Config
+       ✓ 0 cells written
+    5. Validation checks
+       ✓ VAL01-VAL04 written
+
+  Period 2027-03 / Budget
+    1. CST Pool Config
+       ✓ 0 cells written
+    2. CST Pool to Pool Config
+       ✓ 0 cells written
+    3. CST Activity Config
+       ✓ 0 cells written
+    4. CST Activity to Activity Config
+       ✓ 0 cells written
+    5. Validation checks
+       ✓ VAL01-VAL04 written
+
+────────────────────────────────────────────────────────────
+  Done. Review VAL checks in PAW before running apportionment.
+────────────────────────────────────────────────────────────
+
+  ✓ Load Drivers COMPLETE — Completed for all Budget periods
+  → Load Drivers REQUESTED — starting
+
+────────────────────────────────────────────────────────────
+  ETL — Load Drivers → TM1
+  Source: cst_test_data.db
+  Version: Budget  (2026-04 → 2027-03, 12 periods)
+────────────────────────────────────────────────────────────
+
+  Period 2026-04 / Budget
+    1. CST Pool Config
+       ✓ 30 cells written
+    2. CST Pool to Pool Config
+       ✓ 60 cells written
+    3. CST Activity Config
+       ✓ 231 cells written
+    4. CST Activity to Activity Config
+       ✓ 12 cells written
+    5. Validation checks
+       ✓ VAL01-VAL04 written
+
+  Period 2026-05 / Budget
+    1. CST Pool Config
+       ✓ 30 cells written
+    2. CST Pool to Pool Config
+       ✓ 60 cells written
+    3. CST Activity Config
+       ✓ 231 cells written
+    4. CST Activity to Activity Config
+       ✓ 12 cells written
+    5. Validation checks
+       ✓ VAL01-VAL04 written
+
+  Period 2026-06 / Budget
+    1. CST Pool Config
+       ✓ 30 cells written
+    2. CST Pool to Pool Config
+       ✓ 60 cells written
+    3. CST Activity Config
+       ✓ 231 cells written
+    4. CST Activity to Activity Config
+       ✓ 12 cells written
+    5. Validation checks
+       ✓ VAL01-VAL04 written
+
+  Period 2026-07 / Budget
+    1. CST Pool Config
+       ✓ 30 cells written
+    2. CST Pool to Pool Config
+       ✓ 60 cells written
+    3. CST Activity Config
+       ✓ 231 cells written
+    4. CST Activity to Activity Config
+       ✓ 12 cells written
+    5. Validation checks
+       ✓ VAL01-VAL04 written
+
+  Period 2026-08 / Budget
+    1. CST Pool Config
+       ✓ 30 cells written
+    2. CST Pool to Pool Config
+       ✓ 60 cells written
+    3. CST Activity Config
+       ✓ 231 cells written
+    4. CST Activity to Activity Config
+       ✓ 12 cells written
+    5. Validation checks
+       ✓ VAL01-VAL04 written
+
+  Period 2026-09 / Budget
+    1. CST Pool Config
+       ✓ 30 cells written
+    2. CST Pool to Pool Config
+       ✓ 60 cells written
+    3. CST Activity Config
+       ✓ 231 cells written
+    4. CST Activity to Activity Config
+       ✓ 12 cells written
+    5. Validation checks
+       ✓ VAL01-VAL04 written
+
+  Period 2026-10 / Budget
+    1. CST Pool Config
+       ✓ 30 cells written
+    2. CST Pool to Pool Config
+       ✓ 60 cells written
+    3. CST Activity Config
+       ✓ 231 cells written
+    4. CST Activity to Activity Config
+       ✓ 12 cells written
+    5. Validation checks
+       ✓ VAL01-VAL04 written
+
+  Period 2026-11 / Budget
+    1. CST Pool Config
+       ✓ 30 cells written
+    2. CST Pool to Pool Config
+       ✓ 60 cells written
+    3. CST Activity Config
+       ✓ 231 cells written
+    4. CST Activity to Activity Config
+       ✓ 12 cells written
+    5. Validation checks
+       ✓ VAL01-VAL04 written
+
+  Period 2026-12 / Budget
+    1. CST Pool Config
+       ✓ 30 cells written
+    2. CST Pool to Pool Config
+       ✓ 60 cells written
+    3. CST Activity Config
+       ✓ 231 cells written
+    4. CST Activity to Activity Config
+       ✓ 12 cells written
+    5. Validation checks
+       ✓ VAL01-VAL04 written
+
+  Period 2027-01 / Budget
+    1. CST Pool Config
+       ✓ 30 cells written
+    2. CST Pool to Pool Config
+       ✓ 60 cells written
+    3. CST Activity Config
+       ✓ 231 cells written
+    4. CST Activity to Activity Config
+       ✓ 12 cells written
+    5. Validation checks
+       ✓ VAL01-VAL04 written
+
+  Period 2027-02 / Budget
+    1. CST Pool Config
+       ✓ 30 cells written
+    2. CST Pool to Pool Config
+       ✓ 60 cells written
+    3. CST Activity Config
+       ✓ 231 cells written
+    4. CST Activity to Activity Config
+       ✓ 12 cells written
+    5. Validation checks
+       ✓ VAL01-VAL04 written
+
+  Period 2027-03 / Budget
+    1. CST Pool Config
+       ✓ 30 cells written
+    2. CST Pool to Pool Config
+       ✓ 60 cells written
+    3. CST Activity Config
+       ✓ 231 cells written
+    4. CST Activity to Activity Config
+       ✓ 12 cells written
+    5. Validation checks
+       ✓ VAL01-VAL04 written
+
+────────────────────────────────────────────────────────────
+  Done. Review VAL checks in PAW before running apportionment.
+────────────────────────────────────────────────────────────
+
+  ✓ Load Drivers COMPLETE — Completed for all Budget periods
+  → Load GL REQUESTED — starting
+
+────────────────────────────────────────────────────────────
+  ETL — Load GL Data → TM1
+  Source: cst_test_data.db
+  Version: Budget  (2026-04 → 2027-03, 12 periods)
+────────────────────────────────────────────────────────────
+
+  Period 2026-04 / Budget
+✓ Wrote Apportionment Type for 34 valid accounts
+    ✓ 274 cells written
+    ✓ VAL04 written
+
+  Period 2026-05 / Budget
+✓ Wrote Apportionment Type for 34 valid accounts
+    ✓ 274 cells written
+    ✓ VAL04 written
+
+  Period 2026-06 / Budget
+✓ Wrote Apportionment Type for 34 valid accounts
+    ✓ 274 cells written
+    ✓ VAL04 written
+
+  Period 2026-07 / Budget
+✓ Wrote Apportionment Type for 34 valid accounts
+    ✓ 274 cells written
+    ✓ VAL04 written
+
+  Period 2026-08 / Budget
+✓ Wrote Apportionment Type for 34 valid accounts
+    ✓ 274 cells written
+    ✓ VAL04 written
+
+  Period 2026-09 / Budget
+✓ Wrote Apportionment Type for 34 valid accounts
+    ✓ 274 cells written
+    ✓ VAL04 written
+
+  Period 2026-10 / Budget
+✓ Wrote Apportionment Type for 34 valid accounts
+    ✓ 274 cells written
+    ✓ VAL04 written
+
+  Period 2026-11 / Budget
+✓ Wrote Apportionment Type for 34 valid accounts
+    ✓ 274 cells written
+    ✓ VAL04 written
+
+  Period 2026-12 / Budget
+✓ Wrote Apportionment Type for 34 valid accounts
+    ✓ 274 cells written
+    ✓ VAL04 written
+
+  Period 2027-01 / Budget
+✓ Wrote Apportionment Type for 34 valid accounts
+    ✓ 274 cells written
+    ✓ VAL04 written
+
+  Period 2027-02 / Budget
+✓ Wrote Apportionment Type for 34 valid accounts
+    ✓ 274 cells written
+    ✓ VAL04 written
+
+  Period 2027-03 / Budget
+✓ Wrote Apportionment Type for 34 valid accounts
+    ✓ 274 cells written
+    ✓ VAL04 written
+
+────────────────────────────────────────────────────────────
+  Done. Review VAL04 in PAW before running apportionment.
+────────────────────────────────────────────────────────────
+
+  ✓ Load GL COMPLETE — Completed for all Budget periods
+  → Run Apportionment REQUESTED — starting
+
+────────────────────────────────────────────────────────────
+  CST Apportionment Run
+  Period:  2026-04
+  Version: Budget
+────────────────────────────────────────────────────────────
+
+  Running VAL checks...
+    VAL checks written to Reconciliation cube
+
+  Validation gate check...
+    ✓ VAL01: PASS — All pools have driver percentage shares configured
+    ✓ VAL02: PASS — All activities have input volumes configured
+    ! VAL03: WARNING — SQL source check not configured — skipped
+    ✓ VAL04: PASS — All overhead accounts have pool assignments
+    ✓ VAL05: PASS — All Direct accounts have Direct % configured
+    ✓ VAL06: PASS — All accounts have Apportionment Type configured
+
+  Stage 1b — Pool → Pool (reciprocal)
+    P2P config: 3 source pools
+    Stage 1 balances: 9 pools  total=5,860.76
+    Converged in 11 iterations  (max change=0.0080)
+    ✓ Settled Amount written for 45 pool/CC combinations  total=5,860.75
+    ✓ Inter-pool transfers written: 20 pool pairs
+    ✓ Stage 1b Complete flag written to Reconciliation cube
+
+  Stage 2b — Activity → Activity (reciprocal)
+    A2A config: 3 source activities
+    Stage 2 balances: 11 activities  total=5,860.75
+    Converged in 2 iterations  (max change=0.0000)
+    ✓ Settled Amount written for 99 activity/CC combinations  total=5,860.75
+    ✓ Stage 2b Complete flag written to Reconciliation cube
+
+  Reading reconciliation checks...
+
+  Reconciliation summary:
+    ✓ RC01: PASS  In=      5,860.76  Out=      5,860.76
+    ✓ RC02: PASS  In=      5,860.76  Out=      5,860.75
+    ✓ RC03: PASS  In=      5,860.75  Out=      5,860.75
+    ✓ RC04: PASS  In=      5,860.75  Out=      5,860.75
+    ✓ RC05: PASS  In=      5,860.75  Out=      5,860.75
+    ✓ RC06: PASS  In=      5,860.76  Out=      5,860.75
+
+────────────────────────────────────────────────────────────
+  ✓ Apportionment complete — all RC checks PASS
+────────────────────────────────────────────────────────────
+
+
+────────────────────────────────────────────────────────────
+  CST Apportionment Run
+  Period:  2026-05
+  Version: Budget
+────────────────────────────────────────────────────────────
+
+  Running VAL checks...
+    VAL checks written to Reconciliation cube
+
+  Validation gate check...
+    ✓ VAL01: PASS — All pools have driver percentage shares configured
+    ✓ VAL02: PASS — All activities have input volumes configured
+    ! VAL03: WARNING — SQL source check not configured — skipped
+    ✓ VAL04: PASS — All overhead accounts have pool assignments
+    ✓ VAL05: PASS — All Direct accounts have Direct % configured
+    ✓ VAL06: PASS — All accounts have Apportionment Type configured
+
+  Stage 1b — Pool → Pool (reciprocal)
+    P2P config: 3 source pools
+    Stage 1 balances: 9 pools  total=5,633.58
+    Converged in 11 iterations  (max change=0.0078)
+    ✓ Settled Amount written for 45 pool/CC combinations  total=5,633.57
+    ✓ Inter-pool transfers written: 20 pool pairs
+    ✓ Stage 1b Complete flag written to Reconciliation cube
+
+  Stage 2b — Activity → Activity (reciprocal)
+    A2A config: 3 source activities
+    Stage 2 balances: 11 activities  total=5,633.57
+    Converged in 2 iterations  (max change=0.0000)
+    ✓ Settled Amount written for 99 activity/CC combinations  total=5,633.57
+    ✓ Stage 2b Complete flag written to Reconciliation cube
+
+  Reading reconciliation checks...
+
+  Reconciliation summary:
+    ✓ RC01: PASS  In=      5,633.58  Out=      5,633.58
+    ✓ RC02: PASS  In=      5,633.58  Out=      5,633.57
+    ✓ RC03: PASS  In=      5,633.57  Out=      5,633.57
+    ✓ RC04: PASS  In=      5,633.57  Out=      5,633.57
+    ✓ RC05: PASS  In=      5,633.57  Out=      5,633.57
+    ✓ RC06: PASS  In=      5,633.58  Out=      5,633.57
+
+────────────────────────────────────────────────────────────
+  ✓ Apportionment complete — all RC checks PASS
+────────────────────────────────────────────────────────────
+
+
+────────────────────────────────────────────────────────────
+  CST Apportionment Run
+  Period:  2026-06
+  Version: Budget
+────────────────────────────────────────────────────────────
+
+  Running VAL checks...
+    VAL checks written to Reconciliation cube
+
+  Validation gate check...
+    ✓ VAL01: PASS — All pools have driver percentage shares configured
+    ✓ VAL02: PASS — All activities have input volumes configured
+    ! VAL03: WARNING — SQL source check not configured — skipped
+    ✓ VAL04: PASS — All overhead accounts have pool assignments
+    ✓ VAL05: PASS — All Direct accounts have Direct % configured
+    ✓ VAL06: PASS — All accounts have Apportionment Type configured
+
+  Stage 1b — Pool → Pool (reciprocal)
+    P2P config: 3 source pools
+    Stage 1 balances: 9 pools  total=5,395.34
+    Converged in 11 iterations  (max change=0.0074)
+    ✓ Settled Amount written for 45 pool/CC combinations  total=5,395.33
+    ✓ Inter-pool transfers written: 20 pool pairs
+    ✓ Stage 1b Complete flag written to Reconciliation cube
+
+  Stage 2b — Activity → Activity (reciprocal)
+    A2A config: 3 source activities
+    Stage 2 balances: 11 activities  total=5,395.33
+    Converged in 2 iterations  (max change=0.0000)
+    ✓ Settled Amount written for 99 activity/CC combinations  total=5,395.33
+    ✓ Stage 2b Complete flag written to Reconciliation cube
+
+  Reading reconciliation checks...
+
+  Reconciliation summary:
+    ✓ RC01: PASS  In=      5,395.34  Out=      5,395.34
+    ✓ RC02: PASS  In=      5,395.34  Out=      5,395.33
+    ✓ RC03: PASS  In=      5,395.33  Out=      5,395.33
+    ✓ RC04: PASS  In=      5,395.33  Out=      5,395.33
+    ✓ RC05: PASS  In=      5,395.33  Out=      5,395.33
+    ✓ RC06: PASS  In=      5,395.34  Out=      5,395.33
+
+────────────────────────────────────────────────────────────
+  ✓ Apportionment complete — all RC checks PASS
+────────────────────────────────────────────────────────────
+
+
+────────────────────────────────────────────────────────────
+  CST Apportionment Run
+  Period:  2026-07
+  Version: Budget
+────────────────────────────────────────────────────────────
+
+  Running VAL checks...
+    VAL checks written to Reconciliation cube
+
+  Validation gate check...
+    ✓ VAL01: PASS — All pools have driver percentage shares configured
+    ✓ VAL02: PASS — All activities have input volumes configured
+    ! VAL03: WARNING — SQL source check not configured — skipped
+    ✓ VAL04: PASS — All overhead accounts have pool assignments
+    ✓ VAL05: PASS — All Direct accounts have Direct % configured
+    ✓ VAL06: PASS — All accounts have Apportionment Type configured
+
+  Stage 1b — Pool → Pool (reciprocal)
+    P2P config: 3 source pools
+    Stage 1 balances: 9 pools  total=5,120.57
+    Converged in 11 iterations  (max change=0.0070)
+    ✓ Settled Amount written for 45 pool/CC combinations  total=5,120.56
+    ✓ Inter-pool transfers written: 20 pool pairs
+    ✓ Stage 1b Complete flag written to Reconciliation cube
+
+  Stage 2b — Activity → Activity (reciprocal)
+    A2A config: 3 source activities
+    Stage 2 balances: 11 activities  total=5,120.56
+    Converged in 2 iterations  (max change=0.0000)
+    ✓ Settled Amount written for 99 activity/CC combinations  total=5,120.56
+    ✓ Stage 2b Complete flag written to Reconciliation cube
+
+  Reading reconciliation checks...
+
+  Reconciliation summary:
+    ✓ RC01: PASS  In=      5,120.57  Out=      5,120.57
+    ✓ RC02: PASS  In=      5,120.57  Out=      5,120.56
+    ✓ RC03: PASS  In=      5,120.56  Out=      5,120.56
+    ✓ RC04: PASS  In=      5,120.56  Out=      5,120.56
+    ✓ RC05: PASS  In=      5,120.56  Out=      5,120.56
+    ✓ RC06: PASS  In=      5,120.57  Out=      5,120.56
+
+────────────────────────────────────────────────────────────
+  ✓ Apportionment complete — all RC checks PASS
+────────────────────────────────────────────────────────────
+
+
+────────────────────────────────────────────────────────────
+  CST Apportionment Run
+  Period:  2026-08
+  Version: Budget
+────────────────────────────────────────────────────────────
+
+  Running VAL checks...
+    VAL checks written to Reconciliation cube
+
+  Validation gate check...
+    ✓ VAL01: PASS — All pools have driver percentage shares configured
+    ✓ VAL02: PASS — All activities have input volumes configured
+    ! VAL03: WARNING — SQL source check not configured — skipped
+    ✓ VAL04: PASS — All overhead accounts have pool assignments
+    ✓ VAL05: PASS — All Direct accounts have Direct % configured
+    ✓ VAL06: PASS — All accounts have Apportionment Type configured
+
+  Stage 1b — Pool → Pool (reciprocal)
+    P2P config: 3 source pools
+    Stage 1 balances: 9 pools  total=4,839.44
+    Converged in 11 iterations  (max change=0.0066)
+    ✓ Settled Amount written for 45 pool/CC combinations  total=4,839.43
+    ✓ Inter-pool transfers written: 20 pool pairs
+    ✓ Stage 1b Complete flag written to Reconciliation cube
+
+  Stage 2b — Activity → Activity (reciprocal)
+    A2A config: 3 source activities
+    Stage 2 balances: 11 activities  total=4,839.43
+    Converged in 2 iterations  (max change=0.0000)
+    ✓ Settled Amount written for 99 activity/CC combinations  total=4,839.43
+    ✓ Stage 2b Complete flag written to Reconciliation cube
+
+  Reading reconciliation checks...
+
+  Reconciliation summary:
+    ✓ RC01: PASS  In=      4,839.44  Out=      4,839.44
+    ✓ RC02: PASS  In=      4,839.44  Out=      4,839.43
+    ✓ RC03: PASS  In=      4,839.43  Out=      4,839.43
+    ✓ RC04: PASS  In=      4,839.43  Out=      4,839.43
+    ✓ RC05: PASS  In=      4,839.43  Out=      4,839.43
+    ✓ RC06: PASS  In=      4,839.44  Out=      4,839.43
+
+────────────────────────────────────────────────────────────
+  ✓ Apportionment complete — all RC checks PASS
+────────────────────────────────────────────────────────────
+
+
+────────────────────────────────────────────────────────────
+  CST Apportionment Run
+  Period:  2026-09
+  Version: Budget
+────────────────────────────────────────────────────────────
+
+  Running VAL checks...
+    VAL checks written to Reconciliation cube
+
+  Validation gate check...
+    ✓ VAL01: PASS — All pools have driver percentage shares configured
+    ✓ VAL02: PASS — All activities have input volumes configured
+    ! VAL03: WARNING — SQL source check not configured — skipped
+    ✓ VAL04: PASS — All overhead accounts have pool assignments
+    ✓ VAL05: PASS — All Direct accounts have Direct % configured
+    ✓ VAL06: PASS — All accounts have Apportionment Type configured
+
+  Stage 1b — Pool → Pool (reciprocal)
+    P2P config: 3 source pools
+    Stage 1 balances: 9 pools  total=4,495.94
+    Converged in 11 iterations  (max change=0.0061)
+    ✓ Settled Amount written for 45 pool/CC combinations  total=4,495.93
+    ✓ Inter-pool transfers written: 20 pool pairs
+    ✓ Stage 1b Complete flag written to Reconciliation cube
+
+  Stage 2b — Activity → Activity (reciprocal)
+    A2A config: 3 source activities
+    Stage 2 balances: 11 activities  total=4,495.93
+    Converged in 2 iterations  (max change=0.0000)
+    ✓ Settled Amount written for 99 activity/CC combinations  total=4,495.93
+    ✓ Stage 2b Complete flag written to Reconciliation cube
+
+  Reading reconciliation checks...
+
+  Reconciliation summary:
+    ✓ RC01: PASS  In=      4,495.94  Out=      4,495.94
+    ✓ RC02: PASS  In=      4,495.94  Out=      4,495.93
+    ✓ RC03: PASS  In=      4,495.93  Out=      4,495.93
+    ✓ RC04: PASS  In=      4,495.93  Out=      4,495.93
+    ✓ RC05: PASS  In=      4,495.93  Out=      4,495.93
+    ✓ RC06: PASS  In=      4,495.94  Out=      4,495.93
+
+────────────────────────────────────────────────────────────
+  ✓ Apportionment complete — all RC checks PASS
+────────────────────────────────────────────────────────────
+
+
+────────────────────────────────────────────────────────────
+  CST Apportionment Run
+  Period:  2026-10
+  Version: Budget
+────────────────────────────────────────────────────────────
+
+  Running VAL checks...
+    VAL checks written to Reconciliation cube
+
+  Validation gate check...
+    ✓ VAL01: PASS — All pools have driver percentage shares configured
+    ✓ VAL02: PASS — All activities have input volumes configured
+    ! VAL03: WARNING — SQL source check not configured — skipped
+    ✓ VAL04: PASS — All overhead accounts have pool assignments
+    ✓ VAL05: PASS — All Direct accounts have Direct % configured
+    ✓ VAL06: PASS — All accounts have Apportionment Type configured
+
+  Stage 1b — Pool → Pool (reciprocal)
+    P2P config: 3 source pools
+    Stage 1 balances: 9 pools  total=4,293.82
+    Converged in 11 iterations  (max change=0.0058)
+    ✓ Settled Amount written for 45 pool/CC combinations  total=4,293.81
+    ✓ Inter-pool transfers written: 20 pool pairs
+    ✓ Stage 1b Complete flag written to Reconciliation cube
+
+  Stage 2b — Activity → Activity (reciprocal)
+    A2A config: 3 source activities
+    Stage 2 balances: 11 activities  total=4,293.81
+    Converged in 2 iterations  (max change=0.0000)
+    ✓ Settled Amount written for 99 activity/CC combinations  total=4,293.81
+    ✓ Stage 2b Complete flag written to Reconciliation cube
+
+  Reading reconciliation checks...
+
+  Reconciliation summary:
+    ✓ RC01: PASS  In=      4,293.82  Out=      4,293.82
+    ✓ RC02: PASS  In=      4,293.82  Out=      4,293.81
+    ✓ RC03: PASS  In=      4,293.81  Out=      4,293.81
+    ✓ RC04: PASS  In=      4,293.81  Out=      4,293.81
+    ✓ RC05: PASS  In=      4,293.81  Out=      4,293.81
+    ✓ RC06: PASS  In=      4,293.82  Out=      4,293.81
+
+────────────────────────────────────────────────────────────
+  ✓ Apportionment complete — all RC checks PASS
+────────────────────────────────────────────────────────────
+
+
+────────────────────────────────────────────────────────────
+  CST Apportionment Run
+  Period:  2026-11
+  Version: Budget
+────────────────────────────────────────────────────────────
+
+  Running VAL checks...
+    VAL checks written to Reconciliation cube
+
+  Validation gate check...
+    ✓ VAL01: PASS — All pools have driver percentage shares configured
+    ✓ VAL02: PASS — All activities have input volumes configured
+    ! VAL03: WARNING — SQL source check not configured — skipped
+    ✓ VAL04: PASS — All overhead accounts have pool assignments
+    ✓ VAL05: PASS — All Direct accounts have Direct % configured
+    ✓ VAL06: PASS — All accounts have Apportionment Type configured
+
+  Stage 1b — Pool → Pool (reciprocal)
+    P2P config: 3 source pools
+    Stage 1 balances: 9 pools  total=4,077.98
+    Converged in 11 iterations  (max change=0.0055)
+    ✓ Settled Amount written for 45 pool/CC combinations  total=4,077.97
+    ✓ Inter-pool transfers written: 20 pool pairs
+    ✓ Stage 1b Complete flag written to Reconciliation cube
+
+  Stage 2b — Activity → Activity (reciprocal)
+    A2A config: 3 source activities
+    Stage 2 balances: 11 activities  total=4,077.97
+    Converged in 2 iterations  (max change=0.0000)
+    ✓ Settled Amount written for 99 activity/CC combinations  total=4,077.97
+    ✓ Stage 2b Complete flag written to Reconciliation cube
+
+  Reading reconciliation checks...
+
+  Reconciliation summary:
+    ✓ RC01: PASS  In=      4,077.98  Out=      4,077.98
+    ✓ RC02: PASS  In=      4,077.98  Out=      4,077.97
+    ✓ RC03: PASS  In=      4,077.97  Out=      4,077.97
+    ✓ RC04: PASS  In=      4,077.97  Out=      4,077.97
+    ✓ RC05: PASS  In=      4,077.97  Out=      4,077.97
+    ✓ RC06: PASS  In=      4,077.98  Out=      4,077.97
+
+────────────────────────────────────────────────────────────
+  ✓ Apportionment complete — all RC checks PASS
+────────────────────────────────────────────────────────────
+
+
+────────────────────────────────────────────────────────────
+  CST Apportionment Run
+  Period:  2026-12
+  Version: Budget
+────────────────────────────────────────────────────────────
+
+  Running VAL checks...
+    VAL checks written to Reconciliation cube
+
+  Validation gate check...
+    ✓ VAL01: PASS — All pools have driver percentage shares configured
+    ✓ VAL02: PASS — All activities have input volumes configured
+    ! VAL03: WARNING — SQL source check not configured — skipped
+    ✓ VAL04: PASS — All overhead accounts have pool assignments
+    ✓ VAL05: PASS — All Direct accounts have Direct % configured
+    ✓ VAL06: PASS — All accounts have Apportionment Type configured
+
+  Stage 1b — Pool → Pool (reciprocal)
+    P2P config: 3 source pools
+    Stage 1 balances: 9 pools  total=3,868.34
+    Converged in 11 iterations  (max change=0.0052)
+    ✓ Settled Amount written for 45 pool/CC combinations  total=3,868.33
+    ✓ Inter-pool transfers written: 20 pool pairs
+    ✓ Stage 1b Complete flag written to Reconciliation cube
+
+  Stage 2b — Activity → Activity (reciprocal)
+    A2A config: 3 source activities
+    Stage 2 balances: 11 activities  total=3,868.33
+    Converged in 2 iterations  (max change=0.0000)
+    ✓ Settled Amount written for 99 activity/CC combinations  total=3,868.33
+    ✓ Stage 2b Complete flag written to Reconciliation cube
+
+  Reading reconciliation checks...
+
+  Reconciliation summary:
+    ✓ RC01: PASS  In=      3,868.34  Out=      3,868.34
+    ✓ RC02: PASS  In=      3,868.34  Out=      3,868.33
+    ✓ RC03: PASS  In=      3,868.33  Out=      3,868.33
+    ✓ RC04: PASS  In=      3,868.33  Out=      3,868.33
+    ✓ RC05: PASS  In=      3,868.33  Out=      3,868.33

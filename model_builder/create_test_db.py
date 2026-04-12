@@ -5,7 +5,7 @@ aligned to the live TM1 model (GBL Account, CST Cost Pool, CST Activity,
 CST Service Line, GBL Cost Centre codes).
 
 Driver percentages sum to 100 per pool (pool_drivers) and per activity
-(activity_drivers). GL input covers all 12 FY2025 Budget periods.
+(activity_drivers). GL input covers all 12 FY2027 Budget periods (2026-04 to 2027-03).
 
 GBL Cost Centre codes (D001-D017):
   Clinical  : D001 Emergency Department, D002 Elective Surgery,
@@ -730,8 +730,8 @@ _ACTIVITY_DRIVER_VALUES_STATIC = [
 ]
 
 _BUDGET_PERIODS = [
-    '2025-04', '2025-05', '2025-06', '2025-07', '2025-08', '2025-09',
-    '2025-10', '2025-11', '2025-12', '2026-01', '2026-02', '2026-03',
+    '2026-04', '2026-05', '2026-06', '2026-07', '2026-08', '2026-09',
+    '2026-10', '2026-11', '2026-12', '2027-01', '2027-02', '2027-03',
 ]
 _FORECAST_PERIODS = [
     '2026-03', '2026-04', '2026-05', '2026-06', '2026-07', '2026-08',
