@@ -1,0 +1,325 @@
+vGBL Period,vGBL Version,vCST Activity,vCST Activity Dest,vCST Activity to Activity Config Measure,vAmount
+2026-04,Budget,A01,Input,Redistribution Percentage,0
+2026-04,Budget,A01,Input,Driver Description,Patient Admission
+2026-04,Budget,A03,Input,Redistribution Percentage,25
+2026-04,Budget,A03,Input,Driver Description,Clinical Procedure
+2026-04,Budget,A04,Input,Redistribution Percentage,15
+2026-04,Budget,A04,Input,Driver Description,Patient Monitoring
+2026-04,Budget,A01,A03,Driver Value,60
+2026-04,Budget,A01,A04,Driver Value,40
+2026-04,Budget,A03,A01,Driver Value,35
+2026-04,Budget,A03,A07,Driver Value,65
+2026-04,Budget,A04,A01,Driver Value,50
+2026-04,Budget,A04,A03,Driver Value,50
+2026-04,Budget,A07,A09,Driver Value,100
+2026-05,Budget,A01,Input,Redistribution Percentage,0
+2026-05,Budget,A01,Input,Driver Description,Patient Admission
+2026-05,Budget,A03,Input,Redistribution Percentage,25
+2026-05,Budget,A03,Input,Driver Description,Clinical Procedure
+2026-05,Budget,A04,Input,Redistribution Percentage,15
+2026-05,Budget,A04,Input,Driver Description,Patient Monitoring
+2026-05,Budget,A01,A03,Driver Value,60
+2026-05,Budget,A01,A04,Driver Value,40
+2026-05,Budget,A03,A01,Driver Value,35
+2026-05,Budget,A03,A07,Driver Value,65
+2026-05,Budget,A04,A01,Driver Value,50
+2026-05,Budget,A04,A03,Driver Value,50
+2026-05,Budget,A07,A09,Driver Value,100
+2026-06,Budget,A01,Input,Redistribution Percentage,0
+2026-06,Budget,A01,Input,Driver Description,Patient Admission
+2026-06,Budget,A03,Input,Redistribution Percentage,25
+2026-06,Budget,A03,Input,Driver Description,Clinical Procedure
+2026-06,Budget,A04,Input,Redistribution Percentage,15
+2026-06,Budget,A04,Input,Driver Description,Patient Monitoring
+2026-06,Budget,A01,A03,Driver Value,60
+2026-06,Budget,A01,A04,Driver Value,40
+2026-06,Budget,A03,A01,Driver Value,35
+2026-06,Budget,A03,A07,Driver Value,65
+2026-06,Budget,A04,A01,Driver Value,50
+2026-06,Budget,A04,A03,Driver Value,50
+2026-06,Budget,A07,A09,Driver Value,100
+2026-07,Budget,A01,Input,Redistribution Percentage,0
+2026-07,Budget,A01,Input,Driver Description,Patient Admission
+2026-07,Budget,A03,Input,Redistribution Percentage,25
+2026-07,Budget,A03,Input,Driver Description,Clinical Procedure
+2026-07,Budget,A04,Input,Redistribution Percentage,15
+2026-07,Budget,A04,Input,Driver Description,Patient Monitoring
+2026-07,Budget,A01,A03,Driver Value,60
+2026-07,Budget,A01,A04,Driver Value,40
+2026-07,Budget,A03,A01,Driver Value,35
+2026-07,Budget,A03,A07,Driver Value,65
+2026-07,Budget,A04,A01,Driver Value,50
+2026-07,Budget,A04,A03,Driver Value,50
+2026-07,Budget,A07,A09,Driver Value,100
+2026-08,Budget,A01,Input,Redistribution Percentage,0
+2026-08,Budget,A01,Input,Driver Description,Patient Admission
+2026-08,Budget,A03,Input,Redistribution Percentage,25
+2026-08,Budget,A03,Input,Driver Description,Clinical Procedure
+2026-08,Budget,A04,Input,Redistribution Percentage,15
+2026-08,Budget,A04,Input,Driver Description,Patient Monitoring
+2026-08,Budget,A01,A03,Driver Value,60
+2026-08,Budget,A01,A04,Driver Value,40
+2026-08,Budget,A03,A01,Driver Value,35
+2026-08,Budget,A03,A07,Driver Value,65
+2026-08,Budget,A04,A01,Driver Value,50
+2026-08,Budget,A04,A03,Driver Value,50
+2026-08,Budget,A07,A09,Driver Value,100
+2026-09,Budget,A01,Input,Redistribution Percentage,0
+2026-09,Budget,A01,Input,Driver Description,Patient Admission
+2026-09,Budget,A03,Input,Redistribution Percentage,25
+2026-09,Budget,A03,Input,Driver Description,Clinical Procedure
+2026-09,Budget,A04,Input,Redistribution Percentage,15
+2026-09,Budget,A04,Input,Driver Description,Patient Monitoring
+2026-09,Budget,A01,A03,Driver Value,60
+2026-09,Budget,A01,A04,Driver Value,40
+2026-09,Budget,A03,A01,Driver Value,35
+2026-09,Budget,A03,A07,Driver Value,65
+2026-09,Budget,A04,A01,Driver Value,50
+2026-09,Budget,A04,A03,Driver Value,50
+2026-09,Budget,A07,A09,Driver Value,100
+2026-10,Budget,A01,Input,Redistribution Percentage,0
+2026-10,Budget,A01,Input,Driver Description,Patient Admission
+2026-10,Budget,A03,Input,Redistribution Percentage,25
+2026-10,Budget,A03,Input,Driver Description,Clinical Procedure
+2026-10,Budget,A04,Input,Redistribution Percentage,15
+2026-10,Budget,A04,Input,Driver Description,Patient Monitoring
+2026-10,Budget,A01,A03,Driver Value,60
+2026-10,Budget,A01,A04,Driver Value,40
+2026-10,Budget,A03,A01,Driver Value,35
+2026-10,Budget,A03,A07,Driver Value,65
+2026-10,Budget,A04,A01,Driver Value,50
+2026-10,Budget,A04,A03,Driver Value,50
+2026-10,Budget,A07,A09,Driver Value,100
+2026-11,Budget,A01,Input,Redistribution Percentage,0
+2026-11,Budget,A01,Input,Driver Description,Patient Admission
+2026-11,Budget,A03,Input,Redistribution Percentage,25
+2026-11,Budget,A03,Input,Driver Description,Clinical Procedure
+2026-11,Budget,A04,Input,Redistribution Percentage,15
+2026-11,Budget,A04,Input,Driver Description,Patient Monitoring
+2026-11,Budget,A01,A03,Driver Value,60
+2026-11,Budget,A01,A04,Driver Value,40
+2026-11,Budget,A03,A01,Driver Value,35
+2026-11,Budget,A03,A07,Driver Value,65
+2026-11,Budget,A04,A01,Driver Value,50
+2026-11,Budget,A04,A03,Driver Value,50
+2026-11,Budget,A07,A09,Driver Value,100
+2026-12,Budget,A01,Input,Redistribution Percentage,0
+2026-12,Budget,A01,Input,Driver Description,Patient Admission
+2026-12,Budget,A03,Input,Redistribution Percentage,25
+2026-12,Budget,A03,Input,Driver Description,Clinical Procedure
+2026-12,Budget,A04,Input,Redistribution Percentage,15
+2026-12,Budget,A04,Input,Driver Description,Patient Monitoring
+2026-12,Budget,A01,A03,Driver Value,60
+2026-12,Budget,A01,A04,Driver Value,40
+2026-12,Budget,A03,A01,Driver Value,35
+2026-12,Budget,A03,A07,Driver Value,65
+2026-12,Budget,A04,A01,Driver Value,50
+2026-12,Budget,A04,A03,Driver Value,50
+2026-12,Budget,A07,A09,Driver Value,100
+2027-01,Budget,A01,Input,Redistribution Percentage,0
+2027-01,Budget,A01,Input,Driver Description,Patient Admission
+2027-01,Budget,A03,Input,Redistribution Percentage,25
+2027-01,Budget,A03,Input,Driver Description,Clinical Procedure
+2027-01,Budget,A04,Input,Redistribution Percentage,15
+2027-01,Budget,A04,Input,Driver Description,Patient Monitoring
+2027-01,Budget,A01,A03,Driver Value,60
+2027-01,Budget,A01,A04,Driver Value,40
+2027-01,Budget,A03,A01,Driver Value,35
+2027-01,Budget,A03,A07,Driver Value,65
+2027-01,Budget,A04,A01,Driver Value,50
+2027-01,Budget,A04,A03,Driver Value,50
+2027-01,Budget,A07,A09,Driver Value,100
+2027-02,Budget,A01,Input,Redistribution Percentage,0
+2027-02,Budget,A01,Input,Driver Description,Patient Admission
+2027-02,Budget,A03,Input,Redistribution Percentage,25
+2027-02,Budget,A03,Input,Driver Description,Clinical Procedure
+2027-02,Budget,A04,Input,Redistribution Percentage,15
+2027-02,Budget,A04,Input,Driver Description,Patient Monitoring
+2027-02,Budget,A01,A03,Driver Value,60
+2027-02,Budget,A01,A04,Driver Value,40
+2027-02,Budget,A03,A01,Driver Value,35
+2027-02,Budget,A03,A07,Driver Value,65
+2027-02,Budget,A04,A01,Driver Value,50
+2027-02,Budget,A04,A03,Driver Value,50
+2027-02,Budget,A07,A09,Driver Value,100
+2027-03,Budget,A01,Input,Redistribution Percentage,0
+2027-03,Budget,A01,Input,Driver Description,Patient Admission
+2027-03,Budget,A03,Input,Redistribution Percentage,25
+2027-03,Budget,A03,Input,Driver Description,Clinical Procedure
+2027-03,Budget,A04,Input,Redistribution Percentage,15
+2027-03,Budget,A04,Input,Driver Description,Patient Monitoring
+2027-03,Budget,A01,A03,Driver Value,60
+2027-03,Budget,A01,A04,Driver Value,40
+2027-03,Budget,A03,A01,Driver Value,35
+2027-03,Budget,A03,A07,Driver Value,65
+2027-03,Budget,A04,A01,Driver Value,50
+2027-03,Budget,A04,A03,Driver Value,50
+2027-03,Budget,A07,A09,Driver Value,100
+2026-04,Budget,A02,Input,Redistribution Percentage,10
+2026-04,Budget,A02,Input,Driver Description,Surgical Preparation
+2026-04,Budget,A05,Input,Redistribution Percentage,0
+2026-04,Budget,A05,Input,Driver Description,Diagnostic Ordering
+2026-04,Budget,A06,Input,Redistribution Percentage,20
+2026-04,Budget,A06,Input,Driver Description,Diagnostic Reporting
+2026-04,Budget,A08,Input,Redistribution Percentage,30
+2026-04,Budget,A08,Input,Driver Description,Theatre Scheduling
+2026-04,Budget,A09,Input,Redistribution Percentage,15
+2026-04,Budget,A09,Input,Driver Description,Discharge Planning
+2026-04,Budget,A10,Input,Redistribution Percentage,0
+2026-04,Budget,A10,Input,Driver Description,Outpatient Coordination
+2026-04,Budget,A11,Input,Redistribution Percentage,10
+2026-04,Budget,A11,Input,Driver Description,Infection Prevention
+2026-05,Budget,A02,Input,Redistribution Percentage,10
+2026-05,Budget,A02,Input,Driver Description,Surgical Preparation
+2026-05,Budget,A05,Input,Redistribution Percentage,0
+2026-05,Budget,A05,Input,Driver Description,Diagnostic Ordering
+2026-05,Budget,A06,Input,Redistribution Percentage,20
+2026-05,Budget,A06,Input,Driver Description,Diagnostic Reporting
+2026-05,Budget,A08,Input,Redistribution Percentage,30
+2026-05,Budget,A08,Input,Driver Description,Theatre Scheduling
+2026-05,Budget,A09,Input,Redistribution Percentage,15
+2026-05,Budget,A09,Input,Driver Description,Discharge Planning
+2026-05,Budget,A10,Input,Redistribution Percentage,0
+2026-05,Budget,A10,Input,Driver Description,Outpatient Coordination
+2026-05,Budget,A11,Input,Redistribution Percentage,10
+2026-05,Budget,A11,Input,Driver Description,Infection Prevention
+2026-06,Budget,A02,Input,Redistribution Percentage,10
+2026-06,Budget,A02,Input,Driver Description,Surgical Preparation
+2026-06,Budget,A05,Input,Redistribution Percentage,0
+2026-06,Budget,A05,Input,Driver Description,Diagnostic Ordering
+2026-06,Budget,A06,Input,Redistribution Percentage,20
+2026-06,Budget,A06,Input,Driver Description,Diagnostic Reporting
+2026-06,Budget,A08,Input,Redistribution Percentage,30
+2026-06,Budget,A08,Input,Driver Description,Theatre Scheduling
+2026-06,Budget,A09,Input,Redistribution Percentage,15
+2026-06,Budget,A09,Input,Driver Description,Discharge Planning
+2026-06,Budget,A10,Input,Redistribution Percentage,0
+2026-06,Budget,A10,Input,Driver Description,Outpatient Coordination
+2026-06,Budget,A11,Input,Redistribution Percentage,10
+2026-06,Budget,A11,Input,Driver Description,Infection Prevention
+2026-07,Budget,A02,Input,Redistribution Percentage,10
+2026-07,Budget,A02,Input,Driver Description,Surgical Preparation
+2026-07,Budget,A05,Input,Redistribution Percentage,0
+2026-07,Budget,A05,Input,Driver Description,Diagnostic Ordering
+2026-07,Budget,A06,Input,Redistribution Percentage,20
+2026-07,Budget,A06,Input,Driver Description,Diagnostic Reporting
+2026-07,Budget,A08,Input,Redistribution Percentage,30
+2026-07,Budget,A08,Input,Driver Description,Theatre Scheduling
+2026-07,Budget,A09,Input,Redistribution Percentage,15
+2026-07,Budget,A09,Input,Driver Description,Discharge Planning
+2026-07,Budget,A10,Input,Redistribution Percentage,0
+2026-07,Budget,A10,Input,Driver Description,Outpatient Coordination
+2026-07,Budget,A11,Input,Redistribution Percentage,10
+2026-07,Budget,A11,Input,Driver Description,Infection Prevention
+2026-08,Budget,A02,Input,Redistribution Percentage,10
+2026-08,Budget,A02,Input,Driver Description,Surgical Preparation
+2026-08,Budget,A05,Input,Redistribution Percentage,0
+2026-08,Budget,A05,Input,Driver Description,Diagnostic Ordering
+2026-08,Budget,A06,Input,Redistribution Percentage,20
+2026-08,Budget,A06,Input,Driver Description,Diagnostic Reporting
+2026-08,Budget,A08,Input,Redistribution Percentage,30
+2026-08,Budget,A08,Input,Driver Description,Theatre Scheduling
+2026-08,Budget,A09,Input,Redistribution Percentage,15
+2026-08,Budget,A09,Input,Driver Description,Discharge Planning
+2026-08,Budget,A10,Input,Redistribution Percentage,0
+2026-08,Budget,A10,Input,Driver Description,Outpatient Coordination
+2026-08,Budget,A11,Input,Redistribution Percentage,10
+2026-08,Budget,A11,Input,Driver Description,Infection Prevention
+2026-09,Budget,A02,Input,Redistribution Percentage,10
+2026-09,Budget,A02,Input,Driver Description,Surgical Preparation
+2026-09,Budget,A05,Input,Redistribution Percentage,0
+2026-09,Budget,A05,Input,Driver Description,Diagnostic Ordering
+2026-09,Budget,A06,Input,Redistribution Percentage,20
+2026-09,Budget,A06,Input,Driver Description,Diagnostic Reporting
+2026-09,Budget,A08,Input,Redistribution Percentage,30
+2026-09,Budget,A08,Input,Driver Description,Theatre Scheduling
+2026-09,Budget,A09,Input,Redistribution Percentage,15
+2026-09,Budget,A09,Input,Driver Description,Discharge Planning
+2026-09,Budget,A10,Input,Redistribution Percentage,0
+2026-09,Budget,A10,Input,Driver Description,Outpatient Coordination
+2026-09,Budget,A11,Input,Redistribution Percentage,10
+2026-09,Budget,A11,Input,Driver Description,Infection Prevention
+2026-10,Budget,A02,Input,Redistribution Percentage,10
+2026-10,Budget,A02,Input,Driver Description,Surgical Preparation
+2026-10,Budget,A05,Input,Redistribution Percentage,0
+2026-10,Budget,A05,Input,Driver Description,Diagnostic Ordering
+2026-10,Budget,A06,Input,Redistribution Percentage,20
+2026-10,Budget,A06,Input,Driver Description,Diagnostic Reporting
+2026-10,Budget,A08,Input,Redistribution Percentage,30
+2026-10,Budget,A08,Input,Driver Description,Theatre Scheduling
+2026-10,Budget,A09,Input,Redistribution Percentage,15
+2026-10,Budget,A09,Input,Driver Description,Discharge Planning
+2026-10,Budget,A10,Input,Redistribution Percentage,0
+2026-10,Budget,A10,Input,Driver Description,Outpatient Coordination
+2026-10,Budget,A11,Input,Redistribution Percentage,10
+2026-10,Budget,A11,Input,Driver Description,Infection Prevention
+2026-11,Budget,A02,Input,Redistribution Percentage,10
+2026-11,Budget,A02,Input,Driver Description,Surgical Preparation
+2026-11,Budget,A05,Input,Redistribution Percentage,0
+2026-11,Budget,A05,Input,Driver Description,Diagnostic Ordering
+2026-11,Budget,A06,Input,Redistribution Percentage,20
+2026-11,Budget,A06,Input,Driver Description,Diagnostic Reporting
+2026-11,Budget,A08,Input,Redistribution Percentage,30
+2026-11,Budget,A08,Input,Driver Description,Theatre Scheduling
+2026-11,Budget,A09,Input,Redistribution Percentage,15
+2026-11,Budget,A09,Input,Driver Description,Discharge Planning
+2026-11,Budget,A10,Input,Redistribution Percentage,0
+2026-11,Budget,A10,Input,Driver Description,Outpatient Coordination
+2026-11,Budget,A11,Input,Redistribution Percentage,10
+2026-11,Budget,A11,Input,Driver Description,Infection Prevention
+2026-12,Budget,A02,Input,Redistribution Percentage,10
+2026-12,Budget,A02,Input,Driver Description,Surgical Preparation
+2026-12,Budget,A05,Input,Redistribution Percentage,0
+2026-12,Budget,A05,Input,Driver Description,Diagnostic Ordering
+2026-12,Budget,A06,Input,Redistribution Percentage,20
+2026-12,Budget,A06,Input,Driver Description,Diagnostic Reporting
+2026-12,Budget,A08,Input,Redistribution Percentage,30
+2026-12,Budget,A08,Input,Driver Description,Theatre Scheduling
+2026-12,Budget,A09,Input,Redistribution Percentage,15
+2026-12,Budget,A09,Input,Driver Description,Discharge Planning
+2026-12,Budget,A10,Input,Redistribution Percentage,0
+2026-12,Budget,A10,Input,Driver Description,Outpatient Coordination
+2026-12,Budget,A11,Input,Redistribution Percentage,10
+2026-12,Budget,A11,Input,Driver Description,Infection Prevention
+2027-01,Budget,A02,Input,Redistribution Percentage,10
+2027-01,Budget,A02,Input,Driver Description,Surgical Preparation
+2027-01,Budget,A05,Input,Redistribution Percentage,0
+2027-01,Budget,A05,Input,Driver Description,Diagnostic Ordering
+2027-01,Budget,A06,Input,Redistribution Percentage,20
+2027-01,Budget,A06,Input,Driver Description,Diagnostic Reporting
+2027-01,Budget,A08,Input,Redistribution Percentage,30
+2027-01,Budget,A08,Input,Driver Description,Theatre Scheduling
+2027-01,Budget,A09,Input,Redistribution Percentage,15
+2027-01,Budget,A09,Input,Driver Description,Discharge Planning
+2027-01,Budget,A10,Input,Redistribution Percentage,0
+2027-01,Budget,A10,Input,Driver Description,Outpatient Coordination
+2027-01,Budget,A11,Input,Redistribution Percentage,10
+2027-01,Budget,A11,Input,Driver Description,Infection Prevention
+2027-02,Budget,A02,Input,Redistribution Percentage,10
+2027-02,Budget,A02,Input,Driver Description,Surgical Preparation
+2027-02,Budget,A05,Input,Redistribution Percentage,0
+2027-02,Budget,A05,Input,Driver Description,Diagnostic Ordering
+2027-02,Budget,A06,Input,Redistribution Percentage,20
+2027-02,Budget,A06,Input,Driver Description,Diagnostic Reporting
+2027-02,Budget,A08,Input,Redistribution Percentage,30
+2027-02,Budget,A08,Input,Driver Description,Theatre Scheduling
+2027-02,Budget,A09,Input,Redistribution Percentage,15
+2027-02,Budget,A09,Input,Driver Description,Discharge Planning
+2027-02,Budget,A10,Input,Redistribution Percentage,0
+2027-02,Budget,A10,Input,Driver Description,Outpatient Coordination
+2027-02,Budget,A11,Input,Redistribution Percentage,10
+2027-02,Budget,A11,Input,Driver Description,Infection Prevention
+2027-03,Budget,A02,Input,Redistribution Percentage,10
+2027-03,Budget,A02,Input,Driver Description,Surgical Preparation
+2027-03,Budget,A05,Input,Redistribution Percentage,0
+2027-03,Budget,A05,Input,Driver Description,Diagnostic Ordering
+2027-03,Budget,A06,Input,Redistribution Percentage,20
+2027-03,Budget,A06,Input,Driver Description,Diagnostic Reporting
+2027-03,Budget,A08,Input,Redistribution Percentage,30
+2027-03,Budget,A08,Input,Driver Description,Theatre Scheduling
+2027-03,Budget,A09,Input,Redistribution Percentage,15
+2027-03,Budget,A09,Input,Driver Description,Discharge Planning
+2027-03,Budget,A10,Input,Redistribution Percentage,0
+2027-03,Budget,A10,Input,Driver Description,Outpatient Coordination
+2027-03,Budget,A11,Input,Redistribution Percentage,10
+2027-03,Budget,A11,Input,Driver Description,Infection Prevention

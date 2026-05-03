@@ -1,0 +1,433 @@
+﻿vGBL Period,vGBL Version,vCST Cost Pool,vCST Cost Pool Dest,vCST Pool to Pool Config Measure,vAmount
+2026-04,Budget,CP01,Input,Driver Description,FLOORSPACE
+2026-04,Budget,CP01,Input,Redistribution Percentage,45.5
+2026-04,Budget,CP01,CP03,Active,1
+2026-04,Budget,CP01,CP03,Driver Value,1412
+2026-04,Budget,CP01,CP05,Active,1
+2026-04,Budget,CP01,CP05,Driver Value,704
+2026-04,Budget,CP01,CP08,Active,1
+2026-04,Budget,CP01,CP08,Driver Value,2753
+2026-04,Budget,CP02,Input,Driver Description,POWERUSAGE
+2026-04,Budget,CP02,Input,Redistribution Percentage,38.7
+2026-04,Budget,CP02,CP05,Active,1
+2026-04,Budget,CP02,CP05,Driver Value,42098
+2026-04,Budget,CP02,CP03,Active,1
+2026-04,Budget,CP02,CP03,Driver Value,39256
+2026-04,Budget,CP02,CP08,Active,1
+2026-04,Budget,CP02,CP08,Driver Value,28289
+2026-04,Budget,CP03,Input,Driver Description,HEADCOUNT
+2026-04,Budget,CP03,Input,Redistribution Percentage,95.01
+2026-04,Budget,CP03,CP05,Active,1
+2026-04,Budget,CP03,CP05,Driver Value,36
+2026-04,Budget,CP03,CP02,Active,1
+2026-04,Budget,CP03,CP02,Driver Value,149
+2026-04,Budget,CP06,Input,Driver Description,POWERUSAGE
+2026-04,Budget,CP06,Input,Redistribution Percentage,61.8
+2026-04,Budget,CP06,CP01,Active,1
+2026-04,Budget,CP06,CP01,Driver Value,21395
+2026-04,Budget,CP06,CP07,Active,1
+2026-04,Budget,CP06,CP07,Driver Value,87397
+2026-04,Budget,CP06,CP08,Active,1
+2026-04,Budget,CP06,CP08,Driver Value,65302
+2026-04,Budget,CP07,Input,Driver Description,BEDDAYS
+2026-04,Budget,CP07,Input,Redistribution Percentage,88.1
+2026-04,Budget,CP07,CP02,Active,1
+2026-04,Budget,CP07,CP02,Driver Value,760
+2026-04,Budget,CP07,CP04,Active,1
+2026-04,Budget,CP07,CP04,Driver Value,744
+2026-05,Budget,CP01,Input,Driver Description,FLOORSPACE
+2026-05,Budget,CP01,Input,Redistribution Percentage,45.5
+2026-05,Budget,CP01,CP03,Active,1
+2026-05,Budget,CP01,CP03,Driver Value,1267
+2026-05,Budget,CP01,CP05,Active,1
+2026-05,Budget,CP01,CP05,Driver Value,2291
+2026-05,Budget,CP01,CP08,Active,1
+2026-05,Budget,CP01,CP08,Driver Value,2405
+2026-05,Budget,CP02,Input,Driver Description,POWERUSAGE
+2026-05,Budget,CP02,Input,Redistribution Percentage,38.7
+2026-05,Budget,CP02,CP05,Active,1
+2026-05,Budget,CP02,CP05,Driver Value,76237
+2026-05,Budget,CP02,CP03,Active,1
+2026-05,Budget,CP02,CP03,Driver Value,88907
+2026-05,Budget,CP02,CP08,Active,1
+2026-05,Budget,CP02,CP08,Driver Value,13478
+2026-05,Budget,CP03,Input,Driver Description,HEADCOUNT
+2026-05,Budget,CP03,Input,Redistribution Percentage,95.01
+2026-05,Budget,CP03,CP05,Active,1
+2026-05,Budget,CP03,CP05,Driver Value,60
+2026-05,Budget,CP03,CP02,Active,1
+2026-05,Budget,CP03,CP02,Driver Value,149
+2026-05,Budget,CP06,Input,Driver Description,POWERUSAGE
+2026-05,Budget,CP06,Input,Redistribution Percentage,61.8
+2026-05,Budget,CP06,CP01,Active,1
+2026-05,Budget,CP06,CP01,Driver Value,64987
+2026-05,Budget,CP06,CP07,Active,1
+2026-05,Budget,CP06,CP07,Driver Value,38893
+2026-05,Budget,CP06,CP08,Active,1
+2026-05,Budget,CP06,CP08,Driver Value,68878
+2026-05,Budget,CP07,Input,Driver Description,BEDDAYS
+2026-05,Budget,CP07,Input,Redistribution Percentage,88.1
+2026-05,Budget,CP07,CP02,Active,1
+2026-05,Budget,CP07,CP02,Driver Value,2778
+2026-05,Budget,CP07,CP04,Active,1
+2026-05,Budget,CP07,CP04,Driver Value,553
+2026-06,Budget,CP01,Input,Driver Description,FLOORSPACE
+2026-06,Budget,CP01,Input,Redistribution Percentage,45.5
+2026-06,Budget,CP01,CP03,Active,1
+2026-06,Budget,CP01,CP03,Driver Value,1807
+2026-06,Budget,CP01,CP05,Active,1
+2026-06,Budget,CP01,CP05,Driver Value,3962
+2026-06,Budget,CP01,CP08,Active,1
+2026-06,Budget,CP01,CP08,Driver Value,3287
+2026-06,Budget,CP02,Input,Driver Description,POWERUSAGE
+2026-06,Budget,CP02,Input,Redistribution Percentage,38.7
+2026-06,Budget,CP02,CP05,Active,1
+2026-06,Budget,CP02,CP05,Driver Value,46421
+2026-06,Budget,CP02,CP03,Active,1
+2026-06,Budget,CP02,CP03,Driver Value,30379
+2026-06,Budget,CP02,CP08,Active,1
+2026-06,Budget,CP02,CP08,Driver Value,38221
+2026-06,Budget,CP03,Input,Driver Description,HEADCOUNT
+2026-06,Budget,CP03,Input,Redistribution Percentage,95.01
+2026-06,Budget,CP03,CP05,Active,1
+2026-06,Budget,CP03,CP05,Driver Value,96
+2026-06,Budget,CP03,CP02,Active,1
+2026-06,Budget,CP03,CP02,Driver Value,36
+2026-06,Budget,CP06,Input,Driver Description,POWERUSAGE
+2026-06,Budget,CP06,Input,Redistribution Percentage,61.8
+2026-06,Budget,CP06,CP01,Active,1
+2026-06,Budget,CP06,CP01,Driver Value,22156
+2026-06,Budget,CP06,CP07,Active,1
+2026-06,Budget,CP06,CP07,Driver Value,59797
+2026-06,Budget,CP06,CP08,Active,1
+2026-06,Budget,CP06,CP08,Driver Value,22676
+2026-06,Budget,CP07,Input,Driver Description,BEDDAYS
+2026-06,Budget,CP07,Input,Redistribution Percentage,88.1
+2026-06,Budget,CP07,CP02,Active,1
+2026-06,Budget,CP07,CP02,Driver Value,3440
+2026-06,Budget,CP07,CP04,Active,1
+2026-06,Budget,CP07,CP04,Driver Value,3317
+2026-07,Budget,CP01,Input,Driver Description,FLOORSPACE
+2026-07,Budget,CP01,Input,Redistribution Percentage,45.5
+2026-07,Budget,CP01,CP03,Active,1
+2026-07,Budget,CP01,CP03,Driver Value,2666
+2026-07,Budget,CP01,CP05,Active,1
+2026-07,Budget,CP01,CP05,Driver Value,855
+2026-07,Budget,CP01,CP08,Active,1
+2026-07,Budget,CP01,CP08,Driver Value,4263
+2026-07,Budget,CP02,Input,Driver Description,POWERUSAGE
+2026-07,Budget,CP02,Input,Redistribution Percentage,38.7
+2026-07,Budget,CP02,CP05,Active,1
+2026-07,Budget,CP02,CP05,Driver Value,80284
+2026-07,Budget,CP02,CP03,Active,1
+2026-07,Budget,CP02,CP03,Driver Value,26361
+2026-07,Budget,CP02,CP08,Active,1
+2026-07,Budget,CP02,CP08,Driver Value,59615
+2026-07,Budget,CP03,Input,Driver Description,HEADCOUNT
+2026-07,Budget,CP03,Input,Redistribution Percentage,95.01
+2026-07,Budget,CP03,CP05,Active,1
+2026-07,Budget,CP03,CP05,Driver Value,30
+2026-07,Budget,CP03,CP02,Active,1
+2026-07,Budget,CP03,CP02,Driver Value,85
+2026-07,Budget,CP06,Input,Driver Description,POWERUSAGE
+2026-07,Budget,CP06,Input,Redistribution Percentage,61.8
+2026-07,Budget,CP06,CP01,Active,1
+2026-07,Budget,CP06,CP01,Driver Value,92397
+2026-07,Budget,CP06,CP07,Active,1
+2026-07,Budget,CP06,CP07,Driver Value,91070
+2026-07,Budget,CP06,CP08,Active,1
+2026-07,Budget,CP06,CP08,Driver Value,57400
+2026-07,Budget,CP07,Input,Driver Description,BEDDAYS
+2026-07,Budget,CP07,Input,Redistribution Percentage,88.1
+2026-07,Budget,CP07,CP02,Active,1
+2026-07,Budget,CP07,CP02,Driver Value,2075
+2026-07,Budget,CP07,CP04,Active,1
+2026-07,Budget,CP07,CP04,Driver Value,1069
+2026-08,Budget,CP01,Input,Driver Description,FLOORSPACE
+2026-08,Budget,CP01,Input,Redistribution Percentage,45.5
+2026-08,Budget,CP01,CP03,Active,1
+2026-08,Budget,CP01,CP03,Driver Value,875
+2026-08,Budget,CP01,CP05,Active,1
+2026-08,Budget,CP01,CP05,Driver Value,2366
+2026-08,Budget,CP01,CP08,Active,1
+2026-08,Budget,CP01,CP08,Driver Value,2870
+2026-08,Budget,CP02,Input,Driver Description,POWERUSAGE
+2026-08,Budget,CP02,Input,Redistribution Percentage,38.7
+2026-08,Budget,CP02,CP05,Active,1
+2026-08,Budget,CP02,CP05,Driver Value,20458
+2026-08,Budget,CP02,CP03,Active,1
+2026-08,Budget,CP02,CP03,Driver Value,40512
+2026-08,Budget,CP02,CP08,Active,1
+2026-08,Budget,CP02,CP08,Driver Value,23238
+2026-08,Budget,CP03,Input,Driver Description,HEADCOUNT
+2026-08,Budget,CP03,Input,Redistribution Percentage,95.01
+2026-08,Budget,CP03,CP05,Active,1
+2026-08,Budget,CP03,CP05,Driver Value,107
+2026-08,Budget,CP03,CP02,Active,1
+2026-08,Budget,CP03,CP02,Driver Value,81
+2026-08,Budget,CP06,Input,Driver Description,POWERUSAGE
+2026-08,Budget,CP06,Input,Redistribution Percentage,61.8
+2026-08,Budget,CP06,CP01,Active,1
+2026-08,Budget,CP06,CP01,Driver Value,69429
+2026-08,Budget,CP06,CP07,Active,1
+2026-08,Budget,CP06,CP07,Driver Value,93320
+2026-08,Budget,CP06,CP08,Active,1
+2026-08,Budget,CP06,CP08,Driver Value,57819
+2026-08,Budget,CP07,Input,Driver Description,BEDDAYS
+2026-08,Budget,CP07,Input,Redistribution Percentage,88.1
+2026-08,Budget,CP07,CP02,Active,1
+2026-08,Budget,CP07,CP02,Driver Value,1832
+2026-08,Budget,CP07,CP04,Active,1
+2026-08,Budget,CP07,CP04,Driver Value,3532
+2026-09,Budget,CP01,Input,Driver Description,FLOORSPACE
+2026-09,Budget,CP01,Input,Redistribution Percentage,45.5
+2026-09,Budget,CP01,CP03,Active,1
+2026-09,Budget,CP01,CP03,Driver Value,3410
+2026-09,Budget,CP01,CP05,Active,1
+2026-09,Budget,CP01,CP05,Driver Value,2216
+2026-09,Budget,CP01,CP08,Active,1
+2026-09,Budget,CP01,CP08,Driver Value,2687
+2026-09,Budget,CP02,Input,Driver Description,POWERUSAGE
+2026-09,Budget,CP02,Input,Redistribution Percentage,38.7
+2026-09,Budget,CP02,CP05,Active,1
+2026-09,Budget,CP02,CP05,Driver Value,99593
+2026-09,Budget,CP02,CP03,Active,1
+2026-09,Budget,CP02,CP03,Driver Value,94939
+2026-09,Budget,CP02,CP08,Active,1
+2026-09,Budget,CP02,CP08,Driver Value,19358
+2026-09,Budget,CP03,Input,Driver Description,HEADCOUNT
+2026-09,Budget,CP03,Input,Redistribution Percentage,95.01
+2026-09,Budget,CP03,CP05,Active,1
+2026-09,Budget,CP03,CP05,Driver Value,53
+2026-09,Budget,CP03,CP02,Active,1
+2026-09,Budget,CP03,CP02,Driver Value,146
+2026-09,Budget,CP06,Input,Driver Description,POWERUSAGE
+2026-09,Budget,CP06,Input,Redistribution Percentage,61.8
+2026-09,Budget,CP06,CP01,Active,1
+2026-09,Budget,CP06,CP01,Driver Value,42087
+2026-09,Budget,CP06,CP07,Active,1
+2026-09,Budget,CP06,CP07,Driver Value,31417
+2026-09,Budget,CP06,CP08,Active,1
+2026-09,Budget,CP06,CP08,Driver Value,70589
+2026-09,Budget,CP07,Input,Driver Description,BEDDAYS
+2026-09,Budget,CP07,Input,Redistribution Percentage,88.1
+2026-09,Budget,CP07,CP02,Active,1
+2026-09,Budget,CP07,CP02,Driver Value,3608
+2026-09,Budget,CP07,CP04,Active,1
+2026-09,Budget,CP07,CP04,Driver Value,2711
+2026-10,Budget,CP01,Input,Driver Description,FLOORSPACE
+2026-10,Budget,CP01,Input,Redistribution Percentage,45.5
+2026-10,Budget,CP01,CP03,Active,1
+2026-10,Budget,CP01,CP03,Driver Value,2299
+2026-10,Budget,CP01,CP05,Active,1
+2026-10,Budget,CP01,CP05,Driver Value,3156
+2026-10,Budget,CP01,CP08,Active,1
+2026-10,Budget,CP01,CP08,Driver Value,958
+2026-10,Budget,CP02,Input,Driver Description,POWERUSAGE
+2026-10,Budget,CP02,Input,Redistribution Percentage,38.7
+2026-10,Budget,CP02,CP05,Active,1
+2026-10,Budget,CP02,CP05,Driver Value,40021
+2026-10,Budget,CP02,CP03,Active,1
+2026-10,Budget,CP02,CP03,Driver Value,14207
+2026-10,Budget,CP02,CP08,Active,1
+2026-10,Budget,CP02,CP08,Driver Value,51347
+2026-10,Budget,CP03,Input,Driver Description,HEADCOUNT
+2026-10,Budget,CP03,Input,Redistribution Percentage,95.01
+2026-10,Budget,CP03,CP05,Active,1
+2026-10,Budget,CP03,CP05,Driver Value,112
+2026-10,Budget,CP03,CP02,Active,1
+2026-10,Budget,CP03,CP02,Driver Value,78
+2026-10,Budget,CP06,Input,Driver Description,POWERUSAGE
+2026-10,Budget,CP06,Input,Redistribution Percentage,61.8
+2026-10,Budget,CP06,CP01,Active,1
+2026-10,Budget,CP06,CP01,Driver Value,18675
+2026-10,Budget,CP06,CP07,Active,1
+2026-10,Budget,CP06,CP07,Driver Value,37653
+2026-10,Budget,CP06,CP08,Active,1
+2026-10,Budget,CP06,CP08,Driver Value,84341
+2026-10,Budget,CP07,Input,Driver Description,BEDDAYS
+2026-10,Budget,CP07,Input,Redistribution Percentage,88.1
+2026-10,Budget,CP07,CP02,Active,1
+2026-10,Budget,CP07,CP02,Driver Value,3077
+2026-10,Budget,CP07,CP04,Active,1
+2026-10,Budget,CP07,CP04,Driver Value,2241
+2026-11,Budget,CP01,Input,Driver Description,FLOORSPACE
+2026-11,Budget,CP01,Input,Redistribution Percentage,45.5
+2026-11,Budget,CP01,CP03,Active,1
+2026-11,Budget,CP01,CP03,Driver Value,4589
+2026-11,Budget,CP01,CP05,Active,1
+2026-11,Budget,CP01,CP05,Driver Value,3741
+2026-11,Budget,CP01,CP08,Active,1
+2026-11,Budget,CP01,CP08,Driver Value,4258
+2026-11,Budget,CP02,Input,Driver Description,POWERUSAGE
+2026-11,Budget,CP02,Input,Redistribution Percentage,38.7
+2026-11,Budget,CP02,CP05,Active,1
+2026-11,Budget,CP02,CP05,Driver Value,28726
+2026-11,Budget,CP02,CP03,Active,1
+2026-11,Budget,CP02,CP03,Driver Value,44718
+2026-11,Budget,CP02,CP08,Active,1
+2026-11,Budget,CP02,CP08,Driver Value,28301
+2026-11,Budget,CP03,Input,Driver Description,HEADCOUNT
+2026-11,Budget,CP03,Input,Redistribution Percentage,95.01
+2026-11,Budget,CP03,CP05,Active,1
+2026-11,Budget,CP03,CP05,Driver Value,73
+2026-11,Budget,CP03,CP02,Active,1
+2026-11,Budget,CP03,CP02,Driver Value,147
+2026-11,Budget,CP06,Input,Driver Description,POWERUSAGE
+2026-11,Budget,CP06,Input,Redistribution Percentage,61.8
+2026-11,Budget,CP06,CP01,Active,1
+2026-11,Budget,CP06,CP01,Driver Value,44438
+2026-11,Budget,CP06,CP07,Active,1
+2026-11,Budget,CP06,CP07,Driver Value,86622
+2026-11,Budget,CP06,CP08,Active,1
+2026-11,Budget,CP06,CP08,Driver Value,66155
+2026-11,Budget,CP07,Input,Driver Description,BEDDAYS
+2026-11,Budget,CP07,Input,Redistribution Percentage,88.1
+2026-11,Budget,CP07,CP02,Active,1
+2026-11,Budget,CP07,CP02,Driver Value,3771
+2026-11,Budget,CP07,CP04,Active,1
+2026-11,Budget,CP07,CP04,Driver Value,3465
+2026-12,Budget,CP01,Input,Driver Description,FLOORSPACE
+2026-12,Budget,CP01,Input,Redistribution Percentage,45.5
+2026-12,Budget,CP01,CP03,Active,1
+2026-12,Budget,CP01,CP03,Driver Value,2296
+2026-12,Budget,CP01,CP05,Active,1
+2026-12,Budget,CP01,CP05,Driver Value,1633
+2026-12,Budget,CP01,CP08,Active,1
+2026-12,Budget,CP01,CP08,Driver Value,4674
+2026-12,Budget,CP02,Input,Driver Description,POWERUSAGE
+2026-12,Budget,CP02,Input,Redistribution Percentage,38.7
+2026-12,Budget,CP02,CP05,Active,1
+2026-12,Budget,CP02,CP05,Driver Value,74686
+2026-12,Budget,CP02,CP03,Active,1
+2026-12,Budget,CP02,CP03,Driver Value,21915
+2026-12,Budget,CP02,CP08,Active,1
+2026-12,Budget,CP02,CP08,Driver Value,16175
+2026-12,Budget,CP03,Input,Driver Description,HEADCOUNT
+2026-12,Budget,CP03,Input,Redistribution Percentage,95.01
+2026-12,Budget,CP03,CP05,Active,1
+2026-12,Budget,CP03,CP05,Driver Value,38
+2026-12,Budget,CP03,CP02,Active,1
+2026-12,Budget,CP03,CP02,Driver Value,49
+2026-12,Budget,CP06,Input,Driver Description,POWERUSAGE
+2026-12,Budget,CP06,Input,Redistribution Percentage,61.8
+2026-12,Budget,CP06,CP01,Active,1
+2026-12,Budget,CP06,CP01,Driver Value,92240
+2026-12,Budget,CP06,CP07,Active,1
+2026-12,Budget,CP06,CP07,Driver Value,30969
+2026-12,Budget,CP06,CP08,Active,1
+2026-12,Budget,CP06,CP08,Driver Value,99192
+2026-12,Budget,CP07,Input,Driver Description,BEDDAYS
+2026-12,Budget,CP07,Input,Redistribution Percentage,88.1
+2026-12,Budget,CP07,CP02,Active,1
+2026-12,Budget,CP07,CP02,Driver Value,3958
+2026-12,Budget,CP07,CP04,Active,1
+2026-12,Budget,CP07,CP04,Driver Value,1020
+2027-01,Budget,CP01,Input,Driver Description,FLOORSPACE
+2027-01,Budget,CP01,Input,Redistribution Percentage,45.5
+2027-01,Budget,CP01,CP03,Active,1
+2027-01,Budget,CP01,CP03,Driver Value,3652
+2027-01,Budget,CP01,CP05,Active,1
+2027-01,Budget,CP01,CP05,Driver Value,3626
+2027-01,Budget,CP01,CP08,Active,1
+2027-01,Budget,CP01,CP08,Driver Value,4334
+2027-01,Budget,CP02,Input,Driver Description,POWERUSAGE
+2027-01,Budget,CP02,Input,Redistribution Percentage,38.7
+2027-01,Budget,CP02,CP05,Active,1
+2027-01,Budget,CP02,CP05,Driver Value,79352
+2027-01,Budget,CP02,CP03,Active,1
+2027-01,Budget,CP02,CP03,Driver Value,42953
+2027-01,Budget,CP02,CP08,Active,1
+2027-01,Budget,CP02,CP08,Driver Value,82512
+2027-01,Budget,CP03,Input,Driver Description,HEADCOUNT
+2027-01,Budget,CP03,Input,Redistribution Percentage,95.01
+2027-01,Budget,CP03,CP05,Active,1
+2027-01,Budget,CP03,CP05,Driver Value,12
+2027-01,Budget,CP03,CP02,Active,1
+2027-01,Budget,CP03,CP02,Driver Value,39
+2027-01,Budget,CP06,Input,Driver Description,POWERUSAGE
+2027-01,Budget,CP06,Input,Redistribution Percentage,61.8
+2027-01,Budget,CP06,CP01,Active,1
+2027-01,Budget,CP06,CP01,Driver Value,99353
+2027-01,Budget,CP06,CP07,Active,1
+2027-01,Budget,CP06,CP07,Driver Value,80381
+2027-01,Budget,CP06,CP08,Active,1
+2027-01,Budget,CP06,CP08,Driver Value,44973
+2027-01,Budget,CP07,Input,Driver Description,BEDDAYS
+2027-01,Budget,CP07,Input,Redistribution Percentage,88.1
+2027-01,Budget,CP07,CP02,Active,1
+2027-01,Budget,CP07,CP02,Driver Value,3286
+2027-01,Budget,CP07,CP04,Active,1
+2027-01,Budget,CP07,CP04,Driver Value,1413
+2027-02,Budget,CP01,Input,Driver Description,FLOORSPACE
+2027-02,Budget,CP01,Input,Redistribution Percentage,45.5
+2027-02,Budget,CP01,CP03,Active,1
+2027-02,Budget,CP01,CP03,Driver Value,2904
+2027-02,Budget,CP01,CP05,Active,1
+2027-02,Budget,CP01,CP05,Driver Value,4061
+2027-02,Budget,CP01,CP08,Active,1
+2027-02,Budget,CP01,CP08,Driver Value,1795
+2027-02,Budget,CP02,Input,Driver Description,POWERUSAGE
+2027-02,Budget,CP02,Input,Redistribution Percentage,38.7
+2027-02,Budget,CP02,CP05,Active,1
+2027-02,Budget,CP02,CP05,Driver Value,69470
+2027-02,Budget,CP02,CP03,Active,1
+2027-02,Budget,CP02,CP03,Driver Value,10425
+2027-02,Budget,CP02,CP08,Active,1
+2027-02,Budget,CP02,CP08,Driver Value,44522
+2027-02,Budget,CP03,Input,Driver Description,HEADCOUNT
+2027-02,Budget,CP03,Input,Redistribution Percentage,95.01
+2027-02,Budget,CP03,CP05,Active,1
+2027-02,Budget,CP03,CP05,Driver Value,138
+2027-02,Budget,CP03,CP02,Active,1
+2027-02,Budget,CP03,CP02,Driver Value,55
+2027-02,Budget,CP06,Input,Driver Description,POWERUSAGE
+2027-02,Budget,CP06,Input,Redistribution Percentage,61.8
+2027-02,Budget,CP06,CP01,Active,1
+2027-02,Budget,CP06,CP01,Driver Value,76542
+2027-02,Budget,CP06,CP07,Active,1
+2027-02,Budget,CP06,CP07,Driver Value,23947
+2027-02,Budget,CP06,CP08,Active,1
+2027-02,Budget,CP06,CP08,Driver Value,91959
+2027-02,Budget,CP07,Input,Driver Description,BEDDAYS
+2027-02,Budget,CP07,Input,Redistribution Percentage,88.1
+2027-02,Budget,CP07,CP02,Active,1
+2027-02,Budget,CP07,CP02,Driver Value,2944
+2027-02,Budget,CP07,CP04,Active,1
+2027-02,Budget,CP07,CP04,Driver Value,4658
+2027-03,Budget,CP01,Input,Driver Description,FLOORSPACE
+2027-03,Budget,CP01,Input,Redistribution Percentage,45.5
+2027-03,Budget,CP01,CP03,Active,1
+2027-03,Budget,CP01,CP03,Driver Value,2129
+2027-03,Budget,CP01,CP05,Active,1
+2027-03,Budget,CP01,CP05,Driver Value,1752
+2027-03,Budget,CP01,CP08,Active,1
+2027-03,Budget,CP01,CP08,Driver Value,3563
+2027-03,Budget,CP02,Input,Driver Description,POWERUSAGE
+2027-03,Budget,CP02,Input,Redistribution Percentage,38.7
+2027-03,Budget,CP02,CP05,Active,1
+2027-03,Budget,CP02,CP05,Driver Value,31174
+2027-03,Budget,CP02,CP03,Active,1
+2027-03,Budget,CP02,CP03,Driver Value,80697
+2027-03,Budget,CP02,CP08,Active,1
+2027-03,Budget,CP02,CP08,Driver Value,79514
+2027-03,Budget,CP03,Input,Driver Description,HEADCOUNT
+2027-03,Budget,CP03,Input,Redistribution Percentage,95.01
+2027-03,Budget,CP03,CP05,Active,1
+2027-03,Budget,CP03,CP05,Driver Value,10
+2027-03,Budget,CP03,CP02,Active,1
+2027-03,Budget,CP03,CP02,Driver Value,92
+2027-03,Budget,CP06,Input,Driver Description,POWERUSAGE
+2027-03,Budget,CP06,Input,Redistribution Percentage,61.8
+2027-03,Budget,CP06,CP01,Active,1
+2027-03,Budget,CP06,CP01,Driver Value,74042
+2027-03,Budget,CP06,CP07,Active,1
+2027-03,Budget,CP06,CP07,Driver Value,12552
+2027-03,Budget,CP06,CP08,Active,1
+2027-03,Budget,CP06,CP08,Driver Value,24662
+2027-03,Budget,CP07,Input,Driver Description,BEDDAYS
+2027-03,Budget,CP07,Input,Redistribution Percentage,88.1
+2027-03,Budget,CP07,CP02,Active,1
+2027-03,Budget,CP07,CP02,Driver Value,3473
+2027-03,Budget,CP07,CP04,Active,1
+2027-03,Budget,CP07,CP04,Driver Value,3019

@@ -1,0 +1,385 @@
+Period,Version,Cost Pool,Driver,Activity,Measure,Value
+2026-04,Budget,CP01,Input,Input,Pool to Activity Basis,FLOORSPACE
+2026-04,Budget,CP02,Input,Input,Pool to Activity Basis,ASSETVALUE
+2026-04,Budget,CP03,Input,Input,Pool to Activity Basis,HEADCOUNT
+2026-04,Budget,CP04,Input,Input,Pool to Activity Basis,HEADCOUNT
+2026-04,Budget,CP05,Input,Input,Pool to Activity Basis,TRANSACTIONS
+2026-04,Budget,CP06,Input,Input,Pool to Activity Basis,FLOORSPACE
+2026-04,Budget,CP07,Input,Input,Pool to Activity Basis,BEDDAYS
+2026-04,Budget,CP08,Input,Input,Pool to Activity Basis,HEADCOUNT
+2026-04,Budget,CP09,Input,Input,Pool to Activity Basis,HEADCOUNT
+2026-04,Budget,CP01,FLOORSPACE,A01,Driver Value,1200
+2026-04,Budget,CP01,FLOORSPACE,A04,Driver Value,800
+2026-04,Budget,CP01,FLOORSPACE,A11,Driver Value,500
+2026-04,Budget,CP02,ASSETVALUE,A01,Driver Value,4800000
+2026-04,Budget,CP02,ASSETVALUE,A03,Driver Value,3200000
+2026-04,Budget,CP02,ASSETVALUE,A04,Driver Value,2500000
+2026-04,Budget,CP03,HEADCOUNT,A01,Driver Value,48
+2026-04,Budget,CP03,HEADCOUNT,A03,Driver Value,35
+2026-04,Budget,CP03,HEADCOUNT,A04,Driver Value,42
+2026-04,Budget,CP03,HEADCOUNT,A07,Driver Value,25
+2026-04,Budget,CP04,HEADCOUNT,A01,Driver Value,25
+2026-04,Budget,CP04,HEADCOUNT,A09,Driver Value,35
+2026-04,Budget,CP04,HEADCOUNT,A10,Driver Value,40
+2026-04,Budget,CP05,TRANSACTIONS,A05,Driver Value,1200
+2026-04,Budget,CP05,TRANSACTIONS,A06,Driver Value,800
+2026-04,Budget,CP06,FLOORSPACE,A01,Driver Value,800
+2026-04,Budget,CP06,FLOORSPACE,A11,Driver Value,1200
+2026-04,Budget,CP07,BEDDAYS,A01,Driver Value,850
+2026-04,Budget,CP07,BEDDAYS,A09,Driver Value,650
+2026-04,Budget,CP08,HEADCOUNT,A08,Driver Value,100
+2026-04,Budget,CP09,HEADCOUNT,A01,Driver Value,25
+2026-04,Budget,CP09,HEADCOUNT,A10,Driver Value,35
+2026-04,Budget,CP09,HEADCOUNT,A09,Driver Value,40
+2026-05,Budget,CP01,Input,Input,Pool to Activity Basis,FLOORSPACE
+2026-05,Budget,CP02,Input,Input,Pool to Activity Basis,ASSETVALUE
+2026-05,Budget,CP03,Input,Input,Pool to Activity Basis,HEADCOUNT
+2026-05,Budget,CP04,Input,Input,Pool to Activity Basis,HEADCOUNT
+2026-05,Budget,CP05,Input,Input,Pool to Activity Basis,TRANSACTIONS
+2026-05,Budget,CP06,Input,Input,Pool to Activity Basis,FLOORSPACE
+2026-05,Budget,CP07,Input,Input,Pool to Activity Basis,BEDDAYS
+2026-05,Budget,CP08,Input,Input,Pool to Activity Basis,HEADCOUNT
+2026-05,Budget,CP09,Input,Input,Pool to Activity Basis,HEADCOUNT
+2026-05,Budget,CP01,FLOORSPACE,A01,Driver Value,1200
+2026-05,Budget,CP01,FLOORSPACE,A04,Driver Value,800
+2026-05,Budget,CP01,FLOORSPACE,A11,Driver Value,500
+2026-05,Budget,CP02,ASSETVALUE,A01,Driver Value,4800000
+2026-05,Budget,CP02,ASSETVALUE,A03,Driver Value,3200000
+2026-05,Budget,CP02,ASSETVALUE,A04,Driver Value,2500000
+2026-05,Budget,CP03,HEADCOUNT,A01,Driver Value,48
+2026-05,Budget,CP03,HEADCOUNT,A03,Driver Value,35
+2026-05,Budget,CP03,HEADCOUNT,A04,Driver Value,42
+2026-05,Budget,CP03,HEADCOUNT,A07,Driver Value,25
+2026-05,Budget,CP04,HEADCOUNT,A01,Driver Value,25
+2026-05,Budget,CP04,HEADCOUNT,A09,Driver Value,35
+2026-05,Budget,CP04,HEADCOUNT,A10,Driver Value,40
+2026-05,Budget,CP05,TRANSACTIONS,A05,Driver Value,1200
+2026-05,Budget,CP05,TRANSACTIONS,A06,Driver Value,800
+2026-05,Budget,CP06,FLOORSPACE,A01,Driver Value,800
+2026-05,Budget,CP06,FLOORSPACE,A11,Driver Value,1200
+2026-05,Budget,CP07,BEDDAYS,A01,Driver Value,850
+2026-05,Budget,CP07,BEDDAYS,A09,Driver Value,650
+2026-05,Budget,CP08,HEADCOUNT,A08,Driver Value,100
+2026-05,Budget,CP09,HEADCOUNT,A01,Driver Value,25
+2026-05,Budget,CP09,HEADCOUNT,A10,Driver Value,35
+2026-05,Budget,CP09,HEADCOUNT,A09,Driver Value,40
+2026-06,Budget,CP01,Input,Input,Pool to Activity Basis,FLOORSPACE
+2026-06,Budget,CP02,Input,Input,Pool to Activity Basis,ASSETVALUE
+2026-06,Budget,CP03,Input,Input,Pool to Activity Basis,HEADCOUNT
+2026-06,Budget,CP04,Input,Input,Pool to Activity Basis,HEADCOUNT
+2026-06,Budget,CP05,Input,Input,Pool to Activity Basis,TRANSACTIONS
+2026-06,Budget,CP06,Input,Input,Pool to Activity Basis,FLOORSPACE
+2026-06,Budget,CP07,Input,Input,Pool to Activity Basis,BEDDAYS
+2026-06,Budget,CP08,Input,Input,Pool to Activity Basis,HEADCOUNT
+2026-06,Budget,CP09,Input,Input,Pool to Activity Basis,HEADCOUNT
+2026-06,Budget,CP01,FLOORSPACE,A01,Driver Value,1200
+2026-06,Budget,CP01,FLOORSPACE,A04,Driver Value,800
+2026-06,Budget,CP01,FLOORSPACE,A11,Driver Value,500
+2026-06,Budget,CP02,ASSETVALUE,A01,Driver Value,4800000
+2026-06,Budget,CP02,ASSETVALUE,A03,Driver Value,3200000
+2026-06,Budget,CP02,ASSETVALUE,A04,Driver Value,2500000
+2026-06,Budget,CP03,HEADCOUNT,A01,Driver Value,48
+2026-06,Budget,CP03,HEADCOUNT,A03,Driver Value,35
+2026-06,Budget,CP03,HEADCOUNT,A04,Driver Value,42
+2026-06,Budget,CP03,HEADCOUNT,A07,Driver Value,25
+2026-06,Budget,CP04,HEADCOUNT,A01,Driver Value,25
+2026-06,Budget,CP04,HEADCOUNT,A09,Driver Value,35
+2026-06,Budget,CP04,HEADCOUNT,A10,Driver Value,40
+2026-06,Budget,CP05,TRANSACTIONS,A05,Driver Value,1200
+2026-06,Budget,CP05,TRANSACTIONS,A06,Driver Value,800
+2026-06,Budget,CP06,FLOORSPACE,A01,Driver Value,800
+2026-06,Budget,CP06,FLOORSPACE,A11,Driver Value,1200
+2026-06,Budget,CP07,BEDDAYS,A01,Driver Value,850
+2026-06,Budget,CP07,BEDDAYS,A09,Driver Value,650
+2026-06,Budget,CP08,HEADCOUNT,A08,Driver Value,100
+2026-06,Budget,CP09,HEADCOUNT,A01,Driver Value,25
+2026-06,Budget,CP09,HEADCOUNT,A10,Driver Value,35
+2026-06,Budget,CP09,HEADCOUNT,A09,Driver Value,40
+2026-07,Budget,CP01,Input,Input,Pool to Activity Basis,FLOORSPACE
+2026-07,Budget,CP02,Input,Input,Pool to Activity Basis,ASSETVALUE
+2026-07,Budget,CP03,Input,Input,Pool to Activity Basis,HEADCOUNT
+2026-07,Budget,CP04,Input,Input,Pool to Activity Basis,HEADCOUNT
+2026-07,Budget,CP05,Input,Input,Pool to Activity Basis,TRANSACTIONS
+2026-07,Budget,CP06,Input,Input,Pool to Activity Basis,FLOORSPACE
+2026-07,Budget,CP07,Input,Input,Pool to Activity Basis,BEDDAYS
+2026-07,Budget,CP08,Input,Input,Pool to Activity Basis,HEADCOUNT
+2026-07,Budget,CP09,Input,Input,Pool to Activity Basis,HEADCOUNT
+2026-07,Budget,CP01,FLOORSPACE,A01,Driver Value,1200
+2026-07,Budget,CP01,FLOORSPACE,A04,Driver Value,800
+2026-07,Budget,CP01,FLOORSPACE,A11,Driver Value,500
+2026-07,Budget,CP02,ASSETVALUE,A01,Driver Value,4800000
+2026-07,Budget,CP02,ASSETVALUE,A03,Driver Value,3200000
+2026-07,Budget,CP02,ASSETVALUE,A04,Driver Value,2500000
+2026-07,Budget,CP03,HEADCOUNT,A01,Driver Value,48
+2026-07,Budget,CP03,HEADCOUNT,A03,Driver Value,35
+2026-07,Budget,CP03,HEADCOUNT,A04,Driver Value,42
+2026-07,Budget,CP03,HEADCOUNT,A07,Driver Value,25
+2026-07,Budget,CP04,HEADCOUNT,A01,Driver Value,25
+2026-07,Budget,CP04,HEADCOUNT,A09,Driver Value,35
+2026-07,Budget,CP04,HEADCOUNT,A10,Driver Value,40
+2026-07,Budget,CP05,TRANSACTIONS,A05,Driver Value,1200
+2026-07,Budget,CP05,TRANSACTIONS,A06,Driver Value,800
+2026-07,Budget,CP06,FLOORSPACE,A01,Driver Value,800
+2026-07,Budget,CP06,FLOORSPACE,A11,Driver Value,1200
+2026-07,Budget,CP07,BEDDAYS,A01,Driver Value,850
+2026-07,Budget,CP07,BEDDAYS,A09,Driver Value,650
+2026-07,Budget,CP08,HEADCOUNT,A08,Driver Value,100
+2026-07,Budget,CP09,HEADCOUNT,A01,Driver Value,25
+2026-07,Budget,CP09,HEADCOUNT,A10,Driver Value,35
+2026-07,Budget,CP09,HEADCOUNT,A09,Driver Value,40
+2026-08,Budget,CP01,Input,Input,Pool to Activity Basis,FLOORSPACE
+2026-08,Budget,CP02,Input,Input,Pool to Activity Basis,ASSETVALUE
+2026-08,Budget,CP03,Input,Input,Pool to Activity Basis,HEADCOUNT
+2026-08,Budget,CP04,Input,Input,Pool to Activity Basis,HEADCOUNT
+2026-08,Budget,CP05,Input,Input,Pool to Activity Basis,TRANSACTIONS
+2026-08,Budget,CP06,Input,Input,Pool to Activity Basis,FLOORSPACE
+2026-08,Budget,CP07,Input,Input,Pool to Activity Basis,BEDDAYS
+2026-08,Budget,CP08,Input,Input,Pool to Activity Basis,HEADCOUNT
+2026-08,Budget,CP09,Input,Input,Pool to Activity Basis,HEADCOUNT
+2026-08,Budget,CP01,FLOORSPACE,A01,Driver Value,1200
+2026-08,Budget,CP01,FLOORSPACE,A04,Driver Value,800
+2026-08,Budget,CP01,FLOORSPACE,A11,Driver Value,500
+2026-08,Budget,CP02,ASSETVALUE,A01,Driver Value,4800000
+2026-08,Budget,CP02,ASSETVALUE,A03,Driver Value,3200000
+2026-08,Budget,CP02,ASSETVALUE,A04,Driver Value,2500000
+2026-08,Budget,CP03,HEADCOUNT,A01,Driver Value,48
+2026-08,Budget,CP03,HEADCOUNT,A03,Driver Value,35
+2026-08,Budget,CP03,HEADCOUNT,A04,Driver Value,42
+2026-08,Budget,CP03,HEADCOUNT,A07,Driver Value,25
+2026-08,Budget,CP04,HEADCOUNT,A01,Driver Value,25
+2026-08,Budget,CP04,HEADCOUNT,A09,Driver Value,35
+2026-08,Budget,CP04,HEADCOUNT,A10,Driver Value,40
+2026-08,Budget,CP05,TRANSACTIONS,A05,Driver Value,1200
+2026-08,Budget,CP05,TRANSACTIONS,A06,Driver Value,800
+2026-08,Budget,CP06,FLOORSPACE,A01,Driver Value,800
+2026-08,Budget,CP06,FLOORSPACE,A11,Driver Value,1200
+2026-08,Budget,CP07,BEDDAYS,A01,Driver Value,850
+2026-08,Budget,CP07,BEDDAYS,A09,Driver Value,650
+2026-08,Budget,CP08,HEADCOUNT,A08,Driver Value,100
+2026-08,Budget,CP09,HEADCOUNT,A01,Driver Value,25
+2026-08,Budget,CP09,HEADCOUNT,A10,Driver Value,35
+2026-08,Budget,CP09,HEADCOUNT,A09,Driver Value,40
+2026-09,Budget,CP01,Input,Input,Pool to Activity Basis,FLOORSPACE
+2026-09,Budget,CP02,Input,Input,Pool to Activity Basis,ASSETVALUE
+2026-09,Budget,CP03,Input,Input,Pool to Activity Basis,HEADCOUNT
+2026-09,Budget,CP04,Input,Input,Pool to Activity Basis,HEADCOUNT
+2026-09,Budget,CP05,Input,Input,Pool to Activity Basis,TRANSACTIONS
+2026-09,Budget,CP06,Input,Input,Pool to Activity Basis,FLOORSPACE
+2026-09,Budget,CP07,Input,Input,Pool to Activity Basis,BEDDAYS
+2026-09,Budget,CP08,Input,Input,Pool to Activity Basis,HEADCOUNT
+2026-09,Budget,CP09,Input,Input,Pool to Activity Basis,HEADCOUNT
+2026-09,Budget,CP01,FLOORSPACE,A01,Driver Value,1200
+2026-09,Budget,CP01,FLOORSPACE,A04,Driver Value,800
+2026-09,Budget,CP01,FLOORSPACE,A11,Driver Value,500
+2026-09,Budget,CP02,ASSETVALUE,A01,Driver Value,4800000
+2026-09,Budget,CP02,ASSETVALUE,A03,Driver Value,3200000
+2026-09,Budget,CP02,ASSETVALUE,A04,Driver Value,2500000
+2026-09,Budget,CP03,HEADCOUNT,A01,Driver Value,48
+2026-09,Budget,CP03,HEADCOUNT,A03,Driver Value,35
+2026-09,Budget,CP03,HEADCOUNT,A04,Driver Value,42
+2026-09,Budget,CP03,HEADCOUNT,A07,Driver Value,25
+2026-09,Budget,CP04,HEADCOUNT,A01,Driver Value,25
+2026-09,Budget,CP04,HEADCOUNT,A09,Driver Value,35
+2026-09,Budget,CP04,HEADCOUNT,A10,Driver Value,40
+2026-09,Budget,CP05,TRANSACTIONS,A05,Driver Value,1200
+2026-09,Budget,CP05,TRANSACTIONS,A06,Driver Value,800
+2026-09,Budget,CP06,FLOORSPACE,A01,Driver Value,800
+2026-09,Budget,CP06,FLOORSPACE,A11,Driver Value,1200
+2026-09,Budget,CP07,BEDDAYS,A01,Driver Value,850
+2026-09,Budget,CP07,BEDDAYS,A09,Driver Value,650
+2026-09,Budget,CP08,HEADCOUNT,A08,Driver Value,100
+2026-09,Budget,CP09,HEADCOUNT,A01,Driver Value,25
+2026-09,Budget,CP09,HEADCOUNT,A10,Driver Value,35
+2026-09,Budget,CP09,HEADCOUNT,A09,Driver Value,40
+2026-10,Budget,CP01,Input,Input,Pool to Activity Basis,FLOORSPACE
+2026-10,Budget,CP02,Input,Input,Pool to Activity Basis,ASSETVALUE
+2026-10,Budget,CP03,Input,Input,Pool to Activity Basis,HEADCOUNT
+2026-10,Budget,CP04,Input,Input,Pool to Activity Basis,HEADCOUNT
+2026-10,Budget,CP05,Input,Input,Pool to Activity Basis,TRANSACTIONS
+2026-10,Budget,CP06,Input,Input,Pool to Activity Basis,FLOORSPACE
+2026-10,Budget,CP07,Input,Input,Pool to Activity Basis,BEDDAYS
+2026-10,Budget,CP08,Input,Input,Pool to Activity Basis,HEADCOUNT
+2026-10,Budget,CP09,Input,Input,Pool to Activity Basis,HEADCOUNT
+2026-10,Budget,CP01,FLOORSPACE,A01,Driver Value,1200
+2026-10,Budget,CP01,FLOORSPACE,A04,Driver Value,800
+2026-10,Budget,CP01,FLOORSPACE,A11,Driver Value,500
+2026-10,Budget,CP02,ASSETVALUE,A01,Driver Value,4800000
+2026-10,Budget,CP02,ASSETVALUE,A03,Driver Value,3200000
+2026-10,Budget,CP02,ASSETVALUE,A04,Driver Value,2500000
+2026-10,Budget,CP03,HEADCOUNT,A01,Driver Value,48
+2026-10,Budget,CP03,HEADCOUNT,A03,Driver Value,35
+2026-10,Budget,CP03,HEADCOUNT,A04,Driver Value,42
+2026-10,Budget,CP03,HEADCOUNT,A07,Driver Value,25
+2026-10,Budget,CP04,HEADCOUNT,A01,Driver Value,25
+2026-10,Budget,CP04,HEADCOUNT,A09,Driver Value,35
+2026-10,Budget,CP04,HEADCOUNT,A10,Driver Value,40
+2026-10,Budget,CP05,TRANSACTIONS,A05,Driver Value,1200
+2026-10,Budget,CP05,TRANSACTIONS,A06,Driver Value,800
+2026-10,Budget,CP06,FLOORSPACE,A01,Driver Value,800
+2026-10,Budget,CP06,FLOORSPACE,A11,Driver Value,1200
+2026-10,Budget,CP07,BEDDAYS,A01,Driver Value,850
+2026-10,Budget,CP07,BEDDAYS,A09,Driver Value,650
+2026-10,Budget,CP08,HEADCOUNT,A08,Driver Value,100
+2026-10,Budget,CP09,HEADCOUNT,A01,Driver Value,25
+2026-10,Budget,CP09,HEADCOUNT,A10,Driver Value,35
+2026-10,Budget,CP09,HEADCOUNT,A09,Driver Value,40
+2026-11,Budget,CP01,Input,Input,Pool to Activity Basis,FLOORSPACE
+2026-11,Budget,CP02,Input,Input,Pool to Activity Basis,ASSETVALUE
+2026-11,Budget,CP03,Input,Input,Pool to Activity Basis,HEADCOUNT
+2026-11,Budget,CP04,Input,Input,Pool to Activity Basis,HEADCOUNT
+2026-11,Budget,CP05,Input,Input,Pool to Activity Basis,TRANSACTIONS
+2026-11,Budget,CP06,Input,Input,Pool to Activity Basis,FLOORSPACE
+2026-11,Budget,CP07,Input,Input,Pool to Activity Basis,BEDDAYS
+2026-11,Budget,CP08,Input,Input,Pool to Activity Basis,HEADCOUNT
+2026-11,Budget,CP09,Input,Input,Pool to Activity Basis,HEADCOUNT
+2026-11,Budget,CP01,FLOORSPACE,A01,Driver Value,1200
+2026-11,Budget,CP01,FLOORSPACE,A04,Driver Value,800
+2026-11,Budget,CP01,FLOORSPACE,A11,Driver Value,500
+2026-11,Budget,CP02,ASSETVALUE,A01,Driver Value,4800000
+2026-11,Budget,CP02,ASSETVALUE,A03,Driver Value,3200000
+2026-11,Budget,CP02,ASSETVALUE,A04,Driver Value,2500000
+2026-11,Budget,CP03,HEADCOUNT,A01,Driver Value,48
+2026-11,Budget,CP03,HEADCOUNT,A03,Driver Value,35
+2026-11,Budget,CP03,HEADCOUNT,A04,Driver Value,42
+2026-11,Budget,CP03,HEADCOUNT,A07,Driver Value,25
+2026-11,Budget,CP04,HEADCOUNT,A01,Driver Value,25
+2026-11,Budget,CP04,HEADCOUNT,A09,Driver Value,35
+2026-11,Budget,CP04,HEADCOUNT,A10,Driver Value,40
+2026-11,Budget,CP05,TRANSACTIONS,A05,Driver Value,1200
+2026-11,Budget,CP05,TRANSACTIONS,A06,Driver Value,800
+2026-11,Budget,CP06,FLOORSPACE,A01,Driver Value,800
+2026-11,Budget,CP06,FLOORSPACE,A11,Driver Value,1200
+2026-11,Budget,CP07,BEDDAYS,A01,Driver Value,850
+2026-11,Budget,CP07,BEDDAYS,A09,Driver Value,650
+2026-11,Budget,CP08,HEADCOUNT,A08,Driver Value,100
+2026-11,Budget,CP09,HEADCOUNT,A01,Driver Value,25
+2026-11,Budget,CP09,HEADCOUNT,A10,Driver Value,35
+2026-11,Budget,CP09,HEADCOUNT,A09,Driver Value,40
+2026-12,Budget,CP01,Input,Input,Pool to Activity Basis,FLOORSPACE
+2026-12,Budget,CP02,Input,Input,Pool to Activity Basis,ASSETVALUE
+2026-12,Budget,CP03,Input,Input,Pool to Activity Basis,HEADCOUNT
+2026-12,Budget,CP04,Input,Input,Pool to Activity Basis,HEADCOUNT
+2026-12,Budget,CP05,Input,Input,Pool to Activity Basis,TRANSACTIONS
+2026-12,Budget,CP06,Input,Input,Pool to Activity Basis,FLOORSPACE
+2026-12,Budget,CP07,Input,Input,Pool to Activity Basis,BEDDAYS
+2026-12,Budget,CP08,Input,Input,Pool to Activity Basis,HEADCOUNT
+2026-12,Budget,CP09,Input,Input,Pool to Activity Basis,HEADCOUNT
+2026-12,Budget,CP01,FLOORSPACE,A01,Driver Value,1200
+2026-12,Budget,CP01,FLOORSPACE,A04,Driver Value,800
+2026-12,Budget,CP01,FLOORSPACE,A11,Driver Value,500
+2026-12,Budget,CP02,ASSETVALUE,A01,Driver Value,4800000
+2026-12,Budget,CP02,ASSETVALUE,A03,Driver Value,3200000
+2026-12,Budget,CP02,ASSETVALUE,A04,Driver Value,2500000
+2026-12,Budget,CP03,HEADCOUNT,A01,Driver Value,48
+2026-12,Budget,CP03,HEADCOUNT,A03,Driver Value,35
+2026-12,Budget,CP03,HEADCOUNT,A04,Driver Value,42
+2026-12,Budget,CP03,HEADCOUNT,A07,Driver Value,25
+2026-12,Budget,CP04,HEADCOUNT,A01,Driver Value,25
+2026-12,Budget,CP04,HEADCOUNT,A09,Driver Value,35
+2026-12,Budget,CP04,HEADCOUNT,A10,Driver Value,40
+2026-12,Budget,CP05,TRANSACTIONS,A05,Driver Value,1200
+2026-12,Budget,CP05,TRANSACTIONS,A06,Driver Value,800
+2026-12,Budget,CP06,FLOORSPACE,A01,Driver Value,800
+2026-12,Budget,CP06,FLOORSPACE,A11,Driver Value,1200
+2026-12,Budget,CP07,BEDDAYS,A01,Driver Value,850
+2026-12,Budget,CP07,BEDDAYS,A09,Driver Value,650
+2026-12,Budget,CP08,HEADCOUNT,A08,Driver Value,100
+2026-12,Budget,CP09,HEADCOUNT,A01,Driver Value,25
+2026-12,Budget,CP09,HEADCOUNT,A10,Driver Value,35
+2026-12,Budget,CP09,HEADCOUNT,A09,Driver Value,40
+2027-01,Budget,CP01,Input,Input,Pool to Activity Basis,FLOORSPACE
+2027-01,Budget,CP02,Input,Input,Pool to Activity Basis,ASSETVALUE
+2027-01,Budget,CP03,Input,Input,Pool to Activity Basis,HEADCOUNT
+2027-01,Budget,CP04,Input,Input,Pool to Activity Basis,HEADCOUNT
+2027-01,Budget,CP05,Input,Input,Pool to Activity Basis,TRANSACTIONS
+2027-01,Budget,CP06,Input,Input,Pool to Activity Basis,FLOORSPACE
+2027-01,Budget,CP07,Input,Input,Pool to Activity Basis,BEDDAYS
+2027-01,Budget,CP08,Input,Input,Pool to Activity Basis,HEADCOUNT
+2027-01,Budget,CP09,Input,Input,Pool to Activity Basis,HEADCOUNT
+2027-01,Budget,CP01,FLOORSPACE,A01,Driver Value,1200
+2027-01,Budget,CP01,FLOORSPACE,A04,Driver Value,800
+2027-01,Budget,CP01,FLOORSPACE,A11,Driver Value,500
+2027-01,Budget,CP02,ASSETVALUE,A01,Driver Value,4800000
+2027-01,Budget,CP02,ASSETVALUE,A03,Driver Value,3200000
+2027-01,Budget,CP02,ASSETVALUE,A04,Driver Value,2500000
+2027-01,Budget,CP03,HEADCOUNT,A01,Driver Value,48
+2027-01,Budget,CP03,HEADCOUNT,A03,Driver Value,35
+2027-01,Budget,CP03,HEADCOUNT,A04,Driver Value,42
+2027-01,Budget,CP03,HEADCOUNT,A07,Driver Value,25
+2027-01,Budget,CP04,HEADCOUNT,A01,Driver Value,25
+2027-01,Budget,CP04,HEADCOUNT,A09,Driver Value,35
+2027-01,Budget,CP04,HEADCOUNT,A10,Driver Value,40
+2027-01,Budget,CP05,TRANSACTIONS,A05,Driver Value,1200
+2027-01,Budget,CP05,TRANSACTIONS,A06,Driver Value,800
+2027-01,Budget,CP06,FLOORSPACE,A01,Driver Value,800
+2027-01,Budget,CP06,FLOORSPACE,A11,Driver Value,1200
+2027-01,Budget,CP07,BEDDAYS,A01,Driver Value,850
+2027-01,Budget,CP07,BEDDAYS,A09,Driver Value,650
+2027-01,Budget,CP08,HEADCOUNT,A08,Driver Value,100
+2027-01,Budget,CP09,HEADCOUNT,A01,Driver Value,25
+2027-01,Budget,CP09,HEADCOUNT,A10,Driver Value,35
+2027-01,Budget,CP09,HEADCOUNT,A09,Driver Value,40
+2027-02,Budget,CP01,Input,Input,Pool to Activity Basis,FLOORSPACE
+2027-02,Budget,CP02,Input,Input,Pool to Activity Basis,ASSETVALUE
+2027-02,Budget,CP03,Input,Input,Pool to Activity Basis,HEADCOUNT
+2027-02,Budget,CP04,Input,Input,Pool to Activity Basis,HEADCOUNT
+2027-02,Budget,CP05,Input,Input,Pool to Activity Basis,TRANSACTIONS
+2027-02,Budget,CP06,Input,Input,Pool to Activity Basis,FLOORSPACE
+2027-02,Budget,CP07,Input,Input,Pool to Activity Basis,BEDDAYS
+2027-02,Budget,CP08,Input,Input,Pool to Activity Basis,HEADCOUNT
+2027-02,Budget,CP09,Input,Input,Pool to Activity Basis,HEADCOUNT
+2027-02,Budget,CP01,FLOORSPACE,A01,Driver Value,1200
+2027-02,Budget,CP01,FLOORSPACE,A04,Driver Value,800
+2027-02,Budget,CP01,FLOORSPACE,A11,Driver Value,500
+2027-02,Budget,CP02,ASSETVALUE,A01,Driver Value,4800000
+2027-02,Budget,CP02,ASSETVALUE,A03,Driver Value,3200000
+2027-02,Budget,CP02,ASSETVALUE,A04,Driver Value,2500000
+2027-02,Budget,CP03,HEADCOUNT,A01,Driver Value,48
+2027-02,Budget,CP03,HEADCOUNT,A03,Driver Value,35
+2027-02,Budget,CP03,HEADCOUNT,A04,Driver Value,42
+2027-02,Budget,CP03,HEADCOUNT,A07,Driver Value,25
+2027-02,Budget,CP04,HEADCOUNT,A01,Driver Value,25
+2027-02,Budget,CP04,HEADCOUNT,A09,Driver Value,35
+2027-02,Budget,CP04,HEADCOUNT,A10,Driver Value,40
+2027-02,Budget,CP05,TRANSACTIONS,A05,Driver Value,1200
+2027-02,Budget,CP05,TRANSACTIONS,A06,Driver Value,800
+2027-02,Budget,CP06,FLOORSPACE,A01,Driver Value,800
+2027-02,Budget,CP06,FLOORSPACE,A11,Driver Value,1200
+2027-02,Budget,CP07,BEDDAYS,A01,Driver Value,850
+2027-02,Budget,CP07,BEDDAYS,A09,Driver Value,650
+2027-02,Budget,CP08,HEADCOUNT,A08,Driver Value,100
+2027-02,Budget,CP09,HEADCOUNT,A01,Driver Value,25
+2027-02,Budget,CP09,HEADCOUNT,A10,Driver Value,35
+2027-02,Budget,CP09,HEADCOUNT,A09,Driver Value,40
+2027-03,Budget,CP01,Input,Input,Pool to Activity Basis,FLOORSPACE
+2027-03,Budget,CP02,Input,Input,Pool to Activity Basis,ASSETVALUE
+2027-03,Budget,CP03,Input,Input,Pool to Activity Basis,HEADCOUNT
+2027-03,Budget,CP04,Input,Input,Pool to Activity Basis,HEADCOUNT
+2027-03,Budget,CP05,Input,Input,Pool to Activity Basis,TRANSACTIONS
+2027-03,Budget,CP06,Input,Input,Pool to Activity Basis,FLOORSPACE
+2027-03,Budget,CP07,Input,Input,Pool to Activity Basis,BEDDAYS
+2027-03,Budget,CP08,Input,Input,Pool to Activity Basis,HEADCOUNT
+2027-03,Budget,CP09,Input,Input,Pool to Activity Basis,HEADCOUNT
+2027-03,Budget,CP01,FLOORSPACE,A01,Driver Value,1200
+2027-03,Budget,CP01,FLOORSPACE,A04,Driver Value,800
+2027-03,Budget,CP01,FLOORSPACE,A11,Driver Value,500
+2027-03,Budget,CP02,ASSETVALUE,A01,Driver Value,4800000
+2027-03,Budget,CP02,ASSETVALUE,A03,Driver Value,3200000
+2027-03,Budget,CP02,ASSETVALUE,A04,Driver Value,2500000
+2027-03,Budget,CP03,HEADCOUNT,A01,Driver Value,48
+2027-03,Budget,CP03,HEADCOUNT,A03,Driver Value,35
+2027-03,Budget,CP03,HEADCOUNT,A04,Driver Value,42
+2027-03,Budget,CP03,HEADCOUNT,A07,Driver Value,25
+2027-03,Budget,CP04,HEADCOUNT,A01,Driver Value,25
+2027-03,Budget,CP04,HEADCOUNT,A09,Driver Value,35
+2027-03,Budget,CP04,HEADCOUNT,A10,Driver Value,40
+2027-03,Budget,CP05,TRANSACTIONS,A05,Driver Value,1200
+2027-03,Budget,CP05,TRANSACTIONS,A06,Driver Value,800
+2027-03,Budget,CP06,FLOORSPACE,A01,Driver Value,800
+2027-03,Budget,CP06,FLOORSPACE,A11,Driver Value,1200
+2027-03,Budget,CP07,BEDDAYS,A01,Driver Value,850
+2027-03,Budget,CP07,BEDDAYS,A09,Driver Value,650
+2027-03,Budget,CP08,HEADCOUNT,A08,Driver Value,100
+2027-03,Budget,CP09,HEADCOUNT,A01,Driver Value,25
+2027-03,Budget,CP09,HEADCOUNT,A10,Driver Value,35
+2027-03,Budget,CP09,HEADCOUNT,A09,Driver Value,40

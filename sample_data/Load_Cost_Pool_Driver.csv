@@ -1,0 +1,10 @@
+Period,Version,Cost Pool,Driver,Activity,Measure,Value
+2026-04,Budget,CP01,Input,Input,Pool to Activity Basis,FLOORSPACE
+2026-04,Budget,CP02,Input,Input,Pool to Activity Basis,ASSETVALUE
+2026-04,Budget,CP03,Input,Input,Pool to Activity Basis,HEADCOUNT
+2026-04,Budget,CP04,Input,Input,Pool to Activity Basis,HEADCOUNT
+2026-04,Budget,CP05,Input,Input,Pool to Activity Basis,TRANSACTIONS
+2026-04,Budget,CP06,Input,Input,Pool to Activity Basis,FLOORSPACE
+2026-04,Budget,CP07,Input,Input,Pool to Activity Basis,BEDDAYS
+2026-04,Budget,CP08,Input,Input,Pool to Activity Basis,HEADCOUNT
+2026-04,Budget,CP09,Input,Input,Pool to Activity Basis,HEADCOUNT

@@ -1,0 +1,397 @@
+vGBL Period,vGBL Version,vCST Activity,vCST Driver,vCST Service Line,vCST Activity Config Measure,vAmount
+2026-04,Budget,A01,Input,Input,Activity to Service Line Basis,BEDDAYS
+2026-04,Budget,A02,Input,Input,Activity to Service Line Basis,TRANSACTIONS
+2026-04,Budget,A03,Input,Input,Activity to Service Line Basis,BEDDAYS
+2026-04,Budget,A04,Input,Input,Activity to Service Line Basis,HEADCOUNT
+2026-04,Budget,A05,Input,Input,Activity to Service Line Basis,TRANSACTIONS
+2026-04,Budget,A06,Input,Input,Activity to Service Line Basis,TRANSACTIONS
+2026-04,Budget,A07,Input,Input,Activity to Service Line Basis,BEDDAYS
+2026-04,Budget,A08,Input,Input,Activity to Service Line Basis,TRANSACTIONS
+2026-04,Budget,A09,Input,Input,Activity to Service Line Basis,BEDDAYS
+2026-04,Budget,A10,Input,Input,Activity to Service Line Basis,HEADCOUNT
+2026-04,Budget,A11,Input,Input,Activity to Service Line Basis,HEADCOUNT
+2026-05,Budget,A01,Input,Input,Activity to Service Line Basis,BEDDAYS
+2026-05,Budget,A02,Input,Input,Activity to Service Line Basis,TRANSACTIONS
+2026-05,Budget,A03,Input,Input,Activity to Service Line Basis,BEDDAYS
+2026-05,Budget,A04,Input,Input,Activity to Service Line Basis,HEADCOUNT
+2026-05,Budget,A05,Input,Input,Activity to Service Line Basis,TRANSACTIONS
+2026-05,Budget,A06,Input,Input,Activity to Service Line Basis,TRANSACTIONS
+2026-05,Budget,A07,Input,Input,Activity to Service Line Basis,BEDDAYS
+2026-05,Budget,A08,Input,Input,Activity to Service Line Basis,TRANSACTIONS
+2026-05,Budget,A09,Input,Input,Activity to Service Line Basis,BEDDAYS
+2026-05,Budget,A10,Input,Input,Activity to Service Line Basis,HEADCOUNT
+2026-05,Budget,A11,Input,Input,Activity to Service Line Basis,HEADCOUNT
+2026-06,Budget,A01,Input,Input,Activity to Service Line Basis,BEDDAYS
+2026-06,Budget,A02,Input,Input,Activity to Service Line Basis,TRANSACTIONS
+2026-06,Budget,A03,Input,Input,Activity to Service Line Basis,BEDDAYS
+2026-06,Budget,A04,Input,Input,Activity to Service Line Basis,HEADCOUNT
+2026-06,Budget,A05,Input,Input,Activity to Service Line Basis,TRANSACTIONS
+2026-06,Budget,A06,Input,Input,Activity to Service Line Basis,TRANSACTIONS
+2026-06,Budget,A07,Input,Input,Activity to Service Line Basis,BEDDAYS
+2026-06,Budget,A08,Input,Input,Activity to Service Line Basis,TRANSACTIONS
+2026-06,Budget,A09,Input,Input,Activity to Service Line Basis,BEDDAYS
+2026-06,Budget,A10,Input,Input,Activity to Service Line Basis,HEADCOUNT
+2026-06,Budget,A11,Input,Input,Activity to Service Line Basis,HEADCOUNT
+2026-07,Budget,A01,Input,Input,Activity to Service Line Basis,BEDDAYS
+2026-07,Budget,A02,Input,Input,Activity to Service Line Basis,TRANSACTIONS
+2026-07,Budget,A03,Input,Input,Activity to Service Line Basis,BEDDAYS
+2026-07,Budget,A04,Input,Input,Activity to Service Line Basis,HEADCOUNT
+2026-07,Budget,A05,Input,Input,Activity to Service Line Basis,TRANSACTIONS
+2026-07,Budget,A06,Input,Input,Activity to Service Line Basis,TRANSACTIONS
+2026-07,Budget,A07,Input,Input,Activity to Service Line Basis,BEDDAYS
+2026-07,Budget,A08,Input,Input,Activity to Service Line Basis,TRANSACTIONS
+2026-07,Budget,A09,Input,Input,Activity to Service Line Basis,BEDDAYS
+2026-07,Budget,A10,Input,Input,Activity to Service Line Basis,HEADCOUNT
+2026-07,Budget,A11,Input,Input,Activity to Service Line Basis,HEADCOUNT
+2026-08,Budget,A01,Input,Input,Activity to Service Line Basis,BEDDAYS
+2026-08,Budget,A02,Input,Input,Activity to Service Line Basis,TRANSACTIONS
+2026-08,Budget,A03,Input,Input,Activity to Service Line Basis,BEDDAYS
+2026-08,Budget,A04,Input,Input,Activity to Service Line Basis,HEADCOUNT
+2026-08,Budget,A05,Input,Input,Activity to Service Line Basis,TRANSACTIONS
+2026-08,Budget,A06,Input,Input,Activity to Service Line Basis,TRANSACTIONS
+2026-08,Budget,A07,Input,Input,Activity to Service Line Basis,BEDDAYS
+2026-08,Budget,A08,Input,Input,Activity to Service Line Basis,TRANSACTIONS
+2026-08,Budget,A09,Input,Input,Activity to Service Line Basis,BEDDAYS
+2026-08,Budget,A10,Input,Input,Activity to Service Line Basis,HEADCOUNT
+2026-08,Budget,A11,Input,Input,Activity to Service Line Basis,HEADCOUNT
+2026-09,Budget,A01,Input,Input,Activity to Service Line Basis,BEDDAYS
+2026-09,Budget,A02,Input,Input,Activity to Service Line Basis,TRANSACTIONS
+2026-09,Budget,A03,Input,Input,Activity to Service Line Basis,BEDDAYS
+2026-09,Budget,A04,Input,Input,Activity to Service Line Basis,HEADCOUNT
+2026-09,Budget,A05,Input,Input,Activity to Service Line Basis,TRANSACTIONS
+2026-09,Budget,A06,Input,Input,Activity to Service Line Basis,TRANSACTIONS
+2026-09,Budget,A07,Input,Input,Activity to Service Line Basis,BEDDAYS
+2026-09,Budget,A08,Input,Input,Activity to Service Line Basis,TRANSACTIONS
+2026-09,Budget,A09,Input,Input,Activity to Service Line Basis,BEDDAYS
+2026-09,Budget,A10,Input,Input,Activity to Service Line Basis,HEADCOUNT
+2026-09,Budget,A11,Input,Input,Activity to Service Line Basis,HEADCOUNT
+2026-10,Budget,A01,Input,Input,Activity to Service Line Basis,BEDDAYS
+2026-10,Budget,A02,Input,Input,Activity to Service Line Basis,TRANSACTIONS
+2026-10,Budget,A03,Input,Input,Activity to Service Line Basis,BEDDAYS
+2026-10,Budget,A04,Input,Input,Activity to Service Line Basis,HEADCOUNT
+2026-10,Budget,A05,Input,Input,Activity to Service Line Basis,TRANSACTIONS
+2026-10,Budget,A06,Input,Input,Activity to Service Line Basis,TRANSACTIONS
+2026-10,Budget,A07,Input,Input,Activity to Service Line Basis,BEDDAYS
+2026-10,Budget,A08,Input,Input,Activity to Service Line Basis,TRANSACTIONS
+2026-10,Budget,A09,Input,Input,Activity to Service Line Basis,BEDDAYS
+2026-10,Budget,A10,Input,Input,Activity to Service Line Basis,HEADCOUNT
+2026-10,Budget,A11,Input,Input,Activity to Service Line Basis,HEADCOUNT
+2026-11,Budget,A01,Input,Input,Activity to Service Line Basis,BEDDAYS
+2026-11,Budget,A02,Input,Input,Activity to Service Line Basis,TRANSACTIONS
+2026-11,Budget,A03,Input,Input,Activity to Service Line Basis,BEDDAYS
+2026-11,Budget,A04,Input,Input,Activity to Service Line Basis,HEADCOUNT
+2026-11,Budget,A05,Input,Input,Activity to Service Line Basis,TRANSACTIONS
+2026-11,Budget,A06,Input,Input,Activity to Service Line Basis,TRANSACTIONS
+2026-11,Budget,A07,Input,Input,Activity to Service Line Basis,BEDDAYS
+2026-11,Budget,A08,Input,Input,Activity to Service Line Basis,TRANSACTIONS
+2026-11,Budget,A09,Input,Input,Activity to Service Line Basis,BEDDAYS
+2026-11,Budget,A10,Input,Input,Activity to Service Line Basis,HEADCOUNT
+2026-11,Budget,A11,Input,Input,Activity to Service Line Basis,HEADCOUNT
+2026-12,Budget,A01,Input,Input,Activity to Service Line Basis,BEDDAYS
+2026-12,Budget,A02,Input,Input,Activity to Service Line Basis,TRANSACTIONS
+2026-12,Budget,A03,Input,Input,Activity to Service Line Basis,BEDDAYS
+2026-12,Budget,A04,Input,Input,Activity to Service Line Basis,HEADCOUNT
+2026-12,Budget,A05,Input,Input,Activity to Service Line Basis,TRANSACTIONS
+2026-12,Budget,A06,Input,Input,Activity to Service Line Basis,TRANSACTIONS
+2026-12,Budget,A07,Input,Input,Activity to Service Line Basis,BEDDAYS
+2026-12,Budget,A08,Input,Input,Activity to Service Line Basis,TRANSACTIONS
+2026-12,Budget,A09,Input,Input,Activity to Service Line Basis,BEDDAYS
+2026-12,Budget,A10,Input,Input,Activity to Service Line Basis,HEADCOUNT
+2026-12,Budget,A11,Input,Input,Activity to Service Line Basis,HEADCOUNT
+2027-01,Budget,A01,Input,Input,Activity to Service Line Basis,BEDDAYS
+2027-01,Budget,A02,Input,Input,Activity to Service Line Basis,TRANSACTIONS
+2027-01,Budget,A03,Input,Input,Activity to Service Line Basis,BEDDAYS
+2027-01,Budget,A04,Input,Input,Activity to Service Line Basis,HEADCOUNT
+2027-01,Budget,A05,Input,Input,Activity to Service Line Basis,TRANSACTIONS
+2027-01,Budget,A06,Input,Input,Activity to Service Line Basis,TRANSACTIONS
+2027-01,Budget,A07,Input,Input,Activity to Service Line Basis,BEDDAYS
+2027-01,Budget,A08,Input,Input,Activity to Service Line Basis,TRANSACTIONS
+2027-01,Budget,A09,Input,Input,Activity to Service Line Basis,BEDDAYS
+2027-01,Budget,A10,Input,Input,Activity to Service Line Basis,HEADCOUNT
+2027-01,Budget,A11,Input,Input,Activity to Service Line Basis,HEADCOUNT
+2027-02,Budget,A01,Input,Input,Activity to Service Line Basis,BEDDAYS
+2027-02,Budget,A02,Input,Input,Activity to Service Line Basis,TRANSACTIONS
+2027-02,Budget,A03,Input,Input,Activity to Service Line Basis,BEDDAYS
+2027-02,Budget,A04,Input,Input,Activity to Service Line Basis,HEADCOUNT
+2027-02,Budget,A05,Input,Input,Activity to Service Line Basis,TRANSACTIONS
+2027-02,Budget,A06,Input,Input,Activity to Service Line Basis,TRANSACTIONS
+2027-02,Budget,A07,Input,Input,Activity to Service Line Basis,BEDDAYS
+2027-02,Budget,A08,Input,Input,Activity to Service Line Basis,TRANSACTIONS
+2027-02,Budget,A09,Input,Input,Activity to Service Line Basis,BEDDAYS
+2027-02,Budget,A10,Input,Input,Activity to Service Line Basis,HEADCOUNT
+2027-02,Budget,A11,Input,Input,Activity to Service Line Basis,HEADCOUNT
+2027-03,Budget,A01,Input,Input,Activity to Service Line Basis,BEDDAYS
+2027-03,Budget,A02,Input,Input,Activity to Service Line Basis,TRANSACTIONS
+2027-03,Budget,A03,Input,Input,Activity to Service Line Basis,BEDDAYS
+2027-03,Budget,A04,Input,Input,Activity to Service Line Basis,HEADCOUNT
+2027-03,Budget,A05,Input,Input,Activity to Service Line Basis,TRANSACTIONS
+2027-03,Budget,A06,Input,Input,Activity to Service Line Basis,TRANSACTIONS
+2027-03,Budget,A07,Input,Input,Activity to Service Line Basis,BEDDAYS
+2027-03,Budget,A08,Input,Input,Activity to Service Line Basis,TRANSACTIONS
+2027-03,Budget,A09,Input,Input,Activity to Service Line Basis,BEDDAYS
+2027-03,Budget,A10,Input,Input,Activity to Service Line Basis,HEADCOUNT
+2027-03,Budget,A11,Input,Input,Activity to Service Line Basis,HEADCOUNT
+2026-04,Budget,A01,BEDDAYS,SL01,Driver Value,420
+2026-04,Budget,A01,BEDDAYS,SL03,Driver Value,310
+2026-04,Budget,A01,BEDDAYS,SL07,Driver Value,270
+2026-04,Budget,A02,TRANSACTIONS,SL02,Driver Value,850
+2026-04,Budget,A02,TRANSACTIONS,SL04,Driver Value,650
+2026-04,Budget,A03,BEDDAYS,SL02,Driver Value,620
+2026-04,Budget,A03,BEDDAYS,SL03,Driver Value,580
+2026-04,Budget,A04,HEADCOUNT,SL01,Driver Value,95
+2026-04,Budget,A04,HEADCOUNT,SL04,Driver Value,105
+2026-04,Budget,A04,HEADCOUNT,SL08,Driver Value,60
+2026-04,Budget,A05,TRANSACTIONS,SL05,Driver Value,680
+2026-04,Budget,A05,TRANSACTIONS,SL06,Driver Value,920
+2026-04,Budget,A06,TRANSACTIONS,SL05,Driver Value,450
+2026-04,Budget,A06,TRANSACTIONS,SL06,Driver Value,720
+2026-04,Budget,A07,BEDDAYS,SL07,Driver Value,1250
+2026-04,Budget,A08,TRANSACTIONS,SL02,Driver Value,980
+2026-04,Budget,A09,BEDDAYS,SL01,Driver Value,380
+2026-04,Budget,A09,BEDDAYS,SL03,Driver Value,290
+2026-04,Budget,A09,BEDDAYS,SL07,Driver Value,330
+2026-04,Budget,A10,HEADCOUNT,SL04,Driver Value,110
+2026-04,Budget,A10,HEADCOUNT,SL08,Driver Value,90
+2026-04,Budget,A11,HEADCOUNT,SL08,Driver Value,150
+2026-05,Budget,A01,BEDDAYS,SL01,Driver Value,430
+2026-05,Budget,A01,BEDDAYS,SL03,Driver Value,320
+2026-05,Budget,A01,BEDDAYS,SL07,Driver Value,280
+2026-05,Budget,A02,TRANSACTIONS,SL02,Driver Value,860
+2026-05,Budget,A02,TRANSACTIONS,SL04,Driver Value,660
+2026-05,Budget,A03,BEDDAYS,SL02,Driver Value,630
+2026-05,Budget,A03,BEDDAYS,SL03,Driver Value,590
+2026-05,Budget,A04,HEADCOUNT,SL01,Driver Value,98
+2026-05,Budget,A04,HEADCOUNT,SL04,Driver Value,108
+2026-05,Budget,A04,HEADCOUNT,SL08,Driver Value,62
+2026-05,Budget,A05,TRANSACTIONS,SL05,Driver Value,690
+2026-05,Budget,A05,TRANSACTIONS,SL06,Driver Value,930
+2026-05,Budget,A06,TRANSACTIONS,SL05,Driver Value,460
+2026-05,Budget,A06,TRANSACTIONS,SL06,Driver Value,730
+2026-05,Budget,A07,BEDDAYS,SL07,Driver Value,1260
+2026-05,Budget,A08,TRANSACTIONS,SL02,Driver Value,990
+2026-05,Budget,A09,BEDDAYS,SL01,Driver Value,390
+2026-05,Budget,A09,BEDDAYS,SL03,Driver Value,300
+2026-05,Budget,A09,BEDDAYS,SL07,Driver Value,340
+2026-05,Budget,A10,HEADCOUNT,SL04,Driver Value,112
+2026-05,Budget,A10,HEADCOUNT,SL08,Driver Value,92
+2026-05,Budget,A11,HEADCOUNT,SL08,Driver Value,152
+2026-06,Budget,A01,BEDDAYS,SL01,Driver Value,440
+2026-06,Budget,A01,BEDDAYS,SL03,Driver Value,330
+2026-06,Budget,A01,BEDDAYS,SL07,Driver Value,290
+2026-06,Budget,A02,TRANSACTIONS,SL02,Driver Value,870
+2026-06,Budget,A02,TRANSACTIONS,SL04,Driver Value,670
+2026-06,Budget,A03,BEDDAYS,SL02,Driver Value,640
+2026-06,Budget,A03,BEDDAYS,SL03,Driver Value,600
+2026-06,Budget,A04,HEADCOUNT,SL01,Driver Value,100
+2026-06,Budget,A04,HEADCOUNT,SL04,Driver Value,110
+2026-06,Budget,A04,HEADCOUNT,SL08,Driver Value,63
+2026-06,Budget,A05,TRANSACTIONS,SL05,Driver Value,700
+2026-06,Budget,A05,TRANSACTIONS,SL06,Driver Value,940
+2026-06,Budget,A06,TRANSACTIONS,SL05,Driver Value,470
+2026-06,Budget,A06,TRANSACTIONS,SL06,Driver Value,740
+2026-06,Budget,A07,BEDDAYS,SL07,Driver Value,1270
+2026-06,Budget,A08,TRANSACTIONS,SL02,Driver Value,1000
+2026-06,Budget,A09,BEDDAYS,SL01,Driver Value,400
+2026-06,Budget,A09,BEDDAYS,SL03,Driver Value,310
+2026-06,Budget,A09,BEDDAYS,SL07,Driver Value,350
+2026-06,Budget,A10,HEADCOUNT,SL04,Driver Value,115
+2026-06,Budget,A10,HEADCOUNT,SL08,Driver Value,95
+2026-06,Budget,A11,HEADCOUNT,SL08,Driver Value,155
+2026-07,Budget,A01,BEDDAYS,SL01,Driver Value,450
+2026-07,Budget,A01,BEDDAYS,SL03,Driver Value,340
+2026-07,Budget,A01,BEDDAYS,SL07,Driver Value,300
+2026-07,Budget,A02,TRANSACTIONS,SL02,Driver Value,880
+2026-07,Budget,A02,TRANSACTIONS,SL04,Driver Value,680
+2026-07,Budget,A03,BEDDAYS,SL02,Driver Value,650
+2026-07,Budget,A03,BEDDAYS,SL03,Driver Value,610
+2026-07,Budget,A04,HEADCOUNT,SL01,Driver Value,102
+2026-07,Budget,A04,HEADCOUNT,SL04,Driver Value,112
+2026-07,Budget,A04,HEADCOUNT,SL08,Driver Value,65
+2026-07,Budget,A05,TRANSACTIONS,SL05,Driver Value,710
+2026-07,Budget,A05,TRANSACTIONS,SL06,Driver Value,950
+2026-07,Budget,A06,TRANSACTIONS,SL05,Driver Value,480
+2026-07,Budget,A06,TRANSACTIONS,SL06,Driver Value,750
+2026-07,Budget,A07,BEDDAYS,SL07,Driver Value,1280
+2026-07,Budget,A08,TRANSACTIONS,SL02,Driver Value,1010
+2026-07,Budget,A09,BEDDAYS,SL01,Driver Value,410
+2026-07,Budget,A09,BEDDAYS,SL03,Driver Value,320
+2026-07,Budget,A09,BEDDAYS,SL07,Driver Value,360
+2026-07,Budget,A10,HEADCOUNT,SL04,Driver Value,118
+2026-07,Budget,A10,HEADCOUNT,SL08,Driver Value,98
+2026-07,Budget,A11,HEADCOUNT,SL08,Driver Value,158
+2026-08,Budget,A01,BEDDAYS,SL01,Driver Value,440
+2026-08,Budget,A01,BEDDAYS,SL03,Driver Value,330
+2026-08,Budget,A01,BEDDAYS,SL07,Driver Value,290
+2026-08,Budget,A02,TRANSACTIONS,SL02,Driver Value,870
+2026-08,Budget,A02,TRANSACTIONS,SL04,Driver Value,670
+2026-08,Budget,A03,BEDDAYS,SL02,Driver Value,640
+2026-08,Budget,A03,BEDDAYS,SL03,Driver Value,600
+2026-08,Budget,A04,HEADCOUNT,SL01,Driver Value,100
+2026-08,Budget,A04,HEADCOUNT,SL04,Driver Value,110
+2026-08,Budget,A04,HEADCOUNT,SL08,Driver Value,63
+2026-08,Budget,A05,TRANSACTIONS,SL05,Driver Value,700
+2026-08,Budget,A05,TRANSACTIONS,SL06,Driver Value,940
+2026-08,Budget,A06,TRANSACTIONS,SL05,Driver Value,470
+2026-08,Budget,A06,TRANSACTIONS,SL06,Driver Value,740
+2026-08,Budget,A07,BEDDAYS,SL07,Driver Value,1270
+2026-08,Budget,A08,TRANSACTIONS,SL02,Driver Value,1000
+2026-08,Budget,A09,BEDDAYS,SL01,Driver Value,400
+2026-08,Budget,A09,BEDDAYS,SL03,Driver Value,310
+2026-08,Budget,A09,BEDDAYS,SL07,Driver Value,350
+2026-08,Budget,A10,HEADCOUNT,SL04,Driver Value,115
+2026-08,Budget,A10,HEADCOUNT,SL08,Driver Value,95
+2026-08,Budget,A11,HEADCOUNT,SL08,Driver Value,155
+2026-09,Budget,A01,BEDDAYS,SL01,Driver Value,430
+2026-09,Budget,A01,BEDDAYS,SL03,Driver Value,320
+2026-09,Budget,A01,BEDDAYS,SL07,Driver Value,280
+2026-09,Budget,A02,TRANSACTIONS,SL02,Driver Value,860
+2026-09,Budget,A02,TRANSACTIONS,SL04,Driver Value,660
+2026-09,Budget,A03,BEDDAYS,SL02,Driver Value,630
+2026-09,Budget,A03,BEDDAYS,SL03,Driver Value,590
+2026-09,Budget,A04,HEADCOUNT,SL01,Driver Value,98
+2026-09,Budget,A04,HEADCOUNT,SL04,Driver Value,108
+2026-09,Budget,A04,HEADCOUNT,SL08,Driver Value,62
+2026-09,Budget,A05,TRANSACTIONS,SL05,Driver Value,690
+2026-09,Budget,A05,TRANSACTIONS,SL06,Driver Value,930
+2026-09,Budget,A06,TRANSACTIONS,SL05,Driver Value,460
+2026-09,Budget,A06,TRANSACTIONS,SL06,Driver Value,730
+2026-09,Budget,A07,BEDDAYS,SL07,Driver Value,1260
+2026-09,Budget,A08,TRANSACTIONS,SL02,Driver Value,990
+2026-09,Budget,A09,BEDDAYS,SL01,Driver Value,390
+2026-09,Budget,A09,BEDDAYS,SL03,Driver Value,300
+2026-09,Budget,A09,BEDDAYS,SL07,Driver Value,340
+2026-09,Budget,A10,HEADCOUNT,SL04,Driver Value,112
+2026-09,Budget,A10,HEADCOUNT,SL08,Driver Value,92
+2026-09,Budget,A11,HEADCOUNT,SL08,Driver Value,152
+2026-10,Budget,A01,BEDDAYS,SL01,Driver Value,420
+2026-10,Budget,A01,BEDDAYS,SL03,Driver Value,310
+2026-10,Budget,A01,BEDDAYS,SL07,Driver Value,270
+2026-10,Budget,A02,TRANSACTIONS,SL02,Driver Value,850
+2026-10,Budget,A02,TRANSACTIONS,SL04,Driver Value,650
+2026-10,Budget,A03,BEDDAYS,SL02,Driver Value,620
+2026-10,Budget,A03,BEDDAYS,SL03,Driver Value,580
+2026-10,Budget,A04,HEADCOUNT,SL01,Driver Value,95
+2026-10,Budget,A04,HEADCOUNT,SL04,Driver Value,105
+2026-10,Budget,A04,HEADCOUNT,SL08,Driver Value,60
+2026-10,Budget,A05,TRANSACTIONS,SL05,Driver Value,680
+2026-10,Budget,A05,TRANSACTIONS,SL06,Driver Value,920
+2026-10,Budget,A06,TRANSACTIONS,SL05,Driver Value,450
+2026-10,Budget,A06,TRANSACTIONS,SL06,Driver Value,720
+2026-10,Budget,A07,BEDDAYS,SL07,Driver Value,1250
+2026-10,Budget,A08,TRANSACTIONS,SL02,Driver Value,980
+2026-10,Budget,A09,BEDDAYS,SL01,Driver Value,380
+2026-10,Budget,A09,BEDDAYS,SL03,Driver Value,290
+2026-10,Budget,A09,BEDDAYS,SL07,Driver Value,330
+2026-10,Budget,A10,HEADCOUNT,SL04,Driver Value,110
+2026-10,Budget,A10,HEADCOUNT,SL08,Driver Value,90
+2026-10,Budget,A11,HEADCOUNT,SL08,Driver Value,150
+2026-11,Budget,A01,BEDDAYS,SL01,Driver Value,410
+2026-11,Budget,A01,BEDDAYS,SL03,Driver Value,300
+2026-11,Budget,A01,BEDDAYS,SL07,Driver Value,260
+2026-11,Budget,A02,TRANSACTIONS,SL02,Driver Value,840
+2026-11,Budget,A02,TRANSACTIONS,SL04,Driver Value,640
+2026-11,Budget,A03,BEDDAYS,SL02,Driver Value,610
+2026-11,Budget,A03,BEDDAYS,SL03,Driver Value,570
+2026-11,Budget,A04,HEADCOUNT,SL01,Driver Value,93
+2026-11,Budget,A04,HEADCOUNT,SL04,Driver Value,103
+2026-11,Budget,A04,HEADCOUNT,SL08,Driver Value,58
+2026-11,Budget,A05,TRANSACTIONS,SL05,Driver Value,670
+2026-11,Budget,A05,TRANSACTIONS,SL06,Driver Value,910
+2026-11,Budget,A06,TRANSACTIONS,SL05,Driver Value,440
+2026-11,Budget,A06,TRANSACTIONS,SL06,Driver Value,710
+2026-11,Budget,A07,BEDDAYS,SL07,Driver Value,1240
+2026-11,Budget,A08,TRANSACTIONS,SL02,Driver Value,970
+2026-11,Budget,A09,BEDDAYS,SL01,Driver Value,370
+2026-11,Budget,A09,BEDDAYS,SL03,Driver Value,280
+2026-11,Budget,A09,BEDDAYS,SL07,Driver Value,320
+2026-11,Budget,A10,HEADCOUNT,SL04,Driver Value,108
+2026-11,Budget,A10,HEADCOUNT,SL08,Driver Value,88
+2026-11,Budget,A11,HEADCOUNT,SL08,Driver Value,148
+2026-12,Budget,A01,BEDDAYS,SL01,Driver Value,400
+2026-12,Budget,A01,BEDDAYS,SL03,Driver Value,290
+2026-12,Budget,A01,BEDDAYS,SL07,Driver Value,250
+2026-12,Budget,A02,TRANSACTIONS,SL02,Driver Value,830
+2026-12,Budget,A02,TRANSACTIONS,SL04,Driver Value,630
+2026-12,Budget,A03,BEDDAYS,SL02,Driver Value,600
+2026-12,Budget,A03,BEDDAYS,SL03,Driver Value,560
+2026-12,Budget,A04,HEADCOUNT,SL01,Driver Value,90
+2026-12,Budget,A04,HEADCOUNT,SL04,Driver Value,100
+2026-12,Budget,A04,HEADCOUNT,SL08,Driver Value,55
+2026-12,Budget,A05,TRANSACTIONS,SL05,Driver Value,660
+2026-12,Budget,A05,TRANSACTIONS,SL06,Driver Value,900
+2026-12,Budget,A06,TRANSACTIONS,SL05,Driver Value,430
+2026-12,Budget,A06,TRANSACTIONS,SL06,Driver Value,700
+2026-12,Budget,A07,BEDDAYS,SL07,Driver Value,1230
+2026-12,Budget,A08,TRANSACTIONS,SL02,Driver Value,960
+2026-12,Budget,A09,BEDDAYS,SL01,Driver Value,360
+2026-12,Budget,A09,BEDDAYS,SL03,Driver Value,270
+2026-12,Budget,A09,BEDDAYS,SL07,Driver Value,310
+2026-12,Budget,A10,HEADCOUNT,SL04,Driver Value,105
+2026-12,Budget,A10,HEADCOUNT,SL08,Driver Value,85
+2026-12,Budget,A11,HEADCOUNT,SL08,Driver Value,145
+2027-01,Budget,A01,BEDDAYS,SL01,Driver Value,415
+2027-01,Budget,A01,BEDDAYS,SL03,Driver Value,305
+2027-01,Budget,A01,BEDDAYS,SL07,Driver Value,265
+2027-01,Budget,A02,TRANSACTIONS,SL02,Driver Value,845
+2027-01,Budget,A02,TRANSACTIONS,SL04,Driver Value,645
+2027-01,Budget,A03,BEDDAYS,SL02,Driver Value,615
+2027-01,Budget,A03,BEDDAYS,SL03,Driver Value,575
+2027-01,Budget,A04,HEADCOUNT,SL01,Driver Value,93
+2027-01,Budget,A04,HEADCOUNT,SL04,Driver Value,103
+2027-01,Budget,A04,HEADCOUNT,SL08,Driver Value,58
+2027-01,Budget,A05,TRANSACTIONS,SL05,Driver Value,675
+2027-01,Budget,A05,TRANSACTIONS,SL06,Driver Value,915
+2027-01,Budget,A06,TRANSACTIONS,SL05,Driver Value,445
+2027-01,Budget,A06,TRANSACTIONS,SL06,Driver Value,715
+2027-01,Budget,A07,BEDDAYS,SL07,Driver Value,1245
+2027-01,Budget,A08,TRANSACTIONS,SL02,Driver Value,975
+2027-01,Budget,A09,BEDDAYS,SL01,Driver Value,375
+2027-01,Budget,A09,BEDDAYS,SL03,Driver Value,285
+2027-01,Budget,A09,BEDDAYS,SL07,Driver Value,325
+2027-01,Budget,A10,HEADCOUNT,SL04,Driver Value,108
+2027-01,Budget,A10,HEADCOUNT,SL08,Driver Value,88
+2027-01,Budget,A11,HEADCOUNT,SL08,Driver Value,148
+2027-02,Budget,A01,BEDDAYS,SL01,Driver Value,425
+2027-02,Budget,A01,BEDDAYS,SL03,Driver Value,315
+2027-02,Budget,A01,BEDDAYS,SL07,Driver Value,275
+2027-02,Budget,A02,TRANSACTIONS,SL02,Driver Value,855
+2027-02,Budget,A02,TRANSACTIONS,SL04,Driver Value,655
+2027-02,Budget,A03,BEDDAYS,SL02,Driver Value,625
+2027-02,Budget,A03,BEDDAYS,SL03,Driver Value,585
+2027-02,Budget,A04,HEADCOUNT,SL01,Driver Value,96
+2027-02,Budget,A04,HEADCOUNT,SL04,Driver Value,106
+2027-02,Budget,A04,HEADCOUNT,SL08,Driver Value,61
+2027-02,Budget,A05,TRANSACTIONS,SL05,Driver Value,685
+2027-02,Budget,A05,TRANSACTIONS,SL06,Driver Value,925
+2027-02,Budget,A06,TRANSACTIONS,SL05,Driver Value,455
+2027-02,Budget,A06,TRANSACTIONS,SL06,Driver Value,725
+2027-02,Budget,A07,BEDDAYS,SL07,Driver Value,1255
+2027-02,Budget,A08,TRANSACTIONS,SL02,Driver Value,985
+2027-02,Budget,A09,BEDDAYS,SL01,Driver Value,385
+2027-02,Budget,A09,BEDDAYS,SL03,Driver Value,295
+2027-02,Budget,A09,BEDDAYS,SL07,Driver Value,335
+2027-02,Budget,A10,HEADCOUNT,SL04,Driver Value,110
+2027-02,Budget,A10,HEADCOUNT,SL08,Driver Value,90
+2027-02,Budget,A11,HEADCOUNT,SL08,Driver Value,150
+2027-03,Budget,A01,BEDDAYS,SL01,Driver Value,420
+2027-03,Budget,A01,BEDDAYS,SL03,Driver Value,310
+2027-03,Budget,A01,BEDDAYS,SL07,Driver Value,270
+2027-03,Budget,A02,TRANSACTIONS,SL02,Driver Value,850
+2027-03,Budget,A02,TRANSACTIONS,SL04,Driver Value,650
+2027-03,Budget,A03,BEDDAYS,SL02,Driver Value,620
+2027-03,Budget,A03,BEDDAYS,SL03,Driver Value,580
+2027-03,Budget,A04,HEADCOUNT,SL01,Driver Value,95
+2027-03,Budget,A04,HEADCOUNT,SL04,Driver Value,105
+2027-03,Budget,A04,HEADCOUNT,SL08,Driver Value,60
+2027-03,Budget,A05,TRANSACTIONS,SL05,Driver Value,680
+2027-03,Budget,A05,TRANSACTIONS,SL06,Driver Value,920
+2027-03,Budget,A06,TRANSACTIONS,SL05,Driver Value,450
+2027-03,Budget,A06,TRANSACTIONS,SL06,Driver Value,720
+2027-03,Budget,A07,BEDDAYS,SL07,Driver Value,1250
+2027-03,Budget,A08,TRANSACTIONS,SL02,Driver Value,980
+2027-03,Budget,A09,BEDDAYS,SL01,Driver Value,380
+2027-03,Budget,A09,BEDDAYS,SL03,Driver Value,290
+2027-03,Budget,A09,BEDDAYS,SL07,Driver Value,330
+2027-03,Budget,A10,HEADCOUNT,SL04,Driver Value,110
+2027-03,Budget,A10,HEADCOUNT,SL08,Driver Value,90
+2027-03,Budget,A11,HEADCOUNT,SL08,Driver Value,150
