@@ -6,8 +6,9 @@ Run order:
   python3 model_builder/build_cst_model.py
 
 Prerequisites:
-  GBL dimensions must already exist (built via tm1_global).
+  GBL dimensions must already exist — run build_gbl_model.py first.
   Run cleanup_cst_model.py first for a clean rebuild.
+  For a full build (GBL + CST in one step) use build_model.py.
 """
 
 import sys
