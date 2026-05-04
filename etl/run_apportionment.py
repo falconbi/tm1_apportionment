@@ -27,6 +27,15 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from tm1py_connect import get_tm1_service
 from etl.utils import get_version_periods
 from config import CST_CONFIG
+from etl.val_checks import (
+    run_val00,
+    run_val01,
+    run_val02,
+    run_val03,
+    run_val04,
+    run_val05,
+    run_val06,
+)
 
 
 OVERHEAD_CONSOLIDATION = CST_CONFIG["overhead_consolidation"]
@@ -39,28 +48,57 @@ RECON_DIMS = [
     "CST Apportionment Reconciliation Measure",
 ]
 
-VAL_CHECKS = ["VAL01", "VAL02", "VAL03", "VAL04"]
-RC_CHECKS = ["RC01", "RC03", "RC05"]
+VAL_CHECKS = ["VAL00", "VAL01", "VAL02", "VAL03", "VAL04", "VAL05"]
+RC_CHECKS = ["RC01", "RC02", "RC03", "RC04", "RC05", "RC06"]
 
 
 def _read_val_status(tm1, period, version):
     """Read all VAL check statuses from Reconciliation cube."""
     results = {}
     for check in VAL_CHECKS:
-        status = (
-            tm1.cells.get_value(
-                RECON_CUBE, f"{period},{version},{check},Status", dimensions=RECON_DIMS
+        try:
+            status = (
+                tm1.cells.get_value(
+                    RECON_CUBE,
+                    f"{period},{version},{check},Status",
+                    dimensions=RECON_DIMS,
+                )
+                or "NO DATA"
             )
-            or "NO DATA"
-        )
-        message = (
-            tm1.cells.get_value(
-                RECON_CUBE, f"{period},{version},{check},Message", dimensions=RECON_DIMS
+        except StopIteration:
+            status = "NO DATA"
+
+        try:
+            message = (
+                tm1.cells.get_value(
+                    RECON_CUBE,
+                    f"{period},{version},{check},Message",
+                    dimensions=RECON_DIMS,
+                )
+                or ""
             )
-            or ""
-        )
+        except StopIteration:
+            message = ""
+
         results[check] = {"status": status, "message": message}
     return results
+
+
+def _write_val_check(tm1, period, version, check, status, message=""):
+    """Write VAL check status and message to Reconciliation cube."""
+    tm1.cells.write_value(
+        status,
+        RECON_CUBE,
+        (period, version, check, "Status"),
+        dimensions=RECON_DIMS,
+    )
+    if message:
+        tm1.cells.write_value(
+            message,
+            RECON_CUBE,
+            (period, version, check, "Message"),
+            dimensions=RECON_DIMS,
+        )
 
 
 def _read_rc_results(tm1, period, version):
@@ -100,6 +138,16 @@ def _read_rc_results(tm1, period, version):
 def _gate_check(tm1, period, version, force=False):
     """Check VAL results — return True if safe to proceed."""
     print(f"\n  Validation gate check...")
+
+    # Run VAL checks from val_checks.py (VAL00 first — fundamental config)
+    run_val00(tm1, period, version)
+    run_val01(tm1, period, version)
+    run_val02(tm1, period, version)
+    run_val03(tm1, period, version)
+    run_val04(tm1, period, version)
+    run_val05(tm1, period, version)
+    run_val06(tm1, period, version)  # Date/Time stamp
+
     val_results = _read_val_status(tm1, period, version)
     all_pass = True
     for check, r in val_results.items():
@@ -266,6 +314,49 @@ def _run_stage1b(tm1, period, version, max_iter):
     print(f"    Converged in {iterations} iterations  (max change={max_change:.4f})")
 
     # ── 5. Write Base Amount and Final Balance to P2P Config cube ─────────────
+    # Clear existing cells for these measures
+    clear_mdx = (
+        f"SELECT "
+        f"{{TM1FILTERBYLEVEL({{TM1SUBSETALL([CST Cost Pool])}}, 0)}} ON 0, "
+        f"{{TM1FILTERBYLEVEL({{TM1SUBSETALL([CST Cost Pool Dest])}}, 0)}} ON 1 "
+        f"FROM [{P2P_CONFIG_CUBE}] "
+        f"WHERE ([GBL Period].[{period}], [GBL Version].[{version}], "
+        f"[GBL Cost Centre].[Input], "
+        f"[CST Pool to Pool Config Measure].[Base Amount])"
+    )
+    raw_clear = tm1.cells.execute_mdx(
+        clear_mdx, skip_zeros=True, element_unique_names=False
+    )
+    if raw_clear:
+        clear_cells = {
+            (period, version, key[2], key[3], "Input", "Base Amount"): 0
+            for key in raw_clear.keys()
+        }
+        tm1.cells.write_values(P2P_CONFIG_CUBE, clear_cells, dimensions=P2P_CONFIG_DIMS)
+        print(f"    ✓ Cleared {len(clear_cells)} existing Base Amount cells")
+
+    clear_mdx2 = (
+        f"SELECT "
+        f"{{TM1FILTERBYLEVEL({{TM1SUBSETALL([CST Cost Pool])}}, 0)}} ON 0, "
+        f"{{TM1FILTERBYLEVEL({{TM1SUBSETALL([CST Cost Pool Dest])}}, 0)}} ON 1 "
+        f"FROM [{P2P_CONFIG_CUBE}] "
+        f"WHERE ([GBL Period].[{period}], [GBL Version].[{version}], "
+        f"[GBL Cost Centre].[Input], "
+        f"[CST Pool to Pool Config Measure].[Final Balance])"
+    )
+    raw_clear2 = tm1.cells.execute_mdx(
+        clear_mdx2, skip_zeros=True, element_unique_names=False
+    )
+    if raw_clear2:
+        clear_cells2 = {
+            (period, version, key[2], key[3], "Input", "Final Balance"): 0
+            for key in raw_clear2.keys()
+        }
+        tm1.cells.write_values(
+            P2P_CONFIG_CUBE, clear_cells2, dimensions=P2P_CONFIG_DIMS
+        )
+        print(f"    ✓ Cleared {len(clear_cells2)} existing Final Balance cells")
+
     config_cells = {}
     for pool, base in balances.items():
         config_cells[(period, version, pool, "Input", "Input", "Base Amount")] = base
@@ -293,6 +384,12 @@ def _run_stage1b(tm1, period, version, max_iter):
             )
             settled_total += settled_cc
 
+    # Clear existing Settled Amount cells then write new ones
+    if settled_cells:
+        clear_cells = {k: 0 for k in settled_cells}
+        tm1.cells.write_values(P2A_CUBE, clear_cells, dimensions=P2A_DIMS)
+        print(f"    ✓ Cleared {len(clear_cells)} existing Settled Amount cells")
+
     tm1.cells.write_values(P2A_CUBE, settled_cells, dimensions=P2A_DIMS)
     print(
         f"    ✓ Settled Amount written for {len(settled_cells)} pool/CC combinations  "
@@ -300,12 +397,28 @@ def _run_stage1b(tm1, period, version, max_iter):
     )
 
     # ── 7. Write Stage 1b Complete flag to Reconciliation cube ────────────────
+    # Clear existing flag
+    tm1.cells.write_values(
+        RECON_CUBE,
+        {(period, version, "RC03", "Stage 1b Complete"): 0},
+        dimensions=RECON_DIMS,
+    )
+    # Write new flag
     tm1.cells.write_values(
         RECON_CUBE,
         {(period, version, "RC03", "Stage 1b Complete"): 1},
         dimensions=RECON_DIMS,
     )
     print(f"    ✓ Stage 1b Complete flag written to Reconciliation cube")
+
+    # ── 6. Write Stage 2b Complete flag to Reconciliation cube ─────
+    tm1.cells.write_value(
+        1.0,
+        RECON_CUBE,
+        (period, version, "RC04", "Stage 2b Complete"),
+        dimensions=RECON_DIMS,
+    )
+    print(f"    ✓ Stage 2b Complete flag written to Reconciliation cube")
 
 
 def _run_stage2b(tm1, period, version, max_iter):
@@ -398,10 +511,10 @@ def _run_stage2b(tm1, period, version, max_iter):
     balances_by_cc = {}
     balances = {}
     for key, cell in raw_bal.items():
-        act = key[2]  # CST Activity from ON 0
-        cc = key[3]  # GBL Cost Centre from ON 1
+        act = key[2]  # CST Activity (cube dim 2)
+        cc = key[4]  # GBL Cost Centre (cube dim 4)
         val = cell.get("Value") or 0
-        balances_by_cc[(act, cc)] = val
+        balances_by_cc[(act, cc)] = balances_by_cc.get((act, cc), 0) + val
         balances[act] = balances.get(act, 0) + val
 
     if not balances:
@@ -436,6 +549,49 @@ def _run_stage2b(tm1, period, version, max_iter):
     print(f"    Converged in {iterations} iterations  (max change={max_change:.4f})")
 
     # ── 5. Write Base Amount and Final Balance to A2A Config cube ─────
+    # Clear existing cells for these measures
+    clear_mdx = (
+        f"SELECT "
+        f"{{TM1FILTERBYLEVEL({{TM1SUBSETALL([CST Activity])}}, 0)}} ON 0, "
+        f"{{TM1FILTERBYLEVEL({{TM1SUBSETALL([CST Activity Dest])}}, 0)}} ON 1 "
+        f"FROM [{A2A_CONFIG_CUBE}] "
+        f"WHERE ([GBL Period].[{period}], [GBL Version].[{version}], "
+        f"[GBL Cost Centre].[Input], "
+        f"[CST Activity to Activity Config Measure].[Base Amount])"
+    )
+    raw_clear = tm1.cells.execute_mdx(
+        clear_mdx, skip_zeros=True, element_unique_names=False
+    )
+    if raw_clear:
+        clear_cells = {
+            (period, version, key[2], key[3], "Input", "Base Amount"): 0
+            for key in raw_clear.keys()
+        }
+        tm1.cells.write_values(A2A_CONFIG_CUBE, clear_cells, dimensions=A2A_CONFIG_DIMS)
+        print(f"    ✓ Cleared {len(clear_cells)} existing Base Amount cells")
+
+    clear_mdx2 = (
+        f"SELECT "
+        f"{{TM1FILTERBYLEVEL({{TM1SUBSETALL([CST Activity])}}, 0)}} ON 0, "
+        f"{{TM1FILTERBYLEVEL({{TM1SUBSETALL([CST Activity Dest])}}, 0)}} ON 1 "
+        f"FROM [{A2A_CONFIG_CUBE}] "
+        f"WHERE ([GBL Period].[{period}], [GBL Version].[{version}], "
+        f"[GBL Cost Centre].[Input], "
+        f"[CST Activity to Activity Config Measure].[Final Balance])"
+    )
+    raw_clear2 = tm1.cells.execute_mdx(
+        clear_mdx2, skip_zeros=True, element_unique_names=False
+    )
+    if raw_clear2:
+        clear_cells2 = {
+            (period, version, key[2], key[3], "Input", "Final Balance"): 0
+            for key in raw_clear2.keys()
+        }
+        tm1.cells.write_values(
+            A2A_CONFIG_CUBE, clear_cells2, dimensions=A2A_CONFIG_DIMS
+        )
+        print(f"    ✓ Cleared {len(clear_cells2)} existing Final Balance cells")
+
     config_cells = {}
     for act, base in balances.items():
         config_cells[(period, version, act, "Input", "Input", "Base Amount")] = base
@@ -446,9 +602,85 @@ def _run_stage2b(tm1, period, version, max_iter):
     tm1.cells.write_values(A2A_CONFIG_CUBE, config_cells, dimensions=A2A_CONFIG_DIMS)
     print(f"    ✓ Base Amount and Final Balance written for {len(balances)} activities")
 
-    # ── 6. Write Stage 2b Complete flag ────────────────────────────
-    # TODO: Add "Stage 2b Complete" to reconciliation cube measures
-    print(f"    ~ Stage 2b Complete flag — skipped (measure not in cube yet)")
+    # ── 6. Write settled amounts to CST Activity to Service Line Apportionment ────────
+    A2SL_CUBE = "CST Activity to Service Line Apportionment"
+    A2SL_DIMS = [
+        "GBL Period",
+        "GBL Version",
+        "CST Service Line",
+        "CST Activity",
+        "GBL Cost Centre",
+        "CST Activity to Service Line Apportionment Measure",
+    ]
+
+    # Clear existing Settled Amount cells for this period/version
+    clear_mdx = (
+        f"SELECT "
+        f"{{TM1FILTERBYLEVEL({{TM1SUBSETALL([CST Activity])}}, 0)}} ON 0, "
+        f"{{TM1FILTERBYLEVEL({{TM1SUBSETALL([GBL Cost Centre])}}, 0)}} ON 1 "
+        f"FROM [{A2SL_CUBE}] "
+        f"WHERE ([GBL Period].[{period}], [GBL Version].[{version}], "
+        f"[CST Service Line].[Input], "
+        f"[CST Activity to Service Line Apportionment Measure].[Settled Amount])"
+    )
+    raw_clear = tm1.cells.execute_mdx(
+        clear_mdx, skip_zeros=True, element_unique_names=False
+    )
+    if raw_clear:
+        clear_cells = {
+            (period, version, "Input", key[2], "Input", "Settled Amount"): 0
+            for key in raw_clear.keys()
+        }
+        tm1.cells.write_values(A2SL_CUBE, clear_cells, dimensions=A2SL_DIMS)
+        print(f"    ✓ Cleared {len(clear_cells)} existing Settled Amount cells")
+
+    settled_cells = {}
+    settled_total = 0
+    for act, throughput in b.items():
+        r = redist_pct.get(act, 0.0)
+        settled_net = throughput * (1 - r)
+        act_stage2 = balances.get(act, 0)
+        ratio = (settled_net / act_stage2) if act_stage2 != 0 else 0
+        print(
+            f"    Activity {act}: throughput={throughput:,.2f}, r={r}, settled_net={settled_net:,.2f}, act_stage2={act_stage2:,.2f}, ratio={ratio:.6f}"
+        )
+        # Write settled amount by (act, cc)
+        cell_count = 0
+        for (a, cc), stage2_cc in balances_by_cc.items():
+            if a != act:
+                continue
+            settled_cc = stage2_cc * ratio
+            settled_cells[(period, version, "Input", act, cc, "Settled Amount")] = (
+                settled_cc
+            )
+            settled_total += settled_cc
+            cell_count += 1
+        print(
+            f"      Wrote {cell_count} cells for {act}, subtotal={settled_total:,.2f}"
+        )
+
+    tm1.cells.write_values(A2SL_CUBE, settled_cells, dimensions=A2SL_DIMS)
+    print(
+        f"    ✓ Settled Amount written for {len(settled_cells)} activity/CC combinations  "
+        f"total={settled_total:,.2f}"
+    )
+
+    # ── 7. Write Stage 2b Complete flag to Reconciliation cube ─────
+    # Clear existing flag
+    tm1.cells.write_value(
+        0.0,
+        RECON_CUBE,
+        (period, version, "RC04", "Stage 2b Complete"),
+        dimensions=RECON_DIMS,
+    )
+    # Write new flag
+    tm1.cells.write_value(
+        1.0,
+        RECON_CUBE,
+        (period, version, "RC04", "Stage 2b Complete"),
+        dimensions=RECON_DIMS,
+    )
+    print(f"    ✓ Stage 2b Complete flag written to Reconciliation cube")
 
 
 def _print_rc_summary(rc_results):
