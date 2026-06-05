@@ -1,0 +1,89 @@
+{
+  "Name": "Load-CST Account Config-Apportionment Type-CSV",
+  "PrologProcedure": "#****Begin: Generated Statements***\r\n#****End: Generated Statements****\r\n# =============================================\r\n# PROLOG \r\n# =============================================\r\nsCube = 'CST Account Config';\r\nsDim_Period      = 'GBL Period';\r\nsDim_Version     = 'GBL Version';\r\nsDim_Account     = 'GBL Account';\r\nsDim_CostCentre  = 'GBL Cost Centre';\r\nsDim_CostPool    = 'CST Cost Pool';\r\nsDim_ServiceLine = 'CST Service Line';\r\nsDim_Measure     = 'CST Account Config Measure';\r\n# CLEAR CUBEVIEW\r\nsView = 'TI_Clear_Amount';\r\nsSubset = sView;\r\nIF(ViewExists(sCube, sView) = 1);\r\n    ViewDestroy(sCube, sView);\r\nENDIF;\r\nIF(SubsetExists(sDim_Measure, sSubset) = 1);\r\n    SubsetDestroy(sDim_Measure, sSubset);\r\nENDIF;\r\n# Create subset with only \"Amount\"\r\nSubsetCreate(sDim_Measure, sSubset);\r\nSubsetElementInsert(sDim_Measure, sSubset, 'Apportionment Type', 1);\r\n# Create view with subset\r\nViewCreate(sCube, sView, 1);\r\nViewSubsetAssign(sCube, sView, sDim_Measure, sView);\r\n#Zero\r\nViewZeroOut(sCube, sView);\r\n#Cleanup\r\nViewDestroy(sCube, sView);\r\nLogOutput('INFO', 'Cleared only \"Amount\" measure from cube');",
+  "MetadataProcedure": "#****Begin: Generated Statements***\r\n#****End: Generated Statements****\r\n# =============================================\r\n# METADATA\r\n# =============================================\r\n# No metadata processing needed for this simple load",
+  "DataProcedure": "#****Begin: Generated Statements***\r\n#****End: Generated Statements****\r\n# =============================================\r\n# DATA\r\n# =============================================\r\n# Skip header row\r\nIF(vGBL_Period @= 'vGBL Period');\r\n    ItemSkip;\r\nENDIF;\r\n# Convert amount to number\r\n#nAmount = StringToNumber(vAmount);\r\n# Load to cube\r\nCellPutS(vAmount, \r\n    sCube, \r\n    vGBL_Period, \r\n    vGBL_Version, \r\n    vGBL_Account, \r\n    vGBL_Cost_Centre, \r\n    vCST_Cost_Pool, \r\n    vCST_Service_Line, \r\n    vCST_Account_Config_Measure);",
+  "EpilogProcedure": "#****Begin: Generated Statements***\r\n#****End: Generated Statements****\r\n# =============================================\r\n# EPILOG\r\n# =============================================\r\nLogOutput('INFO', 'Process completed successfully for cube: ' | sCube);\r\n# Optional: Save cube\r\n# CubeSave(sCube);",
+  "HasSecurityAccess": false,
+  "UIData": "",
+  "DataSource": {
+    "Type": "ASCII",
+    "asciiDecimalSeparator": ".",
+    "asciiDelimiterChar": ",",
+    "asciiDelimiterType": "Character",
+    "asciiHeaderRecords": 1,
+    "asciiQuoteCharacter": "\"",
+    "asciiThousandSeparator": ",",
+    "dataSourceNameForClient": "Load_Apportionment_Type.csv",
+    "dataSourceNameForServer": "Load_Apportionment_Type.csv"
+  },
+  "Parameters": [],
+  "Variables": [
+    {
+      "Name": "vGBL_Period",
+      "Type": "String",
+      "Position": 1,
+      "StartByte": 0,
+      "EndByte": 0
+    },
+    {
+      "Name": "vGBL_Version",
+      "Type": "String",
+      "Position": 2,
+      "StartByte": 0,
+      "EndByte": 0
+    },
+    {
+      "Name": "vGBL_Account",
+      "Type": "String",
+      "Position": 3,
+      "StartByte": 0,
+      "EndByte": 0
+    },
+    {
+      "Name": "vGBL_Cost_Centre",
+      "Type": "String",
+      "Position": 4,
+      "StartByte": 0,
+      "EndByte": 0
+    },
+    {
+      "Name": "vCST_Cost_Pool",
+      "Type": "String",
+      "Position": 5,
+      "StartByte": 0,
+      "EndByte": 0
+    },
+    {
+      "Name": "vCST_Service_Line",
+      "Type": "String",
+      "Position": 6,
+      "StartByte": 0,
+      "EndByte": 0
+    },
+    {
+      "Name": "vCST_Account_Config_Measure",
+      "Type": "String",
+      "Position": 7,
+      "StartByte": 0,
+      "EndByte": 0
+    },
+    {
+      "Name": "vAmount",
+      "Type": "String",
+      "Position": 8,
+      "StartByte": 0,
+      "EndByte": 0
+    }
+  ],
+  "VariablesUIData": [
+    "VarType=32\fColType=827\f",
+    "VarType=32\fColType=827\f",
+    "VarType=32\fColType=827\f",
+    "VarType=32\fColType=827\f",
+    "VarType=32\fColType=827\f",
+    "VarType=32\fColType=827\f",
+    "VarType=32\fColType=827\f",
+    "VarType=32\fColType=827\f"
+  ]
+}

@@ -1,0 +1,42 @@
+SKIPCHECK;
+FEEDSTRINGS;
+
+# Driver Percentage Share (Activity → Service Line)
+# Calculates what % of the activity should go to each service line based on driver values
+
+['Driver Percentage Share'] = N:
+IF( !CST Driver @<> 'Input', CONTINUE,
+
+    IF(
+        DB('CST Activity Config',
+           !GBL Period, !GBL Version, !CST Activity,
+           DB('CST Activity Config', !GBL Period, !GBL Version, !CST Activity, 'Input', 'Input', 'Activity to Service Line Basis'),
+           !CST Service Line,
+           'Driver Value') = 0,
+
+        0,
+
+        DB('CST Activity Config',
+           !GBL Period, !GBL Version, !CST Activity,
+           DB('CST Activity Config', !GBL Period, !GBL Version, !CST Activity, 'Input', 'Input', 'Activity to Service Line Basis'),
+           !CST Service Line,
+           'Driver Value')
+        /
+        DB('CST Activity Config',
+           !GBL Period, !GBL Version, !CST Activity,
+           DB('CST Activity Config', !GBL Period, !GBL Version, !CST Activity, 'Input', 'Input', 'Activity to Service Line Basis'),
+           'Total Service Lines',
+           'Driver Value')
+        * 100
+    )
+);
+
+FEEDERS;
+
+# Feed Apportionment Rate in Stage 3 — Cost Centre not in Activity Config so use Total Cost Centres consolidation.
+['CST Driver':'Input','CST Activity Config Measure':'Driver Percentage Share'] =>
+  DB('CST Activity to Service Line Apportionment', !GBL Period, !GBL Version,
+     !CST Service Line, !CST Activity, 'GBL Cost Centre':'Total Cost Centres', 'Apportionment Rate');
+
+# Feeder for Driver Percentage Share
+['Driver Value'] => ['CST Driver':'Input','Driver Percentage Share'];

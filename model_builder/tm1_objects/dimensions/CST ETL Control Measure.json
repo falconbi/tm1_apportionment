@@ -1,0 +1,70 @@
+{
+  "name": "CST ETL Control Measure",
+  "elements": [
+    {
+      "name": "Status",
+      "type": "String"
+    },
+    {
+      "name": "Period",
+      "type": "String"
+    },
+    {
+      "name": "Version",
+      "type": "String"
+    },
+    {
+      "name": "Force",
+      "type": "Numeric"
+    },
+    {
+      "name": "Max Iter",
+      "type": "Numeric"
+    },
+    {
+      "name": "Message",
+      "type": "String"
+    },
+    {
+      "name": "Requested At",
+      "type": "String"
+    },
+    {
+      "name": "Completed At",
+      "type": "String"
+    }
+  ],
+  "edges": [],
+  "attributes": [
+    {
+      "name": "Desc",
+      "type": "Alias"
+    }
+  ],
+  "attribute_values": {
+    "Status": {
+      "Desc": "Status"
+    },
+    "Period": {
+      "Desc": "Period"
+    },
+    "Version": {
+      "Desc": "Version"
+    },
+    "Force": {
+      "Desc": "Force"
+    },
+    "Max Iter": {
+      "Desc": "Max Iter"
+    },
+    "Message": {
+      "Desc": "Message"
+    },
+    "Requested At": {
+      "Desc": "Requested At"
+    },
+    "Completed At": {
+      "Desc": "Completed At"
+    }
+  }
+}

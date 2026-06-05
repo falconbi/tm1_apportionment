@@ -1,0 +1,157 @@
+{
+  "name": "CST Cost Pool Dest",
+  "elements": [
+    {
+      "name": "Total Cost Pools",
+      "type": "Consolidated"
+    },
+    {
+      "name": "CP01",
+      "type": "Numeric"
+    },
+    {
+      "name": "CP02",
+      "type": "Numeric"
+    },
+    {
+      "name": "CP03",
+      "type": "Numeric"
+    },
+    {
+      "name": "CP04",
+      "type": "Numeric"
+    },
+    {
+      "name": "CP05",
+      "type": "Numeric"
+    },
+    {
+      "name": "CP06",
+      "type": "Numeric"
+    },
+    {
+      "name": "CP07",
+      "type": "Numeric"
+    },
+    {
+      "name": "CP08",
+      "type": "Numeric"
+    },
+    {
+      "name": "CP09",
+      "type": "Numeric"
+    },
+    {
+      "name": "Input",
+      "type": "Numeric"
+    }
+  ],
+  "edges": [
+    {
+      "parent": "Total Cost Pools",
+      "component": "CP01",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total Cost Pools",
+      "component": "CP02",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total Cost Pools",
+      "component": "CP03",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total Cost Pools",
+      "component": "CP04",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total Cost Pools",
+      "component": "CP05",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total Cost Pools",
+      "component": "CP06",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total Cost Pools",
+      "component": "CP07",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total Cost Pools",
+      "component": "CP08",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total Cost Pools",
+      "component": "CP09",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total Cost Pools",
+      "component": "Input",
+      "weight": 0.0
+    }
+  ],
+  "attributes": [
+    {
+      "name": "Code & Desc",
+      "type": "Alias"
+    },
+    {
+      "name": "Desc",
+      "type": "Alias"
+    }
+  ],
+  "attribute_values": {
+    "Total Cost Pools": {
+      "Code & Desc": "",
+      "Desc": ""
+    },
+    "CP01": {
+      "Code & Desc": "CP01 Facilities",
+      "Desc": "Facilities"
+    },
+    "CP02": {
+      "Code & Desc": "CP02 Clinical Engineering",
+      "Desc": "Clinical Engineering"
+    },
+    "CP03": {
+      "Code & Desc": "CP03 Information Technology",
+      "Desc": "Information Technology"
+    },
+    "CP04": {
+      "Code & Desc": "CP04 Human Resources",
+      "Desc": "Human Resources"
+    },
+    "CP05": {
+      "Code & Desc": "CP05 Finance and Admin",
+      "Desc": "Finance and Admin"
+    },
+    "CP06": {
+      "Code & Desc": "CP06 Sterilisation",
+      "Desc": "Sterilisation"
+    },
+    "CP07": {
+      "Code & Desc": "CP07 Patient Transport",
+      "Desc": "Patient Transport"
+    },
+    "CP08": {
+      "Code & Desc": "CP08 Catering",
+      "Desc": "Catering"
+    },
+    "CP09": {
+      "Code & Desc": "CP09 Executive and Governance",
+      "Desc": "Executive and Governance"
+    },
+    "Input": {
+      "Code & Desc": "Input",
+      "Desc": "Input"
+    }
+  }
+}

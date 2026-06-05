@@ -1,0 +1,34 @@
+SKIPCHECK;
+FEEDSTRINGS;
+
+# ── Pre Apportionment ─────────────────────────────────────────────────────
+# Overhead GL amounts before the ABC chain redistributes them to Service Lines.
+# Service Line pinned to 'Input' — SL not known pre-apportionment.
+# Only Indirect accounts produce a value — Direct/Excluded/Revenue return 0
+# because Account Config Amount is only loaded for Indirect accounts.
+['Amount','CST Apportionment Stage':'Pre Apportionment','CST Service Line':'Input'] = N:
+  DB('CST Account Config', !GBL Period, !GBL Version,
+     !GBL Account, !GBL Cost Centre, 'Input', 'Input', 'Amount');
+
+# ── Post Apportionment ────────────────────────────────────────────────────
+# Allocated overhead landing on each Service Line after the full ABC chain.
+# Pinned to Account='7000' (Allocated Overhead) — Pool/Activity detail
+# available via drill-through to CST Activity to Service Line Apportionment.
+# Total Activities consolidation covers both indirect (A01-A11) and direct (Activity='Input').
+['Amount','CST Apportionment Stage':'Post Apportionment','GBL Account':'7000'] = N:
+  DB('CST Activity to Service Line Apportionment', !GBL Period, !GBL Version,
+     !CST Service Line, 'Total Activities', !GBL Cost Centre, 'Apportioned Amount');
+
+FEEDERS;
+
+# No feeders for Amount — those live in source cube rule files:
+#   Pre Apportionment  → cst_account_config.yaml (Account Config Amount feeder)
+#   Post Apportionment → cst_activity_to_service_line_apportionment.yaml (Apportioned Amount feeder)
+
+# Feed RC06 in Reconciliation cube — end-to-end GL Input = Service Line Output check.
+['Amount','CST Apportionment Stage':'Post Apportionment','GBL Account':'7000'] =>
+  DB('CST Apportionment Reconciliation', !GBL Period, !GBL Version, 'RC06', 'Input Total'),
+  DB('CST Apportionment Reconciliation', !GBL Period, !GBL Version, 'RC06', 'Output Total'),
+  DB('CST Apportionment Reconciliation', !GBL Period, !GBL Version, 'RC06', 'Variance'),
+  DB('CST Apportionment Reconciliation', !GBL Period, !GBL Version, 'RC06', 'Variance Percent'),
+  DB('CST Apportionment Reconciliation', !GBL Period, !GBL Version, 'RC06', 'Status');

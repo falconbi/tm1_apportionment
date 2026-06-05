@@ -298,7 +298,9 @@ def _run_stage1b(tm1, period, version, max_iter):
     for i in range(max_iter):
         new_b = dict(balances)
         for src, dests in pct.items():
-            r = redist_pct.get(src, 1.0)
+            r = redist_pct.get(src, 0.0)
+            if r == 0.0:
+                raise ValueError(f"Missing redistribution % for pool: {src}")
             for dest, share in dests.items():
                 new_b[dest] = new_b.get(dest, 0) + b.get(src, 0) * r * share
 
@@ -411,66 +413,32 @@ def _run_stage1b(tm1, period, version, max_iter):
     )
     print(f"    ✓ Stage 1b Complete flag written to Reconciliation cube")
 
-    # ── 6. Write Stage 2b Complete flag to Reconciliation cube ─────
-    tm1.cells.write_value(
-        1.0,
-        RECON_CUBE,
-        (period, version, "RC04", "Stage 2b Complete"),
-        dimensions=RECON_DIMS,
-    )
-    print(f"    ✓ Stage 2b Complete flag written to Reconciliation cube")
-
 
 def _run_stage2b(tm1, period, version, max_iter):
-    """Stage 2b — Activity → Activity reciprocal iteration."""
+    """Stage 2b — Activity → Activity reciprocal iteration.
+
+    Mirrors _run_stage1b structure exactly, substituting Activity dimensions.
+    Reads driver values and redistribution % from CST Activity to Activity Config.
+    Writes Base Amount + Final Balance to A2A Config, Settled Amount to A2SL cube.
+    """
     print(f"\n  Stage 2b — Activity → Activity (reciprocal)")
 
     TOLERANCE = 0.01
 
-    # Exactly mirror _run_stage1b structure
-    A2A_CONFIG_CUBE = "CST Activity to Activity Config"
-    A2A_CONFIG_DIMS = [
-        "GBL Period",
-        "GBL Version",
-        "CST Activity",
-        "CST Activity Dest",
-        "GBL Cost Centre",
-        "CST Activity to Activity Config Measure",
-    ]
+    A2A_CONFIG_CUBE = 'CST Activity to Activity Config'
+    A2A_CONFIG_DIMS = ['GBL Period', 'GBL Version', 'CST Activity', 'CST Activity Dest',
+                       'GBL Cost Centre', 'CST Activity to Activity Config Measure']
 
-    P2A_CUBE = "CST Pool to Activity Apportionment"
-    P2A_DIMS = [
-        "GBL Period",
-        "GBL Version",
-        "CST Activity",
-        "CST Cost Pool",
-        "GBL Cost Centre",
-        "CST Pool to Activity Apportionment Measure",
-    ]
+    P2A_CUBE = 'CST Pool to Activity Apportionment'
+    P2A_DIMS = ['GBL Period', 'GBL Version', 'CST Activity', 'CST Cost Pool',
+                'GBL Cost Centre', 'CST Pool to Activity Apportionment Measure']
 
-    # ── 1. Read A2A config: source activities with redistribution % ─────────
-    redist_mdx = (
-        f"SELECT "
-        f"{{TM1FILTERBYLEVEL({{TM1SUBSETALL([CST Activity])}}, 0)}} ON 0, "
-        f"{{TM1FILTERBYLEVEL({{TM1SUBSETALL([CST Activity Dest])}}, 0)}} ON 1 "
-        f"FROM [{A2A_CONFIG_CUBE}] "
-        f"WHERE ([GBL Period].[{period}], [GBL Version].[{version}], "
-        f"[GBL Cost Centre].[Input], "
-        f"[CST Activity to Activity Config Measure].[Redistribution Percentage])"
-    )
-    raw_redist = tm1.cells.execute_mdx(
-        redist_mdx, skip_zeros=True, element_unique_names=False
-    )
+    A2SL_CUBE = 'CST Activity to Service Line Apportionment'
+    A2SL_DIMS = ['GBL Period', 'GBL Version', 'CST Service Line', 'CST Activity',
+                 'GBL Cost Centre', 'CST Activity to Service Line Apportionment Measure']
 
-    pct = {}  # {src_act: {dest_act: share}}
-    for key, cell in raw_redist.items():
-        src = key[0]
-        dest = key[1]
-        val = cell.get("Value") or 0
-        if val != 0:
-            pct.setdefault(src, {})[dest] = val / 100
-
-    # ── 2. Read A2A driver values ─────────────────────────────────
+    # ── 1. Read A2A driver values ─────────────────────────────────────────────
+    # A2A_CONFIG dims: Period(0), Version(1), Activity(2), ActivityDest(3), CC(4), Measure(5)
     a2a_mdx = (
         f"SELECT "
         f"{{TM1FILTERBYLEVEL({{TM1SUBSETALL([CST Activity])}}, 0)}} ON 0, "
@@ -480,40 +448,68 @@ def _run_stage2b(tm1, period, version, max_iter):
         f"[GBL Cost Centre].[Input], "
         f"[CST Activity to Activity Config Measure].[Driver Value])"
     )
-    raw_a2a = tm1.cells.execute_mdx(
-        a2a_mdx, skip_zeros=True, element_unique_names=False
+    raw = tm1.cells.execute_mdx(a2a_mdx, skip_zeros=True, element_unique_names=False)
+
+    raw_values = {}
+    for key, cell in raw.items():
+        src  = key[2]
+        dest = key[3]
+        val  = cell.get('Value') or 0
+        if val != 0:
+            raw_values.setdefault(src, {})[dest] = val
+
+    if not raw_values:
+        print(f"    ~ No A2A driver values found — skipping")
+        return
+
+    pct = {}
+    for src, dests in raw_values.items():
+        total = sum(dests.values())
+        if total > 0:
+            pct[src] = {dest: val / total for dest, val in dests.items()}
+
+    # ── 2. Read Redistribution Percentage per source activity ─────────────────
+    # Stored at Activity Dest = 'Input'
+    redist_mdx = (
+        f"SELECT "
+        f"{{TM1FILTERBYLEVEL({{TM1SUBSETALL([CST Activity])}}, 0)}} ON 0, "
+        f"{{[CST Activity Dest].[Input]}} ON 1 "
+        f"FROM [{A2A_CONFIG_CUBE}] "
+        f"WHERE ([GBL Period].[{period}], [GBL Version].[{version}], "
+        f"[GBL Cost Centre].[Input], "
+        f"[CST Activity to Activity Config Measure].[Redistribution Percentage])"
     )
+    raw_redist = tm1.cells.execute_mdx(redist_mdx, skip_zeros=True, element_unique_names=False)
 
     redist_pct = {}
-    for key, cell in raw_a2a.items():
-        act = key[0]
-        val = cell.get("Value") or 0
+    for key, cell in raw_redist.items():
+        act = key[2]
+        val = cell.get('Value') or 0
         if val != 0:
             redist_pct[act] = val / 100
 
-    print(
-        f"    A2A config: {len(pct)} source activities  {len(redist_pct)} with redistribution %"
-    )
+    print(f"    A2A config: {len(pct)} source activities  {len(redist_pct)} with redistribution %")
 
-    # ── 3. Read Stage 2 balances from previous stage ──────────────────
+    # ── 3. Read Stage 2 activity balances from P2A cube ──────────────────────
+    # Fix CST Cost Pool at consolidation to get totals across all pools per activity/CC
+    # P2A dims: Period(0), Version(1), Activity(2), CostPool(3), CC(4), Measure(5)
     bal_mdx = (
         f"SELECT "
         f"{{TM1FILTERBYLEVEL({{TM1SUBSETALL([CST Activity])}}, 0)}} ON 0, "
         f"{{TM1FILTERBYLEVEL({{TM1SUBSETALL([GBL Cost Centre])}}, 0)}} ON 1 "
         f"FROM [{P2A_CUBE}] "
         f"WHERE ([GBL Period].[{period}], [GBL Version].[{version}], "
+        f"[CST Cost Pool].[Total Cost Pools], "
         f"[CST Pool to Activity Apportionment Measure].[Apportioned Amount])"
     )
-    raw_bal = tm1.cells.execute_mdx(
-        bal_mdx, skip_zeros=True, element_unique_names=False
-    )
+    raw_bal = tm1.cells.execute_mdx(bal_mdx, skip_zeros=True, element_unique_names=False)
 
-    balances_by_cc = {}
-    balances = {}
+    balances_by_cc = {}  # {(activity, cc): amount}
+    balances = {}        # {activity: total}
     for key, cell in raw_bal.items():
-        act = key[2]  # CST Activity (cube dim 2)
-        cc = key[4]  # GBL Cost Centre (cube dim 4)
-        val = cell.get("Value") or 0
+        act = key[2]
+        cc  = key[4]
+        val = cell.get('Value') or 0
         balances_by_cc[(act, cc)] = balances_by_cc.get((act, cc), 0) + val
         balances[act] = balances.get(act, 0) + val
 
@@ -521,25 +517,23 @@ def _run_stage2b(tm1, period, version, max_iter):
         print(f"    ~ No Stage 2 balances found — skipping")
         return
 
-    print(
-        f"    Stage 2 balances: {len(balances)} activities  "
-        f"total={sum(balances.values()):,.2f}"
-    )
+    print(f"    Stage 2 balances: {len(balances)} activities  "
+          f"total={sum(balances.values()):,.2f}")
 
-    # ── 4. Iterate until convergence ──────────────────────────────
+    # ── 4. Iterate until convergence ─────────────────────────────────────────
     b = dict(balances)
     iterations = 0
 
     for i in range(max_iter):
         new_b = dict(balances)
         for src, dests in pct.items():
-            r = redist_pct.get(src, 1.0)
+            r = redist_pct.get(src, 0.0)
+            if r == 0.0:
+                raise ValueError(f"Missing redistribution % for activity: {src}")
             for dest, share in dests.items():
                 new_b[dest] = new_b.get(dest, 0) + b.get(src, 0) * r * share
 
-        max_change = max(
-            abs(new_b.get(p, 0) - b.get(p, 0)) for p in set(list(b) + list(new_b))
-        )
+        max_change = max(abs(new_b.get(p, 0) - b.get(p, 0)) for p in set(list(b) + list(new_b)))
         b = new_b
         iterations += 1
 
@@ -548,136 +542,40 @@ def _run_stage2b(tm1, period, version, max_iter):
 
     print(f"    Converged in {iterations} iterations  (max change={max_change:.4f})")
 
-    # ── 5. Write Base Amount and Final Balance to A2A Config cube ─────
-    # Clear existing cells for these measures
-    clear_mdx = (
-        f"SELECT "
-        f"{{TM1FILTERBYLEVEL({{TM1SUBSETALL([CST Activity])}}, 0)}} ON 0, "
-        f"{{TM1FILTERBYLEVEL({{TM1SUBSETALL([CST Activity Dest])}}, 0)}} ON 1 "
-        f"FROM [{A2A_CONFIG_CUBE}] "
-        f"WHERE ([GBL Period].[{period}], [GBL Version].[{version}], "
-        f"[GBL Cost Centre].[Input], "
-        f"[CST Activity to Activity Config Measure].[Base Amount])"
-    )
-    raw_clear = tm1.cells.execute_mdx(
-        clear_mdx, skip_zeros=True, element_unique_names=False
-    )
-    if raw_clear:
-        clear_cells = {
-            (period, version, key[2], key[3], "Input", "Base Amount"): 0
-            for key in raw_clear.keys()
-        }
-        tm1.cells.write_values(A2A_CONFIG_CUBE, clear_cells, dimensions=A2A_CONFIG_DIMS)
-        print(f"    ✓ Cleared {len(clear_cells)} existing Base Amount cells")
-
-    clear_mdx2 = (
-        f"SELECT "
-        f"{{TM1FILTERBYLEVEL({{TM1SUBSETALL([CST Activity])}}, 0)}} ON 0, "
-        f"{{TM1FILTERBYLEVEL({{TM1SUBSETALL([CST Activity Dest])}}, 0)}} ON 1 "
-        f"FROM [{A2A_CONFIG_CUBE}] "
-        f"WHERE ([GBL Period].[{period}], [GBL Version].[{version}], "
-        f"[GBL Cost Centre].[Input], "
-        f"[CST Activity to Activity Config Measure].[Final Balance])"
-    )
-    raw_clear2 = tm1.cells.execute_mdx(
-        clear_mdx2, skip_zeros=True, element_unique_names=False
-    )
-    if raw_clear2:
-        clear_cells2 = {
-            (period, version, key[2], key[3], "Input", "Final Balance"): 0
-            for key in raw_clear2.keys()
-        }
-        tm1.cells.write_values(
-            A2A_CONFIG_CUBE, clear_cells2, dimensions=A2A_CONFIG_DIMS
-        )
-        print(f"    ✓ Cleared {len(clear_cells2)} existing Final Balance cells")
-
+    # ── 5. Write Base Amount and Final Balance to A2A Config cube ─────────────
+    # Stored at Activity Dest = 'Input' — Apportioned Amount is rule-driven
+    # Activities with no A2A config get Final Balance = Base Amount
     config_cells = {}
     for act, base in balances.items():
-        config_cells[(period, version, act, "Input", "Input", "Base Amount")] = base
-        config_cells[(period, version, act, "Input", "Input", "Final Balance")] = b.get(
-            act, base
-        )
-
+        config_cells[(period, version, act, 'Input', 'Input', 'Base Amount')]   = base
+        config_cells[(period, version, act, 'Input', 'Input', 'Final Balance')] = b.get(act, base)
     tm1.cells.write_values(A2A_CONFIG_CUBE, config_cells, dimensions=A2A_CONFIG_DIMS)
     print(f"    ✓ Base Amount and Final Balance written for {len(balances)} activities")
 
-    # ── 6. Write settled amounts to CST Activity to Service Line Apportionment ────────
-    A2SL_CUBE = "CST Activity to Service Line Apportionment"
-    A2SL_DIMS = [
-        "GBL Period",
-        "GBL Version",
-        "CST Service Line",
-        "CST Activity",
-        "GBL Cost Centre",
-        "CST Activity to Service Line Apportionment Measure",
-    ]
-
-    # Clear existing Settled Amount cells for this period/version
-    clear_mdx = (
-        f"SELECT "
-        f"{{TM1FILTERBYLEVEL({{TM1SUBSETALL([CST Activity])}}, 0)}} ON 0, "
-        f"{{TM1FILTERBYLEVEL({{TM1SUBSETALL([GBL Cost Centre])}}, 0)}} ON 1 "
-        f"FROM [{A2SL_CUBE}] "
-        f"WHERE ([GBL Period].[{period}], [GBL Version].[{version}], "
-        f"[CST Service Line].[Input], "
-        f"[CST Activity to Service Line Apportionment Measure].[Settled Amount])"
-    )
-    raw_clear = tm1.cells.execute_mdx(
-        clear_mdx, skip_zeros=True, element_unique_names=False
-    )
-    if raw_clear:
-        clear_cells = {
-            (period, version, "Input", key[2], "Input", "Settled Amount"): 0
-            for key in raw_clear.keys()
-        }
-        tm1.cells.write_values(A2SL_CUBE, clear_cells, dimensions=A2SL_DIMS)
-        print(f"    ✓ Cleared {len(clear_cells)} existing Settled Amount cells")
-
+    # ── 6. Write settled amounts to CST Activity to Service Line Apportionment ─
+    # settled_net = final balance × (1 - redistribution %) — flows forward to Stage 3
     settled_cells = {}
     settled_total = 0
     for act, throughput in b.items():
-        r = redist_pct.get(act, 0.0)
+        r           = redist_pct.get(act, 0.0)
         settled_net = throughput * (1 - r)
-        act_stage2 = balances.get(act, 0)
-        ratio = (settled_net / act_stage2) if act_stage2 != 0 else 0
-        print(
-            f"    Activity {act}: throughput={throughput:,.2f}, r={r}, settled_net={settled_net:,.2f}, act_stage2={act_stage2:,.2f}, ratio={ratio:.6f}"
-        )
-        # Write settled amount by (act, cc)
-        cell_count = 0
+        act_stage2  = balances.get(act, 0)
+        ratio       = (settled_net / act_stage2) if act_stage2 != 0 else 0
         for (a, cc), stage2_cc in balances_by_cc.items():
             if a != act:
                 continue
             settled_cc = stage2_cc * ratio
-            settled_cells[(period, version, "Input", act, cc, "Settled Amount")] = (
-                settled_cc
-            )
+            settled_cells[(period, version, 'Input', act, cc, 'Settled Amount')] = settled_cc
             settled_total += settled_cc
-            cell_count += 1
-        print(
-            f"      Wrote {cell_count} cells for {act}, subtotal={settled_total:,.2f}"
-        )
 
     tm1.cells.write_values(A2SL_CUBE, settled_cells, dimensions=A2SL_DIMS)
-    print(
-        f"    ✓ Settled Amount written for {len(settled_cells)} activity/CC combinations  "
-        f"total={settled_total:,.2f}"
-    )
+    print(f"    ✓ Settled Amount written for {len(settled_cells)} activity/CC combinations  "
+          f"total={settled_total:,.2f}")
 
-    # ── 7. Write Stage 2b Complete flag to Reconciliation cube ─────
-    # Clear existing flag
-    tm1.cells.write_value(
-        0.0,
+    # ── 7. Write Stage 2b Complete flag to Reconciliation cube ───────────────
+    tm1.cells.write_values(
         RECON_CUBE,
-        (period, version, "RC04", "Stage 2b Complete"),
-        dimensions=RECON_DIMS,
-    )
-    # Write new flag
-    tm1.cells.write_value(
-        1.0,
-        RECON_CUBE,
-        (period, version, "RC04", "Stage 2b Complete"),
+        {(period, version, 'RC04', 'Stage 2b Complete'): 1},
         dimensions=RECON_DIMS,
     )
     print(f"    ✓ Stage 2b Complete flag written to Reconciliation cube")

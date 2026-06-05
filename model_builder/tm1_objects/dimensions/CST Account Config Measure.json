@@ -1,0 +1,56 @@
+{
+  "name": "CST Account Config Measure",
+  "elements": [
+    {
+      "name": "Amount",
+      "type": "Numeric"
+    },
+    {
+      "name": "Apportionment Type",
+      "type": "String"
+    },
+    {
+      "name": "Driver Percentage Share",
+      "type": "Numeric"
+    },
+    {
+      "name": "Direct Percentage Share",
+      "type": "Numeric"
+    },
+    {
+      "name": "Direct Amount",
+      "type": "Numeric"
+    },
+    {
+      "name": "Indirect for Apportionment",
+      "type": "Numeric"
+    }
+  ],
+  "edges": [],
+  "attributes": [
+    {
+      "name": "Desc",
+      "type": "Alias"
+    }
+  ],
+  "attribute_values": {
+    "Amount": {
+      "Desc": "Amount"
+    },
+    "Apportionment Type": {
+      "Desc": "Apportionment Type"
+    },
+    "Driver Percentage Share": {
+      "Desc": "Driver Percentage Share"
+    },
+    "Direct Percentage Share": {
+      "Desc": "Direct Percentage Share"
+    },
+    "Direct Amount": {
+      "Desc": "Direct Amount"
+    },
+    "Indirect for Apportionment": {
+      "Desc": ""
+    }
+  }
+}

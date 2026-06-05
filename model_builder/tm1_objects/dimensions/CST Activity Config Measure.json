@@ -1,0 +1,49 @@
+{
+  "name": "CST Activity Config Measure",
+  "elements": [
+    {
+      "name": "Activity to Service Line Basis",
+      "type": "String"
+    },
+    {
+      "name": "Driver Value",
+      "type": "Numeric"
+    },
+    {
+      "name": "Input Volume",
+      "type": "Numeric"
+    },
+    {
+      "name": "Input Description",
+      "type": "String"
+    },
+    {
+      "name": "Driver Percentage Share",
+      "type": "Numeric"
+    }
+  ],
+  "edges": [],
+  "attributes": [
+    {
+      "name": "Desc",
+      "type": "Alias"
+    }
+  ],
+  "attribute_values": {
+    "Activity to Service Line Basis": {
+      "Desc": "Activity to Service Line Basis"
+    },
+    "Driver Value": {
+      "Desc": "Driver Value"
+    },
+    "Input Volume": {
+      "Desc": "Input Volume"
+    },
+    "Input Description": {
+      "Desc": "Input Description"
+    },
+    "Driver Percentage Share": {
+      "Desc": "Driver Percentage Share"
+    }
+  }
+}

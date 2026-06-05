@@ -1,0 +1,49 @@
+{
+  "name": "CST Activity to Service Line Apportionment Measure",
+  "elements": [
+    {
+      "name": "Amount",
+      "type": "Numeric"
+    },
+    {
+      "name": "Settled Amount",
+      "type": "Numeric"
+    },
+    {
+      "name": "Apportionment Rate",
+      "type": "Numeric"
+    },
+    {
+      "name": "Apportioned Amount",
+      "type": "Numeric"
+    },
+    {
+      "name": "Per Unit",
+      "type": "Numeric"
+    }
+  ],
+  "edges": [],
+  "attributes": [
+    {
+      "name": "Desc",
+      "type": "Alias"
+    }
+  ],
+  "attribute_values": {
+    "Amount": {
+      "Desc": "Amount"
+    },
+    "Settled Amount": {
+      "Desc": ""
+    },
+    "Apportionment Rate": {
+      "Desc": "Apportionment Rate"
+    },
+    "Apportioned Amount": {
+      "Desc": "Apportioned Amount"
+    },
+    "Per Unit": {
+      "Desc": "Per Unit"
+    }
+  }
+}

@@ -1,0 +1,300 @@
+{
+  "name": "GBL Cost Centre",
+  "elements": [
+    {
+      "name": "Total Cost Centres",
+      "type": "Consolidated"
+    },
+    {
+      "name": "Total Clinical Cost Centres",
+      "type": "Consolidated"
+    },
+    {
+      "name": "D001",
+      "type": "Numeric"
+    },
+    {
+      "name": "D002",
+      "type": "Numeric"
+    },
+    {
+      "name": "D003",
+      "type": "Numeric"
+    },
+    {
+      "name": "D004",
+      "type": "Numeric"
+    },
+    {
+      "name": "D005",
+      "type": "Numeric"
+    },
+    {
+      "name": "D006",
+      "type": "Numeric"
+    },
+    {
+      "name": "D007",
+      "type": "Numeric"
+    },
+    {
+      "name": "D008",
+      "type": "Numeric"
+    },
+    {
+      "name": "Total Administrative Cost Centres",
+      "type": "Consolidated"
+    },
+    {
+      "name": "D009",
+      "type": "Numeric"
+    },
+    {
+      "name": "D010",
+      "type": "Numeric"
+    },
+    {
+      "name": "D011",
+      "type": "Numeric"
+    },
+    {
+      "name": "D012",
+      "type": "Numeric"
+    },
+    {
+      "name": "Total Support Cost Centres",
+      "type": "Consolidated"
+    },
+    {
+      "name": "D013",
+      "type": "Numeric"
+    },
+    {
+      "name": "D014",
+      "type": "Numeric"
+    },
+    {
+      "name": "D015",
+      "type": "Numeric"
+    },
+    {
+      "name": "D016",
+      "type": "Numeric"
+    },
+    {
+      "name": "D017",
+      "type": "Numeric"
+    },
+    {
+      "name": "Input",
+      "type": "Numeric"
+    }
+  ],
+  "edges": [
+    {
+      "parent": "Total Cost Centres",
+      "component": "Total Clinical Cost Centres",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total Cost Centres",
+      "component": "Total Administrative Cost Centres",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total Cost Centres",
+      "component": "Total Support Cost Centres",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total Cost Centres",
+      "component": "Input",
+      "weight": 0.0
+    },
+    {
+      "parent": "Total Clinical Cost Centres",
+      "component": "D001",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total Clinical Cost Centres",
+      "component": "D002",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total Clinical Cost Centres",
+      "component": "D003",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total Clinical Cost Centres",
+      "component": "D004",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total Clinical Cost Centres",
+      "component": "D005",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total Clinical Cost Centres",
+      "component": "D006",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total Clinical Cost Centres",
+      "component": "D007",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total Clinical Cost Centres",
+      "component": "D008",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total Administrative Cost Centres",
+      "component": "D009",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total Administrative Cost Centres",
+      "component": "D010",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total Administrative Cost Centres",
+      "component": "D011",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total Administrative Cost Centres",
+      "component": "D012",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total Support Cost Centres",
+      "component": "D013",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total Support Cost Centres",
+      "component": "D014",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total Support Cost Centres",
+      "component": "D015",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total Support Cost Centres",
+      "component": "D016",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total Support Cost Centres",
+      "component": "D017",
+      "weight": 1.0
+    }
+  ],
+  "attributes": [
+    {
+      "name": "Code & Desc",
+      "type": "Alias"
+    },
+    {
+      "name": "Desc",
+      "type": "Alias"
+    }
+  ],
+  "attribute_values": {
+    "Total Cost Centres": {
+      "Code & Desc": "Total Cost Centres",
+      "Desc": "Total Cost Centres"
+    },
+    "Total Clinical Cost Centres": {
+      "Code & Desc": "Total Clinical Cost Centres",
+      "Desc": "Total Clinical Cost Centres"
+    },
+    "D001": {
+      "Code & Desc": "D001 Emergency Department",
+      "Desc": "Emergency Department"
+    },
+    "D002": {
+      "Code & Desc": "D002 Elective Surgery",
+      "Desc": "Elective Surgery"
+    },
+    "D003": {
+      "Code & Desc": "D003 Intensive Care Unit",
+      "Desc": "Intensive Care Unit"
+    },
+    "D004": {
+      "Code & Desc": "D004 Outpatient Clinics",
+      "Desc": "Outpatient Clinics"
+    },
+    "D005": {
+      "Code & Desc": "D005 Radiology",
+      "Desc": "Radiology"
+    },
+    "D006": {
+      "Code & Desc": "D006 Pathology Laboratory",
+      "Desc": "Pathology Laboratory"
+    },
+    "D007": {
+      "Code & Desc": "D007 Maternity",
+      "Desc": "Maternity"
+    },
+    "D008": {
+      "Code & Desc": "D008 Allied Health",
+      "Desc": "Allied Health"
+    },
+    "Total Administrative Cost Centres": {
+      "Code & Desc": "Total Administrative Cost Centres",
+      "Desc": "Total Administrative Cost Centres"
+    },
+    "D009": {
+      "Code & Desc": "D009 Finance and Administration",
+      "Desc": "Finance and Administration"
+    },
+    "D010": {
+      "Code & Desc": "D010 Human Resources",
+      "Desc": "Human Resources"
+    },
+    "D011": {
+      "Code & Desc": "D011 Information Technology",
+      "Desc": "Information Technology"
+    },
+    "D012": {
+      "Code & Desc": "D012 Executive and Governance",
+      "Desc": "Executive and Governance"
+    },
+    "Total Support Cost Centres": {
+      "Code & Desc": "Total Support Cost Centres",
+      "Desc": "Total Support Cost Centres"
+    },
+    "D013": {
+      "Code & Desc": "D013 Facility Management",
+      "Desc": "Facility Management"
+    },
+    "D014": {
+      "Code & Desc": "D014 Clinical Engineering",
+      "Desc": "Clinical Engineering"
+    },
+    "D015": {
+      "Code & Desc": "D015 Sterilisation Services",
+      "Desc": "Sterilisation Services"
+    },
+    "D016": {
+      "Code & Desc": "D016 Patient Transport",
+      "Desc": "Patient Transport"
+    },
+    "D017": {
+      "Code & Desc": "D017 Catering Services",
+      "Desc": "Catering Services"
+    },
+    "Input": {
+      "Code & Desc": "Input",
+      "Desc": "Input"
+    }
+  }
+}

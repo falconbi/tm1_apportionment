@@ -1,0 +1,118 @@
+{
+  "name": "CST Driver",
+  "elements": [
+    {
+      "name": "Total Drivers",
+      "type": "Consolidated"
+    },
+    {
+      "name": "FLOORSPACE",
+      "type": "Numeric"
+    },
+    {
+      "name": "HEADCOUNT",
+      "type": "Numeric"
+    },
+    {
+      "name": "ASSETVALUE",
+      "type": "Numeric"
+    },
+    {
+      "name": "POWERUSAGE",
+      "type": "Numeric"
+    },
+    {
+      "name": "BEDDAYS",
+      "type": "Numeric"
+    },
+    {
+      "name": "TRANSACTIONS",
+      "type": "Numeric"
+    },
+    {
+      "name": "Input",
+      "type": "Numeric"
+    }
+  ],
+  "edges": [
+    {
+      "parent": "Total Drivers",
+      "component": "FLOORSPACE",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total Drivers",
+      "component": "HEADCOUNT",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total Drivers",
+      "component": "ASSETVALUE",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total Drivers",
+      "component": "POWERUSAGE",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total Drivers",
+      "component": "BEDDAYS",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total Drivers",
+      "component": "TRANSACTIONS",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total Drivers",
+      "component": "Input",
+      "weight": 0.0
+    }
+  ],
+  "attributes": [
+    {
+      "name": "Code & Desc",
+      "type": "Alias"
+    },
+    {
+      "name": "Desc",
+      "type": "Alias"
+    }
+  ],
+  "attribute_values": {
+    "Total Drivers": {
+      "Code & Desc": "",
+      "Desc": ""
+    },
+    "FLOORSPACE": {
+      "Code & Desc": "FLOORSPACE Floor Area (m2)",
+      "Desc": "Floor Area (m2)"
+    },
+    "HEADCOUNT": {
+      "Code & Desc": "HEADCOUNT FTE Headcount",
+      "Desc": "FTE Headcount"
+    },
+    "ASSETVALUE": {
+      "Code & Desc": "ASSETVALUE Asset Value",
+      "Desc": "Asset Value"
+    },
+    "POWERUSAGE": {
+      "Code & Desc": "POWERUSAGE Power Usage (kWh)",
+      "Desc": "Power Usage (kWh)"
+    },
+    "BEDDAYS": {
+      "Code & Desc": "BEDDAYS Patient Bed Days",
+      "Desc": "Patient Bed Days"
+    },
+    "TRANSACTIONS": {
+      "Code & Desc": "TRANSACTIONS Transaction Count",
+      "Desc": "Transaction Count"
+    },
+    "Input": {
+      "Code & Desc": "Input",
+      "Desc": "Input"
+    }
+  }
+}

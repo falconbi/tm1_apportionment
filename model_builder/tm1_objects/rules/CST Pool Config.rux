@@ -1,0 +1,50 @@
+SKIPCHECK;
+FEEDSTRINGS;
+
+# Driver Percentage Share (Pool → Activity)
+# Calculates what % of the pool should go to each activity based on driver values
+
+['Driver Percentage Share'] = N:
+IF( !CST Driver @<> 'Input', CONTINUE,
+
+    IF(
+        DB('CST Pool Config', 
+           !GBL Period, !GBL Version, !CST Cost Pool, 
+           DB('CST Pool Config', !GBL Period, !GBL Version, !CST Cost Pool, 'Input', 'Input', 'Pool to Activity Basis'), 
+           !CST Activity, 
+           'Driver Value') = 0,
+
+        0,
+
+        DB('CST Pool Config', 
+           !GBL Period, !GBL Version, !CST Cost Pool, 
+           DB('CST Pool Config', !GBL Period, !GBL Version, !CST Cost Pool, 'Input', 'Input', 'Pool to Activity Basis'), 
+           !CST Activity, 
+           'Driver Value') 
+        /
+        DB('CST Pool Config', 
+           !GBL Period, !GBL Version, !CST Cost Pool, 
+           DB('CST Pool Config', !GBL Period, !GBL Version, !CST Cost Pool, 'Input', 'Input', 'Pool to Activity Basis'), 
+           'Total Activities', 
+           'Driver Value')
+        * 100
+    )
+);
+
+
+FEEDERS;
+
+# Feed Apportionment Rate in Stage 2 — Cost Centre not in Pool Config so use Total Cost Centres consolidation.
+['CST Driver':'Input','CST Pool Config Measure':'Driver Percentage Share'] =>
+  DB('CST Pool to Activity Apportionment',
+     !GBL Period, !GBL Version, !CST Activity, !CST Cost Pool, 'GBL Cost Centre':'Total Cost Centres', 'Apportionment Rate');
+
+# Internal Feeder for % Share
+['Driver Value'] => 
+    DB('CST Pool to Activity Apportionment', 
+       !GBL Period, 
+       !GBL Version, 
+       !CST Activity, 
+       !CST Cost Pool, 
+       'Input', 
+       'Driver Percentage Share');

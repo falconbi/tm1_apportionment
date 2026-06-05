@@ -1,0 +1,5 @@
+{
+  "Name": "Bdgt Periods",
+  "Hierarchy@odata.bind": "Dimensions('GBL Period')/Hierarchies('GBL Period')",
+  "Expression": "{\n  STRTOMEMBER(\"[GBL Period].[\" + [GBL Version].[Budget].Properties(\"Start Period\") + \"]\")\n  :\n  STRTOMEMBER(\"[GBL Period].[\" + [GBL Version].[Budget].Properties(\"End Period\") + \"]\")\n}\n"
+}

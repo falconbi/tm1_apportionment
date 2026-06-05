@@ -1,0 +1,183 @@
+{
+  "name": "CST Activity",
+  "elements": [
+    {
+      "name": "Total Activities",
+      "type": "Consolidated"
+    },
+    {
+      "name": "A01",
+      "type": "Numeric"
+    },
+    {
+      "name": "A02",
+      "type": "Numeric"
+    },
+    {
+      "name": "A03",
+      "type": "Numeric"
+    },
+    {
+      "name": "A04",
+      "type": "Numeric"
+    },
+    {
+      "name": "A05",
+      "type": "Numeric"
+    },
+    {
+      "name": "A06",
+      "type": "Numeric"
+    },
+    {
+      "name": "A07",
+      "type": "Numeric"
+    },
+    {
+      "name": "A08",
+      "type": "Numeric"
+    },
+    {
+      "name": "A09",
+      "type": "Numeric"
+    },
+    {
+      "name": "A10",
+      "type": "Numeric"
+    },
+    {
+      "name": "A11",
+      "type": "Numeric"
+    },
+    {
+      "name": "Input",
+      "type": "Numeric"
+    }
+  ],
+  "edges": [
+    {
+      "parent": "Total Activities",
+      "component": "A01",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total Activities",
+      "component": "A02",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total Activities",
+      "component": "A03",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total Activities",
+      "component": "A04",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total Activities",
+      "component": "A05",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total Activities",
+      "component": "A06",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total Activities",
+      "component": "A07",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total Activities",
+      "component": "A08",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total Activities",
+      "component": "A09",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total Activities",
+      "component": "A10",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total Activities",
+      "component": "A11",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total Activities",
+      "component": "Input",
+      "weight": 0.0
+    }
+  ],
+  "attributes": [
+    {
+      "name": "Code & Desc",
+      "type": "Alias"
+    },
+    {
+      "name": "Desc",
+      "type": "Alias"
+    }
+  ],
+  "attribute_values": {
+    "Total Activities": {
+      "Code & Desc": "",
+      "Desc": ""
+    },
+    "A01": {
+      "Code & Desc": "A01 Patient Admission",
+      "Desc": "Patient Admission"
+    },
+    "A02": {
+      "Code & Desc": "A02 Surgical Preparation",
+      "Desc": "Surgical Preparation"
+    },
+    "A03": {
+      "Code & Desc": "A03 Clinical Procedure",
+      "Desc": "Clinical Procedure"
+    },
+    "A04": {
+      "Code & Desc": "A04 Patient Monitoring",
+      "Desc": "Patient Monitoring"
+    },
+    "A05": {
+      "Code & Desc": "A05 Diagnostic Ordering",
+      "Desc": "Diagnostic Ordering"
+    },
+    "A06": {
+      "Code & Desc": "A06 Diagnostic Reporting",
+      "Desc": "Diagnostic Reporting"
+    },
+    "A07": {
+      "Code & Desc": "A07 Medication Management",
+      "Desc": "Medication Management"
+    },
+    "A08": {
+      "Code & Desc": "A08 Theatre Scheduling",
+      "Desc": "Theatre Scheduling"
+    },
+    "A09": {
+      "Code & Desc": "A09 Discharge Planning",
+      "Desc": "Discharge Planning"
+    },
+    "A10": {
+      "Code & Desc": "A10 Outpatient Coordination",
+      "Desc": "Outpatient Coordination"
+    },
+    "A11": {
+      "Code & Desc": "A11 Infection Prevention",
+      "Desc": "Infection Prevention"
+    },
+    "Input": {
+      "Code & Desc": "Input",
+      "Desc": "Input"
+    }
+  }
+}

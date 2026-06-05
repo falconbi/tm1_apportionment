@@ -1,0 +1,7 @@
+{
+  "Name": "SYS NET PROFIT",
+  "Hierarchy@odata.bind": "Dimensions('GBL Account')/Hierarchies('GBL Account')",
+  "Elements@odata.bind": [
+    "Dimensions('GBL Account')/Hierarchies('GBL Account')/Elements('NET PROFIT')"
+  ]
+}

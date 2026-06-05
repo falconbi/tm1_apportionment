@@ -1,0 +1,7 @@
+{
+  "Name": "SYS Total Departments",
+  "Hierarchy@odata.bind": "Dimensions('GBL Department')/Hierarchies('GBL Department')",
+  "Elements@odata.bind": [
+    "Dimensions('GBL Department')/Hierarchies('GBL Department')/Elements('Total Departments')"
+  ]
+}

@@ -1,0 +1,5 @@
+{
+  "Name": "SYS All",
+  "Hierarchy@odata.bind": "Dimensions('GBL Department')/Hierarchies('GBL Department')",
+  "Expression": "{TM1SUBSETALL( [GBL Department] )}"
+}

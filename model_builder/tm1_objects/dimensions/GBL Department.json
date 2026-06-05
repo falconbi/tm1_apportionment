@@ -1,0 +1,248 @@
+{
+  "name": "GBL Department",
+  "elements": [
+    {
+      "name": "Total Departments",
+      "type": "Consolidated"
+    },
+    {
+      "name": "D001",
+      "type": "Numeric"
+    },
+    {
+      "name": "D002",
+      "type": "Numeric"
+    },
+    {
+      "name": "D003",
+      "type": "Numeric"
+    },
+    {
+      "name": "D004",
+      "type": "Numeric"
+    },
+    {
+      "name": "D005",
+      "type": "Numeric"
+    },
+    {
+      "name": "D006",
+      "type": "Numeric"
+    },
+    {
+      "name": "D007",
+      "type": "Numeric"
+    },
+    {
+      "name": "D008",
+      "type": "Numeric"
+    },
+    {
+      "name": "D009",
+      "type": "Numeric"
+    },
+    {
+      "name": "D010",
+      "type": "Numeric"
+    },
+    {
+      "name": "D011",
+      "type": "Numeric"
+    },
+    {
+      "name": "D012",
+      "type": "Numeric"
+    },
+    {
+      "name": "D013",
+      "type": "Numeric"
+    },
+    {
+      "name": "D014",
+      "type": "Numeric"
+    },
+    {
+      "name": "D015",
+      "type": "Numeric"
+    },
+    {
+      "name": "D016",
+      "type": "Numeric"
+    },
+    {
+      "name": "D017",
+      "type": "Numeric"
+    }
+  ],
+  "edges": [
+    {
+      "parent": "Total Departments",
+      "component": "D001",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total Departments",
+      "component": "D002",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total Departments",
+      "component": "D003",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total Departments",
+      "component": "D004",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total Departments",
+      "component": "D005",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total Departments",
+      "component": "D006",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total Departments",
+      "component": "D007",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total Departments",
+      "component": "D008",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total Departments",
+      "component": "D009",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total Departments",
+      "component": "D010",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total Departments",
+      "component": "D011",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total Departments",
+      "component": "D012",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total Departments",
+      "component": "D013",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total Departments",
+      "component": "D014",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total Departments",
+      "component": "D015",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total Departments",
+      "component": "D016",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total Departments",
+      "component": "D017",
+      "weight": 1.0
+    }
+  ],
+  "attributes": [
+    {
+      "name": "Code & Desc",
+      "type": "String"
+    },
+    {
+      "name": "Desc",
+      "type": "String"
+    }
+  ],
+  "attribute_values": {
+    "Total Departments": {
+      "Code & Desc": "Total Departments",
+      "Desc": "Total Departments"
+    },
+    "D001": {
+      "Code & Desc": "D001 Emergency",
+      "Desc": "Emergency"
+    },
+    "D002": {
+      "Code & Desc": "D002 Elective Surgery",
+      "Desc": "Elective Surgery"
+    },
+    "D003": {
+      "Code & Desc": "D003 ICU",
+      "Desc": "ICU"
+    },
+    "D004": {
+      "Code & Desc": "D004 Outpatients",
+      "Desc": "Outpatients"
+    },
+    "D005": {
+      "Code & Desc": "D005 Radiology",
+      "Desc": "Radiology"
+    },
+    "D006": {
+      "Code & Desc": "D006 Pathology",
+      "Desc": "Pathology"
+    },
+    "D007": {
+      "Code & Desc": "D007 Maternity",
+      "Desc": "Maternity"
+    },
+    "D008": {
+      "Code & Desc": "D008 Allied Health",
+      "Desc": "Allied Health"
+    },
+    "D009": {
+      "Code & Desc": "D009 Facilities",
+      "Desc": "Facilities"
+    },
+    "D010": {
+      "Code & Desc": "D010 Clinical Engineering",
+      "Desc": "Clinical Engineering"
+    },
+    "D011": {
+      "Code & Desc": "D011 IT",
+      "Desc": "IT"
+    },
+    "D012": {
+      "Code & Desc": "D012 Human Resources",
+      "Desc": "Human Resources"
+    },
+    "D013": {
+      "Code & Desc": "D013 Finance",
+      "Desc": "Finance"
+    },
+    "D014": {
+      "Code & Desc": "D014 Sterilisation",
+      "Desc": "Sterilisation"
+    },
+    "D015": {
+      "Code & Desc": "D015 Patient Transport",
+      "Desc": "Patient Transport"
+    },
+    "D016": {
+      "Code & Desc": "D016 Catering",
+      "Desc": "Catering"
+    },
+    "D017": {
+      "Code & Desc": "D017 Executive and Governance",
+      "Desc": "Executive and Governance"
+    }
+  }
+}

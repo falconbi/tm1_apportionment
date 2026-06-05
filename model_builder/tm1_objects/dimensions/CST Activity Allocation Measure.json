@@ -1,0 +1,35 @@
+{
+  "name": "CST Activity Allocation Measure",
+  "elements": [
+    {
+      "name": "Allocated Amount",
+      "type": "Numeric"
+    },
+    {
+      "name": "Allocation Rate",
+      "type": "Numeric"
+    },
+    {
+      "name": "Activity Total",
+      "type": "Numeric"
+    }
+  ],
+  "edges": [],
+  "attributes": [
+    {
+      "name": "Desc",
+      "type": "Alias"
+    }
+  ],
+  "attribute_values": {
+    "Allocated Amount": {
+      "Desc": "Cost allocated from cost pools into this activity"
+    },
+    "Allocation Rate": {
+      "Desc": "Activity total cost divided by sum of driver values for this activity"
+    },
+    "Activity Total": {
+      "Desc": "Total cost in this activity available for allocation to service lines"
+    }
+  }
+}

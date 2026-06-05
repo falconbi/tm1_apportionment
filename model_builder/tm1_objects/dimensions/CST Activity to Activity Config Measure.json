@@ -1,0 +1,77 @@
+{
+  "name": "CST Activity to Activity Config Measure",
+  "elements": [
+    {
+      "name": "Driver Percentage Share",
+      "type": "Numeric"
+    },
+    {
+      "name": "Driver Value",
+      "type": "Numeric"
+    },
+    {
+      "name": "Driver Description",
+      "type": "String"
+    },
+    {
+      "name": "Redistribution Percentage",
+      "type": "Numeric"
+    },
+    {
+      "name": "Iteration Number",
+      "type": "Numeric"
+    },
+    {
+      "name": "Base Amount",
+      "type": "Numeric"
+    },
+    {
+      "name": "Final Balance",
+      "type": "Numeric"
+    },
+    {
+      "name": "Settled Amount",
+      "type": "Numeric"
+    },
+    {
+      "name": "Apportioned Amount",
+      "type": "Numeric"
+    }
+  ],
+  "edges": [],
+  "attributes": [
+    {
+      "name": "Desc",
+      "type": "Alias"
+    }
+  ],
+  "attribute_values": {
+    "Driver Percentage Share": {
+      "Desc": "Driver Percentage Share"
+    },
+    "Driver Value": {
+      "Desc": "Driver Value"
+    },
+    "Driver Description": {
+      "Desc": "Driver Description"
+    },
+    "Redistribution Percentage": {
+      "Desc": ""
+    },
+    "Iteration Number": {
+      "Desc": "Iteration Number"
+    },
+    "Base Amount": {
+      "Desc": ""
+    },
+    "Final Balance": {
+      "Desc": ""
+    },
+    "Settled Amount": {
+      "Desc": ""
+    },
+    "Apportioned Amount": {
+      "Desc": "Apportioned Amount"
+    }
+  }
+}

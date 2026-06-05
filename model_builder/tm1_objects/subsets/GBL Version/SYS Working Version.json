@@ -1,0 +1,5 @@
+{
+  "Name": "SYS Working Version",
+  "Hierarchy@odata.bind": "Dimensions('GBL Version')/Hierarchies('GBL Version')",
+  "Expression": "{FILTER(TM1SUBSETALL([GBL Version]),\n  [GBL Version].CURRENTMEMBER.PROPERTIES(\"Current Working\") = \"Y\")}\n"
+}

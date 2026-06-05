@@ -1,0 +1,5 @@
+{
+  "Name": "SYS Leaf",
+  "Hierarchy@odata.bind": "Dimensions('CST Allocation Stage')/Hierarchies('CST Allocation Stage')",
+  "Expression": "{TM1FILTERBYLEVEL( {TM1SUBSETALL( [CST Allocation Stage] )}, 0)}"
+}

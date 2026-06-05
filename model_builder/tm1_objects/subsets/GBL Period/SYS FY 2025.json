@@ -1,0 +1,7 @@
+{
+  "Name": "SYS FY 2025",
+  "Hierarchy@odata.bind": "Dimensions('GBL Period')/Hierarchies('GBL Period')",
+  "Elements@odata.bind": [
+    "Dimensions('GBL Period')/Hierarchies('GBL Period')/Elements('FY2025')"
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "name": "CST Allocation Reconciliation Measure",
+  "elements": [
+    {
+      "name": "Input Total",
+      "type": "Numeric"
+    },
+    {
+      "name": "Output Total",
+      "type": "Numeric"
+    },
+    {
+      "name": "Variance",
+      "type": "Numeric"
+    },
+    {
+      "name": "Variance Percent",
+      "type": "Numeric"
+    }
+  ],
+  "edges": [],
+  "attributes": [
+    {
+      "name": "Desc",
+      "type": "Alias"
+    }
+  ],
+  "attribute_values": {
+    "Input Total": {
+      "Desc": "Total cost entering this allocation stage"
+    },
+    "Output Total": {
+      "Desc": "Total cost leaving this allocation stage"
+    },
+    "Variance": {
+      "Desc": "Input minus Output \u2014 tolerance 1 dollar, halt on breach"
+    },
+    "Variance Percent": {
+      "Desc": "Variance as a percentage of Input Total"
+    }
+  }
+}

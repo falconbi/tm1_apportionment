@@ -1,0 +1,5 @@
+{
+  "Name": "All ETL Jobs",
+  "Hierarchy@odata.bind": "Dimensions('CST ETL Job')/Hierarchies('CST ETL Job')",
+  "Expression": "{TM1FILTERBYLEVEL({TM1SUBSETALL([CST ETL Job])}, 0)}"
+}

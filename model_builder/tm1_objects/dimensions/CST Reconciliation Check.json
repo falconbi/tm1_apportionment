@@ -1,0 +1,222 @@
+{
+  "name": "CST Reconciliation Check",
+  "elements": [
+    {
+      "name": "Total Reconciliation",
+      "type": "Consolidated"
+    },
+    {
+      "name": "RC01",
+      "type": "Numeric"
+    },
+    {
+      "name": "RC02",
+      "type": "Numeric"
+    },
+    {
+      "name": "RC03",
+      "type": "Numeric"
+    },
+    {
+      "name": "RC04",
+      "type": "Numeric"
+    },
+    {
+      "name": "RC05",
+      "type": "Numeric"
+    },
+    {
+      "name": "RC06",
+      "type": "Numeric"
+    },
+    {
+      "name": "VAL01",
+      "type": "Numeric"
+    },
+    {
+      "name": "VAL02",
+      "type": "Numeric"
+    },
+    {
+      "name": "VAL03",
+      "type": "Numeric"
+    },
+    {
+      "name": "VAL04",
+      "type": "Numeric"
+    },
+    {
+      "name": "Input",
+      "type": "Numeric"
+    },
+    {
+      "name": "RC00",
+      "type": "Numeric"
+    },
+    {
+      "name": "VAL05",
+      "type": "Numeric"
+    },
+    {
+      "name": "VAL00",
+      "type": "Numeric"
+    },
+    {
+      "name": "VAL06",
+      "type": "Numeric"
+    }
+  ],
+  "edges": [
+    {
+      "parent": "Total Reconciliation",
+      "component": "RC00",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total Reconciliation",
+      "component": "RC01",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total Reconciliation",
+      "component": "RC02",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total Reconciliation",
+      "component": "RC03",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total Reconciliation",
+      "component": "RC04",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total Reconciliation",
+      "component": "RC05",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total Reconciliation",
+      "component": "RC06",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total Reconciliation",
+      "component": "VAL00",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total Reconciliation",
+      "component": "VAL01",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total Reconciliation",
+      "component": "VAL02",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total Reconciliation",
+      "component": "VAL03",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total Reconciliation",
+      "component": "VAL04",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total Reconciliation",
+      "component": "VAL05",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total Reconciliation",
+      "component": "VAL06",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total Reconciliation",
+      "component": "Input",
+      "weight": 0.0
+    }
+  ],
+  "attributes": [
+    {
+      "name": "Code & Desc",
+      "type": "Alias"
+    },
+    {
+      "name": "Desc",
+      "type": "Alias"
+    }
+  ],
+  "attribute_values": {
+    "Total Reconciliation": {
+      "Code & Desc": "",
+      "Desc": ""
+    },
+    "RC01": {
+      "Code & Desc": "RC01 GL Input = Cost Pool",
+      "Desc": "GL Input = Cost Pool"
+    },
+    "RC02": {
+      "Code & Desc": "RC02 Pool Reciprocal Balance",
+      "Desc": "Pool Reciprocal Balance"
+    },
+    "RC03": {
+      "Code & Desc": "RC03 Cost Pool = Activity",
+      "Desc": "Cost Pool = Activity"
+    },
+    "RC04": {
+      "Code & Desc": "RC04 Activity Reciprocal Balance",
+      "Desc": "Activity Reciprocal Balance"
+    },
+    "RC05": {
+      "Code & Desc": "RC05 Activity = Service Line",
+      "Desc": "Activity = Service Line"
+    },
+    "RC06": {
+      "Code & Desc": "RC06 GL Input = Service Line End to End",
+      "Desc": "GL Input = Service Line End to End"
+    },
+    "VAL01": {
+      "Code & Desc": "VAL01 Driver Value Completeness",
+      "Desc": "Driver Value Completeness"
+    },
+    "VAL02": {
+      "Code & Desc": "VAL02 Pool to Pool",
+      "Desc": "Pool Config Coverage"
+    },
+    "VAL03": {
+      "Code & Desc": "VAL03 Pool to Activity",
+      "Desc": "All Activities have drivers "
+    },
+    "VAL04": {
+      "Code & Desc": "VAL04 Activity to Activity",
+      "Desc": "Activity Config Coverage"
+    },
+    "Input": {
+      "Code & Desc": "Input",
+      "Desc": "Input"
+    },
+    "RC00": {
+      "Code & Desc": "RC00 Indirect and Direct Balances INFO",
+      "Desc": "INFO Direct and Indirect"
+    },
+    "VAL05": {
+      "Code & Desc": "VAL05 Act 2 SL Drivers ",
+      "Desc": "Activity to Service Line Drivers"
+    },
+    "VAL00": {
+      "Code & Desc": "VAL00 Check Apportionment Type Exists ",
+      "Desc": "Apportionment Type Exists "
+    },
+    "VAL06": {
+      "Code & Desc": "VAL06 Last Run Date",
+      "Desc": "Last Run Date"
+    }
+  }
+}

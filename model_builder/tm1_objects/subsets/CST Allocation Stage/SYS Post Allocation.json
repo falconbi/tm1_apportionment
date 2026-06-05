@@ -1,0 +1,7 @@
+{
+  "Name": "SYS Post Allocation",
+  "Hierarchy@odata.bind": "Dimensions('CST Allocation Stage')/Hierarchies('CST Allocation Stage')",
+  "Elements@odata.bind": [
+    "Dimensions('CST Allocation Stage')/Hierarchies('CST Allocation Stage')/Elements('Post Allocation')"
+  ]
+}

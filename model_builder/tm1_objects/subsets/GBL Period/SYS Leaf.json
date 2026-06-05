@@ -1,0 +1,5 @@
+{
+  "Name": "SYS Leaf",
+  "Hierarchy@odata.bind": "Dimensions('GBL Period')/Hierarchies('GBL Period')",
+  "Expression": "{TM1FILTERBYLEVEL( {TM1SUBSETALL( [GBL Period] )}, 0)}"
+}

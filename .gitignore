@@ -5,3 +5,7 @@ __pycache__/
 *.db
 *.db-journal
 config.py
+poller.log
+logs/
+docs/*.png
+docs/Archive/

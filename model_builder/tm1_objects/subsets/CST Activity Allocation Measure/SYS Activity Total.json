@@ -1,0 +1,7 @@
+{
+  "Name": "SYS Activity Total",
+  "Hierarchy@odata.bind": "Dimensions('CST Activity Allocation Measure')/Hierarchies('CST Activity Allocation Measure')",
+  "Elements@odata.bind": [
+    "Dimensions('CST Activity Allocation Measure')/Hierarchies('CST Activity Allocation Measure')/Elements('Activity Total')"
+  ]
+}

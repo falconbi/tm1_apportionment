@@ -31,7 +31,7 @@ Deploys all TM1 objects from source files in this repo — dimensions, cubes, ru
 
 **App (ETL)** — run each period to load data and execute apportionment
 
-Loads GL data and driver assumptions from SQL into TM1, runs the reciprocal iteration stages, validates data quality via gate checks, and reports reconciliation results end-to-end.
+Loads GL data and driver assumptions from CSV into TM1, runs the reciprocal iteration stages, validates data quality via gate checks, and reports reconciliation results end-to-end.
 
 ---
 
@@ -49,7 +49,7 @@ Activity → Service Line Stage 3   (TM1 rules, live)
 
 ## Prerequisites
 
-- IBM Planning Analytics V12 server running and accessible
+- IBM Planning Analytics server running and accessible
 - Python 3.10+
 - TM1py (see `requirements.txt`)
 
@@ -73,15 +73,35 @@ cp config.example.py config.py
 
 Edit `config.py` with your TM1 server address, credentials, and account hierarchy consolidation names. See `config.example.py` for all options.
 
-### 3. Build the model
+### 3. Deploy the model
 
 ```bash
-python3 model_builder/build_cst_model.py
+python3 model_builder/deploy.py
 ```
 
-This builds everything on the TM1 server in one run — GBL dimensions, CST dimensions, all 10 cubes, rules, views, and TI processes.
+This deploys all TM1 objects from the JSON definitions in `model_builder/tm1_objects/` —
+dimensions, cubes, rules, subsets, views, and TI processes. The target server is configured in
+`model_builder/deployment_config.py`.
 
-### 4. Generate test data
+### 4. Load sample data
+
+The model comes with sample CSV data in `sample_data/`. Load it into TM1:
+
+```bash
+python3 load_csv_data.py
+```
+
+This reads each CSV and writes directly to the target cube via the TM1 REST API —
+no manual file copy to the TM1 server needed.
+
+### 5. Validate and run
+
+```bash
+python3 etl/val_checks.py --version Budget
+python3 etl/run_apportionment.py --version Budget
+```
+
+### 7. Generate test database (alternative data source)
 
 The SQLite test database is not stored in git (binary file excluded). Generate it locally first:
 
@@ -91,7 +111,7 @@ python3 model_builder/create_test_db.py
 
 This creates `tests/data/cst_test_data.db` — a fully populated test database covering Budget FY2027 (April 2026 → March 2027) with GL amounts, driver values, pool and activity config, and cost centre assignments across all 18 tables.
 
-### 5. Load test data and run
+### 8. Load from SQLite and run
 
 ```bash
 python3 etl/load_gl.py --version Budget
@@ -99,7 +119,7 @@ python3 etl/load_drivers.py --version Budget
 python3 etl/run_apportionment.py --version Budget
 ```
 
-### 6. Start the ETL poller
+### 9. Start the ETL poller
 
 Required for TI-triggered ETL from PAW.
 

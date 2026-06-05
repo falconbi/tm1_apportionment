@@ -1,0 +1,2429 @@
+{
+  "name": "GBL Period",
+  "elements": [
+    {
+      "name": "FY2023",
+      "type": "Consolidated"
+    },
+    {
+      "name": "FY2024",
+      "type": "Consolidated"
+    },
+    {
+      "name": "FY2025",
+      "type": "Consolidated"
+    },
+    {
+      "name": "FY2026",
+      "type": "Consolidated"
+    },
+    {
+      "name": "FY2027",
+      "type": "Consolidated"
+    },
+    {
+      "name": "FY2028",
+      "type": "Consolidated"
+    },
+    {
+      "name": "FY2029",
+      "type": "Consolidated"
+    },
+    {
+      "name": "FY2030",
+      "type": "Consolidated"
+    },
+    {
+      "name": "FY2031",
+      "type": "Consolidated"
+    },
+    {
+      "name": "2023-01",
+      "type": "Numeric"
+    },
+    {
+      "name": "2023-02",
+      "type": "Numeric"
+    },
+    {
+      "name": "2023-03",
+      "type": "Numeric"
+    },
+    {
+      "name": "2023-04",
+      "type": "Numeric"
+    },
+    {
+      "name": "2023-05",
+      "type": "Numeric"
+    },
+    {
+      "name": "2023-06",
+      "type": "Numeric"
+    },
+    {
+      "name": "2023-07",
+      "type": "Numeric"
+    },
+    {
+      "name": "2023-08",
+      "type": "Numeric"
+    },
+    {
+      "name": "2023-09",
+      "type": "Numeric"
+    },
+    {
+      "name": "2023-10",
+      "type": "Numeric"
+    },
+    {
+      "name": "2023-11",
+      "type": "Numeric"
+    },
+    {
+      "name": "2023-12",
+      "type": "Numeric"
+    },
+    {
+      "name": "2024-01",
+      "type": "Numeric"
+    },
+    {
+      "name": "2024-02",
+      "type": "Numeric"
+    },
+    {
+      "name": "2024-03",
+      "type": "Numeric"
+    },
+    {
+      "name": "2024-04",
+      "type": "Numeric"
+    },
+    {
+      "name": "2024-05",
+      "type": "Numeric"
+    },
+    {
+      "name": "2024-06",
+      "type": "Numeric"
+    },
+    {
+      "name": "2024-07",
+      "type": "Numeric"
+    },
+    {
+      "name": "2024-08",
+      "type": "Numeric"
+    },
+    {
+      "name": "2024-09",
+      "type": "Numeric"
+    },
+    {
+      "name": "2024-10",
+      "type": "Numeric"
+    },
+    {
+      "name": "2024-11",
+      "type": "Numeric"
+    },
+    {
+      "name": "2024-12",
+      "type": "Numeric"
+    },
+    {
+      "name": "2025-01",
+      "type": "Numeric"
+    },
+    {
+      "name": "2025-02",
+      "type": "Numeric"
+    },
+    {
+      "name": "2025-03",
+      "type": "Numeric"
+    },
+    {
+      "name": "2025-04",
+      "type": "Numeric"
+    },
+    {
+      "name": "2025-05",
+      "type": "Numeric"
+    },
+    {
+      "name": "2025-06",
+      "type": "Numeric"
+    },
+    {
+      "name": "2025-07",
+      "type": "Numeric"
+    },
+    {
+      "name": "2025-08",
+      "type": "Numeric"
+    },
+    {
+      "name": "2025-09",
+      "type": "Numeric"
+    },
+    {
+      "name": "2025-10",
+      "type": "Numeric"
+    },
+    {
+      "name": "2025-11",
+      "type": "Numeric"
+    },
+    {
+      "name": "2025-12",
+      "type": "Numeric"
+    },
+    {
+      "name": "2026-01",
+      "type": "Numeric"
+    },
+    {
+      "name": "2026-02",
+      "type": "Numeric"
+    },
+    {
+      "name": "2026-03",
+      "type": "Numeric"
+    },
+    {
+      "name": "2026-04",
+      "type": "Numeric"
+    },
+    {
+      "name": "2026-05",
+      "type": "Numeric"
+    },
+    {
+      "name": "2026-06",
+      "type": "Numeric"
+    },
+    {
+      "name": "2026-07",
+      "type": "Numeric"
+    },
+    {
+      "name": "2026-08",
+      "type": "Numeric"
+    },
+    {
+      "name": "2026-09",
+      "type": "Numeric"
+    },
+    {
+      "name": "2026-10",
+      "type": "Numeric"
+    },
+    {
+      "name": "2026-11",
+      "type": "Numeric"
+    },
+    {
+      "name": "2026-12",
+      "type": "Numeric"
+    },
+    {
+      "name": "2027-01",
+      "type": "Numeric"
+    },
+    {
+      "name": "2027-02",
+      "type": "Numeric"
+    },
+    {
+      "name": "2027-03",
+      "type": "Numeric"
+    },
+    {
+      "name": "2027-04",
+      "type": "Numeric"
+    },
+    {
+      "name": "2027-05",
+      "type": "Numeric"
+    },
+    {
+      "name": "2027-06",
+      "type": "Numeric"
+    },
+    {
+      "name": "2027-07",
+      "type": "Numeric"
+    },
+    {
+      "name": "2027-08",
+      "type": "Numeric"
+    },
+    {
+      "name": "2027-09",
+      "type": "Numeric"
+    },
+    {
+      "name": "2027-10",
+      "type": "Numeric"
+    },
+    {
+      "name": "2027-11",
+      "type": "Numeric"
+    },
+    {
+      "name": "2027-12",
+      "type": "Numeric"
+    },
+    {
+      "name": "2028-01",
+      "type": "Numeric"
+    },
+    {
+      "name": "2028-02",
+      "type": "Numeric"
+    },
+    {
+      "name": "2028-03",
+      "type": "Numeric"
+    },
+    {
+      "name": "2028-04",
+      "type": "Numeric"
+    },
+    {
+      "name": "2028-05",
+      "type": "Numeric"
+    },
+    {
+      "name": "2028-06",
+      "type": "Numeric"
+    },
+    {
+      "name": "2028-07",
+      "type": "Numeric"
+    },
+    {
+      "name": "2028-08",
+      "type": "Numeric"
+    },
+    {
+      "name": "2028-09",
+      "type": "Numeric"
+    },
+    {
+      "name": "2028-10",
+      "type": "Numeric"
+    },
+    {
+      "name": "2028-11",
+      "type": "Numeric"
+    },
+    {
+      "name": "2028-12",
+      "type": "Numeric"
+    },
+    {
+      "name": "2029-01",
+      "type": "Numeric"
+    },
+    {
+      "name": "2029-02",
+      "type": "Numeric"
+    },
+    {
+      "name": "2029-03",
+      "type": "Numeric"
+    },
+    {
+      "name": "2029-04",
+      "type": "Numeric"
+    },
+    {
+      "name": "2029-05",
+      "type": "Numeric"
+    },
+    {
+      "name": "2029-06",
+      "type": "Numeric"
+    },
+    {
+      "name": "2029-07",
+      "type": "Numeric"
+    },
+    {
+      "name": "2029-08",
+      "type": "Numeric"
+    },
+    {
+      "name": "2029-09",
+      "type": "Numeric"
+    },
+    {
+      "name": "2029-10",
+      "type": "Numeric"
+    },
+    {
+      "name": "2029-11",
+      "type": "Numeric"
+    },
+    {
+      "name": "2029-12",
+      "type": "Numeric"
+    },
+    {
+      "name": "2030-01",
+      "type": "Numeric"
+    },
+    {
+      "name": "2030-02",
+      "type": "Numeric"
+    },
+    {
+      "name": "2030-03",
+      "type": "Numeric"
+    },
+    {
+      "name": "2030-04",
+      "type": "Numeric"
+    },
+    {
+      "name": "2030-05",
+      "type": "Numeric"
+    },
+    {
+      "name": "2030-06",
+      "type": "Numeric"
+    },
+    {
+      "name": "2030-07",
+      "type": "Numeric"
+    },
+    {
+      "name": "2030-08",
+      "type": "Numeric"
+    },
+    {
+      "name": "2030-09",
+      "type": "Numeric"
+    },
+    {
+      "name": "2030-10",
+      "type": "Numeric"
+    },
+    {
+      "name": "2030-11",
+      "type": "Numeric"
+    },
+    {
+      "name": "2030-12",
+      "type": "Numeric"
+    }
+  ],
+  "edges": [
+    {
+      "parent": "FY2023",
+      "component": "2023-01",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2023",
+      "component": "2023-02",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2023",
+      "component": "2023-03",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2024",
+      "component": "2023-04",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2024",
+      "component": "2023-05",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2024",
+      "component": "2023-06",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2024",
+      "component": "2023-07",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2024",
+      "component": "2023-08",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2024",
+      "component": "2023-09",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2024",
+      "component": "2023-10",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2024",
+      "component": "2023-11",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2024",
+      "component": "2023-12",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2024",
+      "component": "2024-01",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2024",
+      "component": "2024-02",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2024",
+      "component": "2024-03",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2025",
+      "component": "2024-04",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2025",
+      "component": "2024-05",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2025",
+      "component": "2024-06",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2025",
+      "component": "2024-07",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2025",
+      "component": "2024-08",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2025",
+      "component": "2024-09",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2025",
+      "component": "2024-10",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2025",
+      "component": "2024-11",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2025",
+      "component": "2024-12",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2025",
+      "component": "2025-01",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2025",
+      "component": "2025-02",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2025",
+      "component": "2025-03",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2026",
+      "component": "2025-04",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2026",
+      "component": "2025-05",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2026",
+      "component": "2025-06",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2026",
+      "component": "2025-07",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2026",
+      "component": "2025-08",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2026",
+      "component": "2025-09",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2026",
+      "component": "2025-10",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2026",
+      "component": "2025-11",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2026",
+      "component": "2025-12",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2026",
+      "component": "2026-01",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2026",
+      "component": "2026-02",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2026",
+      "component": "2026-03",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2027",
+      "component": "2026-04",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2027",
+      "component": "2026-05",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2027",
+      "component": "2026-06",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2027",
+      "component": "2026-07",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2027",
+      "component": "2026-08",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2027",
+      "component": "2026-09",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2027",
+      "component": "2026-10",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2027",
+      "component": "2026-11",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2027",
+      "component": "2026-12",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2027",
+      "component": "2027-01",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2027",
+      "component": "2027-02",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2027",
+      "component": "2027-03",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2028",
+      "component": "2027-04",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2028",
+      "component": "2027-05",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2028",
+      "component": "2027-06",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2028",
+      "component": "2027-07",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2028",
+      "component": "2027-08",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2028",
+      "component": "2027-09",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2028",
+      "component": "2027-10",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2028",
+      "component": "2027-11",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2028",
+      "component": "2027-12",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2028",
+      "component": "2028-01",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2028",
+      "component": "2028-02",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2028",
+      "component": "2028-03",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2029",
+      "component": "2028-04",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2029",
+      "component": "2028-05",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2029",
+      "component": "2028-06",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2029",
+      "component": "2028-07",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2029",
+      "component": "2028-08",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2029",
+      "component": "2028-09",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2029",
+      "component": "2028-10",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2029",
+      "component": "2028-11",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2029",
+      "component": "2028-12",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2029",
+      "component": "2029-01",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2029",
+      "component": "2029-02",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2029",
+      "component": "2029-03",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2030",
+      "component": "2029-04",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2030",
+      "component": "2029-05",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2030",
+      "component": "2029-06",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2030",
+      "component": "2029-07",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2030",
+      "component": "2029-08",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2030",
+      "component": "2029-09",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2030",
+      "component": "2029-10",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2030",
+      "component": "2029-11",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2030",
+      "component": "2029-12",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2030",
+      "component": "2030-01",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2030",
+      "component": "2030-02",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2030",
+      "component": "2030-03",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2031",
+      "component": "2030-04",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2031",
+      "component": "2030-05",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2031",
+      "component": "2030-06",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2031",
+      "component": "2030-07",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2031",
+      "component": "2030-08",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2031",
+      "component": "2030-09",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2031",
+      "component": "2030-10",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2031",
+      "component": "2030-11",
+      "weight": 1.0
+    },
+    {
+      "parent": "FY2031",
+      "component": "2030-12",
+      "weight": 1.0
+    }
+  ],
+  "attributes": [
+    {
+      "name": "Period End Serial",
+      "type": "Numeric"
+    },
+    {
+      "name": "Period Start Serial",
+      "type": "Numeric"
+    },
+    {
+      "name": "Calendar Year",
+      "type": "Numeric"
+    },
+    {
+      "name": "Days in Period",
+      "type": "Numeric"
+    },
+    {
+      "name": "Fin Year",
+      "type": "String"
+    },
+    {
+      "name": "First Period",
+      "type": "String"
+    },
+    {
+      "name": "Last Period",
+      "type": "String"
+    },
+    {
+      "name": "Previous Period",
+      "type": "String"
+    },
+    {
+      "name": "Next Period",
+      "type": "String"
+    },
+    {
+      "name": "Calendar Month",
+      "type": "Numeric"
+    },
+    {
+      "name": "Caption",
+      "type": "String"
+    },
+    {
+      "name": "Long Name",
+      "type": "String"
+    }
+  ],
+  "attribute_values": {
+    "FY2023": {
+      "Period End Serial": null,
+      "Period Start Serial": null,
+      "Calendar Year": null,
+      "Days in Period": null,
+      "Fin Year": "",
+      "First Period": "",
+      "Last Period": "",
+      "Previous Period": "",
+      "Next Period": "",
+      "Calendar Month": null,
+      "Caption": "",
+      "Long Name": ""
+    },
+    "FY2024": {
+      "Period End Serial": null,
+      "Period Start Serial": null,
+      "Calendar Year": null,
+      "Days in Period": null,
+      "Fin Year": "",
+      "First Period": "",
+      "Last Period": "",
+      "Previous Period": "",
+      "Next Period": "",
+      "Calendar Month": null,
+      "Caption": "",
+      "Long Name": ""
+    },
+    "FY2025": {
+      "Period End Serial": null,
+      "Period Start Serial": null,
+      "Calendar Year": null,
+      "Days in Period": null,
+      "Fin Year": "2025",
+      "First Period": "2025-01",
+      "Last Period": "2025-12",
+      "Previous Period": "",
+      "Next Period": "",
+      "Calendar Month": null,
+      "Caption": "2025",
+      "Long Name": ""
+    },
+    "FY2026": {
+      "Period End Serial": null,
+      "Period Start Serial": null,
+      "Calendar Year": null,
+      "Days in Period": null,
+      "Fin Year": "2026",
+      "First Period": "2026-01",
+      "Last Period": "2026-12",
+      "Previous Period": "",
+      "Next Period": "",
+      "Calendar Month": null,
+      "Caption": "2026",
+      "Long Name": ""
+    },
+    "FY2027": {
+      "Period End Serial": null,
+      "Period Start Serial": null,
+      "Calendar Year": null,
+      "Days in Period": null,
+      "Fin Year": "2027",
+      "First Period": "2027-01",
+      "Last Period": "2027-12",
+      "Previous Period": "",
+      "Next Period": "",
+      "Calendar Month": null,
+      "Caption": "2027",
+      "Long Name": ""
+    },
+    "FY2028": {
+      "Period End Serial": null,
+      "Period Start Serial": null,
+      "Calendar Year": null,
+      "Days in Period": null,
+      "Fin Year": "2028",
+      "First Period": "2028-01",
+      "Last Period": "2028-12",
+      "Previous Period": "",
+      "Next Period": "",
+      "Calendar Month": null,
+      "Caption": "2028",
+      "Long Name": ""
+    },
+    "FY2029": {
+      "Period End Serial": null,
+      "Period Start Serial": null,
+      "Calendar Year": null,
+      "Days in Period": null,
+      "Fin Year": "2029",
+      "First Period": "2029-01",
+      "Last Period": "2029-12",
+      "Previous Period": "",
+      "Next Period": "",
+      "Calendar Month": null,
+      "Caption": "2029",
+      "Long Name": ""
+    },
+    "FY2030": {
+      "Period End Serial": null,
+      "Period Start Serial": null,
+      "Calendar Year": null,
+      "Days in Period": null,
+      "Fin Year": "2030",
+      "First Period": "2030-01",
+      "Last Period": "2030-12",
+      "Previous Period": "",
+      "Next Period": "",
+      "Calendar Month": null,
+      "Caption": "2030",
+      "Long Name": ""
+    },
+    "FY2031": {
+      "Period End Serial": null,
+      "Period Start Serial": null,
+      "Calendar Year": null,
+      "Days in Period": null,
+      "Fin Year": "",
+      "First Period": "",
+      "Last Period": "",
+      "Previous Period": "",
+      "Next Period": "",
+      "Calendar Month": null,
+      "Caption": "",
+      "Long Name": ""
+    },
+    "2023-01": {
+      "Period End Serial": 44957,
+      "Period Start Serial": 44927,
+      "Calendar Year": 2023,
+      "Days in Period": 31,
+      "Fin Year": "FY2023",
+      "First Period": "2022-04",
+      "Last Period": "2023-03",
+      "Previous Period": "2022-12",
+      "Next Period": "2023-02",
+      "Calendar Month": 1,
+      "Caption": "Jan-23",
+      "Long Name": "January 2023"
+    },
+    "2023-02": {
+      "Period End Serial": 44985,
+      "Period Start Serial": 44958,
+      "Calendar Year": 2023,
+      "Days in Period": 28,
+      "Fin Year": "FY2023",
+      "First Period": "2022-04",
+      "Last Period": "2023-03",
+      "Previous Period": "2023-01",
+      "Next Period": "2023-03",
+      "Calendar Month": 2,
+      "Caption": "Feb-23",
+      "Long Name": "February 2023"
+    },
+    "2023-03": {
+      "Period End Serial": 45016,
+      "Period Start Serial": 44986,
+      "Calendar Year": 2023,
+      "Days in Period": 31,
+      "Fin Year": "FY2023",
+      "First Period": "2022-04",
+      "Last Period": "2023-03",
+      "Previous Period": "2023-02",
+      "Next Period": "2023-04",
+      "Calendar Month": 3,
+      "Caption": "Mar-23",
+      "Long Name": "March 2023"
+    },
+    "2023-04": {
+      "Period End Serial": 45046,
+      "Period Start Serial": 45017,
+      "Calendar Year": 2023,
+      "Days in Period": 30,
+      "Fin Year": "FY2024",
+      "First Period": "2023-04",
+      "Last Period": "2024-03",
+      "Previous Period": "2023-03",
+      "Next Period": "2023-05",
+      "Calendar Month": 4,
+      "Caption": "Apr-23",
+      "Long Name": "April 2023"
+    },
+    "2023-05": {
+      "Period End Serial": 45077,
+      "Period Start Serial": 45047,
+      "Calendar Year": 2023,
+      "Days in Period": 31,
+      "Fin Year": "FY2024",
+      "First Period": "2023-04",
+      "Last Period": "2024-03",
+      "Previous Period": "2023-04",
+      "Next Period": "2023-06",
+      "Calendar Month": 5,
+      "Caption": "May-23",
+      "Long Name": "May 2023"
+    },
+    "2023-06": {
+      "Period End Serial": 45107,
+      "Period Start Serial": 45078,
+      "Calendar Year": 2023,
+      "Days in Period": 30,
+      "Fin Year": "FY2024",
+      "First Period": "2023-04",
+      "Last Period": "2024-03",
+      "Previous Period": "2023-05",
+      "Next Period": "2023-07",
+      "Calendar Month": 6,
+      "Caption": "Jun-23",
+      "Long Name": "June 2023"
+    },
+    "2023-07": {
+      "Period End Serial": 45138,
+      "Period Start Serial": 45108,
+      "Calendar Year": 2023,
+      "Days in Period": 31,
+      "Fin Year": "FY2024",
+      "First Period": "2023-04",
+      "Last Period": "2024-03",
+      "Previous Period": "2023-06",
+      "Next Period": "2023-08",
+      "Calendar Month": 7,
+      "Caption": "Jul-23",
+      "Long Name": "July 2023"
+    },
+    "2023-08": {
+      "Period End Serial": 45169,
+      "Period Start Serial": 45139,
+      "Calendar Year": 2023,
+      "Days in Period": 31,
+      "Fin Year": "FY2024",
+      "First Period": "2023-04",
+      "Last Period": "2024-03",
+      "Previous Period": "2023-07",
+      "Next Period": "2023-09",
+      "Calendar Month": 8,
+      "Caption": "Aug-23",
+      "Long Name": "August 2023"
+    },
+    "2023-09": {
+      "Period End Serial": 45199,
+      "Period Start Serial": 45170,
+      "Calendar Year": 2023,
+      "Days in Period": 30,
+      "Fin Year": "FY2024",
+      "First Period": "2023-04",
+      "Last Period": "2024-03",
+      "Previous Period": "2023-08",
+      "Next Period": "2023-10",
+      "Calendar Month": 9,
+      "Caption": "Sep-23",
+      "Long Name": "September 2023"
+    },
+    "2023-10": {
+      "Period End Serial": 45230,
+      "Period Start Serial": 45200,
+      "Calendar Year": 2023,
+      "Days in Period": 31,
+      "Fin Year": "FY2024",
+      "First Period": "2023-04",
+      "Last Period": "2024-03",
+      "Previous Period": "2023-09",
+      "Next Period": "2023-11",
+      "Calendar Month": 10,
+      "Caption": "Oct-23",
+      "Long Name": "October 2023"
+    },
+    "2023-11": {
+      "Period End Serial": 45260,
+      "Period Start Serial": 45231,
+      "Calendar Year": 2023,
+      "Days in Period": 30,
+      "Fin Year": "FY2024",
+      "First Period": "2023-04",
+      "Last Period": "2024-03",
+      "Previous Period": "2023-10",
+      "Next Period": "2023-12",
+      "Calendar Month": 11,
+      "Caption": "Nov-23",
+      "Long Name": "November 2023"
+    },
+    "2023-12": {
+      "Period End Serial": 45291,
+      "Period Start Serial": 45261,
+      "Calendar Year": 2023,
+      "Days in Period": 31,
+      "Fin Year": "FY2024",
+      "First Period": "2023-04",
+      "Last Period": "2024-03",
+      "Previous Period": "2023-11",
+      "Next Period": "2024-01",
+      "Calendar Month": 12,
+      "Caption": "Dec-23",
+      "Long Name": "December 2023"
+    },
+    "2024-01": {
+      "Period End Serial": 45322,
+      "Period Start Serial": 45292,
+      "Calendar Year": 2024,
+      "Days in Period": 31,
+      "Fin Year": "FY2024",
+      "First Period": "2023-04",
+      "Last Period": "2024-03",
+      "Previous Period": "2023-12",
+      "Next Period": "2024-02",
+      "Calendar Month": 1,
+      "Caption": "Jan-24",
+      "Long Name": "January 2024"
+    },
+    "2024-02": {
+      "Period End Serial": 45351,
+      "Period Start Serial": 45323,
+      "Calendar Year": 2024,
+      "Days in Period": 29,
+      "Fin Year": "FY2024",
+      "First Period": "2023-04",
+      "Last Period": "2024-03",
+      "Previous Period": "2024-01",
+      "Next Period": "2024-03",
+      "Calendar Month": 2,
+      "Caption": "Feb-24",
+      "Long Name": "February 2024"
+    },
+    "2024-03": {
+      "Period End Serial": 45382,
+      "Period Start Serial": 45352,
+      "Calendar Year": 2024,
+      "Days in Period": 31,
+      "Fin Year": "FY2024",
+      "First Period": "2023-04",
+      "Last Period": "2024-03",
+      "Previous Period": "2024-02",
+      "Next Period": "2024-04",
+      "Calendar Month": 3,
+      "Caption": "Mar-24",
+      "Long Name": "March 2024"
+    },
+    "2024-04": {
+      "Period End Serial": 45412,
+      "Period Start Serial": 45383,
+      "Calendar Year": 2024,
+      "Days in Period": 30,
+      "Fin Year": "FY2025",
+      "First Period": "2024-04",
+      "Last Period": "2025-03",
+      "Previous Period": "2024-03",
+      "Next Period": "2024-05",
+      "Calendar Month": 4,
+      "Caption": "Apr-24",
+      "Long Name": "April 2024"
+    },
+    "2024-05": {
+      "Period End Serial": 45443,
+      "Period Start Serial": 45413,
+      "Calendar Year": 2024,
+      "Days in Period": 31,
+      "Fin Year": "FY2025",
+      "First Period": "2024-04",
+      "Last Period": "2025-03",
+      "Previous Period": "2024-04",
+      "Next Period": "2024-06",
+      "Calendar Month": 5,
+      "Caption": "May-24",
+      "Long Name": "May 2024"
+    },
+    "2024-06": {
+      "Period End Serial": 45473,
+      "Period Start Serial": 45444,
+      "Calendar Year": 2024,
+      "Days in Period": 30,
+      "Fin Year": "FY2025",
+      "First Period": "2024-04",
+      "Last Period": "2025-03",
+      "Previous Period": "2024-05",
+      "Next Period": "2024-07",
+      "Calendar Month": 6,
+      "Caption": "Jun-24",
+      "Long Name": "June 2024"
+    },
+    "2024-07": {
+      "Period End Serial": 45504,
+      "Period Start Serial": 45474,
+      "Calendar Year": 2024,
+      "Days in Period": 31,
+      "Fin Year": "FY2025",
+      "First Period": "2024-04",
+      "Last Period": "2025-03",
+      "Previous Period": "2024-06",
+      "Next Period": "2024-08",
+      "Calendar Month": 7,
+      "Caption": "Jul-24",
+      "Long Name": "July 2024"
+    },
+    "2024-08": {
+      "Period End Serial": 45535,
+      "Period Start Serial": 45505,
+      "Calendar Year": 2024,
+      "Days in Period": 31,
+      "Fin Year": "FY2025",
+      "First Period": "2024-04",
+      "Last Period": "2025-03",
+      "Previous Period": "2024-07",
+      "Next Period": "2024-09",
+      "Calendar Month": 8,
+      "Caption": "Aug-24",
+      "Long Name": "August 2024"
+    },
+    "2024-09": {
+      "Period End Serial": 45565,
+      "Period Start Serial": 45536,
+      "Calendar Year": 2024,
+      "Days in Period": 30,
+      "Fin Year": "FY2025",
+      "First Period": "2024-04",
+      "Last Period": "2025-03",
+      "Previous Period": "2024-08",
+      "Next Period": "2024-10",
+      "Calendar Month": 9,
+      "Caption": "Sep-24",
+      "Long Name": "September 2024"
+    },
+    "2024-10": {
+      "Period End Serial": 45596,
+      "Period Start Serial": 45566,
+      "Calendar Year": 2024,
+      "Days in Period": 31,
+      "Fin Year": "FY2025",
+      "First Period": "2024-04",
+      "Last Period": "2025-03",
+      "Previous Period": "2024-09",
+      "Next Period": "2024-11",
+      "Calendar Month": 10,
+      "Caption": "Oct-24",
+      "Long Name": "October 2024"
+    },
+    "2024-11": {
+      "Period End Serial": 45626,
+      "Period Start Serial": 45597,
+      "Calendar Year": 2024,
+      "Days in Period": 30,
+      "Fin Year": "FY2025",
+      "First Period": "2024-04",
+      "Last Period": "2025-03",
+      "Previous Period": "2024-10",
+      "Next Period": "2024-12",
+      "Calendar Month": 11,
+      "Caption": "Nov-24",
+      "Long Name": "November 2024"
+    },
+    "2024-12": {
+      "Period End Serial": 45657,
+      "Period Start Serial": 45627,
+      "Calendar Year": 2024,
+      "Days in Period": 31,
+      "Fin Year": "FY2025",
+      "First Period": "2024-04",
+      "Last Period": "2025-03",
+      "Previous Period": "2024-11",
+      "Next Period": "2025-01",
+      "Calendar Month": 12,
+      "Caption": "Dec-24",
+      "Long Name": "December 2024"
+    },
+    "2025-01": {
+      "Period End Serial": 45688,
+      "Period Start Serial": 45658,
+      "Calendar Year": 2025,
+      "Days in Period": 31,
+      "Fin Year": "FY2025",
+      "First Period": "2024-04",
+      "Last Period": "2025-03",
+      "Previous Period": "2024-12",
+      "Next Period": "2025-02",
+      "Calendar Month": 1,
+      "Caption": "Jan-25",
+      "Long Name": "January 2025"
+    },
+    "2025-02": {
+      "Period End Serial": 45716,
+      "Period Start Serial": 45689,
+      "Calendar Year": 2025,
+      "Days in Period": 28,
+      "Fin Year": "FY2025",
+      "First Period": "2024-04",
+      "Last Period": "2025-03",
+      "Previous Period": "2025-01",
+      "Next Period": "2025-03",
+      "Calendar Month": 2,
+      "Caption": "Feb-25",
+      "Long Name": "February 2025"
+    },
+    "2025-03": {
+      "Period End Serial": 45747,
+      "Period Start Serial": 45717,
+      "Calendar Year": 2025,
+      "Days in Period": 31,
+      "Fin Year": "FY2025",
+      "First Period": "2024-04",
+      "Last Period": "2025-03",
+      "Previous Period": "2025-02",
+      "Next Period": "2025-04",
+      "Calendar Month": 3,
+      "Caption": "Mar-25",
+      "Long Name": "March 2025"
+    },
+    "2025-04": {
+      "Period End Serial": 45777,
+      "Period Start Serial": 45748,
+      "Calendar Year": 2025,
+      "Days in Period": 30,
+      "Fin Year": "FY2026",
+      "First Period": "2025-04",
+      "Last Period": "2026-03",
+      "Previous Period": "2025-03",
+      "Next Period": "2025-05",
+      "Calendar Month": 4,
+      "Caption": "Apr-25",
+      "Long Name": "April 2025"
+    },
+    "2025-05": {
+      "Period End Serial": 45808,
+      "Period Start Serial": 45778,
+      "Calendar Year": 2025,
+      "Days in Period": 31,
+      "Fin Year": "FY2026",
+      "First Period": "2025-04",
+      "Last Period": "2026-03",
+      "Previous Period": "2025-04",
+      "Next Period": "2025-06",
+      "Calendar Month": 5,
+      "Caption": "May-25",
+      "Long Name": "May 2025"
+    },
+    "2025-06": {
+      "Period End Serial": 45838,
+      "Period Start Serial": 45809,
+      "Calendar Year": 2025,
+      "Days in Period": 30,
+      "Fin Year": "FY2026",
+      "First Period": "2025-04",
+      "Last Period": "2026-03",
+      "Previous Period": "2025-05",
+      "Next Period": "2025-07",
+      "Calendar Month": 6,
+      "Caption": "Jun-25",
+      "Long Name": "June 2025"
+    },
+    "2025-07": {
+      "Period End Serial": 45869,
+      "Period Start Serial": 45839,
+      "Calendar Year": 2025,
+      "Days in Period": 31,
+      "Fin Year": "FY2026",
+      "First Period": "2025-04",
+      "Last Period": "2026-03",
+      "Previous Period": "2025-06",
+      "Next Period": "2025-08",
+      "Calendar Month": 7,
+      "Caption": "Jul-25",
+      "Long Name": "July 2025"
+    },
+    "2025-08": {
+      "Period End Serial": 45900,
+      "Period Start Serial": 45870,
+      "Calendar Year": 2025,
+      "Days in Period": 31,
+      "Fin Year": "FY2026",
+      "First Period": "2025-04",
+      "Last Period": "2026-03",
+      "Previous Period": "2025-07",
+      "Next Period": "2025-09",
+      "Calendar Month": 8,
+      "Caption": "Aug-25",
+      "Long Name": "August 2025"
+    },
+    "2025-09": {
+      "Period End Serial": 45930,
+      "Period Start Serial": 45901,
+      "Calendar Year": 2025,
+      "Days in Period": 30,
+      "Fin Year": "FY2026",
+      "First Period": "2025-04",
+      "Last Period": "2026-03",
+      "Previous Period": "2025-08",
+      "Next Period": "2025-10",
+      "Calendar Month": 9,
+      "Caption": "Sep-25",
+      "Long Name": "September 2025"
+    },
+    "2025-10": {
+      "Period End Serial": 45961,
+      "Period Start Serial": 45931,
+      "Calendar Year": 2025,
+      "Days in Period": 31,
+      "Fin Year": "FY2026",
+      "First Period": "2025-04",
+      "Last Period": "2026-03",
+      "Previous Period": "2025-09",
+      "Next Period": "2025-11",
+      "Calendar Month": 10,
+      "Caption": "Oct-25",
+      "Long Name": "October 2025"
+    },
+    "2025-11": {
+      "Period End Serial": 45991,
+      "Period Start Serial": 45962,
+      "Calendar Year": 2025,
+      "Days in Period": 30,
+      "Fin Year": "FY2026",
+      "First Period": "2025-04",
+      "Last Period": "2026-03",
+      "Previous Period": "2025-10",
+      "Next Period": "2025-12",
+      "Calendar Month": 11,
+      "Caption": "Nov-25",
+      "Long Name": "November 2025"
+    },
+    "2025-12": {
+      "Period End Serial": 46022,
+      "Period Start Serial": 45992,
+      "Calendar Year": 2025,
+      "Days in Period": 31,
+      "Fin Year": "FY2026",
+      "First Period": "2025-04",
+      "Last Period": "2026-03",
+      "Previous Period": "2025-11",
+      "Next Period": "2026-01",
+      "Calendar Month": 12,
+      "Caption": "Dec-25",
+      "Long Name": "December 2025"
+    },
+    "2026-01": {
+      "Period End Serial": 46053,
+      "Period Start Serial": 46023,
+      "Calendar Year": 2026,
+      "Days in Period": 31,
+      "Fin Year": "FY2026",
+      "First Period": "2025-04",
+      "Last Period": "2026-03",
+      "Previous Period": "2025-12",
+      "Next Period": "2026-02",
+      "Calendar Month": 1,
+      "Caption": "Jan-26",
+      "Long Name": "January 2026"
+    },
+    "2026-02": {
+      "Period End Serial": 46081,
+      "Period Start Serial": 46054,
+      "Calendar Year": 2026,
+      "Days in Period": 28,
+      "Fin Year": "FY2026",
+      "First Period": "2025-04",
+      "Last Period": "2026-03",
+      "Previous Period": "2026-01",
+      "Next Period": "2026-03",
+      "Calendar Month": 2,
+      "Caption": "Feb-26",
+      "Long Name": "February 2026"
+    },
+    "2026-03": {
+      "Period End Serial": 46112,
+      "Period Start Serial": 46082,
+      "Calendar Year": 2026,
+      "Days in Period": 31,
+      "Fin Year": "FY2026",
+      "First Period": "2025-04",
+      "Last Period": "2026-03",
+      "Previous Period": "2026-02",
+      "Next Period": "2026-04",
+      "Calendar Month": 3,
+      "Caption": "Mar-26",
+      "Long Name": "March 2026"
+    },
+    "2026-04": {
+      "Period End Serial": 46142,
+      "Period Start Serial": 46113,
+      "Calendar Year": 2026,
+      "Days in Period": 30,
+      "Fin Year": "FY2027",
+      "First Period": "2026-04",
+      "Last Period": "2027-03",
+      "Previous Period": "2026-03",
+      "Next Period": "2026-05",
+      "Calendar Month": 4,
+      "Caption": "Apr-26",
+      "Long Name": "April 2026"
+    },
+    "2026-05": {
+      "Period End Serial": 46173,
+      "Period Start Serial": 46143,
+      "Calendar Year": 2026,
+      "Days in Period": 31,
+      "Fin Year": "FY2027",
+      "First Period": "2026-04",
+      "Last Period": "2027-03",
+      "Previous Period": "2026-04",
+      "Next Period": "2026-06",
+      "Calendar Month": 5,
+      "Caption": "May-26",
+      "Long Name": "May 2026"
+    },
+    "2026-06": {
+      "Period End Serial": 46203,
+      "Period Start Serial": 46174,
+      "Calendar Year": 2026,
+      "Days in Period": 30,
+      "Fin Year": "FY2027",
+      "First Period": "2026-04",
+      "Last Period": "2027-03",
+      "Previous Period": "2026-05",
+      "Next Period": "2026-07",
+      "Calendar Month": 6,
+      "Caption": "Jun-26",
+      "Long Name": "June 2026"
+    },
+    "2026-07": {
+      "Period End Serial": 46234,
+      "Period Start Serial": 46204,
+      "Calendar Year": 2026,
+      "Days in Period": 31,
+      "Fin Year": "FY2027",
+      "First Period": "2026-04",
+      "Last Period": "2027-03",
+      "Previous Period": "2026-06",
+      "Next Period": "2026-08",
+      "Calendar Month": 7,
+      "Caption": "Jul-26",
+      "Long Name": "July 2026"
+    },
+    "2026-08": {
+      "Period End Serial": 46265,
+      "Period Start Serial": 46235,
+      "Calendar Year": 2026,
+      "Days in Period": 31,
+      "Fin Year": "FY2027",
+      "First Period": "2026-04",
+      "Last Period": "2027-03",
+      "Previous Period": "2026-07",
+      "Next Period": "2026-09",
+      "Calendar Month": 8,
+      "Caption": "Aug-26",
+      "Long Name": "August 2026"
+    },
+    "2026-09": {
+      "Period End Serial": 46295,
+      "Period Start Serial": 46266,
+      "Calendar Year": 2026,
+      "Days in Period": 30,
+      "Fin Year": "FY2027",
+      "First Period": "2026-04",
+      "Last Period": "2027-03",
+      "Previous Period": "2026-08",
+      "Next Period": "2026-10",
+      "Calendar Month": 9,
+      "Caption": "Sep-26",
+      "Long Name": "September 2026"
+    },
+    "2026-10": {
+      "Period End Serial": 46326,
+      "Period Start Serial": 46296,
+      "Calendar Year": 2026,
+      "Days in Period": 31,
+      "Fin Year": "FY2027",
+      "First Period": "2026-04",
+      "Last Period": "2027-03",
+      "Previous Period": "2026-09",
+      "Next Period": "2026-11",
+      "Calendar Month": 10,
+      "Caption": "Oct-26",
+      "Long Name": "October 2026"
+    },
+    "2026-11": {
+      "Period End Serial": 46356,
+      "Period Start Serial": 46327,
+      "Calendar Year": 2026,
+      "Days in Period": 30,
+      "Fin Year": "FY2027",
+      "First Period": "2026-04",
+      "Last Period": "2027-03",
+      "Previous Period": "2026-10",
+      "Next Period": "2026-12",
+      "Calendar Month": 11,
+      "Caption": "Nov-26",
+      "Long Name": "November 2026"
+    },
+    "2026-12": {
+      "Period End Serial": 46387,
+      "Period Start Serial": 46357,
+      "Calendar Year": 2026,
+      "Days in Period": 31,
+      "Fin Year": "FY2027",
+      "First Period": "2026-04",
+      "Last Period": "2027-03",
+      "Previous Period": "2026-11",
+      "Next Period": "2027-01",
+      "Calendar Month": 12,
+      "Caption": "Dec-26",
+      "Long Name": "December 2026"
+    },
+    "2027-01": {
+      "Period End Serial": 46418,
+      "Period Start Serial": 46388,
+      "Calendar Year": 2027,
+      "Days in Period": 31,
+      "Fin Year": "FY2027",
+      "First Period": "2026-04",
+      "Last Period": "2027-03",
+      "Previous Period": "2026-12",
+      "Next Period": "2027-02",
+      "Calendar Month": 1,
+      "Caption": "Jan-27",
+      "Long Name": "January 2027"
+    },
+    "2027-02": {
+      "Period End Serial": 46446,
+      "Period Start Serial": 46419,
+      "Calendar Year": 2027,
+      "Days in Period": 28,
+      "Fin Year": "FY2027",
+      "First Period": "2026-04",
+      "Last Period": "2027-03",
+      "Previous Period": "2027-01",
+      "Next Period": "2027-03",
+      "Calendar Month": 2,
+      "Caption": "Feb-27",
+      "Long Name": "February 2027"
+    },
+    "2027-03": {
+      "Period End Serial": 46477,
+      "Period Start Serial": 46447,
+      "Calendar Year": 2027,
+      "Days in Period": 31,
+      "Fin Year": "FY2027",
+      "First Period": "2026-04",
+      "Last Period": "2027-03",
+      "Previous Period": "2027-02",
+      "Next Period": "2027-04",
+      "Calendar Month": 3,
+      "Caption": "Mar-27",
+      "Long Name": "March 2027"
+    },
+    "2027-04": {
+      "Period End Serial": 46507,
+      "Period Start Serial": 46478,
+      "Calendar Year": 2027,
+      "Days in Period": 30,
+      "Fin Year": "FY2028",
+      "First Period": "2027-04",
+      "Last Period": "2028-03",
+      "Previous Period": "2027-03",
+      "Next Period": "2027-05",
+      "Calendar Month": 4,
+      "Caption": "Apr-27",
+      "Long Name": "April 2027"
+    },
+    "2027-05": {
+      "Period End Serial": 46538,
+      "Period Start Serial": 46508,
+      "Calendar Year": 2027,
+      "Days in Period": 31,
+      "Fin Year": "FY2028",
+      "First Period": "2027-04",
+      "Last Period": "2028-03",
+      "Previous Period": "2027-04",
+      "Next Period": "2027-06",
+      "Calendar Month": 5,
+      "Caption": "May-27",
+      "Long Name": "May 2027"
+    },
+    "2027-06": {
+      "Period End Serial": 46568,
+      "Period Start Serial": 46539,
+      "Calendar Year": 2027,
+      "Days in Period": 30,
+      "Fin Year": "FY2028",
+      "First Period": "2027-04",
+      "Last Period": "2028-03",
+      "Previous Period": "2027-05",
+      "Next Period": "2027-07",
+      "Calendar Month": 6,
+      "Caption": "Jun-27",
+      "Long Name": "June 2027"
+    },
+    "2027-07": {
+      "Period End Serial": 46599,
+      "Period Start Serial": 46569,
+      "Calendar Year": 2027,
+      "Days in Period": 31,
+      "Fin Year": "FY2028",
+      "First Period": "2027-04",
+      "Last Period": "2028-03",
+      "Previous Period": "2027-06",
+      "Next Period": "2027-08",
+      "Calendar Month": 7,
+      "Caption": "Jul-27",
+      "Long Name": "July 2027"
+    },
+    "2027-08": {
+      "Period End Serial": 46630,
+      "Period Start Serial": 46600,
+      "Calendar Year": 2027,
+      "Days in Period": 31,
+      "Fin Year": "FY2028",
+      "First Period": "2027-04",
+      "Last Period": "2028-03",
+      "Previous Period": "2027-07",
+      "Next Period": "2027-09",
+      "Calendar Month": 8,
+      "Caption": "Aug-27",
+      "Long Name": "August 2027"
+    },
+    "2027-09": {
+      "Period End Serial": 46660,
+      "Period Start Serial": 46631,
+      "Calendar Year": 2027,
+      "Days in Period": 30,
+      "Fin Year": "FY2028",
+      "First Period": "2027-04",
+      "Last Period": "2028-03",
+      "Previous Period": "2027-08",
+      "Next Period": "2027-10",
+      "Calendar Month": 9,
+      "Caption": "Sep-27",
+      "Long Name": "September 2027"
+    },
+    "2027-10": {
+      "Period End Serial": 46691,
+      "Period Start Serial": 46661,
+      "Calendar Year": 2027,
+      "Days in Period": 31,
+      "Fin Year": "FY2028",
+      "First Period": "2027-04",
+      "Last Period": "2028-03",
+      "Previous Period": "2027-09",
+      "Next Period": "2027-11",
+      "Calendar Month": 10,
+      "Caption": "Oct-27",
+      "Long Name": "October 2027"
+    },
+    "2027-11": {
+      "Period End Serial": 46721,
+      "Period Start Serial": 46692,
+      "Calendar Year": 2027,
+      "Days in Period": 30,
+      "Fin Year": "FY2028",
+      "First Period": "2027-04",
+      "Last Period": "2028-03",
+      "Previous Period": "2027-10",
+      "Next Period": "2027-12",
+      "Calendar Month": 11,
+      "Caption": "Nov-27",
+      "Long Name": "November 2027"
+    },
+    "2027-12": {
+      "Period End Serial": 46752,
+      "Period Start Serial": 46722,
+      "Calendar Year": 2027,
+      "Days in Period": 31,
+      "Fin Year": "FY2028",
+      "First Period": "2027-04",
+      "Last Period": "2028-03",
+      "Previous Period": "2027-11",
+      "Next Period": "2028-01",
+      "Calendar Month": 12,
+      "Caption": "Dec-27",
+      "Long Name": "December 2027"
+    },
+    "2028-01": {
+      "Period End Serial": 46783,
+      "Period Start Serial": 46753,
+      "Calendar Year": 2028,
+      "Days in Period": 31,
+      "Fin Year": "FY2028",
+      "First Period": "2027-04",
+      "Last Period": "2028-03",
+      "Previous Period": "2027-12",
+      "Next Period": "2028-02",
+      "Calendar Month": 1,
+      "Caption": "Jan-28",
+      "Long Name": "January 2028"
+    },
+    "2028-02": {
+      "Period End Serial": 46812,
+      "Period Start Serial": 46784,
+      "Calendar Year": 2028,
+      "Days in Period": 29,
+      "Fin Year": "FY2028",
+      "First Period": "2027-04",
+      "Last Period": "2028-03",
+      "Previous Period": "2028-01",
+      "Next Period": "2028-03",
+      "Calendar Month": 2,
+      "Caption": "Feb-28",
+      "Long Name": "February 2028"
+    },
+    "2028-03": {
+      "Period End Serial": 46843,
+      "Period Start Serial": 46813,
+      "Calendar Year": 2028,
+      "Days in Period": 31,
+      "Fin Year": "FY2028",
+      "First Period": "2027-04",
+      "Last Period": "2028-03",
+      "Previous Period": "2028-02",
+      "Next Period": "2028-04",
+      "Calendar Month": 3,
+      "Caption": "Mar-28",
+      "Long Name": "March 2028"
+    },
+    "2028-04": {
+      "Period End Serial": 46873,
+      "Period Start Serial": 46844,
+      "Calendar Year": 2028,
+      "Days in Period": 30,
+      "Fin Year": "FY2029",
+      "First Period": "2028-04",
+      "Last Period": "2029-03",
+      "Previous Period": "2028-03",
+      "Next Period": "2028-05",
+      "Calendar Month": 4,
+      "Caption": "Apr-28",
+      "Long Name": "April 2028"
+    },
+    "2028-05": {
+      "Period End Serial": 46904,
+      "Period Start Serial": 46874,
+      "Calendar Year": 2028,
+      "Days in Period": 31,
+      "Fin Year": "FY2029",
+      "First Period": "2028-04",
+      "Last Period": "2029-03",
+      "Previous Period": "2028-04",
+      "Next Period": "2028-06",
+      "Calendar Month": 5,
+      "Caption": "May-28",
+      "Long Name": "May 2028"
+    },
+    "2028-06": {
+      "Period End Serial": 46934,
+      "Period Start Serial": 46905,
+      "Calendar Year": 2028,
+      "Days in Period": 30,
+      "Fin Year": "FY2029",
+      "First Period": "2028-04",
+      "Last Period": "2029-03",
+      "Previous Period": "2028-05",
+      "Next Period": "2028-07",
+      "Calendar Month": 6,
+      "Caption": "Jun-28",
+      "Long Name": "June 2028"
+    },
+    "2028-07": {
+      "Period End Serial": 46965,
+      "Period Start Serial": 46935,
+      "Calendar Year": 2028,
+      "Days in Period": 31,
+      "Fin Year": "FY2029",
+      "First Period": "2028-04",
+      "Last Period": "2029-03",
+      "Previous Period": "2028-06",
+      "Next Period": "2028-08",
+      "Calendar Month": 7,
+      "Caption": "Jul-28",
+      "Long Name": "July 2028"
+    },
+    "2028-08": {
+      "Period End Serial": 46996,
+      "Period Start Serial": 46966,
+      "Calendar Year": 2028,
+      "Days in Period": 31,
+      "Fin Year": "FY2029",
+      "First Period": "2028-04",
+      "Last Period": "2029-03",
+      "Previous Period": "2028-07",
+      "Next Period": "2028-09",
+      "Calendar Month": 8,
+      "Caption": "Aug-28",
+      "Long Name": "August 2028"
+    },
+    "2028-09": {
+      "Period End Serial": 47026,
+      "Period Start Serial": 46997,
+      "Calendar Year": 2028,
+      "Days in Period": 30,
+      "Fin Year": "FY2029",
+      "First Period": "2028-04",
+      "Last Period": "2029-03",
+      "Previous Period": "2028-08",
+      "Next Period": "2028-10",
+      "Calendar Month": 9,
+      "Caption": "Sep-28",
+      "Long Name": "September 2028"
+    },
+    "2028-10": {
+      "Period End Serial": 47057,
+      "Period Start Serial": 47027,
+      "Calendar Year": 2028,
+      "Days in Period": 31,
+      "Fin Year": "FY2029",
+      "First Period": "2028-04",
+      "Last Period": "2029-03",
+      "Previous Period": "2028-09",
+      "Next Period": "2028-11",
+      "Calendar Month": 10,
+      "Caption": "Oct-28",
+      "Long Name": "October 2028"
+    },
+    "2028-11": {
+      "Period End Serial": 47087,
+      "Period Start Serial": 47058,
+      "Calendar Year": 2028,
+      "Days in Period": 30,
+      "Fin Year": "FY2029",
+      "First Period": "2028-04",
+      "Last Period": "2029-03",
+      "Previous Period": "2028-10",
+      "Next Period": "2028-12",
+      "Calendar Month": 11,
+      "Caption": "Nov-28",
+      "Long Name": "November 2028"
+    },
+    "2028-12": {
+      "Period End Serial": 47118,
+      "Period Start Serial": 47088,
+      "Calendar Year": 2028,
+      "Days in Period": 31,
+      "Fin Year": "FY2029",
+      "First Period": "2028-04",
+      "Last Period": "2029-03",
+      "Previous Period": "2028-11",
+      "Next Period": "2029-01",
+      "Calendar Month": 12,
+      "Caption": "Dec-28",
+      "Long Name": "December 2028"
+    },
+    "2029-01": {
+      "Period End Serial": 47149,
+      "Period Start Serial": 47119,
+      "Calendar Year": 2029,
+      "Days in Period": 31,
+      "Fin Year": "FY2029",
+      "First Period": "2028-04",
+      "Last Period": "2029-03",
+      "Previous Period": "2028-12",
+      "Next Period": "2029-02",
+      "Calendar Month": 1,
+      "Caption": "Jan-29",
+      "Long Name": "January 2029"
+    },
+    "2029-02": {
+      "Period End Serial": 47177,
+      "Period Start Serial": 47150,
+      "Calendar Year": 2029,
+      "Days in Period": 28,
+      "Fin Year": "FY2029",
+      "First Period": "2028-04",
+      "Last Period": "2029-03",
+      "Previous Period": "2029-01",
+      "Next Period": "2029-03",
+      "Calendar Month": 2,
+      "Caption": "Feb-29",
+      "Long Name": "February 2029"
+    },
+    "2029-03": {
+      "Period End Serial": 47208,
+      "Period Start Serial": 47178,
+      "Calendar Year": 2029,
+      "Days in Period": 31,
+      "Fin Year": "FY2029",
+      "First Period": "2028-04",
+      "Last Period": "2029-03",
+      "Previous Period": "2029-02",
+      "Next Period": "2029-04",
+      "Calendar Month": 3,
+      "Caption": "Mar-29",
+      "Long Name": "March 2029"
+    },
+    "2029-04": {
+      "Period End Serial": 47238,
+      "Period Start Serial": 47209,
+      "Calendar Year": 2029,
+      "Days in Period": 30,
+      "Fin Year": "FY2030",
+      "First Period": "2029-04",
+      "Last Period": "2030-03",
+      "Previous Period": "2029-03",
+      "Next Period": "2029-05",
+      "Calendar Month": 4,
+      "Caption": "Apr-29",
+      "Long Name": "April 2029"
+    },
+    "2029-05": {
+      "Period End Serial": 47269,
+      "Period Start Serial": 47239,
+      "Calendar Year": 2029,
+      "Days in Period": 31,
+      "Fin Year": "FY2030",
+      "First Period": "2029-04",
+      "Last Period": "2030-03",
+      "Previous Period": "2029-04",
+      "Next Period": "2029-06",
+      "Calendar Month": 5,
+      "Caption": "May-29",
+      "Long Name": "May 2029"
+    },
+    "2029-06": {
+      "Period End Serial": 47299,
+      "Period Start Serial": 47270,
+      "Calendar Year": 2029,
+      "Days in Period": 30,
+      "Fin Year": "FY2030",
+      "First Period": "2029-04",
+      "Last Period": "2030-03",
+      "Previous Period": "2029-05",
+      "Next Period": "2029-07",
+      "Calendar Month": 6,
+      "Caption": "Jun-29",
+      "Long Name": "June 2029"
+    },
+    "2029-07": {
+      "Period End Serial": 47330,
+      "Period Start Serial": 47300,
+      "Calendar Year": 2029,
+      "Days in Period": 31,
+      "Fin Year": "FY2030",
+      "First Period": "2029-04",
+      "Last Period": "2030-03",
+      "Previous Period": "2029-06",
+      "Next Period": "2029-08",
+      "Calendar Month": 7,
+      "Caption": "Jul-29",
+      "Long Name": "July 2029"
+    },
+    "2029-08": {
+      "Period End Serial": 47361,
+      "Period Start Serial": 47331,
+      "Calendar Year": 2029,
+      "Days in Period": 31,
+      "Fin Year": "FY2030",
+      "First Period": "2029-04",
+      "Last Period": "2030-03",
+      "Previous Period": "2029-07",
+      "Next Period": "2029-09",
+      "Calendar Month": 8,
+      "Caption": "Aug-29",
+      "Long Name": "August 2029"
+    },
+    "2029-09": {
+      "Period End Serial": 47391,
+      "Period Start Serial": 47362,
+      "Calendar Year": 2029,
+      "Days in Period": 30,
+      "Fin Year": "FY2030",
+      "First Period": "2029-04",
+      "Last Period": "2030-03",
+      "Previous Period": "2029-08",
+      "Next Period": "2029-10",
+      "Calendar Month": 9,
+      "Caption": "Sep-29",
+      "Long Name": "September 2029"
+    },
+    "2029-10": {
+      "Period End Serial": 47422,
+      "Period Start Serial": 47392,
+      "Calendar Year": 2029,
+      "Days in Period": 31,
+      "Fin Year": "FY2030",
+      "First Period": "2029-04",
+      "Last Period": "2030-03",
+      "Previous Period": "2029-09",
+      "Next Period": "2029-11",
+      "Calendar Month": 10,
+      "Caption": "Oct-29",
+      "Long Name": "October 2029"
+    },
+    "2029-11": {
+      "Period End Serial": 47452,
+      "Period Start Serial": 47423,
+      "Calendar Year": 2029,
+      "Days in Period": 30,
+      "Fin Year": "FY2030",
+      "First Period": "2029-04",
+      "Last Period": "2030-03",
+      "Previous Period": "2029-10",
+      "Next Period": "2029-12",
+      "Calendar Month": 11,
+      "Caption": "Nov-29",
+      "Long Name": "November 2029"
+    },
+    "2029-12": {
+      "Period End Serial": 47483,
+      "Period Start Serial": 47453,
+      "Calendar Year": 2029,
+      "Days in Period": 31,
+      "Fin Year": "FY2030",
+      "First Period": "2029-04",
+      "Last Period": "2030-03",
+      "Previous Period": "2029-11",
+      "Next Period": "2030-01",
+      "Calendar Month": 12,
+      "Caption": "Dec-29",
+      "Long Name": "December 2029"
+    },
+    "2030-01": {
+      "Period End Serial": 47514,
+      "Period Start Serial": 47484,
+      "Calendar Year": 2030,
+      "Days in Period": 31,
+      "Fin Year": "FY2030",
+      "First Period": "2029-04",
+      "Last Period": "2030-03",
+      "Previous Period": "2029-12",
+      "Next Period": "2030-02",
+      "Calendar Month": 1,
+      "Caption": "Jan-30",
+      "Long Name": "January 2030"
+    },
+    "2030-02": {
+      "Period End Serial": 47542,
+      "Period Start Serial": 47515,
+      "Calendar Year": 2030,
+      "Days in Period": 28,
+      "Fin Year": "FY2030",
+      "First Period": "2029-04",
+      "Last Period": "2030-03",
+      "Previous Period": "2030-01",
+      "Next Period": "2030-03",
+      "Calendar Month": 2,
+      "Caption": "Feb-30",
+      "Long Name": "February 2030"
+    },
+    "2030-03": {
+      "Period End Serial": 47573,
+      "Period Start Serial": 47543,
+      "Calendar Year": 2030,
+      "Days in Period": 31,
+      "Fin Year": "FY2030",
+      "First Period": "2029-04",
+      "Last Period": "2030-03",
+      "Previous Period": "2030-02",
+      "Next Period": "2030-04",
+      "Calendar Month": 3,
+      "Caption": "Mar-30",
+      "Long Name": "March 2030"
+    },
+    "2030-04": {
+      "Period End Serial": 47603,
+      "Period Start Serial": 47574,
+      "Calendar Year": 2030,
+      "Days in Period": 30,
+      "Fin Year": "FY2031",
+      "First Period": "2030-04",
+      "Last Period": "2031-03",
+      "Previous Period": "2030-03",
+      "Next Period": "2030-05",
+      "Calendar Month": 4,
+      "Caption": "Apr-30",
+      "Long Name": "April 2030"
+    },
+    "2030-05": {
+      "Period End Serial": 47634,
+      "Period Start Serial": 47604,
+      "Calendar Year": 2030,
+      "Days in Period": 31,
+      "Fin Year": "FY2031",
+      "First Period": "2030-04",
+      "Last Period": "2031-03",
+      "Previous Period": "2030-04",
+      "Next Period": "2030-06",
+      "Calendar Month": 5,
+      "Caption": "May-30",
+      "Long Name": "May 2030"
+    },
+    "2030-06": {
+      "Period End Serial": 47664,
+      "Period Start Serial": 47635,
+      "Calendar Year": 2030,
+      "Days in Period": 30,
+      "Fin Year": "FY2031",
+      "First Period": "2030-04",
+      "Last Period": "2031-03",
+      "Previous Period": "2030-05",
+      "Next Period": "2030-07",
+      "Calendar Month": 6,
+      "Caption": "Jun-30",
+      "Long Name": "June 2030"
+    },
+    "2030-07": {
+      "Period End Serial": 47695,
+      "Period Start Serial": 47665,
+      "Calendar Year": 2030,
+      "Days in Period": 31,
+      "Fin Year": "FY2031",
+      "First Period": "2030-04",
+      "Last Period": "2031-03",
+      "Previous Period": "2030-06",
+      "Next Period": "2030-08",
+      "Calendar Month": 7,
+      "Caption": "Jul-30",
+      "Long Name": "July 2030"
+    },
+    "2030-08": {
+      "Period End Serial": 47726,
+      "Period Start Serial": 47696,
+      "Calendar Year": 2030,
+      "Days in Period": 31,
+      "Fin Year": "FY2031",
+      "First Period": "2030-04",
+      "Last Period": "2031-03",
+      "Previous Period": "2030-07",
+      "Next Period": "2030-09",
+      "Calendar Month": 8,
+      "Caption": "Aug-30",
+      "Long Name": "August 2030"
+    },
+    "2030-09": {
+      "Period End Serial": 47756,
+      "Period Start Serial": 47727,
+      "Calendar Year": 2030,
+      "Days in Period": 30,
+      "Fin Year": "FY2031",
+      "First Period": "2030-04",
+      "Last Period": "2031-03",
+      "Previous Period": "2030-08",
+      "Next Period": "2030-10",
+      "Calendar Month": 9,
+      "Caption": "Sep-30",
+      "Long Name": "September 2030"
+    },
+    "2030-10": {
+      "Period End Serial": 47787,
+      "Period Start Serial": 47757,
+      "Calendar Year": 2030,
+      "Days in Period": 31,
+      "Fin Year": "FY2031",
+      "First Period": "2030-04",
+      "Last Period": "2031-03",
+      "Previous Period": "2030-09",
+      "Next Period": "2030-11",
+      "Calendar Month": 10,
+      "Caption": "Oct-30",
+      "Long Name": "October 2030"
+    },
+    "2030-11": {
+      "Period End Serial": 47817,
+      "Period Start Serial": 47788,
+      "Calendar Year": 2030,
+      "Days in Period": 30,
+      "Fin Year": "FY2031",
+      "First Period": "2030-04",
+      "Last Period": "2031-03",
+      "Previous Period": "2030-10",
+      "Next Period": "2030-12",
+      "Calendar Month": 11,
+      "Caption": "Nov-30",
+      "Long Name": "November 2030"
+    },
+    "2030-12": {
+      "Period End Serial": 47848,
+      "Period Start Serial": 47818,
+      "Calendar Year": 2030,
+      "Days in Period": 31,
+      "Fin Year": "FY2031",
+      "First Period": "2030-04",
+      "Last Period": "2031-03",
+      "Previous Period": "2030-11",
+      "Next Period": "2031-01",
+      "Calendar Month": 12,
+      "Caption": "Dec-30",
+      "Long Name": "December 2030"
+    }
+  }
+}

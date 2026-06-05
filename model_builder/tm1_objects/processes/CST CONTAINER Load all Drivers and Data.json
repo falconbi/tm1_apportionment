@@ -1,0 +1,15 @@
+{
+  "Name": "CST CONTAINER Load all Drivers and Data",
+  "PrologProcedure": "#****Begin: Generated Statements***\r\n#****End: Generated Statements****\r\n\r\n# =============================================\r\n# Master CST Load Process \r\n# =============================================\r\n\r\nsMaster = GetProcessName();\r\nLogOutput('INFO', sMaster | ' - Starting 8 CST Processes');\r\n\r\nprocess01 = 'Load-CST Account Config-GL Account-CSV';\r\nprocess02 = 'Load-CST Account Config-Direct to SL pct-CSV';\r\nprocess03 = 'Load-CST Account Config-Apportionment Type-CSV';\r\nprocess04 = 'Load-CST Account Config-Driver Pct Account to CP-CSV';\r\nprocess05 = 'Load-CST Pool Config-Pool to Activity Drivers-CSV';\r\nprocess06 = 'Load-CST Pool to Pool Config-Pool to Pool Drivers-CSV';\r\nprocess07 = 'Load-CST Activity to Activity Config-Activity to Activity Drivers-CSV';\r\nprocess08 = 'Load-CST Activity Config-Activity to Service Line Drivers-CSV';\r\n\r\nn = 1;\r\nWHILE(n <= 8);\r\n    IF(n < 10); sVar = 'process0' | NumberToString(n); ELSE; sVar = 'process' | NumberToString(n); ENDIF;\r\n    sChild = EXPAND('%' | sVar | '%');\r\n   \r\n    LogOutput('INFO', sMaster | ' - Running: ' | sChild);\r\n   \r\n    # Call without capturing status\r\n    ExecuteProcess(sChild);\r\n    \r\n    LogOutput('INFO', sMaster | ' - Called: ' | sChild);\r\n   \r\n    n = n + 1;\r\nEND;\r\n\r\nLogOutput('INFO', sMaster | ' - All 8 processes finished');\r\n",
+  "MetadataProcedure": "#****Begin: Generated Statements***\r\n#****End: Generated Statements****\r\n",
+  "DataProcedure": "#****Begin: Generated Statements***\r\n#****End: Generated Statements****\r\n",
+  "EpilogProcedure": "#****Begin: Generated Statements***\r\n#****End: Generated Statements****\r\n",
+  "HasSecurityAccess": false,
+  "UIData": "",
+  "DataSource": {
+    "Type": "None"
+  },
+  "Parameters": [],
+  "Variables": [],
+  "VariablesUIData": []
+}

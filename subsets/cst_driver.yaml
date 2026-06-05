@@ -1,5 +1,0 @@
-dimension: CST Driver
-subsets:
-  - subset_name: All Drivers
-    set_as_default: true
-    mdx: "{TM1FILTERBYLEVEL({TM1SUBSETALL([CST Driver])}, 0)}"

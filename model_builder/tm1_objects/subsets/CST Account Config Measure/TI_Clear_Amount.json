@@ -1,0 +1,7 @@
+{
+  "Name": "TI_Clear_Amount",
+  "Hierarchy@odata.bind": "Dimensions('CST Account Config Measure')/Hierarchies('CST Account Config Measure')",
+  "Elements@odata.bind": [
+    "Dimensions('CST Account Config Measure')/Hierarchies('CST Account Config Measure')/Elements('Apportionment Type')"
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "name": "CST Allocation Config Measure",
+  "elements": [
+    {
+      "name": "Is Allocated",
+      "type": "String"
+    },
+    {
+      "name": "Pool Mapping",
+      "type": "String"
+    },
+    {
+      "name": "Primary Driver",
+      "type": "String"
+    },
+    {
+      "name": "Cost Driver",
+      "type": "String"
+    },
+    {
+      "name": "Revenue Type",
+      "type": "String"
+    }
+  ],
+  "edges": [],
+  "attributes": [
+    {
+      "name": "Desc",
+      "type": "Alias"
+    }
+  ],
+  "attribute_values": {
+    "Is Allocated": {
+      "Desc": "Y = overhead account allocated through ABC, N = direct cost or revenue"
+    },
+    "Pool Mapping": {
+      "Desc": "CST Cost Pool code this GL account maps to"
+    },
+    "Primary Driver": {
+      "Desc": "Driver used to allocate this cost pool to activities"
+    },
+    "Cost Driver": {
+      "Desc": "Driver used to allocate this activity to service lines"
+    },
+    "Revenue Type": {
+      "Desc": "Funding type for this service line"
+    }
+  }
+}

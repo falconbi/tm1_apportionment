@@ -1,0 +1,28 @@
+{
+  "name": "CST Allocation Stage",
+  "elements": [
+    {
+      "name": "Pre Allocation",
+      "type": "Numeric"
+    },
+    {
+      "name": "Post Allocation",
+      "type": "Numeric"
+    }
+  ],
+  "edges": [],
+  "attributes": [
+    {
+      "name": "Desc",
+      "type": "Alias"
+    }
+  ],
+  "attribute_values": {
+    "Pre Allocation": {
+      "Desc": "Costs using traditional allocation \u2014 before ABC is applied"
+    },
+    "Post Allocation": {
+      "Desc": "Costs after ABC allocation has been applied"
+    }
+  }
+}

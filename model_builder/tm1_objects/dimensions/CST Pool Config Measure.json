@@ -1,0 +1,35 @@
+{
+  "name": "CST Pool Config Measure",
+  "elements": [
+    {
+      "name": "Pool to Activity Basis",
+      "type": "String"
+    },
+    {
+      "name": "Driver Value",
+      "type": "Numeric"
+    },
+    {
+      "name": "Driver Percentage Share",
+      "type": "Numeric"
+    }
+  ],
+  "edges": [],
+  "attributes": [
+    {
+      "name": "Desc",
+      "type": "Alias"
+    }
+  ],
+  "attribute_values": {
+    "Pool to Activity Basis": {
+      "Desc": "Pool to Activity Basis"
+    },
+    "Driver Value": {
+      "Desc": "Driver Value"
+    },
+    "Driver Percentage Share": {
+      "Desc": "Driver Percentage Share"
+    }
+  }
+}

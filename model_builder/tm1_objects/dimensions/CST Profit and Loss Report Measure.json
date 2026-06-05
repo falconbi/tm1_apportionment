@@ -1,0 +1,42 @@
+{
+  "name": "CST Profit and Loss Report Measure",
+  "elements": [
+    {
+      "name": "Amount",
+      "type": "Numeric"
+    },
+    {
+      "name": "Variance to Budget",
+      "type": "Numeric"
+    },
+    {
+      "name": "Variance Percent",
+      "type": "Numeric"
+    },
+    {
+      "name": "ABC vs Traditional Variance",
+      "type": "Numeric"
+    }
+  ],
+  "edges": [],
+  "attributes": [
+    {
+      "name": "Desc",
+      "type": "Alias"
+    }
+  ],
+  "attribute_values": {
+    "Amount": {
+      "Desc": "Amount"
+    },
+    "Variance to Budget": {
+      "Desc": "Variance to Budget"
+    },
+    "Variance Percent": {
+      "Desc": "Variance Percent"
+    },
+    "ABC vs Traditional Variance": {
+      "Desc": "ABC vs Traditional Variance"
+    }
+  }
+}

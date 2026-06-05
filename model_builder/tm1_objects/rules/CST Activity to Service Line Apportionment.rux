@@ -1,0 +1,70 @@
+SKIPCHECK;
+FEEDSTRINGS;
+
+# Amount: total cost in this Activity after Stage 2 (Pool → Activity).
+# At Activity='Input': sum of direct cost amounts across all direct accounts for this CC/SL.
+# Direct costs bypass Stages 1 and 2 entirely — Account Config Direct Amount feeds this cell.
+['Amount'] = N:
+  IF( !CST Activity @= 'Input',
+      DB('CST Account Config', !GBL Period, !GBL Version,
+         'TOTAL DIRECT COSTS', !GBL Cost Centre, 'Input', !CST Service Line, 'Direct Amount'),
+      DB('CST Pool to Activity Apportionment', !GBL Period, !GBL Version, !CST Activity,
+         'Total Cost Pools', !GBL Cost Centre, 'Apportioned Amount') );
+
+# Apportionment Rate: driver percentage share for this Activity → Service Line.
+# Computed by Activity Config rule at (activity, Input, service_line).
+# Not applicable for direct costs (Activity='Input') — rate not used there.
+['Apportionment Rate'] = N:
+  DB('CST Activity Config', !GBL Period, !GBL Version, !CST Activity,
+     'Input', !CST Service Line, 'Driver Percentage Share');
+
+# Apportioned Amount: activity cost allocated to this Service Line.
+# At Activity='Input': direct costs are already split by Direct % — Amount IS the apportioned amount.
+# At specific activities: uses Settled Amount (post-A2A) when 2b has run, otherwise Amount (pre-A2A).
+# Same cross-cube flag pattern as Stage 1b — reads 'Stage 2b Complete' from Reconciliation cube.
+['Apportioned Amount'] = N:
+  IF( !CST Activity @= 'Input',
+      ['Amount'],
+      IF( DB('CST Apportionment Reconciliation', !GBL Period, !GBL Version,
+             'RC04', 'Stage 2b Complete') > 0,
+          ['Settled Amount','CST Service Line':'Input'],
+          ['Amount'] )
+      * ['Apportionment Rate'] / 100 );
+
+# Per Unit: apportioned cost per unit of input volume for this Activity / Service Line.
+# Not applicable for direct costs (Activity='Input') — Input Volume = 0 → Per Unit = 0.
+['Per Unit'] = N:
+  IF(
+    DB('CST Activity Config', !GBL Period, !GBL Version, !CST Activity,
+       'Input', !CST Service Line, 'Input Volume') = 0,
+    0,
+    ['Apportioned Amount'] /
+    DB('CST Activity Config', !GBL Period, !GBL Version, !CST Activity,
+       'Input', !CST Service Line, 'Input Volume')
+  );
+
+FEEDERS;
+
+['Apportioned Amount'] => ['Per Unit'];
+
+# Activate Apportioned Amount when Settled Amount is written by Stage 2b Python solver.
+# Pinned at Service Line='Input' — mirrors how P2A Settled Amount is pinned at Activity='Input'.
+['Settled Amount','CST Service Line':'Input'] => ['Apportioned Amount'];
+
+# Feed Post Apportionment Amount in P&L Report cube.
+# Hardcode Account='7000' (Allocated Overhead) and Stage='Post Apportionment' —
+# neither dimension exists in A2SL so cannot use ! variables.
+['Apportioned Amount'] =>
+  DB('CST Profit and Loss Report', !GBL Period, !GBL Version,
+     'GBL Account':'7000', !CST Service Line, !GBL Cost Centre,
+     'Post Apportionment', 'Amount');
+
+# Feed RC05 in Reconciliation cube.
+# Activity='Input' has weight=0 in Total Activities — direct costs are intentionally excluded
+# from RC05 (which checks the indirect chain balance only).
+['Apportioned Amount'] =>
+  DB('CST Apportionment Reconciliation', !GBL Period, !GBL Version, 'RC05', 'Input Total'),
+  DB('CST Apportionment Reconciliation', !GBL Period, !GBL Version, 'RC05', 'Output Total'),
+  DB('CST Apportionment Reconciliation', !GBL Period, !GBL Version, 'RC05', 'Variance'),
+  DB('CST Apportionment Reconciliation', !GBL Period, !GBL Version, 'RC05', 'Variance Percent'),
+  DB('CST Apportionment Reconciliation', !GBL Period, !GBL Version, 'RC05', 'Status');

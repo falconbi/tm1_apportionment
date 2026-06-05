@@ -1,0 +1,144 @@
+{
+  "name": "CST Service Line",
+  "elements": [
+    {
+      "name": "Total Service Lines",
+      "type": "Consolidated"
+    },
+    {
+      "name": "SL01",
+      "type": "Numeric"
+    },
+    {
+      "name": "SL02",
+      "type": "Numeric"
+    },
+    {
+      "name": "SL03",
+      "type": "Numeric"
+    },
+    {
+      "name": "SL04",
+      "type": "Numeric"
+    },
+    {
+      "name": "SL05",
+      "type": "Numeric"
+    },
+    {
+      "name": "SL06",
+      "type": "Numeric"
+    },
+    {
+      "name": "SL07",
+      "type": "Numeric"
+    },
+    {
+      "name": "SL08",
+      "type": "Numeric"
+    },
+    {
+      "name": "Input",
+      "type": "Numeric"
+    }
+  ],
+  "edges": [
+    {
+      "parent": "Total Service Lines",
+      "component": "SL01",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total Service Lines",
+      "component": "SL02",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total Service Lines",
+      "component": "SL03",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total Service Lines",
+      "component": "SL04",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total Service Lines",
+      "component": "SL05",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total Service Lines",
+      "component": "SL06",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total Service Lines",
+      "component": "SL07",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total Service Lines",
+      "component": "SL08",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total Service Lines",
+      "component": "Input",
+      "weight": 0.0
+    }
+  ],
+  "attributes": [
+    {
+      "name": "Code & Desc",
+      "type": "Alias"
+    },
+    {
+      "name": "Desc",
+      "type": "Alias"
+    }
+  ],
+  "attribute_values": {
+    "Total Service Lines": {
+      "Code & Desc": "",
+      "Desc": ""
+    },
+    "SL01": {
+      "Code & Desc": "SL01 Emergency Department",
+      "Desc": "Emergency Department"
+    },
+    "SL02": {
+      "Code & Desc": "SL02 Elective Surgery",
+      "Desc": "Elective Surgery"
+    },
+    "SL03": {
+      "Code & Desc": "SL03 Intensive Care Unit",
+      "Desc": "Intensive Care Unit"
+    },
+    "SL04": {
+      "Code & Desc": "SL04 Outpatient Clinics",
+      "Desc": "Outpatient Clinics"
+    },
+    "SL05": {
+      "Code & Desc": "SL05 Radiology",
+      "Desc": "Radiology"
+    },
+    "SL06": {
+      "Code & Desc": "SL06 Pathology Laboratory",
+      "Desc": "Pathology Laboratory"
+    },
+    "SL07": {
+      "Code & Desc": "SL07 Maternity",
+      "Desc": "Maternity"
+    },
+    "SL08": {
+      "Code & Desc": "SL08 Allied Health",
+      "Desc": "Allied Health"
+    },
+    "Input": {
+      "Code & Desc": "Input",
+      "Desc": "Input"
+    }
+  }
+}

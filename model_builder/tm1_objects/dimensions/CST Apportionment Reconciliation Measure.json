@@ -1,0 +1,70 @@
+{
+  "name": "CST Apportionment Reconciliation Measure",
+  "elements": [
+    {
+      "name": "Input Total",
+      "type": "Numeric"
+    },
+    {
+      "name": "Output Total",
+      "type": "Numeric"
+    },
+    {
+      "name": "Variance",
+      "type": "Numeric"
+    },
+    {
+      "name": "Variance Percent",
+      "type": "Numeric"
+    },
+    {
+      "name": "Status",
+      "type": "String"
+    },
+    {
+      "name": "Message",
+      "type": "String"
+    },
+    {
+      "name": "Stage 1b Complete",
+      "type": "Numeric"
+    },
+    {
+      "name": "Stage 2b Complete",
+      "type": "Numeric"
+    }
+  ],
+  "edges": [],
+  "attributes": [
+    {
+      "name": "Desc",
+      "type": "Alias"
+    }
+  ],
+  "attribute_values": {
+    "Input Total": {
+      "Desc": "Input Total"
+    },
+    "Output Total": {
+      "Desc": "Output Total"
+    },
+    "Variance": {
+      "Desc": "Variance"
+    },
+    "Variance Percent": {
+      "Desc": "Variance Percent"
+    },
+    "Status": {
+      "Desc": "Status"
+    },
+    "Message": {
+      "Desc": "Message"
+    },
+    "Stage 1b Complete": {
+      "Desc": "Stage 1b Complete"
+    },
+    "Stage 2b Complete": {
+      "Desc": ""
+    }
+  }
+}

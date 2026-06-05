@@ -1,0 +1,35 @@
+{
+  "name": "CST Cost Pool Allocation Measure",
+  "elements": [
+    {
+      "name": "Allocated Amount",
+      "type": "Numeric"
+    },
+    {
+      "name": "Allocation Rate",
+      "type": "Numeric"
+    },
+    {
+      "name": "Pool Total",
+      "type": "Numeric"
+    }
+  ],
+  "edges": [],
+  "attributes": [
+    {
+      "name": "Desc",
+      "type": "Alias"
+    }
+  ],
+  "attribute_values": {
+    "Allocated Amount": {
+      "Desc": "GL overhead accumulated into this cost pool"
+    },
+    "Allocation Rate": {
+      "Desc": "Pool total cost divided by sum of driver values for this pool"
+    },
+    "Pool Total": {
+      "Desc": "Total cost in this pool available for allocation to activities"
+    }
+  }
+}

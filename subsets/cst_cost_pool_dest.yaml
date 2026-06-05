@@ -1,5 +1,0 @@
-dimension: CST Cost Pool Dest
-subsets:
-  - subset_name: All Cost Pool Destinations
-    set_as_default: true
-    mdx: "{TM1FILTERBYLEVEL({TM1SUBSETALL([CST Cost Pool Dest])}, 0)}"

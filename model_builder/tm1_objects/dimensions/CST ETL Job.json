@@ -1,0 +1,40 @@
+{
+  "name": "CST ETL Job",
+  "elements": [
+    {
+      "name": "Total ETL Jobs",
+      "type": "Consolidated"
+    },
+    {
+      "name": "Load GL",
+      "type": "Numeric"
+    },
+    {
+      "name": "Load Drivers",
+      "type": "Numeric"
+    },
+    {
+      "name": "Run Apportionment",
+      "type": "Numeric"
+    }
+  ],
+  "edges": [
+    {
+      "parent": "Total ETL Jobs",
+      "component": "Load GL",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total ETL Jobs",
+      "component": "Load Drivers",
+      "weight": 1.0
+    },
+    {
+      "parent": "Total ETL Jobs",
+      "component": "Run Apportionment",
+      "weight": 1.0
+    }
+  ],
+  "attributes": [],
+  "attribute_values": {}
+}

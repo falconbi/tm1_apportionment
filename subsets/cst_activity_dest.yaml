@@ -1,5 +1,0 @@
-dimension: CST Activity Dest
-subsets:
-  - subset_name: All Activity Destinations
-    set_as_default: true
-    mdx: "{TM1FILTERBYLEVEL({TM1SUBSETALL([CST Activity Dest])}, 0)}"

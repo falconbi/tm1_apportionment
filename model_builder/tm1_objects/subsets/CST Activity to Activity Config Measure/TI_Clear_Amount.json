@@ -1,0 +1,9 @@
+{
+  "Name": "TI_Clear_Amount",
+  "Hierarchy@odata.bind": "Dimensions('CST Activity to Activity Config Measure')/Hierarchies('CST Activity to Activity Config Measure')",
+  "Elements@odata.bind": [
+    "Dimensions('CST Activity to Activity Config Measure')/Hierarchies('CST Activity to Activity Config Measure')/Elements('Redistribution Percentage')",
+    "Dimensions('CST Activity to Activity Config Measure')/Hierarchies('CST Activity to Activity Config Measure')/Elements('Driver Description')",
+    "Dimensions('CST Activity to Activity Config Measure')/Hierarchies('CST Activity to Activity Config Measure')/Elements('Driver Value')"
+  ]
+}

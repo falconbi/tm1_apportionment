@@ -1,5 +1,0 @@
-dimension: CST Reconciliation Check
-subsets:
-  - subset_name: All Checks
-    set_as_default: true
-    mdx: "{TM1FILTERBYLEVEL({TM1SUBSETALL([CST Reconciliation Check])}, 0)}"

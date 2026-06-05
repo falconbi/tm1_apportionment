@@ -1,0 +1,73 @@
+{
+  "Name": "Load-CST Activity Config-Activity to Activity Drivers-CSV",
+  "PrologProcedure": "#****Begin: Generated Statements***\r\n#****End: Generated Statements****\r\n# =============================================\r\n# PROLOG \r\n# =============================================\r\nsCube = 'CST Activity to Activity Config';\r\nsDim_Period      = 'GBL Period';\r\nsDim_Version     = 'GBL Version';\r\nsDim_CostPool    = 'CST Activity';\r\nsDim_ServiceLine = 'CST Activity Dest';\r\nsDim_CostCentre  = 'GBL Cost Centre';\r\nsDim_Measure     = 'CST Activity to Activity Config Measure';\r\n# CLEAR CUBEVIEW\r\nsView = 'TI_Clear_Amount';\r\nsSubset = sView;\r\nIF(ViewExists(sCube, sView) = 1);\r\n    ViewDestroy(sCube, sView);\r\nENDIF;\r\nIF(SubsetExists(sDim_Measure, sSubset) = 1);\r\n    SubsetDestroy(sDim_Measure, sSubset);\r\nENDIF;\r\n# Create subset with only \"Amount\"\r\nSubsetCreate(sDim_Measure, sSubset);\r\nSubsetElementInsert(sDim_Measure, sSubset, 'Driver Value', 1);\r\nSubsetElementInsert(sDim_Measure, sSubset, 'Driver Description', 1);\r\nSubsetElementInsert(sDim_Measure, sSubset, 'Redistribution Percentage', 1);\r\n# Create view with subset\r\nViewCreate(sCube, sView, 1);\r\nViewSubsetAssign(sCube, sView, sDim_Measure, sView);\r\n#Zero\r\nViewZeroOut(sCube, sView);\r\n#Cleanup\r\nViewDestroy(sCube, sView);\r\nLogOutput('INFO', 'Cleared only \"Amount\" measure from cube');",
+  "MetadataProcedure": "#****Begin: Generated Statements***\r\n#****End: Generated Statements****\r\n# =============================================\r\n# METADATA\r\n# =============================================\r\n# No metadata processing needed for this simple load",
+  "DataProcedure": "#****Begin: Generated Statements***\r\n#****End: Generated Statements****\r\n# =============================================\r\n# DATA\r\n# =============================================\r\n# Skip header row\r\nIF(vGBL_Period @= 'vGBL Period');\r\n    ItemSkip;\r\nENDIF;\r\n# =============================================\r\n# DATA\r\n# =============================================\r\nsCostCentre = 'Input';\r\nIF( vMeasure @= 'Driver Description' );\r\n    CellPutS( vValue, sCube, vGBL_Period, vGBL_Version, vCST_Activity, vCST_Cost_Activity_Dest, sCostCentre, vMeasure );\r\nELSE;\r\n    CellPutN( StringToNumber( vValue ), sCube, vGBL_Period, vGBL_Version, vCST_Activity, vCST_Cost_Activity_Dest, sCostCentre, vMeasure );\r\nENDIF;",
+  "EpilogProcedure": "#****Begin: Generated Statements***\r\n#****End: Generated Statements****\r\n# =============================================\r\n# EPILOG\r\n# =============================================\r\nLogOutput('INFO', 'Process completed successfully for cube: ' | sCube);\r\n# Optional: Save cube\r\n# CubeSave(sCube);",
+  "HasSecurityAccess": false,
+  "UIData": "",
+  "DataSource": {
+    "Type": "ASCII",
+    "asciiDecimalSeparator": ".",
+    "asciiDelimiterChar": ",",
+    "asciiDelimiterType": "Character",
+    "asciiHeaderRecords": 1,
+    "asciiQuoteCharacter": "\"",
+    "asciiThousandSeparator": ",",
+    "dataSourceNameForClient": "Load_Activity_to_Activity_Drivers.csv",
+    "dataSourceNameForServer": "Load_Activity_to_Activity_Drivers.csv"
+  },
+  "Parameters": [],
+  "Variables": [
+    {
+      "Name": "vGBL_Period",
+      "Type": "String",
+      "Position": 1,
+      "StartByte": 0,
+      "EndByte": 0
+    },
+    {
+      "Name": "vGBL_Version",
+      "Type": "String",
+      "Position": 2,
+      "StartByte": 0,
+      "EndByte": 0
+    },
+    {
+      "Name": "vCST_Activity",
+      "Type": "String",
+      "Position": 3,
+      "StartByte": 0,
+      "EndByte": 0
+    },
+    {
+      "Name": "vCST_Cost_Activity_Dest",
+      "Type": "String",
+      "Position": 4,
+      "StartByte": 0,
+      "EndByte": 0
+    },
+    {
+      "Name": "vMeasure",
+      "Type": "String",
+      "Position": 5,
+      "StartByte": 0,
+      "EndByte": 0
+    },
+    {
+      "Name": "vValue",
+      "Type": "String",
+      "Position": 6,
+      "StartByte": 0,
+      "EndByte": 0
+    }
+  ],
+  "VariablesUIData": [
+    "VarType=32\fColType=827\f",
+    "VarType=32\fColType=827\f",
+    "VarType=32\fColType=827\f",
+    "VarType=32\fColType=827\f",
+    "VarType=32\fColType=827\f",
+    "VarType=32\fColType=827\f"
+  ]
+}

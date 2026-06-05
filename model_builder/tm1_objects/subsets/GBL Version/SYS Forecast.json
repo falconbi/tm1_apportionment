@@ -1,0 +1,7 @@
+{
+  "Name": "SYS Forecast",
+  "Hierarchy@odata.bind": "Dimensions('GBL Version')/Hierarchies('GBL Version')",
+  "Elements@odata.bind": [
+    "Dimensions('GBL Version')/Hierarchies('GBL Version')/Elements('Forecast')"
+  ]
+}

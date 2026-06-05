@@ -1,0 +1,27 @@
+SKIPCHECK;
+FEEDSTRINGS;
+
+# Calc Step to filter out those without Active =1
+['CST Pool to Pool Config Measure':'Driver Percentage Share Step']=N:
+  IF( ['CST Pool to Pool Config Measure':'Active'] = 1,
+        ['CST Pool to Pool Config Measure':'Driver Value'],
+        CONTINUE);
+
+# Calc % of total after above
+['CST Pool to Pool Config Measure':'Driver Percentage Share']=N:
+        ['CST Pool to Pool Config Measure':'Driver Percentage Share Step']\
+        ['CST Cost Pool':'Total Cost Pools', 'CST Cost Pool Dest':'Total Cost Pools', 'CST Pool to Pool Config Measure':'Driver Value'];
+
+# Base Amount (written by Python)
+# Final Balance (written by Python after iteration)
+#Calculated Settled Amount
+['CST Cost Pool Dest':'Input','GBL Cost Centre':'Input','CST Pool to Pool Config Measure':'Settled Amount']=N:
+        ['CST Cost Pool Dest':'Input','GBL Cost Centre':'Input','CST Pool to Pool Config Measure':'Final Balance']*
+        (1-['CST Cost Pool Dest':'Input','GBL Cost Centre':'Input','CST Pool to Pool Config Measure':'Redistribution Percentage']\100);
+
+FEEDERS;
+['CST Pool to Pool Config Measure':'Active'] =>
+          ['CST Pool to Pool Config Measure':'Driver Percentage Share Step'] ,
+          ['CST Pool to Pool Config Measure':'Driver Percentage Share'];
+ ['CST Cost Pool Dest':'Input','GBL Cost Centre':'Input','CST Pool to Pool Config Measure':'Final Balance']=>
+          ['CST Cost Pool Dest':'Input','GBL Cost Centre':'Input','CST Pool to Pool Config Measure':'Settled Amount'];

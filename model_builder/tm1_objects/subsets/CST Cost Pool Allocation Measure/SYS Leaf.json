@@ -1,0 +1,5 @@
+{
+  "Name": "SYS Leaf",
+  "Hierarchy@odata.bind": "Dimensions('CST Cost Pool Allocation Measure')/Hierarchies('CST Cost Pool Allocation Measure')",
+  "Expression": "{TM1FILTERBYLEVEL( {TM1SUBSETALL( [CST Cost Pool Allocation Measure] )}, 0)}"
+}

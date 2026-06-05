@@ -1,0 +1,28 @@
+{
+  "name": "CST Apportionment Stage",
+  "elements": [
+    {
+      "name": "Pre Apportionment",
+      "type": "Numeric"
+    },
+    {
+      "name": "Post Apportionment",
+      "type": "Numeric"
+    }
+  ],
+  "edges": [],
+  "attributes": [
+    {
+      "name": "Desc",
+      "type": "Alias"
+    }
+  ],
+  "attribute_values": {
+    "Pre Apportionment": {
+      "Desc": "Pre Apportionment"
+    },
+    "Post Apportionment": {
+      "Desc": "Post Apportionment"
+    }
+  }
+}

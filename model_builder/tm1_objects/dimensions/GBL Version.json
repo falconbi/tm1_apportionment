@@ -1,0 +1,70 @@
+{
+  "name": "GBL Version",
+  "elements": [
+    {
+      "name": "Actual",
+      "type": "Numeric"
+    },
+    {
+      "name": "Budget",
+      "type": "Numeric"
+    },
+    {
+      "name": "Forecast",
+      "type": "Numeric"
+    }
+  ],
+  "edges": [],
+  "attributes": [
+    {
+      "name": "Is Snapshot",
+      "type": "String"
+    },
+    {
+      "name": "Start Period",
+      "type": "String"
+    },
+    {
+      "name": "End Period",
+      "type": "String"
+    },
+    {
+      "name": "Number of Rolling Months",
+      "type": "Numeric"
+    },
+    {
+      "name": "Desc",
+      "type": "Alias"
+    },
+    {
+      "name": "Current Working",
+      "type": "String"
+    }
+  ],
+  "attribute_values": {
+    "Actual": {
+      "Is Snapshot": "N",
+      "Start Period": "2025-04",
+      "End Period": "2026-03",
+      "Number of Rolling Months": null,
+      "Desc": "Actual results",
+      "Current Working": "N"
+    },
+    "Budget": {
+      "Is Snapshot": "N",
+      "Start Period": "2026-04",
+      "End Period": "2027-03",
+      "Number of Rolling Months": 12,
+      "Desc": "Annual budget",
+      "Current Working": "Y"
+    },
+    "Forecast": {
+      "Is Snapshot": "N",
+      "Start Period": "2026-04",
+      "End Period": "2027-10",
+      "Number of Rolling Months": 18,
+      "Desc": "Rolling forecast",
+      "Current Working": "N"
+    }
+  }
+}

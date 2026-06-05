@@ -1,0 +1,32 @@
+SKIPCHECK;
+FEEDSTRINGS;
+
+# Driver Percentage Share: normalise Driver Value to percentage per source Activity.
+# Same pattern as CST Pool to Pool Config — Python reads Driver Value directly and
+# normalises in the solver, but Driver Percentage Share is available for PAW review.
+['Driver Percentage Share'] = N:
+  IF(
+    DB('CST Activity to Activity Config', !GBL Period, !GBL Version,
+       !CST Activity, 'Total Activity Dest', 'Input', 'Driver Value') = 0, 0,
+    ['Driver Value'] /
+    DB('CST Activity to Activity Config', !GBL Period, !GBL Version,
+       !CST Activity, 'Total Activity Dest', 'Input', 'Driver Value')
+    * 100
+  );
+
+# Base Amount (written by Python)
+# Final Balance (written by Python after iteration)
+# Settled Amount (calculated by this rule)
+['CST Activity Dest':'Input', 'GBL Cost Centre':'Input', 'Settled Amount'] = N:
+    ['CST Activity Dest':'Input', 'GBL Cost Centre':'Input', 'Final Balance'] 
+    * (1 - ['CST Activity Dest':'Input', 'GBL Cost Centre':'Input', 'Redistribution Percentage'] / 100 );
+
+FEEDERS;
+['Final Balance'] => 
+    DB('CST Activity to Activity Config', 
+       !GBL Period, !GBL Version, !CST Activity, 'Input', 'Input', 'Settled Amount');
+  
+# Feed Driver Percentage Share — fired when Driver Value is stored.
+['CST Activity to Activity Config Measure':'Driver Value'] =>
+  DB('CST Activity to Activity Config', !GBL Period, !GBL Version,
+     !CST Activity, !CST Activity Dest, 'Input', 'Driver Percentage Share');

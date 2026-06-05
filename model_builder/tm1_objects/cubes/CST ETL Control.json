@@ -1,0 +1,9 @@
+{
+  "name": "CST ETL Control",
+  "dimensions": [
+    "CST ETL Job",
+    "CST ETL Control Measure"
+  ],
+  "rules": "",
+  "measures": []
+}

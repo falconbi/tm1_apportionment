@@ -1,0 +1,42 @@
+{
+  "name": "CST Pool to Activity Apportionment Measure",
+  "elements": [
+    {
+      "name": "Amount",
+      "type": "Numeric"
+    },
+    {
+      "name": "Settled Amount",
+      "type": "Numeric"
+    },
+    {
+      "name": "Apportionment Rate",
+      "type": "Numeric"
+    },
+    {
+      "name": "Apportioned Amount",
+      "type": "Numeric"
+    }
+  ],
+  "edges": [],
+  "attributes": [
+    {
+      "name": "Desc",
+      "type": "Alias"
+    }
+  ],
+  "attribute_values": {
+    "Amount": {
+      "Desc": "Amount"
+    },
+    "Settled Amount": {
+      "Desc": "Settled Amount"
+    },
+    "Apportionment Rate": {
+      "Desc": "Apportionment Rate"
+    },
+    "Apportioned Amount": {
+      "Desc": "Apportioned Amount"
+    }
+  }
+}

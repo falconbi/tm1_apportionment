@@ -1,0 +1,7 @@
+{
+  "Name": "SYS Pool Total",
+  "Hierarchy@odata.bind": "Dimensions('CST Cost Pool Allocation Measure')/Hierarchies('CST Cost Pool Allocation Measure')",
+  "Elements@odata.bind": [
+    "Dimensions('CST Cost Pool Allocation Measure')/Hierarchies('CST Cost Pool Allocation Measure')/Elements('Pool Total')"
+  ]
+}

@@ -1,0 +1,534 @@
+{
+  "name": "GBL Account",
+  "elements": [
+    {
+      "name": "NET PROFIT",
+      "type": "Consolidated"
+    },
+    {
+      "name": "TOTAL REVENUE",
+      "type": "Consolidated"
+    },
+    {
+      "name": "TOTAL DIRECT COSTS",
+      "type": "Consolidated"
+    },
+    {
+      "name": "TOTAL OVERHEAD",
+      "type": "Consolidated"
+    },
+    {
+      "name": "ALLOCATED OVERHEAD",
+      "type": "Consolidated"
+    },
+    {
+      "name": "4001",
+      "type": "Numeric"
+    },
+    {
+      "name": "4002",
+      "type": "Numeric"
+    },
+    {
+      "name": "4003",
+      "type": "Numeric"
+    },
+    {
+      "name": "4004",
+      "type": "Numeric"
+    },
+    {
+      "name": "4005",
+      "type": "Numeric"
+    },
+    {
+      "name": "5001",
+      "type": "Numeric"
+    },
+    {
+      "name": "5002",
+      "type": "Numeric"
+    },
+    {
+      "name": "5003",
+      "type": "Numeric"
+    },
+    {
+      "name": "6001",
+      "type": "Numeric"
+    },
+    {
+      "name": "6002",
+      "type": "Numeric"
+    },
+    {
+      "name": "6003",
+      "type": "Numeric"
+    },
+    {
+      "name": "6004",
+      "type": "Numeric"
+    },
+    {
+      "name": "6005",
+      "type": "Numeric"
+    },
+    {
+      "name": "6006",
+      "type": "Numeric"
+    },
+    {
+      "name": "6007",
+      "type": "Numeric"
+    },
+    {
+      "name": "6008",
+      "type": "Numeric"
+    },
+    {
+      "name": "6009",
+      "type": "Numeric"
+    },
+    {
+      "name": "6010",
+      "type": "Numeric"
+    },
+    {
+      "name": "6011",
+      "type": "Numeric"
+    },
+    {
+      "name": "6012",
+      "type": "Numeric"
+    },
+    {
+      "name": "6013",
+      "type": "Numeric"
+    },
+    {
+      "name": "6014",
+      "type": "Numeric"
+    },
+    {
+      "name": "6015",
+      "type": "Numeric"
+    },
+    {
+      "name": "6016",
+      "type": "Numeric"
+    },
+    {
+      "name": "6017",
+      "type": "Numeric"
+    },
+    {
+      "name": "6018",
+      "type": "Numeric"
+    },
+    {
+      "name": "6019",
+      "type": "Numeric"
+    },
+    {
+      "name": "6020",
+      "type": "Numeric"
+    },
+    {
+      "name": "6021",
+      "type": "Numeric"
+    },
+    {
+      "name": "6022",
+      "type": "Numeric"
+    },
+    {
+      "name": "6023",
+      "type": "Numeric"
+    },
+    {
+      "name": "6024",
+      "type": "Numeric"
+    },
+    {
+      "name": "6025",
+      "type": "Numeric"
+    },
+    {
+      "name": "6026",
+      "type": "Numeric"
+    },
+    {
+      "name": "7000",
+      "type": "Numeric"
+    }
+  ],
+  "edges": [
+    {
+      "parent": "NET PROFIT",
+      "component": "TOTAL REVENUE",
+      "weight": 1.0
+    },
+    {
+      "parent": "NET PROFIT",
+      "component": "TOTAL DIRECT COSTS",
+      "weight": -1.0
+    },
+    {
+      "parent": "NET PROFIT",
+      "component": "TOTAL OVERHEAD",
+      "weight": -1.0
+    },
+    {
+      "parent": "NET PROFIT",
+      "component": "ALLOCATED OVERHEAD",
+      "weight": -1.0
+    },
+    {
+      "parent": "TOTAL REVENUE",
+      "component": "4001",
+      "weight": 1.0
+    },
+    {
+      "parent": "TOTAL REVENUE",
+      "component": "4002",
+      "weight": 1.0
+    },
+    {
+      "parent": "TOTAL REVENUE",
+      "component": "4003",
+      "weight": 1.0
+    },
+    {
+      "parent": "TOTAL REVENUE",
+      "component": "4004",
+      "weight": 1.0
+    },
+    {
+      "parent": "TOTAL REVENUE",
+      "component": "4005",
+      "weight": 1.0
+    },
+    {
+      "parent": "TOTAL DIRECT COSTS",
+      "component": "5001",
+      "weight": 1.0
+    },
+    {
+      "parent": "TOTAL DIRECT COSTS",
+      "component": "5002",
+      "weight": 1.0
+    },
+    {
+      "parent": "TOTAL DIRECT COSTS",
+      "component": "5003",
+      "weight": 1.0
+    },
+    {
+      "parent": "TOTAL OVERHEAD",
+      "component": "6001",
+      "weight": 1.0
+    },
+    {
+      "parent": "TOTAL OVERHEAD",
+      "component": "6002",
+      "weight": 1.0
+    },
+    {
+      "parent": "TOTAL OVERHEAD",
+      "component": "6003",
+      "weight": 1.0
+    },
+    {
+      "parent": "TOTAL OVERHEAD",
+      "component": "6004",
+      "weight": 1.0
+    },
+    {
+      "parent": "TOTAL OVERHEAD",
+      "component": "6005",
+      "weight": 1.0
+    },
+    {
+      "parent": "TOTAL OVERHEAD",
+      "component": "6006",
+      "weight": 1.0
+    },
+    {
+      "parent": "TOTAL OVERHEAD",
+      "component": "6007",
+      "weight": 1.0
+    },
+    {
+      "parent": "TOTAL OVERHEAD",
+      "component": "6008",
+      "weight": 1.0
+    },
+    {
+      "parent": "TOTAL OVERHEAD",
+      "component": "6009",
+      "weight": 1.0
+    },
+    {
+      "parent": "TOTAL OVERHEAD",
+      "component": "6010",
+      "weight": 1.0
+    },
+    {
+      "parent": "TOTAL OVERHEAD",
+      "component": "6011",
+      "weight": 1.0
+    },
+    {
+      "parent": "TOTAL OVERHEAD",
+      "component": "6012",
+      "weight": 1.0
+    },
+    {
+      "parent": "TOTAL OVERHEAD",
+      "component": "6013",
+      "weight": 1.0
+    },
+    {
+      "parent": "TOTAL OVERHEAD",
+      "component": "6014",
+      "weight": 1.0
+    },
+    {
+      "parent": "TOTAL OVERHEAD",
+      "component": "6015",
+      "weight": 1.0
+    },
+    {
+      "parent": "TOTAL OVERHEAD",
+      "component": "6016",
+      "weight": 1.0
+    },
+    {
+      "parent": "TOTAL OVERHEAD",
+      "component": "6017",
+      "weight": 1.0
+    },
+    {
+      "parent": "TOTAL OVERHEAD",
+      "component": "6018",
+      "weight": 1.0
+    },
+    {
+      "parent": "TOTAL OVERHEAD",
+      "component": "6019",
+      "weight": 1.0
+    },
+    {
+      "parent": "TOTAL OVERHEAD",
+      "component": "6020",
+      "weight": 1.0
+    },
+    {
+      "parent": "TOTAL OVERHEAD",
+      "component": "6021",
+      "weight": 1.0
+    },
+    {
+      "parent": "TOTAL OVERHEAD",
+      "component": "6022",
+      "weight": 1.0
+    },
+    {
+      "parent": "TOTAL OVERHEAD",
+      "component": "6023",
+      "weight": 1.0
+    },
+    {
+      "parent": "TOTAL OVERHEAD",
+      "component": "6024",
+      "weight": 1.0
+    },
+    {
+      "parent": "TOTAL OVERHEAD",
+      "component": "6025",
+      "weight": 1.0
+    },
+    {
+      "parent": "TOTAL OVERHEAD",
+      "component": "6026",
+      "weight": 1.0
+    },
+    {
+      "parent": "ALLOCATED OVERHEAD",
+      "component": "7000",
+      "weight": 1.0
+    }
+  ],
+  "attributes": [
+    {
+      "name": "Code & Desc",
+      "type": "Alias"
+    },
+    {
+      "name": "Desc",
+      "type": "Alias"
+    }
+  ],
+  "attribute_values": {
+    "NET PROFIT": {
+      "Code & Desc": "Net Profit",
+      "Desc": "Net Profit"
+    },
+    "TOTAL REVENUE": {
+      "Code & Desc": "Total Revenue",
+      "Desc": "Total Revenue"
+    },
+    "TOTAL DIRECT COSTS": {
+      "Code & Desc": "Total Direct Costs",
+      "Desc": "Total Direct Costs"
+    },
+    "TOTAL OVERHEAD": {
+      "Code & Desc": "Total Overhead",
+      "Desc": "Total Overhead"
+    },
+    "ALLOCATED OVERHEAD": {
+      "Code & Desc": "Allocated Overhead",
+      "Desc": "Allocated Overhead"
+    },
+    "4001": {
+      "Code & Desc": "4001 Inpatient Revenue",
+      "Desc": "Inpatient Revenue"
+    },
+    "4002": {
+      "Code & Desc": "4002 Outpatient Revenue",
+      "Desc": "Outpatient Revenue"
+    },
+    "4003": {
+      "Code & Desc": "4003 Radiology Revenue",
+      "Desc": "Radiology Revenue"
+    },
+    "4004": {
+      "Code & Desc": "4004 Pathology Revenue",
+      "Desc": "Pathology Revenue"
+    },
+    "4005": {
+      "Code & Desc": "4005 Other Revenue",
+      "Desc": "Other Revenue"
+    },
+    "5001": {
+      "Code & Desc": "5001 Direct Labour",
+      "Desc": "Direct Labour"
+    },
+    "5002": {
+      "Code & Desc": "5002 Direct Materials",
+      "Desc": "Direct Materials"
+    },
+    "5003": {
+      "Code & Desc": "5003 Direct Supplies",
+      "Desc": "Direct Supplies"
+    },
+    "6001": {
+      "Code & Desc": "6001 Indirect Nursing Salaries",
+      "Desc": "Indirect Nursing Salaries"
+    },
+    "6002": {
+      "Code & Desc": "6002 Medical Administration Salaries",
+      "Desc": "Medical Administration Salaries"
+    },
+    "6003": {
+      "Code & Desc": "6003 Building Depreciation",
+      "Desc": "Building Depreciation"
+    },
+    "6004": {
+      "Code & Desc": "6004 Rent and Rates",
+      "Desc": "Rent and Rates"
+    },
+    "6005": {
+      "Code & Desc": "6005 Cleaning and Waste",
+      "Desc": "Cleaning and Waste"
+    },
+    "6006": {
+      "Code & Desc": "6006 Medical Equipment Depreciation",
+      "Desc": "Medical Equipment Depreciation"
+    },
+    "6007": {
+      "Code & Desc": "6007 Equipment Maintenance",
+      "Desc": "Equipment Maintenance"
+    },
+    "6008": {
+      "Code & Desc": "6008 IT Infrastructure",
+      "Desc": "IT Infrastructure"
+    },
+    "6009": {
+      "Code & Desc": "6009 Software Licences",
+      "Desc": "Software Licences"
+    },
+    "6010": {
+      "Code & Desc": "6010 IT Helpdesk",
+      "Desc": "IT Helpdesk"
+    },
+    "6011": {
+      "Code & Desc": "6011 Recruitment Costs",
+      "Desc": "Recruitment Costs"
+    },
+    "6012": {
+      "Code & Desc": "6012 Training and Development",
+      "Desc": "Training and Development"
+    },
+    "6013": {
+      "Code & Desc": "6013 HR Administration",
+      "Desc": "HR Administration"
+    },
+    "6014": {
+      "Code & Desc": "6014 Finance Team Salaries",
+      "Desc": "Finance Team Salaries"
+    },
+    "6015": {
+      "Code & Desc": "6015 Payroll Processing",
+      "Desc": "Payroll Processing"
+    },
+    "6016": {
+      "Code & Desc": "6016 Accounts Payable",
+      "Desc": "Accounts Payable"
+    },
+    "6017": {
+      "Code & Desc": "6017 Autoclave Operation",
+      "Desc": "Autoclave Operation"
+    },
+    "6018": {
+      "Code & Desc": "6018 Sterilisation Materials",
+      "Desc": "Sterilisation Materials"
+    },
+    "6019": {
+      "Code & Desc": "6019 Orderly Salaries",
+      "Desc": "Orderly Salaries"
+    },
+    "6020": {
+      "Code & Desc": "6020 Patient Transfer Equipment",
+      "Desc": "Patient Transfer Equipment"
+    },
+    "6021": {
+      "Code & Desc": "6021 Catering Salaries",
+      "Desc": "Catering Salaries"
+    },
+    "6022": {
+      "Code & Desc": "6022 Food and Beverage",
+      "Desc": "Food and Beverage"
+    },
+    "6023": {
+      "Code & Desc": "6023 Executive Salaries",
+      "Desc": "Executive Salaries"
+    },
+    "6024": {
+      "Code & Desc": "6024 Board Costs",
+      "Desc": "Board Costs"
+    },
+    "6025": {
+      "Code & Desc": "6025 Legal and Compliance",
+      "Desc": "Legal and Compliance"
+    },
+    "6026": {
+      "Code & Desc": "6026 Accreditation Costs",
+      "Desc": "Accreditation Costs"
+    },
+    "7000": {
+      "Code & Desc": "7000 Overhead Recovery",
+      "Desc": "Overhead Recovery"
+    }
+  }
+}

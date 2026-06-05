@@ -1,0 +1,40 @@
+{
+  "Name": "CST Run Apportionment",
+  "PrologProcedure": "#****Begin: Generated Statements***\r\n#****End: Generated Statements****\r\nsCube = 'CST ETL Control';\r\nsJob  = 'Run Apportionment';\r\n\r\nCellPutS( pPeriod,                  sCube, sJob, 'Period'   );\r\nCellPutS( pVersion,                 sCube, sJob, 'Version'  );\r\nCellPutN( pMaxIter,                 sCube, sJob, 'Max Iter' );\r\nCellPutN( pForce,                   sCube, sJob, 'Force'    );\r\nCellPutS( 'REQUESTED',              sCube, sJob, 'Status'   );\r\n",
+  "MetadataProcedure": "#****Begin: Generated Statements***\r\n#****End: Generated Statements****\r\n",
+  "DataProcedure": "#****Begin: Generated Statements***\r\n#****End: Generated Statements****\r\n",
+  "EpilogProcedure": "#****Begin: Generated Statements***\r\n#****End: Generated Statements****\r\n",
+  "HasSecurityAccess": false,
+  "UIData": "CubeAction=1511\fDataAction=1503\fCubeLogChanges=0\f",
+  "DataSource": {
+    "Type": "None"
+  },
+  "Parameters": [
+    {
+      "Name": "pPeriod",
+      "Prompt": "Period e.g. 2025-04 \u2014 leave blank to run all periods for the version",
+      "Value": "",
+      "Type": "String"
+    },
+    {
+      "Name": "pVersion",
+      "Prompt": "Version",
+      "Value": "Budget",
+      "Type": "String"
+    },
+    {
+      "Name": "pMaxIter",
+      "Prompt": "Max iterations for reciprocal solver",
+      "Value": 100,
+      "Type": "Numeric"
+    },
+    {
+      "Name": "pForce",
+      "Prompt": "Force run \u2014 1 skips VAL gate check, 0 aborts on FAIL",
+      "Value": 0,
+      "Type": "Numeric"
+    }
+  ],
+  "Variables": [],
+  "VariablesUIData": []
+}

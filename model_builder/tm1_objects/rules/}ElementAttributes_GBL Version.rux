@@ -1,0 +1,9 @@
+SKIPCHECK;
+FEEDSTRINGS;
+
+
+#Dynamic End Period in Attribute for Forecast 
+['Forecast','End Period']=S: DIMNM( 'GBL Period',DIMIX( 'GBL Period', DB('}ElementAttributes_GBL Version',!GBL Version,'Start Period'))+DB('}ElementAttributes_GBL Version',!GBL Version,'Number of Rolling Months'));
+
+
+FEEDERS;

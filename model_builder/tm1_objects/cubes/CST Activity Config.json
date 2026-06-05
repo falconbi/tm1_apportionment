@@ -1,0 +1,13 @@
+{
+  "name": "CST Activity Config",
+  "dimensions": [
+    "GBL Period",
+    "GBL Version",
+    "CST Activity",
+    "CST Driver",
+    "CST Service Line",
+    "CST Activity Config Measure"
+  ],
+  "rules": "SKIPCHECK;\nFEEDSTRINGS;\n\n# Driver Percentage Share (Activity \u2192 Service Line)\n# Calculates what % of the activity should go to each service line based on driver values\n\n['Driver Percentage Share'] = N:\nIF( !CST Driver @<> 'Input', CONTINUE,\n\n    IF(\n        DB('CST Activity Config',\n           !GBL Period, !GBL Version, !CST Activity,\n           DB('CST Activity Config', !GBL Period, !GBL Version, !CST Activity, 'Input', 'Input', 'Activity to Service Line Basis'),\n           !CST Service Line,\n           'Driver Value') = 0,\n\n        0,\n\n        DB('CST Activity Config',\n           !GBL Period, !GBL Version, !CST Activity,\n           DB('CST Activity Config', !GBL Period, !GBL Version, !CST Activity, 'Input', 'Input', 'Activity to Service Line Basis'),\n           !CST Service Line,\n           'Driver Value')\n        /\n        DB('CST Activity Config',\n           !GBL Period, !GBL Version, !CST Activity,\n           DB('CST Activity Config', !GBL Period, !GBL Version, !CST Activity, 'Input', 'Input', 'Activity to Service Line Basis'),\n           'Total Service Lines',\n           'Driver Value')\n        * 100\n    )\n);\n\nFEEDERS;\n\n# Feed Apportionment Rate in Stage 3 \u2014 Cost Centre not in Activity Config so use Total Cost Centres consolidation.\n['CST Driver':'Input','CST Activity Config Measure':'Driver Percentage Share'] =>\n  DB('CST Activity to Service Line Apportionment', !GBL Period, !GBL Version,\n     !CST Service Line, !CST Activity, 'GBL Cost Centre':'Total Cost Centres', 'Apportionment Rate');\n\n# Feeder for Driver Percentage Share\n['Driver Value'] => ['CST Driver':'Input','Driver Percentage Share'];",
+  "measures": []
+}
