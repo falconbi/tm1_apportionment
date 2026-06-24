@@ -52,6 +52,10 @@
     {
       "name": "Input",
       "type": "Numeric"
+    },
+    {
+      "name": "A12",
+      "type": "Numeric"
     }
   ],
   "edges": [
@@ -114,6 +118,11 @@
       "parent": "Total Activities",
       "component": "Input",
       "weight": 0.0
+    },
+    {
+      "parent": "Total Activities",
+      "component": "A12",
+      "weight": 1.0
     }
   ],
   "attributes": [
@@ -178,6 +187,10 @@
     "Input": {
       "Code & Desc": "Input",
       "Desc": "Input"
+    },
+    "A12": {
+      "Code & Desc": "",
+      "Desc": ""
     }
   }
 }

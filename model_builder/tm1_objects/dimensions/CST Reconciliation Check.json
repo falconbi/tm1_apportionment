@@ -192,7 +192,7 @@
     },
     "VAL03": {
       "Code & Desc": "VAL03 Pool to Activity",
-      "Desc": "All Activities have drivers "
+      "Desc": "All Activities have drivers"
     },
     "VAL04": {
       "Code & Desc": "VAL04 Activity to Activity",
@@ -207,12 +207,12 @@
       "Desc": "INFO Direct and Indirect"
     },
     "VAL05": {
-      "Code & Desc": "VAL05 Act 2 SL Drivers ",
+      "Code & Desc": "VAL05 Act 2 SL Drivers",
       "Desc": "Activity to Service Line Drivers"
     },
     "VAL00": {
-      "Code & Desc": "VAL00 Check Apportionment Type Exists ",
-      "Desc": "Apportionment Type Exists "
+      "Code & Desc": "VAL00 Check Apportionment Type Exists",
+      "Desc": "Apportionment Type Exists"
     },
     "VAL06": {
       "Code & Desc": "VAL06 Last Run Date",

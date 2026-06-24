@@ -1,6 +1,6 @@
 {
   "Name": "CST Run Apportionment",
-  "PrologProcedure": "#****Begin: Generated Statements***\r\n#****End: Generated Statements****\r\nsCube = 'CST ETL Control';\r\nsJob  = 'Run Apportionment';\r\n\r\nCellPutS( pPeriod,                  sCube, sJob, 'Period'   );\r\nCellPutS( pVersion,                 sCube, sJob, 'Version'  );\r\nCellPutN( pMaxIter,                 sCube, sJob, 'Max Iter' );\r\nCellPutN( pForce,                   sCube, sJob, 'Force'    );\r\nCellPutS( 'REQUESTED',              sCube, sJob, 'Status'   );\r\n",
+  "PrologProcedure": "#****Begin: Generated Statements***\r\n#****End: Generated Statements****\r\n# Make sure poller is running\r\n\r\nsCube = 'CST ETL Control';\r\nsJob  = 'Run Apportionment';\r\n\r\nCellPutS( pPeriod,                  sCube, sJob, 'Period'   );\r\nCellPutS( pVersion,                 sCube, sJob, 'Version'  );\r\nCellPutN( pMaxIter,                 sCube, sJob, 'Max Iter' );\r\nCellPutN( pForce,                   sCube, sJob, 'Force'    );\r\nCellPutS( 'REQUESTED',              sCube, sJob, 'Status'   );\r\n",
   "MetadataProcedure": "#****Begin: Generated Statements***\r\n#****End: Generated Statements****\r\n",
   "DataProcedure": "#****Begin: Generated Statements***\r\n#****End: Generated Statements****\r\n",
   "EpilogProcedure": "#****Begin: Generated Statements***\r\n#****End: Generated Statements****\r\n",

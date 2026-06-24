@@ -1,30 +1,35 @@
 SKIPCHECK;
 FEEDSTRINGS;
 
-# Amount: overhead GL amount for this Account / Cost Centre.
+#Region Amount: overhead GL amount for this Account / Cost Centre.
 # Only populated for Indirect accounts
 ['Amount'] = N:
   IF( DB('CST Account Config', !GBL Period, !GBL Version, !GBL Account, 'Input', 'Input', 'Input', 'Apportionment Type')@='Indirect',
         DB('CST Account Config', !GBL Period, !GBL Version, !GBL Account, !GBL Cost Centre, 'Input', 'Input', 'Amount'),
     CONTINUE);
+#EndRegion
 
-# Apportionment Rate: driver percentage share for this Account / CC → Cost Pool.
+
+#Region Apportionment Rate: driver percentage share for this Account / CC → Cost Pool.
 ['Apportionment Rate'] = N:
   DB('CST Account Config', !GBL Period, !GBL Version, !GBL Account, !GBL Cost Centre, !CST Cost Pool, 'Input', 'Driver Percentage Share');
+#EndRegion
 
-# Apportioned Amount: GL amount allocated to this Cost Pool.
+#Region Apportioned Amount: GL amount allocated to this Cost Pool.
 ['Apportioned Amount'] = N:['Amount'] * ['Apportionment Rate'] /100;
+#EndRegion
 
 FEEDERS;
 
-# Chain to Stage 2: feed Amount across all Activities via Total Activities consolidation.
+#Region Chain to Stage 2: feed Amount across all Activities via Total Activities consolidation.
 # Also explicitly feed Activity='Input' — weight=0 elements are not woken by consolidation feeders.
 # Activity='Input' stores the pool total used by RC02 and Stage 1b Settled Amount logic.
 ['Apportioned Amount'] =>
   DB('CST Pool to Activity Apportionment', !GBL Period, !GBL Version,'Total Activities', !CST Cost Pool, 'Total Cost Centres', 'Amount'),
   DB('CST Pool to Activity Apportionment', !GBL Period, !GBL Version,'CST Activity':'Input', !CST Cost Pool, 'GBL Cost Centre':'Total Cost Centres', 'Amount');
+#EndRegion
 
-# Feed RC01 and RC02 in Reconciliation cube.
+#Region Feed RC01 and RC02 in Reconciliation cube.
 # RC02 Input Total reads A2P Apportioned Amount (same source) — feeder lives here.
 # RC02 Output Total reads P2A Settled Amount (stored by Python) — feeder here wakes it up.
 ['Apportioned Amount'] =>
@@ -38,3 +43,4 @@ FEEDERS;
   DB('CST Apportionment Reconciliation', !GBL Period, !GBL Version, 'RC02', 'Variance'),
   DB('CST Apportionment Reconciliation', !GBL Period, !GBL Version, 'RC02', 'Variance Percent'),
   DB('CST Apportionment Reconciliation', !GBL Period, !GBL Version, 'RC02', 'Status');
+  #EndRegion

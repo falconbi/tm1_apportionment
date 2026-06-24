@@ -3,26 +3,17 @@ FEEDSTRINGS;
 
 # Amount: total cost in this Cost Pool after Stage 1 (Account → Pool).
 # Pinned to Activity='Input' — not a per-activity value.
-# Uses {overhead_consolidation} consolidation (overhead accounts, weight=1) — avoids
-# sign inversion from NET PROFIT which carries overhead at weight=-1.
-# Value configured in config.py CST_CONFIG['overhead_consolidation'].
-['Amount','CST Activity':'CST Activity':'Input'] = N:
+['Amount','CST Activity':'Input'] = N:
   DB('CST Account to Pool Apportionment', !GBL Period, !GBL Version, !CST Cost Pool,
-     !GBL Cost Centre, '{overhead_consolidation}', 'Apportioned Amount');
+     !GBL Cost Centre, 'TOTAL OVERHEAD', 'Apportioned Amount');
 
 # Apportionment Rate: driver percentage share for this Cost Pool → Activity.
-# Computed by Pool Config rule at (pool, Input, activity).
 ['Apportionment Rate'] = N:
   DB('CST Pool Config', !GBL Period, !GBL Version, !CST Cost Pool,
      'Input', !CST Activity, 'Driver Percentage Share');
 
 # Apportioned Amount: pool cost allocated to this Activity.
-# Uses Settled Amount (post-P2P) when 1b has run, otherwise falls back to Amount (pre-P2P).
-# Fully-redistributed pools legitimately have Settled Amount = 0 (all costs moved to other
-# pools), so we cannot check per-pool SA or Total Cost Pools SA (self-referential DB() on
-# a consolidation in the same cube returns 0 during N: rule evaluation).
-# Instead we read 'Stage 1b Complete' from the Reconciliation cube — Python writes 1 there
-# after Stage 1b converges, providing a clean cross-cube flag that avoids self-reference.
+# Uses Settled Amount (post-P2P) when Stage 1b has run, otherwise Amount (pre-P2P).
 ['Apportioned Amount'] = N:
   IF( DB('CST Apportionment Reconciliation', !GBL Period, !GBL Version,
          'RC03', 'Stage 1b Complete') > 0,
@@ -32,19 +23,13 @@ FEEDSTRINGS;
 
 FEEDERS;
 
-# Activate Apportioned Amount — fired when Apportionment Rate is non-zero.
-# Without this, SKIPCHECK never evaluates ['Apportioned Amount'] even if Amount and SA exist.
-['Apportionment Rate'] => ['Apportioned Amount'];
+['Apportionment Rate'] => ['Amount'], ['Apportioned Amount'];
 
-# Chain to Stage 3: feed Apportioned Amount and Amount (pinned at Service Line='Input').
 ['Apportioned Amount'] =>
   DB('CST Activity to Service Line Apportionment', !GBL Period, !GBL Version,
      'Total Service Lines', !CST Activity, 'Total Cost Centres', 'Apportioned Amount'),
   DB('CST Activity to Service Line Apportionment', !GBL Period, !GBL Version,
-     'Input', !CST Activity, !GBL Cost Centre, 'Amount');
-
-# Feed RC03 in Reconciliation cube.
-['Apportioned Amount'] =>
+     'Input', !CST Activity, !GBL Cost Centre, 'Amount'),
   DB('CST Apportionment Reconciliation', !GBL Period, !GBL Version, 'RC03', 'Input Total'),
   DB('CST Apportionment Reconciliation', !GBL Period, !GBL Version, 'RC03', 'Output Total'),
   DB('CST Apportionment Reconciliation', !GBL Period, !GBL Version, 'RC03', 'Variance'),

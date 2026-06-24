@@ -23,8 +23,7 @@ FEEDSTRINGS;
 
 FEEDERS;
 ['Final Balance'] => 
-    DB('CST Activity to Activity Config', 
-       !GBL Period, !GBL Version, !CST Activity, 'Input', 'Input', 'Settled Amount');
+    DB('CST Activity to Activity Config',!GBL Period, !GBL Version, !CST Activity, 'Input', 'Input', 'Settled Amount');
   
 # Feed Driver Percentage Share — fired when Driver Value is stored.
 ['CST Activity to Activity Config Measure':'Driver Value'] =>

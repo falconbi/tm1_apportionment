@@ -1,4 +1,5 @@
 TM1py>=1.8.0
 requests
+python-dotenv>=1.0.0
 numpy
 flask

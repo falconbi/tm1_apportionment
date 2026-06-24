@@ -31,26 +31,36 @@
     {
       "name": "Desc",
       "type": "Alias"
+    },
+    {
+      "name": "Format",
+      "type": "String"
     }
   ],
   "attribute_values": {
     "Amount": {
-      "Desc": "Amount"
+      "Desc": "Amount",
+      "Format": "$#,##0"
     },
     "Apportionment Type": {
-      "Desc": "Apportionment Type"
+      "Desc": "Apportionment Type",
+      "Format": "@teal"
     },
     "Driver Percentage Share": {
-      "Desc": "Driver Percentage Share"
+      "Desc": "Driver Percentage Share",
+      "Format": "#,##0.0"
     },
     "Direct Percentage Share": {
-      "Desc": "Direct Percentage Share"
+      "Desc": "Direct Percentage Share",
+      "Format": "#,##0.0"
     },
     "Direct Amount": {
-      "Desc": "Direct Amount"
+      "Desc": "Direct Amount",
+      "Format": "$#,##0"
     },
     "Indirect for Apportionment": {
-      "Desc": ""
+      "Desc": "",
+      "Format": "$#,##0"
     }
   }
 }

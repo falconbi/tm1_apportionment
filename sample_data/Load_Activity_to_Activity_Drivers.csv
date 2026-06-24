@@ -29,6 +29,21 @@ vGBP Period,vGBL Version,vCST Activity,vCST Activity Dest,vCST Activity to Activ
 2026-05,Budget,A07,A09,Driver Value,100
 2026-05,Budget,A07,Input,Driver Description,Intermediate Allocation
 2026-05,Budget,A07,Input,Redistribution Percentage,25
+2026-06,Budget,A01,A03,Driver Value,60
+2026-06,Budget,A01,A04,Driver Value,40
+2026-06,Budget,A01,Input,Driver Description,Patient Admission
+2026-06,Budget,A01,Input,Redistribution Percentage,20
+2026-06,Budget,A03,A01,Driver Value,35
+2026-06,Budget,A03,A07,Driver Value,65
+2026-06,Budget,A03,Input,Driver Description,Clinical Procedure
+2026-06,Budget,A03,Input,Redistribution Percentage,25
+2026-06,Budget,A04,A01,Driver Value,50
+2026-06,Budget,A04,A03,Driver Value,50
+2026-06,Budget,A04,Input,Driver Description,Patient Monitoring
+2026-06,Budget,A04,Input,Redistribution Percentage,15
+2026-06,Budget,A07,A09,Driver Value,100
+2026-06,Budget,A07,Input,Driver Description,Intermediate Allocation
+2026-06,Budget,A07,Input,Redistribution Percentage,25
 2026-07,Budget,A01,A03,Driver Value,60
 2026-07,Budget,A01,A04,Driver Value,40
 2026-07,Budget,A01,Input,Driver Description,Patient Admission

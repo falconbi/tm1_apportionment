@@ -67,11 +67,23 @@ pip install -r requirements.txt
 
 ### 2. Configure
 
+Connection settings can be provided via `.env` file or `config.py` (`.env` takes precedence).
+
+**Option A — `.env` (recommended for secrets):**
+
+```bash
+cp .env.example .env
+```
+
+Edit `.env` with your TM1 server address, port, database, and credentials. Never commit `.env` — it's in `.gitignore`.
+
+**Option B — `config.py`:**
+
 ```bash
 cp config.example.py config.py
 ```
 
-Edit `config.py` with your TM1 server address, credentials, and account hierarchy consolidation names. See `config.example.py` for all options.
+Edit `config.py` with your TM1 server address, credentials, and account hierarchy consolidation names. See `config.example.py` for all options. Set `ACTIVE_PROFILE` to switch between environments.
 
 ### 3. Deploy the model
 

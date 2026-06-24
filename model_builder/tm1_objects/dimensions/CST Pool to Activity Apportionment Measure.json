@@ -23,20 +23,28 @@
     {
       "name": "Desc",
       "type": "Alias"
+    },
+    {
+      "name": "Format",
+      "type": "String"
     }
   ],
   "attribute_values": {
     "Amount": {
-      "Desc": "Amount"
+      "Desc": "Amount",
+      "Format": "#,##0"
     },
     "Settled Amount": {
-      "Desc": "Settled Amount"
+      "Desc": "Settled Amount",
+      "Format": "#,##0"
     },
     "Apportionment Rate": {
-      "Desc": "Apportionment Rate"
+      "Desc": "Apportionment Rate",
+      "Format": "#,##0"
     },
     "Apportioned Amount": {
-      "Desc": "Apportioned Amount"
+      "Desc": "Apportioned Amount",
+      "Format": "#,##0"
     }
   }
 }

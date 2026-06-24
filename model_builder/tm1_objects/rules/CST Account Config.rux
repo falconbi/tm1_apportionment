@@ -1,13 +1,15 @@
 SKIPCHECK;
 FEEDSTRINGS;
 
-# Direct Amount calc based on % splits across SL 
+#Region Direct Amount calc based on % splits across SL 
 ['Direct Amount'] = N:
   IF(
           DB('CST Account Config', !GBL Period, !GBL Version, !GBL Account, 'Input', 'Input', 'Input', 'Apportionment Type')@='Direct'
           &
           DB('CST Account Config', !GBL Period, !GBL Version, !GBL Account, !GBL Cost Centre, 'Input', !CST Service Line, 'Direct Percentage Share')>0,
-          ['Amount', 'CST Service Line':'Input','CST Cost Pool':'Input'] *['Direct Percentage Share'] \100,
+          ['Amount', 'CST Service Line':'Input','CST Cost Pool':'Input'] 
+          *
+          ['Direct Percentage Share'] \100,
   CONTINUE);
 
 ['Indirect for Apportionment']=N:
@@ -15,13 +17,16 @@ FEEDSTRINGS;
           DB('CST Account Config', !GBL Period, !GBL Version, !GBL Account, 'Input', 'Input', 'Input', 'Apportionment Type')@='Indirect',
           ['Amount'],
   CONTINUE);
+#EndRegion
+
 
 FEEDERS;
 
- # Internal Direct Amount to Service Lines  
+#Region Internal Direct Amount to Service Lines  
 ['Amount','CST Cost Pool':'Input','CST Service Line':'Input'] =>[ 'CST Cost Pool':'Input', 'Total Service Lines', 'Direct Amount'],['Indirect for Apportionment'];
+#EndRegion
 
-# Feed Amount for indirect accounts into Stage 1.
+#Region Feed Amount for indirect accounts into Stage 1.
 # Amount stored at CP='Input', SL='Input' — both dims not applicable for the GL amount itself.
 # Also wakes up Direct Amount across all SLs, and RC00 GL Input Summary in Reconciliation.
 ['CST Account Config Measure':'Amount','CST Cost Pool':'Input','CST Service Line':'Input'] =>
@@ -30,22 +35,26 @@ FEEDERS;
   DB('CST Apportionment Reconciliation', !GBL Period, !GBL Version, 'RC00', 'Output Total'),
   DB('CST Apportionment Reconciliation', !GBL Period, !GBL Version, 'RC00', 'Variance Percent'),
   DB('CST Apportionment Reconciliation', !GBL Period, !GBL Version, 'RC00', 'Status');
+#EndRegion
 
-# Feed Pre Apportionment Amount in P&L Report cube.
+#Region Feed Pre Apportionment Amount in P&L Report cube.
 # Hardcode Stage='Pre Apportionment' — not a dimension in Account Config.
 # Service Line pinned to 'Input' in both source and target — SL not known pre-apportionment.
 ['CST Account Config Measure':'Amount','CST Cost Pool':'Input','CST Service Line':'Input'] =>
   DB('CST Profit and Loss Report', !GBL Period, !GBL Version,!GBL Account, 'CST Service Line':'Input', !GBL Cost Centre,'Pre Apportionment', 'Amount');
+#EndRegion
 
-# Feed Apportionment Rate and Apportioned Amount for indirect accounts.
+#Region Feed Apportionment Rate and Apportioned Amount for indirect accounts.
 # Driver Percentage Share stored at specific CP, SL='Input'.
 ['CST Account Config Measure':'Driver Percentage Share','CST Service Line':'Input'] =>
   DB('CST Account to Pool Apportionment', !GBL Period, !GBL Version,!CST Cost Pool, !GBL Cost Centre, !GBL Account, 'Apportionment Rate'),
   DB('CST Account to Pool Apportionment', !GBL Period, !GBL Version,!CST Cost Pool, !GBL Cost Centre, !GBL Account, 'Apportioned Amount');
+#EndRegion
 
-# Feed direct cost Amount and Apportioned Amount into Stage 3 (bypassing Stages 1 and 2).
+#Region Feed direct cost Amount and Apportioned Amount into Stage 3 (bypassing Stages 1 and 2)
 # Activity='Input' sentinel used — direct costs are not associated with any specific activity.
 # Direct Amount fires per (Account, CC, SL) — SL coord feeds the correct A2SL cell directly.
 ['CST Account Config Measure':'Direct Amount'] =>
   DB('CST Activity to Service Line Apportionment', !GBL Period, !GBL Version,!CST Service Line, 'CST Activity':'Input', !GBL Cost Centre, 'Amount'),
   DB('CST Activity to Service Line Apportionment', !GBL Period, !GBL Version,!CST Service Line, 'CST Activity':'Input', !GBL Cost Centre, 'Apportioned Amount');
+#EndRegion  

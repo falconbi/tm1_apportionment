@@ -1,7 +1,7 @@
 SKIPCHECK;
 FEEDSTRINGS;
 
-# ── RC00: GL Input Summary — Indirect vs Direct split ─────────────────────
+#Region ── RC00: GL Input Summary — Indirect vs Direct split ─────────────────────
 # Input Total  = total GL amount routed via indirect ABC chain (overhead accounts).
 # Output Total = total GL amount routed directly to Service Lines (direct cost accounts).
 # Variance     = 0 — not a balance check, purely informational.
@@ -23,8 +23,9 @@ FEEDSTRINGS;
 
 ['Status','CST Reconciliation Check':'RC00'] = S:
   IF( ['Input Total'] = 0, 'NO DATA', 'INFO' );
+#EndRegion
 
-# ── RC01: Stage 1 — Account → Pool rate integrity ─────────────────────────
+#Region ── RC01: Stage 1 — Account → Pool rate integrity ─────────────────────────
 # Input Total reads from Amount pinned at Cost Pool='Input'.
 # Output Total reads Apportioned Amount at Total Cost Pools consolidation.
 
@@ -35,8 +36,9 @@ FEEDSTRINGS;
 ['Output Total','CST Reconciliation Check':'RC01'] = N:
   DB('CST Account to Pool Apportionment', !GBL Period, !GBL Version,
      'Total Cost Pools', 'Total Cost Centres', 'GBL Account':'TOTAL OVERHEAD', 'Apportioned Amount');
+#EndRegion
 
-# ── RC02: Stage 1b — Pool → Pool reciprocal balance ───────────────────────
+#Region ── RC02: Stage 1b — Pool → Pool reciprocal balance ───────────────────────
 # Input Total  = total pool costs before Stage 1b redistribution (P2A Amount at Activity='Input').
 # Output Total = total pool costs after Stage 1b redistribution (P2A Settled Amount).
 # Balance check — Stage 1b only moves costs between pools, total must be preserved.
@@ -53,8 +55,9 @@ FEEDSTRINGS;
 ['Output Total','CST Reconciliation Check':'RC02'] = N:
   DB('CST Pool to Activity Apportionment', !GBL Period, !GBL Version,
      'CST Activity':'Input', 'Total Cost Pools', 'GBL Cost Centre':'Total Cost Centres', 'Settled Amount');
+#EndRegion
 
-# ── RC03: Stage 2 — Pool → Activity rate integrity ────────────────────────
+#Region ── RC03: Stage 2 — Pool → Activity rate integrity ────────────────────────
 # Input Total reads from Amount pinned at Activity='Input'.
 # Output Total reads Apportioned Amount at Total Activities consolidation.
 
@@ -69,10 +72,9 @@ FEEDSTRINGS;
 ['Output Total','CST Reconciliation Check':'RC03'] = N:
   DB('CST Pool to Activity Apportionment', !GBL Period, !GBL Version,
      'Total Activities', 'Total Cost Pools', 'Total Cost Centres', 'Apportioned Amount');
+#EndRegion
 
-
-#===============================================================================================================================
-# ── RC04: Stage 2b — Activity → Activity reciprocal balance ───────────────
+#Region ── RC04: Stage 2b — Activity → Activity reciprocal balance ───────────────
 # Input Total  = total activity costs before Stage 2b (P2A Apportioned Amount).
 # Output Total = total activity costs after Stage 2b (A2SL Settled Amount).
 # Balance check — Stage 2b only moves costs between activities, total must be preserved.
@@ -84,8 +86,9 @@ FEEDSTRINGS;
 ['Output Total','CST Reconciliation Check':'RC04'] = N:
  DB('CST Activity to Service Line Apportionment', !GBL Period, !GBL Version, 
     'Input', 'CST Activity':'Total Activities', 'GBL Cost Centre':'Total Cost Centres', 'Settled Amount' );
+#EndRegion
 
-# ── RC05: Stage 3 — Activity → Service Line rate integrity ────────────────
+#Region ── RC05: Stage 3 — Activity → Service Line rate integrity ────────────────
 # Input Total reads from Settled Amount (post-A2A) if Stage 2b has run, otherwise Amount.
 # Output Total reads Apportioned Amount at Total Service Lines consolidation.
 
@@ -100,8 +103,9 @@ FEEDSTRINGS;
 ['Output Total','CST Reconciliation Check':'RC05'] = N:
   DB('CST Activity to Service Line Apportionment', !GBL Period, !GBL Version,
      'Total Service Lines', 'Total Activities', 'Total Cost Centres', 'Apportioned Amount');
+#EndRegion
 
-# ── RC06: End-to-End — GL Input = Service Line Output ─────────────────────
+#Region ── RC06: End-to-End — GL Input = Service Line Output ─────────────────────
 # Input Total  = total overhead GL amount before any apportionment (RC00 Input Total).
 # Output Total = total allocated overhead landing on Service Lines (P&L Post Apportionment).
 # This is the definitive end-to-end check — everything in must equal everything out.
@@ -114,8 +118,9 @@ FEEDSTRINGS;
   DB('CST Profit and Loss Report', !GBL Period, !GBL Version,
      'GBL Account':'7000', 'CST Service Line':'Total Service Lines',
      'GBL Cost Centre':'Total Cost Centres', 'Post Apportionment', 'Amount');
+#EndRegion
 
-# ── Variance and Variance Percent — RC checks only ───────────────────────
+#Region ── Variance and Variance Percent — RC checks only ───────────────────────
 # VAL checks have no Variance — those are written by Python.
 
 ['Variance','CST Reconciliation Check':'RC01'] = N:
@@ -143,8 +148,9 @@ FEEDSTRINGS;
   IF( ['Input Total'] = 0, 0, ['Variance'] / ['Input Total'] * 100 );
 ['Variance Percent','CST Reconciliation Check':'RC06'] = N:
   IF( ['Input Total'] = 0, 0, ['Variance'] / ['Input Total'] * 100 );
+#EndRegion
 
-# ── Status — RC checks only — VAL checks written by Python ───────────────
+#Region ── Status — RC checks only — VAL checks written by Python ───────────────
 
 ['Status','CST Reconciliation Check':'RC01'] = S:
   IF( ['Input Total'] = 0, 'NO DATA', IF( ABS( ['Variance'] ) <= 0.01, 'PASS', 'FAIL' ) );
@@ -158,5 +164,7 @@ FEEDSTRINGS;
   IF( ['Input Total'] = 0, 'NO DATA', IF( ABS( ['Variance'] ) <= 0.01, 'PASS', 'FAIL' ) );
 ['Status','CST Reconciliation Check':'RC06'] = S:
   IF( ['Input Total'] = 0, 'NO DATA', IF( ABS( ['Variance'] ) <= 1, 'PASS', 'FAIL' ) );
+#EndRegion
 
-FEEDERS;
+#FEEDERS;
+

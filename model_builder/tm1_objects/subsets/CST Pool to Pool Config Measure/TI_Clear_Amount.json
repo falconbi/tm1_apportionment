@@ -1,10 +1,4 @@
 {
   "Name": "TI_Clear_Amount",
-  "Hierarchy@odata.bind": "Dimensions('CST Pool to Pool Config Measure')/Hierarchies('CST Pool to Pool Config Measure')",
-  "Elements@odata.bind": [
-    "Dimensions('CST Pool to Pool Config Measure')/Hierarchies('CST Pool to Pool Config Measure')/Elements('Redistribution Percentage')",
-    "Dimensions('CST Pool to Pool Config Measure')/Hierarchies('CST Pool to Pool Config Measure')/Elements('Driver Description')",
-    "Dimensions('CST Pool to Pool Config Measure')/Hierarchies('CST Pool to Pool Config Measure')/Elements('Driver Value')",
-    "Dimensions('CST Pool to Pool Config Measure')/Hierarchies('CST Pool to Pool Config Measure')/Elements('Active')"
-  ]
+  "Hierarchy@odata.bind": "Dimensions('CST Pool to Pool Config Measure')/Hierarchies('CST Pool to Pool Config Measure')"
 }

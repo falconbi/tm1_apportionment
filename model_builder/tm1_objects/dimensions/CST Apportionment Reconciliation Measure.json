@@ -39,32 +39,44 @@
     {
       "name": "Desc",
       "type": "Alias"
+    },
+    {
+      "name": "Format",
+      "type": "String"
     }
   ],
   "attribute_values": {
     "Input Total": {
-      "Desc": "Input Total"
+      "Desc": "Input Total",
+      "Format": "#,##0"
     },
     "Output Total": {
-      "Desc": "Output Total"
+      "Desc": "Output Total",
+      "Format": "#,##0"
     },
     "Variance": {
-      "Desc": "Variance"
+      "Desc": "Variance",
+      "Format": "#,##0"
     },
     "Variance Percent": {
-      "Desc": "Variance Percent"
+      "Desc": "Variance Percent",
+      "Format": "#,##0"
     },
     "Status": {
-      "Desc": "Status"
+      "Desc": "Status",
+      "Format": "@purple"
     },
     "Message": {
-      "Desc": "Message"
+      "Desc": "Message",
+      "Format": "@orange"
     },
     "Stage 1b Complete": {
-      "Desc": "Stage 1b Complete"
+      "Desc": "Stage 1b Complete",
+      "Format": "#,##0"
     },
     "Stage 2b Complete": {
-      "Desc": ""
+      "Desc": "",
+      "Format": "#,##0"
     }
   }
 }

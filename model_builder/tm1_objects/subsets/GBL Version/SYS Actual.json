@@ -1,7 +1,4 @@
 {
   "Name": "SYS Actual",
-  "Hierarchy@odata.bind": "Dimensions('GBL Version')/Hierarchies('GBL Version')",
-  "Elements@odata.bind": [
-    "Dimensions('GBL Version')/Hierarchies('GBL Version')/Elements('Actual')"
-  ]
+  "Hierarchy@odata.bind": "Dimensions('GBL Version')/Hierarchies('GBL Version')"
 }

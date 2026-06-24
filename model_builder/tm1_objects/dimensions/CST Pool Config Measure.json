@@ -19,17 +19,24 @@
     {
       "name": "Desc",
       "type": "Alias"
+    },
+    {
+      "name": "Format",
+      "type": "String"
     }
   ],
   "attribute_values": {
     "Pool to Activity Basis": {
-      "Desc": "Pool to Activity Basis"
+      "Desc": "Pool to Activity Basis",
+      "Format": "@"
     },
     "Driver Value": {
-      "Desc": "Driver Value"
+      "Desc": "Driver Value",
+      "Format": "#,##0"
     },
     "Driver Percentage Share": {
-      "Desc": "Driver Percentage Share"
+      "Desc": "Driver Percentage Share",
+      "Format": "0%"
     }
   }
 }

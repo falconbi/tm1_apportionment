@@ -83,7 +83,11 @@ def deploy_cubes(tm1):
             tm1.cubes.create(cube)
 
         if data.get("rules"):
-            rules = Rules(data["rules"])
+            rules_text = data["rules"].replace(
+                "{overhead_consolidation}",
+                config.CST_CONFIG["overhead_consolidation"],
+            )
+            rules = Rules(rules_text)
             tm1.cubes.update_or_create_rules(cube_name, rules)
 
         print(f"  ✓ {cube_name}")

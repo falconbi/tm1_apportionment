@@ -1,7 +1,4 @@
 {
   "Name": "SYS Pre Allocation",
-  "Hierarchy@odata.bind": "Dimensions('CST Allocation Stage')/Hierarchies('CST Allocation Stage')",
-  "Elements@odata.bind": [
-    "Dimensions('CST Allocation Stage')/Hierarchies('CST Allocation Stage')/Elements('Pre Allocation')"
-  ]
+  "Hierarchy@odata.bind": "Dimensions('CST Allocation Stage')/Hierarchies('CST Allocation Stage')"
 }

@@ -1,7 +1,4 @@
 {
   "Name": "SYS Budget",
-  "Hierarchy@odata.bind": "Dimensions('GBL Version')/Hierarchies('GBL Version')",
-  "Elements@odata.bind": [
-    "Dimensions('GBL Version')/Hierarchies('GBL Version')/Elements('Budget')"
-  ]
+  "Hierarchy@odata.bind": "Dimensions('GBL Version')/Hierarchies('GBL Version')"
 }

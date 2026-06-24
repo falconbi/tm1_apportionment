@@ -39,12 +39,5 @@ FEEDERS;
   DB('CST Pool to Activity Apportionment',
      !GBL Period, !GBL Version, !CST Activity, !CST Cost Pool, 'GBL Cost Centre':'Total Cost Centres', 'Apportionment Rate');
 
-# Internal Feeder for % Share
-['Driver Value'] => 
-    DB('CST Pool to Activity Apportionment', 
-       !GBL Period, 
-       !GBL Version, 
-       !CST Activity, 
-       !CST Cost Pool, 
-       'Input', 
-       'Driver Percentage Share');
+# Feed Driver Percentage Share in this cube from stored Driver Values
+['Driver Value'] => ['CST Driver':'Input', 'CST Pool Config Measure':'Driver Percentage Share'];

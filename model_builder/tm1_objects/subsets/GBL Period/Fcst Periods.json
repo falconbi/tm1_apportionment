@@ -1,6 +1,5 @@
 {
   "Name": "Fcst Periods",
-  "Alias": "MEMBER_NAME",
   "Hierarchy@odata.bind": "Dimensions('GBL Period')/Hierarchies('GBL Period')",
   "Expression": "TM1IGNORE_BADTUPLES {STRTOMEMBER(\"[GBL Period].[\" + [GBL Version].[Forecast].PROPERTIES(\"Start Period\") + \"]\") : STRTOMEMBER(\"[GBL Period].[\" + [GBL Version].[Forecast].PROPERTIES(\"Start Period\") + \"]\").LEAD([GBL Version].[Forecast].PROPERTIES(\"Number of Rolling Months\") - 1)}"
 }
