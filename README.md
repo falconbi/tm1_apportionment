@@ -8,7 +8,7 @@ The traditional approach is simple step-down allocation — costs trickle down a
 
 This module implements **Activity Based Costing (ABC)** with full reciprocal apportionment. Instead of a one-way waterfall, costs flow through a network of **Cost Pools** and **Activities** — and that network can have feedback loops. The engine keeps redistributing costs around the network until every loop has settled and the numbers stop changing. The result is a mathematically exact answer, not an approximation.
 
-The mathematics behind this is the **Leontief Input-Output model** — the same framework used in macroeconomic analysis to model how industries depend on each other. Applied here, it means:
+The mathematics behind this is the **Leontief Input-Output model** — the same framework used in macroeconomic analysis to model how industries depend on each other. A [simple worked Excel example of the reciprocal pattern](https://docs.google.com/spreadsheets/d/1kggl7vNuaCDad6TpsvQ-mjmal8T23A5gIwobgfKJN5M/edit?usp=sharing) shows the iteration converging step by step before the TM1 implementation. Applied here, it means:
 
 - A Facilities pool can apportion costs to IT, and IT can apportion costs back to Facilities
 - Those circular flows are fully resolved, not ignored
