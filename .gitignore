@@ -9,3 +9,21 @@ poller.log
 logs/
 docs/*.png
 docs/Archive/
+
+# TM1 system objects
+model_builder/tm1_objects/rules/}*.rux
+
+# TM1 IDE test artifacts
+model_builder/tm1_objects/subsets/**/_tm1ide_Test*
+
+# Temporary / delete folders
+etl/TEMP TO BE DELETED/
+model_builder/Old Stuff DELETE/
+
+# Uncommitted test views
+model_builder/tm1_objects/views/**/RPT Default test.json
+
+# Uncommitted subset folders (not yet exported cleanly)
+model_builder/tm1_objects/subsets/CST Cost Pool/
+model_builder/tm1_objects/subsets/CST Service Line/
+model_builder/tm1_objects/subsets/GBL Cost Centre/
