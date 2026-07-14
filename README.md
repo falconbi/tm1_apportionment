@@ -1,5 +1,7 @@
 # tm1_apportionment
 
+**[Full technical documentation →](https://jdlovering.github.io/tm1_apportionment/)**
+
 ## Introduction
 
 Every organisation has costs that don't belong to just one department or service — the IT team supports everyone, Facilities maintains the whole building, Finance processes payroll for all staff. These are **shared costs**, and the challenge is deciding how much each service line or product should bear.

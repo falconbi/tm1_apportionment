@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Activity Based Cost Apportionment in TM1</title>
+<meta name="description" content="A technical reference for the tm1_apportionment module — Activity Based Costing with full Leontief reciprocal apportionment built inside IBM Planning Analytics, deployed entirely from code.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  /* ---- Light tokens (default) ---- */
+  :root{
+    --ink:#1b2126;
+    --ink-soft:#4c5862;
+    --ink-faint:#7a868f;
+    --paper:#fbfaf7;
+    --panel:#ffffff;
+    --rule:#e4e7ea;
+    --rule-soft:#eef0f2;
+
+    --steel:#2f5d8a;
+    --steel-light:#e9f1f8;
+    --green:#2c7a52;
+    --green-light:#e7f4ec;
+    --amber:#b0750f;
+    --amber-light:#fbf2dd;
+    --red:#b23a32;
+    --red-light:#fbe9e6;
+    --indigo:#4a3f9c;
+    --indigo-light:#ecebf8;
+
+    --maxw:860px;
+  }
+
+  /* ---- Dark tokens ---- */
+  @media (prefers-color-scheme:dark){
+    :root{
+      --ink:#dce8f0;
+      --ink-soft:#8aa0b2;
+      --ink-faint:#5c7282;
+      --paper:#0d1318;
+      --panel:#131c25;
+      --rule:#1c2c3a;
+      --rule-soft:#162030;
+
+      --steel:#6ea4d0;
+      --steel-light:#0c1e30;
+      --green:#5bb882;
+      --green-light:#0a1c12;
+      --amber:#c99840;
+      --amber-light:#1c1308;
+      --red:#cc6b62;
+      --red-light:#1e0d0b;
+      --indigo:#8a7cd6;
+      --indigo-light:#120e24;
+    }
+  }
+  :root[data-theme="dark"]{
+    --ink:#dce8f0;
+    --ink-soft:#8aa0b2;
+    --ink-faint:#5c7282;
+    --paper:#0d1318;
+    --panel:#131c25;
+    --rule:#1c2c3a;
+    --rule-soft:#162030;
+
+    --steel:#6ea4d0;
+    --steel-light:#0c1e30;
+    --green:#5bb882;
+    --green-light:#0a1c12;
+    --amber:#c99840;
+    --amber-light:#1c1308;
+    --red:#cc6b62;
+    --red-light:#1e0d0b;
+    --indigo:#8a7cd6;
+    --indigo-light:#120e24;
+  }
+  :root[data-theme="light"]{
+    --ink:#1b2126;
+    --ink-soft:#4c5862;
+    --ink-faint:#7a868f;
+    --paper:#fbfaf7;
+    --panel:#ffffff;
+    --rule:#e4e7ea;
+    --rule-soft:#eef0f2;
+
+    --steel:#2f5d8a;
+    --steel-light:#e9f1f8;
+    --green:#2c7a52;
+    --green-light:#e7f4ec;
+    --amber:#b0750f;
+    --amber-light:#fbf2dd;
+    --red:#b23a32;
+    --red-light:#fbe9e6;
+    --indigo:#4a3f9c;
+    --indigo-light:#ecebf8;
+  }
+
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'IBM Plex Sans',system-ui,sans-serif;
+    font-size:17px;
+    line-height:1.62;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+
+  /* ---- Masthead ---- */
+  .masthead{
+    border-bottom:1px solid var(--rule);
+    background:linear-gradient(180deg,var(--panel) 0%,var(--paper) 100%);
+  }
+  .masthead .wrap{padding-top:78px;padding-bottom:52px}
+  .eyebrow{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12.5px;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--steel);font-weight:500;margin:0 0 22px;
+    display:flex;align-items:center;gap:12px;
+  }
+  .eyebrow::after{content:"";flex:1;height:1px;background:var(--rule)}
+  h1.title{
+    font-family:'IBM Plex Serif',Georgia,serif;
+    font-weight:600;font-size:clamp(2.1rem,5.4vw,3.3rem);
+    line-height:1.08;letter-spacing:-.012em;margin:0 0 22px;color:var(--ink);
+    text-wrap:balance;
+  }
+  h1.title .accent{color:var(--steel)}
+  .standfirst{
+    font-size:1.18rem;line-height:1.55;color:var(--ink-soft);max-width:64ch;margin:0 0 30px;
+  }
+  .meta-row{
+    display:flex;flex-wrap:wrap;gap:10px 26px;
+    font-size:13.5px;color:var(--ink-faint);
+    font-family:'IBM Plex Mono',monospace;
+    padding-top:8px;border-top:1px solid var(--rule-soft);
+  }
+  .meta-row b{color:var(--ink-soft);font-weight:500}
+  .banner{
+    margin:34px 0 0;
+    background:var(--green-light);
+    border:1px solid var(--rule);border-left:4px solid var(--green);
+    border-radius:6px;padding:16px 20px;font-size:15.5px;color:var(--ink-soft);
+  }
+  .banner b{color:var(--green);font-weight:600}
+
+  /* ---- TOC ---- */
+  nav.toc{border-bottom:1px solid var(--rule);background:var(--panel)}
+  nav.toc .wrap{padding-top:34px;padding-bottom:34px}
+  nav.toc h2{
+    font-family:'IBM Plex Mono',monospace;font-size:12px;
+    letter-spacing:.16em;text-transform:uppercase;
+    color:var(--ink-faint);font-weight:500;margin:0 0 18px;
+  }
+  nav.toc ol{
+    list-style:none;margin:0;padding:0;
+    display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));
+    gap:2px 28px;counter-reset:toc;
+  }
+  nav.toc li{counter-increment:toc}
+  nav.toc a{
+    display:flex;gap:12px;align-items:baseline;
+    text-decoration:none;color:var(--ink-soft);
+    padding:7px 4px;border-radius:4px;
+    border-bottom:1px solid transparent;
+    transition:color .15s,background .15s;
+  }
+  nav.toc a::before{
+    content:counter(toc,decimal-leading-zero);
+    font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--steel);
+    flex:none;width:2ch;
+  }
+  nav.toc a:hover{color:var(--steel);background:var(--steel-light)}
+
+  /* ---- Sections ---- */
+  main .wrap{padding-top:8px;padding-bottom:8px}
+  section{padding:44px 0;border-bottom:1px solid var(--rule-soft)}
+  section:last-of-type{border-bottom:none}
+  .sec-head{display:flex;gap:18px;align-items:baseline;margin:0 0 18px}
+  .sec-num{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:14px;font-weight:600;color:var(--steel);flex:none;padding-top:5px;
+  }
+  h2.sec-title{
+    font-family:'IBM Plex Serif',Georgia,serif;
+    font-weight:600;font-size:clamp(1.5rem,3.4vw,2rem);
+    line-height:1.15;letter-spacing:-.01em;margin:0;color:var(--ink);
+    text-wrap:balance;
+  }
+  h3{
+    font-family:'IBM Plex Sans',sans-serif;
+    font-weight:600;font-size:1.16rem;
+    margin:34px 0 12px;color:var(--ink);letter-spacing:-.005em;
+  }
+  p{margin:0 0 16px}
+  strong{font-weight:600;color:var(--ink)}
+  code{
+    font-family:'IBM Plex Mono',monospace;font-size:.88em;
+    background:var(--rule-soft);padding:.1em .38em;border-radius:4px;
+    color:var(--ink-soft);
+  }
+  a{color:var(--steel)}
+  ul,ol{margin:0 0 16px;padding-left:1.3em}
+  li{margin:6px 0}
+  li::marker{color:var(--steel)}
+
+  /* ---- Tables ---- */
+  .tablewrap{overflow-x:auto;margin:22px 0}
+  table{border-collapse:collapse;width:100%;font-size:15px}
+  th,td{text-align:left;padding:10px 14px;border-bottom:1px solid var(--rule);vertical-align:top}
+  thead th{
+    font-family:'IBM Plex Mono',monospace;font-size:11.5px;
+    letter-spacing:.08em;text-transform:uppercase;
+    color:var(--ink-faint);font-weight:600;
+    border-bottom:1.5px solid var(--ink-soft);
+  }
+  tbody tr:hover{background:var(--rule-soft)}
+  td code{background:var(--rule-soft)}
+  .pill{
+    display:inline-block;font-family:'IBM Plex Mono',monospace;
+    font-size:11.5px;font-weight:600;padding:2px 9px;border-radius:20px;letter-spacing:.02em;
+  }
+  .pill.tm1{background:var(--green-light);color:var(--green)}
+  .pill.py{background:var(--amber-light);color:var(--amber)}
+  .pill.fail{background:var(--red-light);color:var(--red)}
+  .pill.warn{background:var(--amber-light);color:var(--amber)}
+  .pill.pass{background:var(--green-light);color:var(--green)}
+  .pill.cfg{background:var(--steel-light);color:var(--steel)}
+
+  /* ---- Code blocks ---- */
+  pre{
+    background:#1c2530;color:#d7e0e8;
+    font-family:'IBM Plex Mono',monospace;font-size:13.5px;line-height:1.6;
+    padding:18px 20px;border-radius:8px;overflow-x:auto;margin:20px 0;
+    border:1px solid #283442;
+  }
+  pre .c{color:#7f8fa0}
+  pre .k{color:#7fb3e0}
+  pre .g{color:#7fd0a0}
+  pre .a{color:#e3b766}
+  pre .r{color:#e89b94}
+  pre.ascii{font-size:13px;line-height:1.5}
+
+  /* ---- Figures ---- */
+  .fig{margin:26px 0;text-align:center}
+  .fig svg{max-width:100%;height:auto}
+  figcaption{
+    font-size:13px;color:var(--ink-faint);
+    font-family:'IBM Plex Mono',monospace;letter-spacing:.02em;
+    margin-top:12px;text-align:center;
+  }
+  figcaption b{color:var(--ink-soft);font-weight:600}
+
+  /* SVG classes */
+  .svg-label{font-family:'IBM Plex Sans',sans-serif;font-size:14px;fill:var(--ink)}
+  .svg-sub{font-family:'IBM Plex Mono',monospace;font-size:11px;fill:var(--ink-faint)}
+  .svg-edge{font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600}
+  .node-steel{fill:var(--steel-light);stroke:var(--steel);stroke-width:1.5}
+  .node-green{fill:var(--green-light);stroke:var(--green);stroke-width:1.5}
+  .node-amber{fill:var(--amber-light);stroke:var(--amber);stroke-width:1.5}
+  .node-red{fill:var(--red-light);stroke:var(--red);stroke-width:1.5}
+  .node-indigo{fill:var(--indigo-light);stroke:var(--indigo);stroke-width:1.5}
+  .node-plain{fill:var(--panel);stroke:var(--ink-soft);stroke-width:1.3}
+  .edge{stroke:var(--ink-soft);stroke-width:1.5;fill:none}
+  .edge-steel{stroke:var(--steel);stroke-width:1.5;fill:none}
+  .edge-green{stroke:var(--green);stroke-width:1.5;fill:none}
+  .edge-amber{stroke:var(--amber);stroke-width:1.5;fill:none}
+  .edge-dash{stroke:var(--ink-faint);stroke-width:1.4;fill:none;stroke-dasharray:5 4}
+
+  /* ---- Callouts ---- */
+  .callout{
+    border-radius:6px;padding:16px 20px;margin:22px 0;font-size:15.5px;
+    border:1px solid var(--rule);border-left:4px solid var(--ink-soft);
+    background:var(--panel);
+  }
+  .callout.warn{background:var(--red-light);border-left-color:var(--red)}
+  .callout.warn b{color:var(--red)}
+  .callout.note{background:var(--steel-light);border-left-color:var(--steel)}
+  .callout.note b{color:var(--steel)}
+  .callout.key{background:var(--amber-light);border-left-color:var(--amber)}
+  .callout.key b{color:var(--amber)}
+  .callout p{margin:0}
+  .callout p+p{margin-top:10px}
+
+  /* ---- Footer ---- */
+  footer{background:#1c2530;color:#aebccb;border-top:3px solid var(--steel)}
+  footer .wrap{padding-top:48px;padding-bottom:54px}
+  footer h2{
+    font-family:'IBM Plex Serif',serif;color:#f0f4f8;font-weight:600;
+    font-size:1.3rem;margin:0 0 14px;
+  }
+  footer p{color:#aebccb;font-size:15px;max-width:62ch}
+  footer a{color:#9ec3e6}
+  .lic{
+    margin-top:22px;padding-top:20px;border-top:1px solid #2c3a48;
+    font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:#8294a4;
+    display:flex;flex-wrap:wrap;gap:8px 22px;
+  }
+
+  @media (max-width:620px){
+    body{font-size:16px}
+    .sec-head{gap:12px}
+    nav.toc ol{grid-template-columns:1fr}
+    .masthead .wrap{padding-top:54px;padding-bottom:40px}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ MASTHEAD ============ -->
+<header class="masthead">
+  <div class="wrap">
+    <p class="eyebrow">Technical Reference &nbsp;·&nbsp; IBM Planning Analytics</p>
+    <h1 class="title">Activity Based Cost<br>Apportionment in <span class="accent">TM1</span></h1>
+    <p class="standfirst">A five-stage cost allocation engine built entirely inside IBM Planning Analytics — resolving circular service relationships through full Leontief reciprocal iteration and tracing every dollar of overhead to the service line that ultimately consumed it.</p>
+    <div class="meta-row">
+      <span><b>Platform</b> IBM Planning Analytics V12 / TM1</span>
+      <span><b>Engine</b> TM1 Rules + Python ETL</span>
+      <span><b>Method</b> Activity Based Costing &middot; Full reciprocal</span>
+      <span><b>Repo</b> github.com/JDLovering/tm1_apportionment</span>
+    </div>
+    <div class="banner">
+      <b>Production-ready.</b> The model builder deploys all TM1 objects from source — dimensions, cubes, rules, views, and TI processes. Clone, configure, deploy. No manual Architect work required.
+    </div>
+  </div>
+</header>
+
+<!-- ============ TOC ============ -->
+<nav class="toc">
+  <div class="wrap">
+    <h2>Contents</h2>
+    <ol>
+      <li><a href="#s1">The Allocation Problem</a></li>
+      <li><a href="#s2">Design Principles</a></li>
+      <li><a href="#s3">The Apportionment Chain</a></li>
+      <li><a href="#s4">Stage 1 — Account &rarr; Pool</a></li>
+      <li><a href="#s5">Stage 1b — Pool ↔ Pool Reciprocal</a></li>
+      <li><a href="#s6">Stage 2 — Pool &rarr; Activity</a></li>
+      <li><a href="#s7">Stage 2b — Activity ↔ Activity Reciprocal</a></li>
+      <li><a href="#s8">Stage 3 — Activity &rarr; Service Line</a></li>
+      <li><a href="#s9">Data Model</a></li>
+      <li><a href="#s10">Validation Gate</a></li>
+      <li><a href="#s11">Reconciliation Checks</a></li>
+      <li><a href="#s12">Building and Running</a></li>
+    </ol>
+  </div>
+</nav>
+
+<main>
+<div class="wrap">
+
+<!-- 01 -->
+<section id="s1">
+  <div class="sec-head"><span class="sec-num">01</span><h2 class="sec-title">The Allocation Problem</h2></div>
+  <p>Every organisation has costs that don't belong to just one department — the IT team supports everyone, Facilities maintains the whole building, Finance processes payroll for all staff. These are <strong>shared costs</strong>, and deciding how much each service line should bear is not a trivial accounting question.</p>
+  <p>The traditional approach is simple step-down allocation — costs trickle down a fixed hierarchy, one level at a time. It is fast to implement. But it ignores a fundamental reality: <strong>shared services support each other</strong>. IT supports Finance. Finance supports HR. HR supports IT. In step-down, circular relationships are either ignored or broken by a fixed ordering, producing an approximation that cannot be audited to its true source.</p>
+
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Characteristic</th><th>Step-Down</th><th>Full Reciprocal (this model)</th></tr></thead>
+      <tbody>
+        <tr><td>Service-to-service flows</td><td>One direction only — fixed hierarchy</td><td>Circular — fully resolved</td></tr>
+        <tr><td>Circular relationships</td><td>Ignored or approximated by ordering</td><td>Exact — Leontief iteration</td></tr>
+        <tr><td>Auditability</td><td>Limited — allocation sequence matters</td><td>Complete — every dollar traceable</td></tr>
+        <tr><td>End-to-end balance</td><td>Dependent on rule design</td><td>Enforced — RC01–RC06 checks</td></tr>
+        <tr><td>Model change required on reorder</td><td>Yes</td><td>No — network resolves dynamically</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout warn">
+    <p><b>The circular dependency.</b> IT pools charge Facilities for system support. Facilities pools charge IT for floor space and utilities. In step-down, one of these flows must be cut — creating a known inaccuracy. Full reciprocal allocation resolves both simultaneously with no approximation.</p>
+  </div>
+</section>
+
+<!-- 02 -->
+<section id="s2">
+  <div class="sec-head"><span class="sec-num">02</span><h2 class="sec-title">Design Principles</h2></div>
+  <p>The module implements <strong>Activity Based Costing (ABC)</strong> with full reciprocal apportionment. Costs flow from GL accounts into Cost Pools, from Pools into Activities, and from Activities into Service Lines — three conceptual levels, each with its own driver logic.</p>
+  <p>Where those levels have circular relationships, the model resolves them using the <strong>Leontief Input-Output model</strong> — the same framework used in macroeconomic analysis to model how industries depend on each other. A cost pool can apportion to another pool, which apportions back to the first; the iteration runs until the numbers stop changing. The result is a mathematically exact answer, not an approximation.</p>
+
+  <h3>The Two-Layer Architecture</h3>
+  <p>The engine splits cleanly across two technologies:</p>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Layer</th><th>Technology</th><th>When it runs</th><th>Stages handled</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>Live apportionment</strong></td>
+          <td><span class="pill tm1">TM1 Rules</span></td>
+          <td>Continuously — recalculates on any data change</td>
+          <td>Stage 1, Stage 2, Stage 3</td>
+        </tr>
+        <tr>
+          <td><strong>Reciprocal iteration</strong></td>
+          <td><span class="pill py">Python ETL</span></td>
+          <td>On demand — run each period after data load</td>
+          <td>Stage 1b, Stage 2b</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p>TM1 rules are declarative and cannot loop — they are ideal for stages where the calculation is a direct formula applied to each intersection. Python handles the iterative stages where circular flows require repeated passes to converge. The two layers are cleanly separated: Python writes the settled amounts back to TM1 and TM1 rules read from them, giving a live view of the post-reciprocal result without re-running Python.</p>
+
+  <div class="callout key">
+    <p><b>Everything is code.</b> All TM1 objects — dimensions, cubes, rules, views, TI processes — are defined in source files in this repository and deployed by the build scripts. Git is the source of truth. There is no manual Architect work. A <code>git diff</code> shows exactly what changed between environments.</p>
+  </div>
+</section>
+
+<!-- 03 -->
+<section id="s3">
+  <div class="sec-head"><span class="sec-num">03</span><h2 class="sec-title">The Apportionment Chain</h2></div>
+  <p>Costs flow through five stages. The three TM1 rules stages are live at all times; the two Python iteration stages run each period to resolve circular pool and activity flows.</p>
+
+  <figure class="fig">
+    <svg viewBox="0 0 700 464" role="img" aria-label="Five-stage apportionment chain from GL accounts through Cost Pools and Activities to Service Lines, with config cubes feeding each stage from the right">
+      <defs>
+        <marker id="arr" markerWidth="9" markerHeight="9" refX="7.5" refY="4" orient="auto">
+          <path d="M0,0 L8,4 L0,8 Z" fill="#4c5862"/>
+        </marker>
+        <marker id="arr-s" markerWidth="9" markerHeight="9" refX="7.5" refY="4" orient="auto">
+          <path d="M0,0 L8,4 L0,8 Z" fill="#2f5d8a"/>
+        </marker>
+        <marker id="arr-g" markerWidth="9" markerHeight="9" refX="7.5" refY="4" orient="auto">
+          <path d="M0,0 L8,4 L0,8 Z" fill="#2c7a52"/>
+        </marker>
+        <marker id="arr-a" markerWidth="9" markerHeight="9" refX="7.5" refY="4" orient="auto">
+          <path d="M0,0 L8,4 L0,8 Z" fill="#b0750f"/>
+        </marker>
+      </defs>
+
+      <!-- GL SOURCE -->
+      <rect class="node-steel" x="10" y="16" width="300" height="44" rx="7"/>
+      <text class="svg-label" x="160" y="35" text-anchor="middle" font-weight="600" font-size="13">GL Source</text>
+      <text class="svg-sub" x="160" y="50" text-anchor="middle">GBL Account &nbsp;&middot;&nbsp; 6xxx Overhead &nbsp;&middot;&nbsp; 5xxx Direct</text>
+
+      <path class="edge" marker-end="url(#arr)" d="M160,60 L160,80"/>
+
+      <!-- STAGE 1 -->
+      <rect class="node-green" x="10" y="82" width="300" height="52" rx="7"/>
+      <text class="svg-label" x="160" y="103" text-anchor="middle" font-weight="600" font-size="13">Stage 1 — Account &#x2192; Pool</text>
+      <text class="svg-sub" x="160" y="120" text-anchor="middle">TM1 Rules &nbsp;&middot;&nbsp; live recalculation</text>
+
+      <rect class="node-steel" x="360" y="88" width="332" height="40" rx="6"/>
+      <text class="svg-label" x="526" y="103" text-anchor="middle" font-weight="600" font-size="12">CST Account Config</text>
+      <text class="svg-sub" x="526" y="118" text-anchor="middle">Pool assignment &nbsp;&middot;&nbsp; Driver % &nbsp;&middot;&nbsp; Apportionment Type</text>
+      <path class="edge-steel" marker-end="url(#arr-s)" d="M360,108 L312,108"/>
+
+      <path class="edge" marker-end="url(#arr)" d="M160,134 L160,148"/>
+
+      <!-- STAGE 1b -->
+      <rect class="node-amber" x="10" y="150" width="300" height="52" rx="7"/>
+      <text class="svg-label" x="160" y="171" text-anchor="middle" font-weight="600" font-size="13">Stage 1b — Pool &#x21D4; Pool</text>
+      <text class="svg-sub" x="160" y="188" text-anchor="middle">Python iteration &nbsp;&middot;&nbsp; ~11 steps to convergence</text>
+
+      <rect class="node-amber" x="360" y="156" width="332" height="40" rx="6"/>
+      <text class="svg-label" x="526" y="171" text-anchor="middle" font-weight="600" font-size="12">CST Pool to Pool Config</text>
+      <text class="svg-sub" x="526" y="186" text-anchor="middle">Driver Values &nbsp;&middot;&nbsp; Active flag &nbsp;&middot;&nbsp; CSV loaded per period</text>
+      <path class="edge-amber" marker-end="url(#arr-a)" d="M360,176 L312,176"/>
+
+      <path class="edge" marker-end="url(#arr)" d="M160,202 L160,214"/>
+
+      <!-- STAGE 2 -->
+      <rect class="node-green" x="10" y="216" width="300" height="52" rx="7"/>
+      <text class="svg-label" x="160" y="237" text-anchor="middle" font-weight="600" font-size="13">Stage 2 — Pool &#x2192; Activity</text>
+      <text class="svg-sub" x="160" y="254" text-anchor="middle">TM1 Rules &nbsp;&middot;&nbsp; reads Stage 1b Settled Amount</text>
+
+      <rect class="node-green" x="360" y="222" width="332" height="40" rx="6"/>
+      <text class="svg-label" x="526" y="237" text-anchor="middle" font-weight="600" font-size="12">CST Pool Config</text>
+      <text class="svg-sub" x="526" y="252" text-anchor="middle">Driver % Share &nbsp;&middot;&nbsp; Settled Amount feed</text>
+      <path class="edge-green" marker-end="url(#arr-g)" d="M360,242 L312,242"/>
+
+      <path class="edge" marker-end="url(#arr)" d="M160,268 L160,280"/>
+
+      <!-- STAGE 2b -->
+      <rect class="node-amber" x="10" y="282" width="300" height="52" rx="7"/>
+      <text class="svg-label" x="160" y="303" text-anchor="middle" font-weight="600" font-size="13">Stage 2b — Activity &#x21D4; Activity</text>
+      <text class="svg-sub" x="160" y="320" text-anchor="middle">Python iteration &nbsp;&middot;&nbsp; same solver as Stage 1b</text>
+
+      <rect class="node-amber" x="360" y="288" width="332" height="40" rx="6"/>
+      <text class="svg-label" x="526" y="303" text-anchor="middle" font-weight="600" font-size="12">CST Activity to Activity Config</text>
+      <text class="svg-sub" x="526" y="318" text-anchor="middle">Driver Values &nbsp;&middot;&nbsp; Active flag &nbsp;&middot;&nbsp; CSV loaded per period</text>
+      <path class="edge-amber" marker-end="url(#arr-a)" d="M360,308 L312,308"/>
+
+      <path class="edge" marker-end="url(#arr)" d="M160,334 L160,346"/>
+
+      <!-- STAGE 3 -->
+      <rect class="node-green" x="10" y="348" width="300" height="52" rx="7"/>
+      <text class="svg-label" x="160" y="369" text-anchor="middle" font-weight="600" font-size="13">Stage 3 — Activity &#x2192; Service Line</text>
+      <text class="svg-sub" x="160" y="386" text-anchor="middle">TM1 Rules &nbsp;&middot;&nbsp; reads Stage 2b Settled Amount</text>
+
+      <rect class="node-green" x="360" y="354" width="332" height="40" rx="6"/>
+      <text class="svg-label" x="526" y="369" text-anchor="middle" font-weight="600" font-size="12">CST Activity Config</text>
+      <text class="svg-sub" x="526" y="384" text-anchor="middle">Driver % Share &nbsp;&middot;&nbsp; Input Volume</text>
+      <path class="edge-green" marker-end="url(#arr-g)" d="M360,374 L312,374"/>
+
+      <path class="edge" marker-end="url(#arr)" d="M160,400 L160,412"/>
+
+      <!-- P&L OUTPUT -->
+      <rect class="node-plain" x="10" y="414" width="300" height="42" rx="7"/>
+      <text class="svg-label" x="160" y="440" text-anchor="middle" font-weight="600" font-size="13">CST Profit and Loss Report</text>
+
+      <!-- LEGEND -->
+      <g transform="translate(360,418)">
+        <rect fill="var(--green-light)" stroke="var(--green)" stroke-width="1.2" x="0" y="0" width="14" height="13" rx="3"/>
+        <text style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;fill:var(--ink-soft)" x="20" y="11">TM1 Rules (live)</text>
+        <rect fill="var(--amber-light)" stroke="var(--amber)" stroke-width="1.2" x="0" y="20" width="14" height="13" rx="3"/>
+        <text style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;fill:var(--ink-soft)" x="20" y="31">Python iteration (reciprocal)</text>
+      </g>
+    </svg>
+    <figcaption><b>Fig 1.</b> Five-stage cost allocation chain — TM1 rules for live stages, Python iteration resolves reciprocal loops</figcaption>
+  </figure>
+
+  <p>Each config cube feeds its stage with the driver assumptions for that level of allocation. The two Python stages write their settled amounts back to TM1; subsequent TM1 rules stages read from those settled values rather than the raw pool totals.</p>
+</section>
+
+<!-- 04 -->
+<section id="s4">
+  <div class="sec-head"><span class="sec-num">04</span><h2 class="sec-title">Stage 1 — Account &rarr; Pool</h2></div>
+  <p>Every GL account is classified as one of three <strong>Apportionment Types</strong> in <code>CST Account Config</code>:</p>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Apportionment Type</th><th>Behaviour</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Indirect</strong></td><td>Account amount apportioned to one or more Cost Pools via Driver %. Enters the apportionment chain at Stage 1.</td></tr>
+        <tr><td><strong>Direct</strong></td><td>Account bypasses the pool and activity chain. Splits directly to Service Lines via Direct Service Line %. Enters the P&amp;L at Stage 3 output.</td></tr>
+        <tr><td><strong>Excluded</strong></td><td>Account excluded from apportionment entirely. Does not appear in the P&amp;L output.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>How Indirect Accounts Apportion</h3>
+  <p>For Indirect accounts, <code>CST Account Config</code> stores a Driver % for each account-pool pairing. These percentages represent how the account's cost should be split across the pools it feeds — and they must sum to 100% for each account.</p>
+  <p>The TM1 rule is straightforward:</p>
+  <pre><span class="c"># CST Account to Pool Apportionment</span>
+<span class="k">Apportioned Amount</span> = <span class="g">GL Amount</span> × <span class="a">Driver %</span></pre>
+  <p>Because it is a TM1 rule, it recalculates instantly whenever the GL amount or the Driver % changes. No TI process, no manual refresh. The Account to Pool Apportionment cube always reflects current data.</p>
+
+  <div class="callout note">
+    <p><b>Account Config is maintained manually.</b> Pool assignments and Apportionment Type reflect model design decisions — which overhead accounts belong to which pools — and are set infrequently. They are stored in TM1 and maintained via a PAW websheet. They are not loaded from CSV.</p>
+  </div>
+</section>
+
+<!-- 05 -->
+<section id="s5">
+  <div class="sec-head"><span class="sec-num">05</span><h2 class="sec-title">Stage 1b — Pool ↔ Pool Reciprocal</h2></div>
+  <p>Cost pools serve each other. The IT pool charges Facilities for system support. The Facilities pool charges IT for floor space. In step-down, one of these flows is cut. In this model, both are fully resolved.</p>
+  <p>Stage 1b is the <strong>reciprocal pool solver</strong>. Python reads the pool totals from Stage 1, reads the inter-pool driver values from <code>CST Pool to Pool Config</code>, and iterates until the settled amounts stop changing.</p>
+
+  <h3>Driver Values and How They Work</h3>
+  <p>Driver values are <strong>raw operational volumes</strong> — not pre-calculated percentages. For each source pool → destination pool pair, the config stores the raw volume of the destination pool's consumption of the source pool's service. Examples: tickets raised (for IT), floor area in sqm (for Facilities), headcount (for HR).</p>
+  <p>Python normalises these at runtime: each source pool's total outgoing volume becomes 100%, and each destination's driver value becomes its fractional share. This means the percentages always reflect the current period's actual volumes, without any pre-calculation step.</p>
+
+  <div class="callout key">
+    <p><b>Driver values are loaded from CSV, not entered manually.</b> They are raw operational volumes sourced from HR systems, facilities management, and other operational data — refreshed each period via ETL. The <code>Active</code> flag in Pool to Pool Config defines which source&thinsp;→&thinsp;destination pairs are live; normalisation runs only over Active=1 pairs.</p>
+  </div>
+
+  <h3>The Solver</h3>
+  <p>The iteration runs on pool-level aggregates (not cost centre level). Each pass:</p>
+  <ol>
+    <li>For each source pool: redistribute its current balance to destination pools using normalised driver percentages</li>
+    <li>Update each destination pool's balance (base amount + received allocations − outgoing allocations)</li>
+    <li>Compute max absolute change across all pools</li>
+    <li>Repeat until max change &lt; 0.01 (typically ~11 iterations)</li>
+  </ol>
+  <p>Convergence is dynamic — the loop breaks when the tolerance is met. The <code>--max-iter 100</code> flag is a safety cap only and is never reached in practice.</p>
+
+  <h3>The Input Sentinel Pattern</h3>
+  <p>All coded CST dimensions carry an <strong><code>Input</code></strong> element at weight 0 under their consolidation. It acts as a reserved slot for storing scalar values that belong to the dimension logically but have no natural counterpart dimension. In Stage 1b:</p>
+  <pre class="ascii"><span class="c"># Driver Value stored at Cost Centre = "Input"</span>
+<span class="k">CST Pool to Pool Config</span>[period, version, CP01, CP03, <span class="g">Input</span>, Driver Value] = 4200
+
+<span class="c"># Redistribution % stored at Cost Pool Dest = "Input"</span>
+<span class="k">CST Pool to Pool Config</span>[period, version, CP01, <span class="g">Input</span>, Input, Redistribution %] = 85</pre>
+  <p>After convergence, Python writes the Settled Amount for each pool back to <code>CST Pool to Pool Config</code> at <code>Cost Pool Dest = Input</code>. TM1 rules in Stage 2 read from this intersection to get the post-reciprocal pool balances.</p>
+
+  <h3>Cost Centre Split-Back</h3>
+  <p>The reciprocal iteration runs at pool aggregate level for speed. After convergence, costs are split back to the individual Cost Centre level using the Stage 1 ratio:</p>
+  <pre class="ascii"><span class="k">ratio</span> = CC Stage 1 amount / Pool Stage 1 total
+<span class="g">CC settled amount</span> = Pool settled amount × <span class="k">ratio</span></pre>
+  <p>This preserves the Cost Centre proportions from Stage 1 exactly, applying the same reciprocal adjustment uniformly across all Cost Centres within a pool.</p>
+</section>
+
+<!-- 06 -->
+<section id="s6">
+  <div class="sec-head"><span class="sec-num">06</span><h2 class="sec-title">Stage 2 — Pool &rarr; Activity</h2></div>
+  <p>With pool-to-pool flows resolved, Stage 2 distributes each pool's settled amount across the Activities it supports. Each pool can feed multiple activities; the split is driven by <strong>Driver % Share</strong> in <code>CST Pool Config</code>.</p>
+  <p>The driver at this stage answers a different question from Stage 1b: not "how much does this pool serve another pool?" but "how do the downstream activities actually consume this pool's service?" A Facilities pool's floor-area driver will assign different percentages when splitting to activities than when splitting pool-to-pool — because the activities occupy different proportions of the building than the pools do.</p>
+
+  <div class="callout note">
+    <p><b>Each stage has its own driver values.</b> The same operational metric (e.g., FLOORSPACE) will carry different numbers at each stage because the question changes: Stage 1b asks how pools consume other pools; Stage 2 asks how activities consume pools; Stage 3 asks how service lines consume activities. Same driver type, different volumes, different cost object.</p>
+  </div>
+
+  <p>The TM1 rule reads the Stage 1b Settled Amount and applies the Driver % Share:</p>
+  <pre><span class="c"># CST Pool to Activity Apportionment</span>
+<span class="k">Apportioned Amount</span> = <span class="g">P2A Settled Amount</span> × <span class="a">Driver % Share</span></pre>
+  <p>Because Stage 2 is a TM1 rule reading from a settled amount written by Stage 1b Python, the Activity apportionment updates immediately whenever Stage 1b is re-run — no manual refresh needed for subsequent stages.</p>
+</section>
+
+<!-- 07 -->
+<section id="s7">
+  <div class="sec-head"><span class="sec-num">07</span><h2 class="sec-title">Stage 2b — Activity ↔ Activity Reciprocal</h2></div>
+  <p>Just as cost pools can serve each other, activities can support each other. A Training activity may serve a Finance activity, which in turn provides support back to Training. Stage 2b resolves these circular activity flows using the same Python iteration solver as Stage 1b.</p>
+
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th></th><th>Stage 1b</th><th>Stage 2b</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Object</strong></td><td>Cost Pools (CP01–CP09)</td><td>Activities (A01–A11)</td></tr>
+        <tr><td><strong>Config cube</strong></td><td>CST Pool to Pool Config</td><td>CST Activity to Activity Config</td></tr>
+        <tr><td><strong>Driver values</strong></td><td>Raw volumes, CSV loaded</td><td>Raw volumes, CSV loaded</td></tr>
+        <tr><td><strong>Convergence</strong></td><td>Max change &lt; 0.01</td><td>Max change &lt; 0.01</td></tr>
+        <tr><td><strong>Settled amount target</strong></td><td>P2A Settled Amount in Pool Config</td><td>A2SL Settled Amount in Activity Config</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>After convergence, Python writes the settled activity amounts to <code>CST Activity Config</code> at <code>Activity Dest = Input</code>. Stage 3 TM1 rules read from these values to produce the final Service Line apportionment.</p>
+</section>
+
+<!-- 08 -->
+<section id="s8">
+  <div class="sec-head"><span class="sec-num">08</span><h2 class="sec-title">Stage 3 — Activity &rarr; Service Line</h2></div>
+  <p>Stage 3 is the final distribution — each activity's settled amount splits to Service Lines using Driver % Share stored in <code>CST Activity Config</code>. The driver at this stage answers how each service line consumes each activity's output.</p>
+  <p>Direct cost accounts (Apportionment Type = Direct, assigned in Stage 1) also arrive at Stage 3 via their direct Service Line percentages, bypassing the pool and activity chain entirely. Both indirect and direct costs land in <code>CST Activity to Service Line Apportionment</code>, which feeds the P&amp;L report.</p>
+
+  <pre><span class="c"># CST Activity to Service Line Apportionment</span>
+<span class="k">Apportioned Amount</span> = <span class="g">A2SL Settled Amount</span> × <span class="a">Driver % Share</span>
+<span class="c"># Direct costs bypass pools/activities:</span>
+<span class="k">Direct Amount</span>      = <span class="g">GL Amount</span> × <span class="a">Direct Service Line %</span></pre>
+
+  <p>The <code>CST Profit and Loss Report</code> cube aggregates all stages — pre-apportionment GL, each apportionment stage, and the final post-apportionment view — across Period, Version, Account, Service Line, Cost Centre, and Stage dimensions. Every figure traces back to its source.</p>
+
+  <div class="callout key">
+    <p><b>End-to-end balance.</b> The total that enters at Stage 1 (all Indirect overhead accounts) must equal the total that exits at Stage 3 (all Service Line allocations). The RC06 reconciliation check enforces this. If it fails, nothing leaves the model until the variance is found and corrected.</p>
+  </div>
+</section>
+
+<!-- 09 -->
+<section id="s9">
+  <div class="sec-head"><span class="sec-num">09</span><h2 class="sec-title">Data Model</h2></div>
+
+  <h3>Cube Inventory</h3>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Stage</th><th>Cube</th><th>Key dimensions</th></tr></thead>
+      <tbody>
+        <tr><td><span class="pill cfg">1 Config</span></td><td><code>CST Account Config</code></td><td>Period, Version, Account, Cost Centre, Cost Pool, Measure</td></tr>
+        <tr><td><span class="pill tm1">1 Output</span></td><td><code>CST Account to Pool Apportionment</code></td><td>Period, Version, Cost Pool, Cost Centre, Account, Measure</td></tr>
+        <tr><td><span class="pill cfg">1b Config</span></td><td><code>CST Pool to Pool Config</code></td><td>Period, Version, Cost Pool, Cost Pool Dest, Cost Centre, Measure</td></tr>
+        <tr><td><span class="pill cfg">2 Config</span></td><td><code>CST Pool Config</code></td><td>Period, Version, Cost Pool, Driver, Activity, Measure</td></tr>
+        <tr><td><span class="pill tm1">2 Output</span></td><td><code>CST Pool to Activity Apportionment</code></td><td>Period, Version, Activity, Cost Pool, Cost Centre, Measure</td></tr>
+        <tr><td><span class="pill cfg">2b Config</span></td><td><code>CST Activity to Activity Config</code></td><td>Period, Version, Activity, Activity Dest, Cost Centre, Measure</td></tr>
+        <tr><td><span class="pill cfg">3 Config</span></td><td><code>CST Activity Config</code></td><td>Period, Version, Activity, Driver, Service Line, Measure</td></tr>
+        <tr><td><span class="pill tm1">3 Output</span></td><td><code>CST Activity to Service Line Apportionment</code></td><td>Period, Version, Service Line, Activity, Cost Centre, Measure</td></tr>
+        <tr><td><span class="pill tm1">P&amp;L</span></td><td><code>CST Profit and Loss Report</code></td><td>Period, Version, Account, Service Line, Cost Centre, Stage, Measure</td></tr>
+        <tr><td><span class="pill pass">Audit</span></td><td><code>CST Apportionment Reconciliation</code></td><td>Period, Version, Reconciliation Check, Measure</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Dimension Inventory</h3>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Dimension</th><th>Elements</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td><code>CST Cost Pool</code></td><td>CP01–CP09</td><td>Code &amp; Desc alias. Input sentinel (weight 0)</td></tr>
+        <tr><td><code>CST Cost Pool Dest</code></td><td>CP01–CP09</td><td>Mirror of Cost Pool — reciprocal destination</td></tr>
+        <tr><td><code>CST Activity</code></td><td>A01–A11</td><td>Code &amp; Desc alias. Input sentinel (weight 0)</td></tr>
+        <tr><td><code>CST Activity Dest</code></td><td>A01–A11</td><td>Mirror of Activity — reciprocal destination</td></tr>
+        <tr><td><code>CST Service Line</code></td><td>SL01–SL08</td><td>Code &amp; Desc alias. Input sentinel (weight 0)</td></tr>
+        <tr><td><code>CST Driver</code></td><td>FLOORSPACE, HEADCOUNT, ASSETVALUE, POWERUSAGE, BEDDAYS, TRANSACTIONS</td><td>Flat list of driver types</td></tr>
+        <tr><td><code>CST Reconciliation Check</code></td><td>RC01–RC06, VAL01–VAL06</td><td>RC = TM1 rules; VAL = Python written</td></tr>
+        <tr><td><code>CST Apportionment Stage</code></td><td>Pre / Post Apportionment</td><td>Flat, Desc alias</td></tr>
+        <tr><td><code>GBL Cost Centre</code></td><td>GBL-owned + Input sentinel</td><td>Input added as orphan — no consolidation edge</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>The Input Sentinel Pattern</h3>
+  <div class="callout note">
+    <p><b>Input sentinel.</b> Every coded CST dimension carries an <code>Input</code> element at weight 0 under its consolidation. It provides a reserved intersection for storing scalar values that belong to a dimension contextually but have no natural counterpart on another dimension axis — driver values, redistribution percentages, base amounts, and settled balances all use this pattern. Because <code>Input</code> carries weight 0, it never rolls up into any consolidation, preventing double-counting.</p>
+  </div>
+
+  <h3>Naming Conventions</h3>
+  <p>All objects use the <code>CST</code> prefix. Cubes follow the flow naming convention: <code>CST [Source] to [Destination] Apportionment</code>. Dimension elements use a two-part pattern: element = code (<code>CP01</code>), alias = code + description (<code>CP01 Facilities</code>). Destination dimensions are exact mirrors of their source — same elements, same aliases.</p>
+</section>
+
+<!-- 10 -->
+<section id="s10">
+  <div class="sec-head"><span class="sec-num">10</span><h2 class="sec-title">Validation Gate</h2></div>
+  <p>Before Stage 1b runs, Python executes six gate checks against the TM1 model. A <span class="pill fail">FAIL</span> on any check blocks the apportionment; a <span class="pill warn">WARNING</span> allows it to proceed with a visible alert that results are interim.</p>
+
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Check</th><th>What it validates</th><th>Status on failure</th></tr></thead>
+      <tbody>
+        <tr><td><span class="pill cfg">VAL01</span></td><td>Pool Config — all pools have driver percentage shares configured</td><td><span class="pill fail">FAIL</span></td></tr>
+        <tr><td><span class="pill cfg">VAL02</span></td><td>Activity Config — all activities have input volumes configured</td><td><span class="pill fail">FAIL</span></td></tr>
+        <tr><td><span class="pill cfg">VAL03</span></td><td>Driver SQL vs TM1 spot-check — loaded values match SQL source totals within tolerance</td><td><span class="pill fail">FAIL</span> (skipped with <span class="pill warn">WARNING</span> if SQL unavailable)</td></tr>
+        <tr><td><span class="pill cfg">VAL04</span></td><td>Account Config — all overhead accounts have pool assignments (Driver % sums to 100)</td><td><span class="pill fail">FAIL</span></td></tr>
+        <tr><td><span class="pill cfg">VAL05</span></td><td>Account Config — all Direct accounts have Direct % configured (sums to 100)</td><td><span class="pill fail">FAIL</span></td></tr>
+        <tr><td><span class="pill cfg">VAL06</span></td><td>Account Config — no accounts with blank Apportionment Type</td><td><span class="pill fail">FAIL</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>Pool-to-pool and activity-to-activity driver completeness raises a <span class="pill warn">WARNING</span> not a <span class="pill fail">FAIL</span> — missing reciprocal config is valid if those pairs are simply not configured (the pair is skipped, not errored).</p>
+
+  <div class="callout warn">
+    <p><b>Override with care.</b> Running <code>python3 etl/run_apportionment.py --force</code> bypasses FAIL gates and proceeds with whatever data is present. Results will be incomplete. Only use <code>--force</code> for exploratory runs with known-incomplete config data.</p>
+  </div>
+
+  <p>VAL check results are written to <code>CST Apportionment Reconciliation</code> at each run. They are always visible in PAW alongside the RC checks.</p>
+</section>
+
+<!-- 11 -->
+<section id="s11">
+  <div class="sec-head"><span class="sec-num">11</span><h2 class="sec-title">Reconciliation Checks</h2></div>
+  <p>Six reconciliation checks run as <strong>always-live TM1 rules</strong> in <code>CST Apportionment Reconciliation</code>. They fire automatically whenever any input data changes — no separate process to run. Status is <span class="pill pass">PASS</span> if <code>ABS(Variance) &le; 0.01</code>, <span class="pill fail">FAIL</span> otherwise, and <code>NO DATA</code> if the input total is zero.</p>
+
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Check</th><th>Stage</th><th>What it confirms</th></tr></thead>
+      <tbody>
+        <tr><td><span class="pill pass">RC01</span></td><td>Stage 1</td><td>GL Amount at <code>Input</code> cost pool = Apportioned Amount at <code>Total Cost Pools</code></td></tr>
+        <tr><td><span class="pill pass">RC02</span></td><td>Stage 1b</td><td>Pool Base Amount = Pool Final Balance after reciprocal (net flow = 0)</td></tr>
+        <tr><td><span class="pill pass">RC03</span></td><td>Stage 2</td><td>Amount at <code>Input</code> activity = Apportioned Amount at <code>Total Activities</code></td></tr>
+        <tr><td><span class="pill pass">RC04</span></td><td>Stage 2b</td><td>Activity Base Amount = Activity Final Balance after reciprocal</td></tr>
+        <tr><td><span class="pill pass">RC05</span></td><td>Stage 3</td><td>Amount at <code>Input</code> service line = Apportioned Amount at <code>Total Service Lines</code></td></tr>
+        <tr><td><span class="pill pass">RC06</span></td><td>End-to-end</td><td>GL Input total = Post Apportionment at <code>Total Service Lines</code></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout key">
+    <p><b>RC06 is the critical check.</b> It confirms that every dollar of overhead that entered the model at Stage 1 has been fully allocated to a Service Line by Stage 3, with no leakage and no duplication. If RC06 fails, the P&amp;L output cannot be used.</p>
+  </div>
+
+  <p>RC02 and RC04 validate the reciprocal stages specifically: after Python iteration, the net flow in and out of each pool (or activity) must be zero. These checks are what confirm that the Leontief solver has converged correctly and the settled amounts are mathematically consistent.</p>
+</section>
+
+<!-- 12 -->
+<section id="s12">
+  <div class="sec-head"><span class="sec-num">12</span><h2 class="sec-title">Building and Running</h2></div>
+
+  <h3>1. Clone and install</h3>
+  <pre><span class="g">git clone</span> https://github.com/JDLovering/tm1_apportionment.git
+<span class="k">cd</span> tm1_apportionment
+<span class="g">pip install</span> -r requirements.txt</pre>
+
+  <h3>2. Configure connection</h3>
+  <p>Copy the example env file and edit with your TM1 server address and credentials:</p>
+  <pre><span class="k">cp</span> .env.example .env
+<span class="c"># edit .env with TM1_ADDRESS, TM1_PORT, TM1_DATABASE, credentials</span></pre>
+  <p>Alternatively, copy and edit <code>config.example.py → config.py</code>. The <code>.env</code> file takes precedence. Never commit either file — both are in <code>.gitignore</code>.</p>
+
+  <h3>3. Deploy the model</h3>
+  <pre><span class="g">python3</span> model_builder/deploy.py</pre>
+  <p>Deploys all dimensions, cubes, rules, subsets, views, and TI processes from the JSON definitions in <code>model_builder/tm1_objects/</code>. The target server is read from the connection config.</p>
+
+  <h3>4. Load sample data</h3>
+  <pre><span class="g">python3</span> load_csv_data.py
+<span class="c"># or generate the SQLite test database first:</span>
+<span class="g">python3</span> model_builder/create_test_db.py
+<span class="g">python3</span> etl/load_gl.py --version Budget
+<span class="g">python3</span> etl/load_drivers.py --version Budget</pre>
+
+  <h3>5. Validate and run</h3>
+  <pre><span class="g">python3</span> etl/val_checks.py --version Budget
+<span class="g">python3</span> etl/run_apportionment.py --version Budget
+
+<span class="c"># Single period:</span>
+<span class="g">python3</span> etl/run_apportionment.py --period 2026-04 --version Budget
+
+<span class="c"># Override FAIL gates (incomplete data, exploratory):</span>
+<span class="g">python3</span> etl/run_apportionment.py --version Budget --force</pre>
+
+  <h3>6. PAW-triggered ETL</h3>
+  <pre><span class="k">./start_poller.sh</span>
+<span class="c"># Required for TI-triggered ETL from Planning Analytics Workspace</span></pre>
+
+  <h3>Rebuild / Teardown</h3>
+  <pre><span class="r">python3</span> model_builder/cleanup_cst_model.py   <span class="c"># safely removes all CST objects</span>
+<span class="g">python3</span> model_builder/build_cst_model.py     <span class="c"># full rebuild</span></pre>
+
+  <h3>Directory Structure</h3>
+  <pre class="ascii">tm1_apportionment/
+├── config.example.py          <span class="c">← copy to config.py and edit</span>
+├── model_builder/             <span class="c">← builds all TM1 objects from source</span>
+│   ├── build_cst_model.py     <span class="c">← orchestrator</span>
+│   ├── cleanup_cst_model.py   <span class="c">← safe teardown</span>
+│   ├── create_gbl_*.py        <span class="c">← GBL dimension builders</span>
+│   └── create_cst_*.py        <span class="c">← CST dimension and cube builders</span>
+├── rules/                     <span class="c">← TM1 rule files (YAML source)</span>
+├── views/                     <span class="c">← TM1 view definitions (YAML)</span>
+├── ti_processes/              <span class="c">← TI process definitions (YAML)</span>
+├── etl/
+│   ├── load_gl.py
+│   ├── load_drivers.py
+│   ├── run_apportionment.py   <span class="c">← Stage 1b, 2b solver + RC checks</span>
+│   ├── val_checks.py          <span class="c">← VAL01–VAL06 gate</span>
+│   └── poller.py
+├── sample_data/               <span class="c">← CSV files for all config cubes</span>
+└── tests/                     <span class="c">← SQLite test database and loaders</span></pre>
+
+  <div class="callout note">
+    <p><b>Period range is version-driven.</b> ETL scripts accept <code>--version Budget</code> without a <code>--period</code> flag. The period list is read from <code>Start Period</code> and <code>End Period</code> attributes on <code>GBL Version</code> in TM1 — no hardcoded date ranges anywhere in the codebase.</p>
+  </div>
+</section>
+
+</div>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <h2>Open methodology</h2>
+    <p>This module is published openly as intellectual property. The conceptual approach — Leontief reciprocal apportionment, the five-stage ABC chain, the Input sentinel pattern, and the two-layer TM1 rules + Python architecture — is shared freely. Detailed platform-specific build work, rule code, and implementation are available as a paid consulting engagement.</p>
+    <div class="lic">
+      <span>&copy; 2026 falconbi</span>
+      <span>Licence: CC BY 4.0 — attribution required, commercial use permitted</span>
+      <span>IBM Planning Analytics / TM1</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
