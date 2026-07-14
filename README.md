@@ -1,6 +1,6 @@
 # tm1_apportionment
 
-**[Full technical documentation →](https://jdlovering.github.io/tm1_apportionment/)**
+**[Full technical documentation →](https://falconbi.github.io/tm1_apportionment/)**
 
 ## Introduction
 
