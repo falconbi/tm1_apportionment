@@ -156,7 +156,7 @@
   .banner b{color:var(--green);font-weight:600}
 
   /* ---- TOC ---- */
-  nav.toc{border-bottom:1px solid var(--rule);background:var(--panel)}
+  nav.toc{border-bottom:1px solid var(--rule);background:var(--panel);position:static;top:auto}
   nav.toc .wrap{padding-top:34px;padding-bottom:34px}
   nav.toc h2{
     font-family:'IBM Plex Mono',monospace;font-size:12px;
@@ -319,11 +319,12 @@
 <body>
 
 <header class="topbar">
-  <a href="index.html" class="brand">
+  <a href="https://falconbi.github.io/articles/" class="brand">
     <img src="favicon.png" class="brand-eagle" alt="FalconBI">
     <span class="brand-word">falcon<b>bi</b></span>
   </a>
-  <div class="topbar-right"><span class="kicker">Technical Reference &nbsp;·&nbsp; IBM Planning Analytics</span></div>
+  <div class="topbar-right"><span class="kicker">Technical Reference &nbsp;·&nbsp; IBM Planning Analytics</span>
+    <a href="https://falconbi.github.io/articles/">&larr; articles</a></div>
 </header>
 
 <!-- ============ MASTHEAD ============ -->
